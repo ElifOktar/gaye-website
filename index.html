@@ -220,6 +220,151 @@
   footer a:hover{color:#fff}
   .copyright{border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;text-align:center;color:rgba(255,255,255,0.4);font-size:12px}
 
+  /* Görseller */
+  .book-cover-img{max-width:340px;width:100%;height:auto;display:block;margin:0 auto;box-shadow:0 30px 60px rgba(27,42,74,0.3);border-radius:4px}
+  .book-cover-img-large{max-width:100%;width:100%;height:auto;box-shadow:0 30px 60px rgba(27,42,74,0.3);border-radius:4px}
+  .gorsel-card{background:#fff;border-radius:14px;padding:24px;border:1px solid var(--border);text-align:center;margin:30px 0}
+  .gorsel-card img{max-width:100%;height:auto;border-radius:8px;margin-bottom:12px}
+  .gorsel-card .caption{font-size:13px;color:var(--text-light);font-style:italic}
+  .miro-block{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:#fff;border-radius:14px;padding:36px;border:1px solid var(--border);margin-bottom:40px}
+  .miro-block img{width:100%;border-radius:8px;box-shadow:0 10px 24px rgba(0,0,0,0.1)}
+  .miro-block h3{font-family:Georgia,serif;font-size:26px;color:var(--navy);margin-bottom:12px}
+  .miro-block .miro-eyebrow{font-size:11px;color:var(--orange);letter-spacing:0.18em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+  .miro-block p{font-size:14.5px;color:var(--text-light);line-height:1.65;margin-bottom:12px}
+  .miro-block p em{color:var(--navy);font-style:italic}
+
+  /* Kurumsal Liderin Hücresi epigraf */
+  .hucre-epigraf{background:#fff;padding:50px 40px;border-radius:14px;border:1px solid var(--border);text-align:center;max-width:880px;margin:0 auto;position:relative}
+  .hucre-epigraf::before{content:"\201C";position:absolute;top:8px;left:24px;font-family:Georgia,serif;font-size:72px;color:var(--orange);line-height:1;opacity:0.4}
+  .hucre-epigraf .epigraf-eye{font-size:11px;letter-spacing:0.22em;color:var(--orange);text-transform:uppercase;font-weight:700;margin-bottom:16px}
+  .hucre-epigraf h2{font-family:Georgia,serif;font-size:30px;color:var(--navy);font-style:italic;line-height:1.4;margin-bottom:18px}
+  .hucre-epigraf h2 em{color:var(--orange);font-style:italic}
+  .hucre-epigraf .alt{font-size:14px;color:var(--text-light);font-style:italic}
+
+  /* CEO/CHRO Roller */
+  .rol-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .rol-card{background:#fff;border-radius:14px;padding:36px;border-top:5px solid var(--navy);position:relative}
+  .rol-card.chro{border-top-color:var(--gold)}
+  .rol-card .rol-tag{display:inline-block;padding:5px 12px;background:var(--bg);color:var(--navy);border-radius:6px;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:16px}
+  .rol-card.chro .rol-tag{color:#7A6418;background:#FFF8DC}
+  .rol-card h3{font-family:Georgia,serif;font-size:24px;color:var(--navy);margin-bottom:8px}
+  .rol-card .rol-vurgu{font-size:14.5px;color:var(--text-light);font-style:italic;margin-bottom:22px;line-height:1.55}
+  .rol-card h5{font-size:12px;letter-spacing:0.15em;color:var(--orange);text-transform:uppercase;font-weight:700;margin-bottom:10px;margin-top:18px}
+  .rol-card ul{list-style:none}
+  .rol-card ul li{padding:7px 0 7px 20px;font-size:13.5px;color:var(--ink);position:relative;line-height:1.55}
+  .rol-card ul li::before{content:"›";position:absolute;left:0;top:7px;color:var(--orange);font-weight:bold;font-size:14px}
+
+  /* Yönetim Kurulu Gündem Şablonu */
+  .gundem-table{background:#fff;border-radius:14px;border:1px solid var(--border);overflow:hidden;margin-top:30px}
+  .gundem-row{display:grid;grid-template-columns:80px 100px 1fr 200px;gap:0;border-bottom:1px solid var(--border);align-items:stretch}
+  .gundem-row:last-child{border-bottom:none}
+  .gundem-row.header{background:var(--navy);color:#fff;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700}
+  .gundem-row > div{padding:18px 16px}
+  .gundem-row .gun-no{text-align:center;font-family:Georgia,serif;font-weight:bold;color:var(--orange);font-size:18px;background:var(--bg)}
+  .gundem-row.header .gun-no{background:transparent;color:var(--gold);font-size:11px;font-weight:700}
+  .gundem-row .gun-sure{font-family:Georgia,serif;color:var(--navy);font-weight:600;font-size:14px;background:var(--bg)}
+  .gundem-row.header .gun-sure{background:transparent;color:var(--gold);font-family:inherit;font-size:11px}
+  .gundem-row .gun-baslik{font-family:Georgia,serif;font-size:15px;color:var(--navy);font-weight:600}
+  .gundem-row .gun-baslik .gun-aciklama{display:block;font-family:inherit;font-size:13px;color:var(--text-light);font-weight:400;margin-top:4px;line-height:1.5}
+  .gundem-row.header .gun-baslik{font-family:inherit;font-size:11px;color:var(--gold);font-weight:700}
+  .gundem-row .gun-cikti{font-size:13px;color:var(--text-light);background:#FFF8F0;border-left:3px solid var(--orange)}
+  .gundem-row.header .gun-cikti{background:transparent;border-left:none;color:var(--gold)}
+
+  /* Yazar Bölümü */
+  .yazar-block{display:grid;grid-template-columns:280px 1fr;gap:50px;align-items:flex-start;background:#fff;border-radius:14px;padding:50px;border:1px solid var(--border)}
+  .yazar-foto{aspect-ratio:1/1;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:Georgia,serif;font-size:80px;font-weight:bold;position:relative;box-shadow:0 20px 40px rgba(27,42,74,0.2)}
+  .yazar-foto::after{content:"";position:absolute;inset:-8px;border:2px solid var(--gold);border-radius:50%;opacity:0.3}
+  .yazar-info h2{font-family:Georgia,serif;font-size:36px;margin-bottom:6px;color:var(--navy)}
+  .yazar-info .tagline{font-size:14px;color:var(--orange);letter-spacing:0.15em;text-transform:uppercase;font-weight:600;margin-bottom:24px}
+  .yazar-info p{font-size:15.5px;color:var(--text-light);line-height:1.7;margin-bottom:14px}
+  .yazar-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px;padding-top:24px;border-top:1px solid var(--border)}
+  .yazar-stats div{text-align:center}
+  .yazar-stats strong{display:block;font-family:Georgia,serif;font-size:24px;color:var(--orange);margin-bottom:4px}
+  .yazar-stats span{font-size:11px;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase}
+
+  /* Hizmet Paketleri */
+  .paket-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .paket{background:#fff;border-radius:14px;padding:36px 30px;border:1px solid var(--border);position:relative;display:flex;flex-direction:column;transition:all 0.3s}
+  .paket:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,0.06);border-color:var(--orange)}
+  .paket.featured{border:2px solid var(--orange);position:relative}
+  .paket.featured::before{content:"En çok tercih edilen";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;padding:4px 14px;border-radius:14px;font-size:11px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase}
+  .paket .paket-tip{font-size:11px;color:var(--orange);letter-spacing:0.18em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+  .paket h3{font-family:Georgia,serif;font-size:24px;color:var(--navy);margin-bottom:6px}
+  .paket .sure{font-size:13px;color:var(--text-light);margin-bottom:20px;font-style:italic}
+  .paket .ozet{font-size:14.5px;color:var(--ink);line-height:1.6;margin-bottom:20px}
+  .paket ul{list-style:none;margin-bottom:24px}
+  .paket ul li{padding:7px 0 7px 22px;font-size:13.5px;color:var(--text-light);position:relative;line-height:1.5}
+  .paket ul li::before{content:"✓";position:absolute;left:0;top:7px;color:var(--orange);font-weight:bold}
+  .paket .paket-btn{margin-top:auto}
+
+  /* 90 Gün Yol Haritası */
+  .yol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:#fff;border-radius:14px;border:1px solid var(--border);overflow:hidden}
+  .yol-step{padding:36px 30px;border-right:1px solid var(--border);position:relative}
+  .yol-step:last-child{border-right:none}
+  .yol-step .gun-badge{display:inline-block;padding:6px 14px;background:var(--bg);color:var(--orange);border-radius:14px;font-size:12px;font-weight:700;letter-spacing:0.1em;margin-bottom:18px}
+  .yol-step h4{font-family:Georgia,serif;font-size:22px;margin-bottom:10px;color:var(--navy)}
+  .yol-step .yol-ozet{font-size:14px;color:var(--text-light);margin-bottom:18px;line-height:1.55}
+  .yol-step ul{list-style:none}
+  .yol-step ul li{padding:6px 0 6px 18px;position:relative;font-size:13.5px;color:var(--ink);line-height:1.5}
+  .yol-step ul li::before{content:"→";position:absolute;left:0;top:6px;color:var(--orange);font-weight:bold;font-size:12px}
+
+  /* Çıktılar */
+  .ciktilar-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .cikti{background:#fff;padding:24px;border-radius:10px;border-left:3px solid var(--orange);display:flex;gap:18px;align-items:flex-start}
+  .cikti .icon{flex-shrink:0;width:42px;height:42px;border-radius:8px;background:#FFF0E0;color:var(--orange);display:flex;align-items:center;justify-content:center;font-size:18px;font-family:Georgia,serif;font-weight:bold}
+  .cikti h4{font-size:15.5px;color:var(--navy);margin-bottom:4px;font-family:Georgia,serif}
+  .cikti p{font-size:13.5px;color:var(--text-light);line-height:1.5}
+
+  /* Manifesto - Gaye-Angajman Görsel Matris */
+  .matrix-visual{background:#fff;padding:40px;border-radius:14px;border:1px solid var(--border);margin-top:30px}
+  .matrix-2x2{display:grid;grid-template-columns:50px 1fr 1fr;grid-template-rows:auto auto auto 50px;gap:0;max-width:780px;margin:0 auto;position:relative}
+  .matrix-yaxis{grid-column:1;grid-row:1 / 4;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:14px;color:var(--navy);font-weight:600;letter-spacing:0.05em}
+  .matrix-yvals{grid-column:1;grid-row:1 / 4;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:15px 0 15px 30px;font-size:11px;color:var(--text-light);letter-spacing:0.1em}
+  .matrix-cell{padding:24px;background:var(--bg);border:2px solid #fff;display:flex;flex-direction:column;justify-content:center;min-height:170px;position:relative}
+  .matrix-cell.k1{background:#E8F5E9;grid-column:3;grid-row:1}
+  .matrix-cell.k2{background:#FFF0E0;grid-column:2;grid-row:1}
+  .matrix-cell.k3{background:#FFF8DC;grid-column:3;grid-row:2}
+  .matrix-cell.k4{background:#FCE8E8;grid-column:2;grid-row:2}
+  .matrix-cell .k-no{font-family:Georgia,serif;font-size:13px;color:var(--text-light);letter-spacing:0.15em;margin-bottom:6px}
+  .matrix-cell h4{font-family:Georgia,serif;font-size:18px;color:var(--navy);margin-bottom:6px;line-height:1.2}
+  .matrix-cell p{font-size:12.5px;color:var(--text-light);line-height:1.5}
+  .matrix-cell.k1 h4{color:#1B5E20}
+  .matrix-cell.k2 h4{color:#B85F0B}
+  .matrix-cell.k3 h4{color:#937217}
+  .matrix-cell.k4 h4{color:#B71C1C}
+  .matrix-xaxis{grid-column:2 / 4;grid-row:4;text-align:center;padding-top:18px;font-family:Georgia,serif;font-size:14px;color:var(--navy);font-weight:600;letter-spacing:0.05em;position:relative}
+  .matrix-xaxis::before{content:"← Düşük                                                       Yüksek →";position:absolute;left:0;right:0;top:0;font-size:10px;font-weight:normal;color:var(--text-light);letter-spacing:0.1em}
+
+  .soru-batarya{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
+  .soru-grup{background:#fff;padding:28px;border-radius:12px;border:1px solid var(--border)}
+  .soru-grup h4{font-family:Georgia,serif;font-size:18px;color:var(--navy);margin-bottom:6px}
+  .soru-grup .alt{font-size:11px;color:var(--orange);letter-spacing:0.15em;text-transform:uppercase;font-weight:600;margin-bottom:16px}
+  .soru-grup ol{counter-reset:soru;list-style:none;padding-left:0}
+  .soru-grup ol li{counter-increment:soru;padding:8px 0 8px 30px;font-size:13.5px;color:var(--text-light);line-height:1.5;position:relative;border-bottom:1px solid var(--border)}
+  .soru-grup ol li:last-child{border-bottom:none}
+  .soru-grup ol li::before{content:counter(soru);position:absolute;left:0;top:8px;font-family:Georgia,serif;color:var(--orange);font-weight:bold;width:22px;font-size:13px}
+
+  /* Bileşen Analizi & Öncelikler */
+  .bilesen-analiz,.oncelikler{background:#fff;border-radius:10px;padding:24px;margin-top:20px;border:1px solid var(--border)}
+  .analiz-header{font-size:11px;letter-spacing:0.18em;color:var(--orange);text-transform:uppercase;font-weight:700;margin-bottom:16px;text-align:center}
+  .ba-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .ba-item{background:var(--bg);padding:14px 12px;border-radius:8px;border-top:3px solid var(--orange);text-align:center}
+  .ba-item:nth-child(2){border-top-color:var(--teal)}
+  .ba-item:nth-child(3){border-top-color:var(--red)}
+  .ba-item:nth-child(4){border-top-color:var(--gold)}
+  .ba-item .ba-label{font-size:11px;color:var(--text-light);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:4px}
+  .ba-item .ba-name{font-family:Georgia,serif;font-size:14px;color:var(--navy);margin-bottom:6px;font-weight:600}
+  .ba-item .ba-vals{font-family:Georgia,serif;font-size:13px;color:var(--text-light)}
+  .ba-item .ba-delta{display:inline-block;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:bold;margin-top:6px;background:#FFF0E0;color:var(--orange)}
+  .ba-item .ba-delta.positive{background:#E8F5E9;color:#1B5E20}
+  .ba-item .ba-delta.warn{background:#FFEBEE;color:#B71C1C}
+
+  .oncelikler ol{list-style:none;counter-reset:onc;padding-left:0}
+  .oncelikler ol li{counter-increment:onc;padding:14px 14px 14px 50px;margin-bottom:10px;background:var(--bg);border-radius:8px;position:relative;font-size:14px;line-height:1.55;color:var(--ink)}
+  .oncelikler ol li::before{content:counter(onc);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:26px;height:26px;background:var(--orange);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:bold;font-family:Georgia,serif}
+  .oncelikler ol li strong{color:var(--navy);display:block;margin-bottom:3px;font-size:14.5px}
+  .oncelikler ol li em{color:var(--orange);font-style:italic}
+
   /* 3'lü Çerçeve */
   .ilke-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:30px}
   .ilke-card{background:#fff;border-radius:14px;padding:36px 30px;border-top:5px solid var(--navy);transition:all 0.3s;display:flex;flex-direction:column}
@@ -294,26 +439,103 @@
   .altin-ilke .triplet{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-top:20px;font-size:14px;color:rgba(255,255,255,0.85);letter-spacing:0.1em}
   .altin-ilke .triplet span{padding:6px 14px;background:rgba(255,255,255,0.08);border-radius:6px}
 
+  /* MOBILE — Mobile için ek kurumsal */
   @media (max-width:900px){
-    .ilke-cards,.isaret-grid,.tuzak-cozum{grid-template-columns:1fr}
-    .akis-flow{grid-template-columns:1fr;gap:20px}
-    .akis-arrow{transform:rotate(90deg)}
-    .altin-ilke h2{font-size:24px}
+    .miro-block{grid-template-columns:1fr;gap:24px;padding:24px}
+    .yazar-block{grid-template-columns:1fr;gap:24px;padding:32px}
+    .yazar-foto{max-width:200px;margin:0 auto;font-size:60px}
+    .paket-grid,.yol-grid,.rol-grid,.ciktilar-grid,.soru-batarya{grid-template-columns:1fr}
+    .yol-step{border-right:none;border-bottom:1px solid var(--border)}
+    .yol-step:last-child{border-bottom:none}
+    .gundem-row{grid-template-columns:60px 80px 1fr}
+    .gundem-row .gun-cikti{grid-column:1 / -1;border-left:none;border-top:3px solid var(--orange);padding:10px 16px;font-size:12px}
+    .gundem-row.header .gun-cikti{display:none}
+    .matrix-2x2{grid-template-columns:30px 1fr 1fr;gap:0}
+    .matrix-yaxis{font-size:12px;padding:0}
+    .matrix-yvals{padding:10px 0 10px 14px;font-size:9px}
+    .matrix-cell{padding:14px;min-height:130px}
+    .matrix-cell h4{font-size:14px}
+    .matrix-cell p{font-size:11.5px}
+    .matrix-cell .k-no{font-size:11px}
+    .hucre-epigraf{padding:36px 24px}
+    .hucre-epigraf h2{font-size:22px}
   }
 
+  /* MOBILE — Tablet (< 900px) */
   @media (max-width:900px){
-    .hero h1{font-size:38px}
-    .page-hero h1{font-size:34px}
-    .hero-grid,.kitap-grid,.form-grid{grid-template-columns:1fr;gap:40px}
-    .cards-3,.bilesen-grid,.torch-grid,.pusula-katmanlar,.matris-grid,.ornek-grid,.data-grid{grid-template-columns:1fr}
+    .container{padding:0 20px}
+    .section{padding:60px 0}
+    .hero{padding:60px 0 50px}
+    .hero h1{font-size:36px;line-height:1.1}
+    .page-hero{padding:50px 0 24px}
+    .page-hero h1{font-size:32px;line-height:1.1}
+    .hero-grid,.kitap-grid,.form-grid{grid-template-columns:1fr;gap:30px}
+    .cards-3,.bilesen-grid,.torch-grid,.pusula-katmanlar,.matris-grid,.ornek-grid,.data-grid,.ilke-cards,.isaret-grid,.tuzak-cozum{grid-template-columns:1fr}
+    .akis-flow{grid-template-columns:1fr;gap:20px;padding:24px}
+    .akis-arrow{transform:rotate(90deg);justify-content:center}
+    .altin-ilke{padding:40px 24px}
+    .altin-ilke h2{font-size:24px;line-height:1.4}
     nav ul{display:none}
-    footer .container{grid-template-columns:1fr 1fr;gap:30px}
-    .cta-final h2,.section-head h2{font-size:32px}
-    .formula-block .formula{font-size:30px}
-    .scale-row{grid-template-columns:1fr 60px;gap:6px}
-    .scale-row .scale-name{grid-column:1 / -1}
-    .calc-section .calc-desc{margin-left:0}
+    nav{padding:14px 0}
+    nav .container{gap:8px}
+    .logo{font-size:18px}
+    .btn{padding:10px 16px;font-size:13px}
+    footer .container{grid-template-columns:1fr 1fr;gap:24px}
+    .cta-final{padding:60px 0}
+    .cta-final h2,.section-head h2{font-size:30px;line-height:1.15}
+    .section-head{margin-bottom:36px}
+    .section-head p{font-size:15.5px}
+    .formula-block{padding:32px 22px}
+    .formula-block .formula{font-size:26px;line-height:1.4}
+    .scale-row{grid-template-columns:1fr 50px;gap:8px}
+    .scale-row .scale-name{grid-column:1 / -1;font-size:13.5px}
+    .calc-section .calc-desc{margin-left:0;margin-top:8px}
+    .calc-body{padding:24px}
+    .calc-header{padding:28px 22px}
+    .calc-header h3{font-size:24px}
+    .result-block{padding:24px}
     .result-row{grid-template-columns:1fr;gap:12px}
+    .result-cell .score-big{font-size:42px}
+    .ba-grid{grid-template-columns:repeat(2,1fr)}
+    .icindekiler{padding:24px}
+    .book-cover{padding:28px}
+    .book-cover h3{font-size:30px}
+  }
+
+  /* MOBILE — Telefon (< 600px) */
+  @media (max-width:600px){
+    .container{padding:0 16px}
+    .hero h1{font-size:30px}
+    .page-hero h1{font-size:26px}
+    .section{padding:50px 0}
+    .cta-final h2,.section-head h2{font-size:26px}
+    .hero .lead,.page-hero p{font-size:16px}
+    .formula-block .formula{font-size:22px}
+    .formula-block{padding:26px 18px}
+    .calc-q label{font-size:13.5px}
+    .calc-q textarea{font-size:13px}
+    .ilke-card{padding:28px 22px}
+    .ilke-card h3{font-size:26px}
+    .isaret{padding:22px}
+    .test-q-row{padding:12px 0}
+    .test-q-text{font-size:14px;min-width:auto}
+    .test-btn{padding:8px 16px;font-size:12.5px}
+    .ornek{padding:22px}
+    .icindekiler{padding:20px}
+    .icindekiler-section{padding-bottom:20px;margin-bottom:20px}
+    .icindekiler-section ol li{font-size:13.5px}
+    .form-card{padding:24px}
+    .ba-grid{grid-template-columns:1fr;gap:8px}
+    .ba-item{padding:12px}
+    .oncelikler ol li{padding:12px 12px 12px 44px;font-size:13.5px}
+    .akis-step{padding:14px}
+    .data-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+    .data-cell{padding:18px}
+    .data-cell .big{font-size:32px}
+    .altin-ilke h2{font-size:20px}
+    .altin-ilke .triplet{flex-direction:column;gap:8px}
+    .kitap-meta-stats{grid-template-columns:repeat(3,1fr);gap:8px}
+    .kitap-meta-stats strong{font-size:22px}
   }
 </style>
 </head>
@@ -340,18 +562,14 @@
       <div>
         <div class="author">SELİM OKTAR</div>
         <h1>Gaye, dışarıdan gelen bir lütuf değil — <em>içeriden inşa edilen</em> bir yapıdır.</h1>
-        <p class="lead">Anadolu Sigorta'dan EY'ye 8 firma, 7 sektör, 755 kayıtlık saha araştırmasıyla geliştirilen Gaye Modeli; bireysel ve kurumsal düzeyde gayeyi haritalandırır, ölçer, hizalar.</p>
+        <p class="lead">Gaye, anlatılan bir hikâye değil; her gün verdiğin kararların toplamı. Bu kitap, o kararların ardındaki pusulayı sana geri veriyor — ölçülebilen, geliştirilebilen, paylaşılabilen bir yapı olarak.</p>
         <div class="hero-cta">
           <a class="btn btn-orange" onclick="go('bireysel')">Gaye Skorumu Hesapla</a>
           <a class="btn btn-ghost" onclick="go('manifesto')">Modeli Tanı</a>
         </div>
       </div>
       <div>
-        <div class="book-cover">
-          <div class="author-tag">SELİM OKTAR</div>
-          <h3>Gayeni <em>Bul.</em></h3>
-          <div class="tag">İÇERİDEN BİR PUSULA</div>
-        </div>
+        <img src="img/kapak.png" alt="Gayeni Bul - Selim Oktar" class="book-cover-img">
       </div>
     </div>
   </section>
@@ -425,6 +643,10 @@
         <h2>Altı bileşen.</h2>
         <p>Gaye, soyut bir kavram değil; altı somut bileşenden oluşan bir harita. Girdi (Gaye), modülatör (Motivasyon), bileşenler (İtici Güçler, Destekler, Köstekler) ve çıktı (Anlam) — birlikte gayenin nasıl tezahür ettiğini gösterirler.</p>
       </div>
+      <div class="gorsel-card">
+        <img src="img/gaye-haritasi.png" alt="Gaye Haritası — Altı Bileşen">
+        <div class="caption">Gaye Haritası — kitabın 2.2 bölümünden orijinal görsel</div>
+      </div>
       <div class="bilesen-grid">
         <div class="bilesen gaye"><div class="sym">⟐</div><h4>GAYE</h4><p>"Neden varım?" sorusunun cevabı. Zamansız varoluş nedeni — modelin girdisi.</p></div>
         <div class="bilesen"><div class="sym">A</div><h4>İtici Güçler</h4><p>Gayeyi eyleme dönüştüren faaliyetler. "Ne yapıyorum?" sorusunun karşılığı.</p></div>
@@ -453,6 +675,10 @@
         <div class="bilesen m"><h4 style="font-size:14px;margin-bottom:6px">5 – 10</h4><p style="font-size:13px">Güçlü</p></div>
         <div class="bilesen gaye"><h4 style="font-size:14px;margin-bottom:6px">10+</h4><p style="font-size:13px">Çok Güçlü</p></div>
       </div>
+      <div class="gorsel-card" style="background:var(--bg)">
+        <img src="img/gaye-denklemi.png" alt="Gaye Denklemi — Görsel Anlatım">
+        <div class="caption">Gaye Denklemi — kitabın 2.3 bölümünden orijinal görsel</div>
+      </div>
     </div>
   </section>
 
@@ -476,14 +702,74 @@
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Çerçeve 04 — Gaye-Angajman Matrisi</div>
-        <h2>Dört kadran, bir fotoğraf.</h2>
-        <p>Bölüm 7'nin matrisi, iki ekseni kesiştirir: Angajman (kişi ne kadar bağlı?) ve Gaye Birlikteliği (bu bağlılık anlamlı bir amaçtan mı kaynaklanıyor?). Her bireyin, her ekibin, her kurumun bir kadranı vardır.</p>
+        <h2>İki eksen, bir fotoğraf.</h2>
+        <p>Çalışmak ile anlamak farklı şeylerdir. Birinin çok çalıştığı her zaman doğru yere gittiği anlamına gelmez. Bölüm 7'nin matrisi, iki ekseni kesiştirir: Angajman (ne kadar bağlısın?) ve Gaye Birlikteliği (bu bağlılık nereden geliyor?). Her birey, her ekip, her kurum bu dört kadrandan birinde durur — ve haritadaki yeri zamanla değişir.</p>
       </div>
-      <div class="matris-grid">
-        <div class="kadran k1"><div class="konum">I. Kadran · Sağ Üst</div><h4>Gaye Birlikteliği</h4><p>Yüksek angajman + yüksek gaye birlikteliği. Anlam ve bağlılık birlikte. İdeal konum.</p></div>
-        <div class="kadran k2"><div class="konum">II. Kadran · Sol Üst</div><h4>Koşan ama nereye?</h4><p>Yüksek angajman, düşük gaye birlikteliği. Enerji var, yön belirsiz. Tükenmenin yatağı.</p></div>
-        <div class="kadran k3"><div class="konum">III. Kadran · Sağ Alt</div><h4>Sempatik ama uzak</h4><p>Düşük angajman, yüksek gaye birlikteliği. Anlama inanır ama harekete geçemez.</p></div>
-        <div class="kadran k4"><div class="konum">IV. Kadran · Sol Alt</div><h4>Kopukluk</h4><p>Düşük angajman, düşük gaye birlikteliği. Ne anlam, ne enerji. Yabancılaşma bölgesi.</p></div>
+
+      <div class="matrix-visual">
+        <div class="matrix-2x2">
+          <div class="matrix-yaxis">↑ Gaye Birlikteliği →</div>
+          <div class="matrix-yvals"><span>YÜKSEK</span><span style="margin-top:auto">DÜŞÜK</span></div>
+
+          <div class="matrix-cell k2">
+            <div class="k-no">II. KADRAN</div>
+            <h4>Koşan ama nereye?</h4>
+            <p>Enerji yüksek, yön belirsiz. Çok çalışıyor — ama anlam haritasıyla hizalı değil. Tükenmişliğin yatağı.</p>
+          </div>
+          <div class="matrix-cell k1">
+            <div class="k-no">I. KADRAN</div>
+            <h4>Gaye Birlikteliği</h4>
+            <p>Anlam ve bağlılık birlikte. İdeal konum — sürdürmek, yaymak, başkalarına da göstermek.</p>
+          </div>
+          <div class="matrix-cell k4">
+            <div class="k-no">IV. KADRAN</div>
+            <h4>Kopukluk</h4>
+            <p>Ne anlam, ne enerji. Yabancılaşmanın bölgesi. Buradan çıkış için önce gaye, sonra angajman.</p>
+          </div>
+          <div class="matrix-cell k3">
+            <div class="k-no">III. KADRAN</div>
+            <h4>Sempatik ama uzak</h4>
+            <p>Anlama inanır, hareket etmez. Niyet kadar çaba, eylem kadar irade gerek.</p>
+          </div>
+
+          <div class="matrix-xaxis">Angajman →</div>
+        </div>
+      </div>
+
+      <div class="soru-batarya">
+        <div class="soru-grup">
+          <h4>Angajman Soruları</h4>
+          <div class="alt">8 soru · 1–5 ölçek</div>
+          <ol>
+            <li>İşime/projelerime ne kadar bağlanıyorum?</li>
+            <li>Yeni bir gün başlarken enerjim nasıl?</li>
+            <li>Zorluklarla karşılaşınca ne kadar dirençliyim?</li>
+            <li>İşimi/projelerimi ne kadar sahipleniyorum?</li>
+            <li>Yakınlarıma işimden ne kadar heyecanla bahsediyorum?</li>
+            <li>Hafta sonları bile çalışmak istediğim oluyor mu?</li>
+            <li>Yeni fikir üretmekten ne kadar keyif alıyorum?</li>
+            <li>Günlük rutinimden ne kadar memnunum?</li>
+          </ol>
+        </div>
+        <div class="soru-grup">
+          <h4>Gaye Birlikteliği Soruları</h4>
+          <div class="alt">8 soru · 1–5 ölçek</div>
+          <ol>
+            <li>Yaptığım işin bir anlamı var mı?</li>
+            <li>Dünyada olumlu bir iz bıraktığımı hissediyor muyum?</li>
+            <li>Değerlerimle uyumlu yaşadığımı düşünüyor muyum?</li>
+            <li>10 yıl sonra bugünün kararlarından memnun olacak mıyım?</li>
+            <li>Başkalarına katkı sağladığımı hissediyor muyum?</li>
+            <li>Hayatımdaki büyük kararlar bir örüntü oluşturuyor mu?</li>
+            <li>"Neden bunu yapıyorum?" sorusuna net yanıtım var mı?</li>
+            <li>Kendimi bir şeylerin parçası olarak görüyor muyum?</li>
+          </ol>
+        </div>
+      </div>
+
+      <div style="margin-top:30px;padding:24px 28px;background:#FFF8F0;border-left:4px solid var(--orange);border-radius:0 10px 10px 0">
+        <p style="font-family:Georgia,serif;font-size:16px;color:var(--ink);font-style:italic;line-height:1.6">"Gaye, çalışmaktan değil; çalışmanın nereye gittiğinden anlaşılır. Matristeki yerin, bu sorunun bir günkü cevabıdır — ama yarınki cevap senin elinde."</p>
+        <p style="font-size:13px;color:var(--text-light);margin-top:8px;font-family:Georgia,serif">— <em>Gayeni Bul</em>, Bölüm 7</p>
       </div>
     </div>
   </section>
@@ -501,16 +787,14 @@
   <section class="section section-cream">
     <div class="container kitap-grid">
       <div>
-        <div class="book-cover" style="max-width:100%">
-          <div class="author-tag">SELİM OKTAR</div>
-          <h3>Gayeni <em>Bul.</em></h3>
-          <div class="tag">İÇERİDEN BİR PUSULA</div>
-        </div>
+        <img src="img/kapak.png" alt="Gayeni Bul - Kapak" class="book-cover-img-large">
       </div>
       <div>
-        <h2 style="font-size:34px;margin-bottom:16px">Kitap, niye bu kitap?</h2>
-        <p style="font-size:16px;color:var(--text-light);margin-bottom:18px">Çağ, "ne yapıyorum?" sorusunu çoğumuza birden fazla kez sordurdu. Selim Oktar bu kitapta o soruya bir cevap değil, bir yöntem sunar. Gaye Modeli; sahada toplanmış 755 kayıtla, 8 farklı firmadan ve 7 sektörden gelen verilerle test edilmiş, kavramsal olarak rafine edilmiş bir çerçevedir.</p>
-        <p style="font-size:16px;color:var(--text-light);margin-bottom:18px">Kitap, hem kişisel pusulasını arayan bireye hem de kurumsal kuzey yıldızını çizmek isteyen lidere yazıldı. Yedi bölüm, dört çerçeve, iki düzlem (bireysel + kurumsal) — ve bir adet sade bir denklem.</p>
+        <h2 style="font-size:34px;margin-bottom:16px">Bir soru, kaç kez döner aklımıza?</h2>
+        <p style="font-size:16px;color:var(--text-light);margin-bottom:18px"><em>"Ne yapıyorum ben?"</em> Bu soru, çoğumuzun zihninde gezinen bir arızalı düşüncedir. Sabah üçte uyandırır, takvime bakarken kıpırdar, kalabalık bir toplantıda kulağa fısıldar. Çoğu zaman bastırırız; çoğu zaman çabuk geçer. Ama dönüp dönüp gelir.</p>
+        <p style="font-size:16px;color:var(--text-light);margin-bottom:18px">Selim Oktar, çeyrek asır boyunca bu soruyu hem kendinde hem sahada izledi. Anadolu Sigorta'dan EY'ye, Ankara Patent'ten ÇCSİB sektörlerine uzanan 755 kayıtlık bir araştırma yürüttü. Vardığı sonuç şuydu: "Ne yapıyorum?" sorusu küçük değildir; yöntemsiz cevaplandığında insanı tüketir.</p>
+        <p style="font-size:16px;color:var(--text-light);margin-bottom:18px"><em>Gayeni Bul</em>, bu soruya bir cevap dayatmaz; <strong style="color:var(--navy)">bir yöntem inşa eder.</strong> Gayeyi haritalandıran, ölçen, hizalayan, geliştirilebilir kılan dört çerçeve. Bireysel pusulanı kurarken kullanırsın — ekibinle gayeyi konuşturmak istediğinde aynı çerçeveyi kurumsal düzleme taşırsın.</p>
+        <p style="font-size:16px;color:var(--text-light);margin-bottom:18px">Hikâye katmanı, modern dünyanın kavşaklarında gayeyi arayan bir yolculuğun peşinden gider. Yöntem katmanı, her bölümün sonunda seni durdurup pratik adımlara çağırır. İkisi birlikte okunmak için yazıldı: birini bırakırsan diğeri eksik kalır.</p>
         <div class="kitap-meta-stats">
           <div><strong>7</strong><span>Bölüm</span></div>
           <div><strong>755</strong><span>Saha kaydı</span></div>
@@ -603,6 +887,32 @@
             <li><span class="num">7.4</span>İşin Ötesinde: Gaye Hayatın Her Köşesinde</li>
             <li><span class="num">7.5</span>Pratik Adımlar: Beş Vaka</li>
           </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Yazar</div>
+        <h2>Selim Oktar.</h2>
+        <p>Çeyrek asırdır gayeyi araştıran araştırmacı, danışman ve yazar. Saha çalışmalarıyla, atölye deneyimleriyle ve kendi entelektüel yolculuğuyla Gaye Modeli'nin temellerini attı.</p>
+      </div>
+      <div class="yazar-block">
+        <div class="yazar-foto">SO</div>
+        <div class="yazar-info">
+          <h2>Selim Oktar</h2>
+          <div class="tagline">Yazar · Araştırmacı · Danışman</div>
+          <p><em>Gayeni Bul</em>, Selim Oktar'ın 25 yıllık araştırmasının damıtıldığı bir kitap. Anadolu Sigorta'dan EY'ye, ÇCSİB sektörlerinden Ankara Patent'e uzanan saha çalışmalarıyla 755 kayıtlık bir veritabanı oluşturdu; bu verilerin üzerine dört çerçeveli Gaye Modeli'ni inşa etti.</p>
+          <p>Kitap, akademik bir öneri olarak değil; sahada test edilmiş, kavramsal olarak rafine edilmiş, bireysel ve kurumsal düzeyde uygulanabilir bir yöntem olarak okuyucuya sunuluyor. Selim Oktar'ın asıl amacı, gayeyi soyut bir kavramdan çıkarıp her gün karar veren insanın elinde bir araca dönüştürmek.</p>
+          <p style="font-style:italic;color:var(--orange);font-family:Georgia,serif;border-left:3px solid var(--orange);padding-left:16px;margin-top:18px">"Gaye anlatılan bir hikâye değil; her gün verdiğin kararların toplamıdır."</p>
+          <div class="yazar-stats">
+            <div><strong>25</strong><span>Yıl Araştırma</span></div>
+            <div><strong>755</strong><span>Saha Kaydı</span></div>
+            <div><strong>8</strong><span>Firma</span></div>
+            <div><strong>7</strong><span>Sektör</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -792,6 +1102,17 @@
             <div style="font-size:11px;letter-spacing:0.18em;color:var(--text-light);text-transform:uppercase;text-align:center;margin-bottom:6px">Gelişim Potansiyeli</div>
             <div class="potansiyel-bar"><div class="potansiyel-bar-fill" id="potansiyel_bar"></div></div>
             <div class="potansiyel-text" id="potansiyel_text">+5.00</div>
+
+            <div class="bilesen-analiz">
+              <div class="analiz-header">Bileşen bazlı gelişim haritan</div>
+              <div class="ba-grid" id="ba_grid"></div>
+            </div>
+
+            <div class="oncelikler">
+              <div class="analiz-header">Senin için en kritik 2 öncelik</div>
+              <ol id="oncelik_list"></ol>
+            </div>
+
             <div class="result-interp" id="result_yorum">
               <strong>Yorumun:</strong> Skorların güncellenince burada kişisel yorumun belirir.
             </div>
@@ -813,12 +1134,32 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+      <div class="hucre-epigraf">
+        <div class="epigraf-eye">Kurumsal Liderin Hücresi</div>
+        <h2>Kurumsal lider, kararını kalabalıkta vermez. <em>Önce hücreye girer</em>; sonra çıkar ve dünyaya hükmünü söyler.</h2>
+        <div class="alt">— Hücre, fiziksel bir oda değil; karar zihninde fazlalıklardan arındırılmış küçük bir alandır.</div>
+      </div>
+    </div>
+  </section>
+
   <section class="section section-cream">
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Kurumsal Lider Çerçevesi</div>
         <h2>Üç ilke, üç sade soru.</h2>
-        <p>Liderlik kararlarının üçte biri yön belirsizliğinden, üçte biri fazla unsurdan, üçte biri kısa-uzun vade tartışmasından sapar. Üç ilke bu üç düğümü doğrudan açar.</p>
+        <p>Liderlik kararlarının üçte biri yön belirsizliğinden, üçte biri fazla unsurdan, üçte biri kısa-uzun vade tartışmasından sapar. Üç ilke bu üç düğümü doğrudan açar — Miró'nun "Cell of a Recluse" metaforuyla.</p>
+      </div>
+
+      <div class="miro-block">
+        <img src="img/miro.png" alt="Joan Miró — Cell of a Recluse (1968)">
+        <div>
+          <div class="miro-eyebrow">İlham Kaynağı</div>
+          <h3>Cell of a Recluse — Hücre, Beyaz Alan, Kırılgan Çizgi</h3>
+          <p>Joan Miró'nun 1968 tarihli üçlemesi, kurumsal liderin karar zihniyetine birebir oturuyor. <em>Hücre</em> — kararı dünyadan değil, fazlalıklardan arındıran iç oda. <em>Beyaz alan</em> — fazlalıklar çıkarıldığında geriye kalan saf zemin. <em>Kırılgan çizgi</em> — kısa vadenin görkemine değil, uzun vadenin sesine kulak veren hüküm.</p>
+          <p>Bu üç metafor; lider için disiplin, ekip için netlik, kurum için dayanıklılık üretir.</p>
+        </div>
       </div>
 
       <div class="ilke-cards">
@@ -1069,8 +1410,256 @@
         <div class="card" style="cursor:default"><div class="num">3.3</div><h3>Yönetişim — Tutarlılık — İlke</h3><p>İyi ilkeler ile kötü ilkelerin ayrımı, tutarlılığın zaman boyutu, gaye odaklı yönetişim.</p></div>
         <div class="card" style="cursor:default"><div class="num">3.4</div><h3>KPI vs MPI</h3><p>KPI: "Ne kadar ürettik?" MPI (Meaningful Performance Index): "Bu üretim kime ne kattı?"</p></div>
       </div>
-      <div style="text-align:center;margin-top:50px">
-        <a class="btn btn-orange" onclick="go('iletisim')">Şirketinle gayeyi konuşalım</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Hizmet Paketleri</div>
+        <h2>Üç paket, üç farklı yoğunluk.</h2>
+        <p>Yarım günlük bir başlangıçtan, çeyrek yıllık bir dönüşüme kadar — şirketinin durumuna göre üç paket. Hepsi Gaye Modeli'nin dört çerçevesi üzerine kurulu.</p>
+      </div>
+      <div class="paket-grid">
+        <div class="paket">
+          <div class="paket-tip">Başlangıç</div>
+          <h3>Hücre Atölyesi</h3>
+          <div class="sure">Yarım gün · 8–15 katılımcı</div>
+          <p class="ozet">Üst yönetim için karar disiplini girişi. Gaye–Meta-Strateji–Bilgelik üçlüsünü vakanız üzerinden uygulamalı çalışırız.</p>
+          <ul>
+            <li>Mevcut karar süreçleri tanısı</li>
+            <li>3 İşaret kanvası ile bir gerçek karar simülasyonu</li>
+            <li>Bilgelik testi grup uygulaması</li>
+            <li>Toplantı protokolü taslağı</li>
+            <li>Sonraki adım yol haritası</li>
+          </ul>
+          <a class="btn btn-ghost paket-btn" onclick="go('iletisim')">Detay iste</a>
+        </div>
+        <div class="paket featured">
+          <div class="paket-tip">En kapsamlı</div>
+          <h3>Gaye Atölyesi</h3>
+          <div class="sure">2 gün · Yönetim Kurulu / İcra Kurulu</div>
+          <p class="ozet">Şirketin gerçek gayesini ortaya çıkarmak ve onu strateji-yapı-kültür üçgenine işlemek için tam paket.</p>
+          <ul>
+            <li>Şirket gayesi cümlesi (kurumsal manifesto)</li>
+            <li>Dört katmanlı Gaye Pusulası inşası</li>
+            <li>Gaye-Angajman matrisinde mevcut konum tanısı</li>
+            <li>4 İş Modeli Tipi'nde şirketin yeri</li>
+            <li>KPI → MPI geçiş planı taslağı</li>
+            <li>30/60/90 günlük uygulama planı</li>
+          </ul>
+          <a class="btn btn-orange paket-btn" onclick="go('iletisim')">Detay iste</a>
+        </div>
+        <div class="paket">
+          <div class="paket-tip">Dönüşüm</div>
+          <h3>Liderlik Programı</h3>
+          <div class="sure">12 hafta · 6 modül · 12–25 lider</div>
+          <p class="ozet">Yöneticilerini gaye taşıyıcısı liderlere dönüştüren, eyleme bağlı yapılandırılmış bir program.</p>
+          <ul>
+            <li>Modül 1: Kişisel Gaye Pusulası (BGS)</li>
+            <li>Modül 2: Karar Disiplini ve Hücre Zamanı</li>
+            <li>Modül 3: 3 İşaret Pratiği</li>
+            <li>Modül 4: Bilgelik Testi ve Etik Çerçeve</li>
+            <li>Modül 5: Ekibe Yansıtma — KPI/MPI</li>
+            <li>Modül 6: Akil Liderlik ve Süreklilik</li>
+          </ul>
+          <a class="btn btn-ghost paket-btn" onclick="go('iletisim')">Detay iste</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">90 Günlük Yol Haritası</div>
+        <h2>Tanıdan operasyona, üç fazda.</h2>
+        <p>Kurumsal Gaye Atölyesi sonrası hayata geçiş, üç eşit fazda yapılır. Her fazın sonunda somut bir çıktı vardır; üçü birden, gayenin günlük operasyona indiği tam bir uygulama döngüsüdür.</p>
+      </div>
+      <div class="yol-grid">
+        <div class="yol-step">
+          <span class="gun-badge">0–30 GÜN</span>
+          <h4>Tanı</h4>
+          <p class="yol-ozet">Şirketin mevcut karar zemininin fotoğrafını çekiyoruz. Tartışma değil, gözlem fazı.</p>
+          <ul>
+            <li>Üst yönetimle 1:1 derin mülakatlar</li>
+            <li>Son 12 ayın 5 büyük kararı analizi</li>
+            <li>Ekiplerle Gaye-Angajman taraması</li>
+            <li>Mevcut KPI seti ve toplantı yapısı incelemesi</li>
+          </ul>
+        </div>
+        <div class="yol-step">
+          <span class="gun-badge">30–60 GÜN</span>
+          <h4>Çerçeve</h4>
+          <p class="yol-ozet">Tanıyı çerçeveye dönüştürüyoruz. Gaye, Meta-Strateji ve Bilgelik şirketin diline geçiyor.</p>
+          <ul>
+            <li>Gaye Atölyesi (2 gün, üst yönetim)</li>
+            <li>Şirket Gayesi cümlesi → kurumsal manifesto</li>
+            <li>Dört katmanlı Gaye Pusulası</li>
+            <li>Karar Akışı protokolünün benimsenmesi</li>
+          </ul>
+        </div>
+        <div class="yol-step">
+          <span class="gun-badge">60–90 GÜN</span>
+          <h4>Operasyon</h4>
+          <p class="yol-ozet">Çerçeve günlük operasyona iniyor. Toplantı, KPI, performans değerlendirme — hepsi yeniden hizalı.</p>
+          <ul>
+            <li>Toplantı agendasına 10 dakikalık hücre zamanı</li>
+            <li>KPI → MPI geçiş tablosu</li>
+            <li>Yönetim kurulu gündem şablonu</li>
+            <li>İlk 90 günlük gözden geçirme</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Şirketinin Eline Ne Kalır?</div>
+        <h2>Sekiz somut çıktı.</h2>
+        <p>Atölyeden manifesto belgelerine, toplantı şablonlarından MPI çerçevesine — sürecin sonunda şirketin yöneticisinin masasına gelen somut çıktıların listesi.</p>
+      </div>
+      <div class="ciktilar-grid">
+        <div class="cikti"><div class="icon">⟐</div><div><h4>Şirket Gayesi Cümlesi</h4><p>Kurumun "neden varız?" sorusunu tek cümlede yanıtlayan, 10 yıl sonra da geçerli olacak gaye ifadesi.</p></div></div>
+        <div class="cikti"><div class="icon">▣</div><div><h4>Dört Katmanlı Gaye Pusulası</h4><p>Gaye / Değerler / Vizyon / Misyon — birbirine bağlı, görsel olarak tek sayfada özetlenmiş kurumsal pusula.</p></div></div>
+        <div class="cikti"><div class="icon">⊞</div><div><h4>Karar Akışı Protokolü</h4><p>Her büyük karar için Gaye → Meta-Strateji → Bilgelik filtresinden geçirme talimatı, tek sayfa.</p></div></div>
+        <div class="cikti"><div class="icon">◇</div><div><h4>3 İşaret Kanvası</h4><p>İtici güç / Köstek / Kaldıraç çerçevesinde stratejik kararı sadeleştirmek için doldurulabilir şablon.</p></div></div>
+        <div class="cikti"><div class="icon">△</div><div><h4>Hücre Zamanı Toplantı Agendası</h4><p>10 dakikalık hücre + ana gündem yapısı. Tüm üst düzey toplantılar bu çerçevede yürür.</p></div></div>
+        <div class="cikti"><div class="icon">○</div><div><h4>KPI → MPI Geçiş Tablosu</h4><p>"Ne kadar ürettik?" sorusundan "Bu üretim kime ne kattı?" sorusuna geçişin somut metrik haritası.</p></div></div>
+        <div class="cikti"><div class="icon">□</div><div><h4>Yönetim Kurulu Gündem Şablonu</h4><p>Üç ilkeyi standart hale getiren, her toplantıda kullanılan resmi gündem şablonu.</p></div></div>
+        <div class="cikti"><div class="icon">⬡</div><div><h4>Gaye-Angajman Tarama Raporu</h4><p>Şirketin tamamı ya da seçili birim için 4 kadran haritası ve aksiyon önerileri.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Rol Bazlı Uygulama</div>
+        <h2>CEO ve CHRO için aynı çerçeve, farklı pratik.</h2>
+        <p>Üst yönetimde aynı ilkeyi farklı sorumluluklarla taşırsın. CEO için odak: yön ve karar disiplini. CHRO için odak: kültür ve insan tarafı. İkisi birlikte gayenin organizasyona inmesini garanti eder.</p>
+      </div>
+      <div class="rol-grid">
+        <div class="rol-card">
+          <div class="rol-tag">CEO</div>
+          <h3>Yön ve Karar Disiplini</h3>
+          <p class="rol-vurgu">"Şirketin gayesini koruyan, kararı sadeleştiren, uzun vadeli hüküm veren kişi."</p>
+
+          <h5>Gaye — Yön Filtresi</h5>
+          <ul>
+            <li>Stratejik kararlarda gaye cümlesini test sorusu olarak kullanır</li>
+            <li>Çeyrek hedefini gayenin ışığında okur, terse çevirmez</li>
+            <li>Yatırımcı baskısı ile gaye arasındaki çizgiyi korur</li>
+          </ul>
+
+          <h5>Meta-Strateji — 3 İşaret</h5>
+          <ul>
+            <li>Yönetim kuruluna giden her kararı 3 işaretle özetler</li>
+            <li>Fazla projeyi, fazla KPI'yı kesme cesaretini gösterir</li>
+            <li>"Bunu yapmıyoruz" listesini en az "yapıyoruz" listesi kadar net tutar</li>
+          </ul>
+
+          <h5>Bilgelik — 3 Yıl Testi</h5>
+          <ul>
+            <li>Her büyük kararı bilgelik testine sokar (3 evet/hayır)</li>
+            <li>Kısa vadenin görkemi yerine uzun vadenin sesini öne alır</li>
+            <li>Hatayı erken yakalayan izleme noktaları kurar</li>
+          </ul>
+        </div>
+
+        <div class="rol-card chro">
+          <div class="rol-tag">CHRO</div>
+          <h3>Kültür ve İnsan Tarafı</h3>
+          <p class="rol-vurgu">"Gayenin günlük davranışa, performansa ve kültüre indiği zemini kuran kişi."</p>
+
+          <h5>Gaye — Kültürel Filtre</h5>
+          <ul>
+            <li>İşe alım kararlarını gaye uyumuyla test eder</li>
+            <li>Kurumsal hikâyeyi (onboarding, iletişim) gaye etrafında kurar</li>
+            <li>Liderlik gelişim programlarını gaye odaklı tasarlar</li>
+          </ul>
+
+          <h5>Meta-Strateji — Sadeleştirme</h5>
+          <ul>
+            <li>Performans çerçevesini sade tutar — fazla metrik = bulanık karar</li>
+            <li>Ekiplere "3 öncelik" disiplinini yayar</li>
+            <li>Toplantı yoğunluğunu hücre zamanıyla dengelemenin sahibi olur</li>
+          </ul>
+
+          <h5>Bilgelik — İnsan Maliyeti</h5>
+          <ul>
+            <li>KPI başarılarının insan maliyetini ayrı ayrı raporlar (MPI)</li>
+            <li>"Kültürü bozan başarı" durumlarını erken işaretler</li>
+            <li>Performans ile yabancılaşma arasındaki çizgiyi izler</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Yönetim Kurulu Gündem Şablonu</div>
+        <h2>Bir saat, üç ilke, somut çıktılar.</h2>
+        <p>Her yönetim kurulu toplantısının başına yerleşen 60 dakikalık standart gündem. Tüm kararlar bu üç filtreden geçer; toplantı sonunda her bölümün masada bıraktığı somut çıktı vardır.</p>
+      </div>
+      <div class="gundem-table">
+        <div class="gundem-row header">
+          <div class="gun-no">#</div>
+          <div class="gun-sure">Süre</div>
+          <div class="gun-baslik">Gündem Maddesi</div>
+          <div class="gun-cikti">Çıktı</div>
+        </div>
+        <div class="gundem-row">
+          <div class="gun-no">1</div>
+          <div class="gun-sure">10 dk</div>
+          <div class="gun-baslik">Hücre Zamanı<span class="gun-aciklama">Telefon kapalı, sunum yok. Üç ilke (Gaye-Meta-Strateji-Bilgelik) kısaca hatırlatılır. Toplantının ana kararı tek cümleyle ifade edilir.</span></div>
+          <div class="gun-cikti">Toplantının ana karar cümlesi</div>
+        </div>
+        <div class="gundem-row">
+          <div class="gun-no">2</div>
+          <div class="gun-sure">10 dk</div>
+          <div class="gun-baslik">Gaye Filtresi<span class="gun-aciklama">"Bu karar, kurumun neden var olduğuna hizmet ediyor mu?" Şirket gayesi cümlesi yüksek sesle okunur, kararın gayeyle hizası tartışılır.</span></div>
+          <div class="gun-cikti">Yön onayı (evet / hayır / koşullu)</div>
+        </div>
+        <div class="gundem-row">
+          <div class="gun-no">3</div>
+          <div class="gun-sure">15 dk</div>
+          <div class="gun-baslik">3 İşaret Çalışması<span class="gun-aciklama">Kararı belirleyen üç unsuru bul: İtici güç, köstek, kaldıraç. 3'ten fazla unsur sıralanıyorsa karar henüz olgunlaşmamıştır — geri çekilir.</span></div>
+          <div class="gun-cikti">3 İşaret kanvası, doldurulmuş</div>
+        </div>
+        <div class="gundem-row">
+          <div class="gun-no">4</div>
+          <div class="gun-sure">10 dk</div>
+          <div class="gun-baslik">Bilgelik Testi<span class="gun-aciklama">Üç soru: Hangi davranışı ödüllendiriyor? · Yanlışsa nasıl erken anlarız? · Yüksek sesle savunulabilir mi? Birine "hayır" → revizyon.</span></div>
+          <div class="gun-cikti">Hüküm: ilerle / revizyon / geri çek</div>
+        </div>
+        <div class="gundem-row">
+          <div class="gun-no">5</div>
+          <div class="gun-sure">10 dk</div>
+          <div class="gun-baslik">Karar ve Sahiplik<span class="gun-aciklama">Karar yazıya geçirilir, sahibi atanır, izleme noktaları belirlenir. KPI değil, MPI eklenir: bu karar kime ne katacak?</span></div>
+          <div class="gun-cikti">Karar metni + sahibi + MPI</div>
+        </div>
+        <div class="gundem-row">
+          <div class="gun-no">6</div>
+          <div class="gun-sure">5 dk</div>
+          <div class="gun-baslik">Geriye Bakış<span class="gun-aciklama">Önceki toplantının kararlarından biri rastgele seçilir, "bilgelik testi" geriye dönük uygulanır. Hata varsa açıkça not düşülür.</span></div>
+          <div class="gun-cikti">Öğrenilen ders defteri</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div style="text-align:center;max-width:680px;margin:0 auto">
+        <div class="eyebrow">İlk Görüşme</div>
+        <h2 style="font-size:38px;margin-bottom:18px;color:var(--navy)">İhtiyacın hangi paket?</h2>
+        <p style="color:var(--text-light);font-size:16px;margin-bottom:30px">İlk 30 dakikalık keşif görüşmesi ücretsiz. Şirketinin durumunu dinleriz, hangi paketin daha uygun olduğunu birlikte değerlendiririz.</p>
+        <a class="btn btn-orange" style="font-size:15px;padding:14px 28px" onclick="go('iletisim')">Şirketinle gayeyi konuşalım</a>
       </div>
     </div>
   </section>
@@ -1174,19 +1763,92 @@
     if(s<10)return'Güçlü';
     return'Çok Güçlü';
   }
-  function yorum(b,g,fark){
+
+  // Bileşen bazlı somut aksiyonlar
+  const aksiyonlar={
+    A_dusuk:{baslik:'İtici güçlerini netleştir',aciklama:'Para ve statü olmasa devam edeceğin işleri bir hafta günlük tut. Hangi konuda zaman uçup gidiyor? Orada cevap var.'},
+    A_artir:{baslik:'İtici güç sıçraması yap',aciklama:'Üç tutkundan birine haftada en az 4 saat yer aç. Takvime gerçek dakika gir, niyet değil.'},
+    B_dusuk:{baslik:'Destek sistemini kur',aciklama:'Çevrendeki 3 destek kaynağını isim isim listele. Eksikse: bir mentor bul, bir topluluğa katıl, bir ustadan ders al.'},
+    B_artir:{baslik:'Mevcut desteğini güçlendir',aciklama:'En değerli 3 ilişkine bu ay düzenli zaman ayır. Destek otomatik gelmez, beslenmek ister.'},
+    C_yuksek:{baslik:'En sık tekrarlayan kösteğini hedefle',aciklama:'Engellerinin %80\'i 1-2 kalıptan gelir. O kalıbı yakala, bir hafta günlük tut, kaynağı içsel mi dışsal mı ayır.'},
+    C_azalt:{baslik:'Kösteklerini sistematik azalt',aciklama:'En büyük kösteğine küçük ama tutarlı haftalık aksiyon ver. 12 hafta sonra geriye dön, fark beklediğinden büyük olur.'},
+    M_dusuk:{baslik:'Motivasyonu kaldıraç olarak kullan',aciklama:'Formülde kösteğin etkisini en çok yumuşatan değişken bu. Geçmişteki başarılarını listele, kısa vadeli kazanım üret, momentum kur.'},
+    M_artir:{baslik:'Motivasyon zeminini sürdürülebilir kıl',aciklama:'Mevcut motivasyonun gerçek mi geçici mi? Anlık ivmeden değil, derin bir kaynaktan geliyorsa bunu somut bir ritüele bağla (sabah rutini, haftalık check-in).'}
+  };
+
+  function bilesenAnaliziHTML(A_b,A_g,B_b,B_g,C_b,C_g,M_b,M_g){
+    const items=[
+      {kod:'A',ad:'İtici Güçler',b:A_b,g:A_g,iyi:'positive'},
+      {kod:'B',ad:'Destekler',b:B_b,g:B_g,iyi:'positive'},
+      {kod:'C',ad:'Köstekler',b:C_b,g:C_g,iyi:'warn',ters:true},
+      {kod:'M',ad:'Motivasyon',b:M_b,g:M_g,iyi:'positive'}
+    ];
+    return items.map(i=>{
+      const delta=i.g-i.b;
+      const cls=i.ters?(delta<0?'positive':(delta>0?'warn':'')):(delta>0?'positive':(delta<0?'warn':''));
+      const sign=delta>0?'+':'';
+      return '<div class="ba-item"><div class="ba-label">'+i.kod+'</div><div class="ba-name">'+i.ad+'</div><div class="ba-vals">'+i.b+' → '+i.g+'</div><div class="ba-delta '+cls+'">'+sign+delta+'</div></div>';
+    }).join('');
+  }
+
+  function oncelikleriHesapla(A_b,A_g,B_b,B_g,C_b,C_g,M_b,M_g){
+    // Her bileşene puan ver - en kritik olanlar
+    const adaylar=[];
+    // C yüksekse (köstek baskın) → en kritik
+    if(C_b>=7) adaylar.push({skor:C_b*1.5,key:'C_yuksek',bilesen:'C'});
+    // M düşükse → formülde en güçlü kaldıraç
+    if(M_b<=4) adaylar.push({skor:(10-M_b)*1.4,key:'M_dusuk',bilesen:'M'});
+    // A düşük
+    if(A_b<=4) adaylar.push({skor:(10-A_b)*1.2,key:'A_dusuk',bilesen:'A'});
+    // B düşük
+    if(B_b<=4) adaylar.push({skor:(10-B_b)*1.1,key:'B_dusuk',bilesen:'B'});
+    // En büyük gelişim potansiyeli olan bileşeni de ekle
+    const farklar=[
+      {key:'A_artir',v:A_g-A_b,bilesen:'A'},
+      {key:'B_artir',v:B_g-B_b,bilesen:'B'},
+      {key:'C_azalt',v:C_b-C_g,bilesen:'C'},
+      {key:'M_artir',v:M_g-M_b,bilesen:'M'}
+    ].filter(x=>x.v>0).sort((a,b)=>b.v-a.v);
+    if(farklar.length) adaylar.push({skor:farklar[0].v*1.0,key:farklar[0].key,bilesen:farklar[0].bilesen});
+
+    // Skora göre sırala, ilk 2'yi al, aynı bileşenden duplicate yapma
+    adaylar.sort((a,b)=>b.skor-a.skor);
+    const secilen=[],bilesenler=new Set();
+    for(const a of adaylar){
+      if(bilesenler.has(a.bilesen)) continue;
+      secilen.push(a);
+      bilesenler.add(a.bilesen);
+      if(secilen.length>=2) break;
+    }
+    if(secilen.length<2){
+      // En az 2 öneri çıkmazsa default ekle
+      const def=['A_artir','M_artir','B_artir','C_azalt'];
+      for(const k of def){
+        if(secilen.length>=2)break;
+        if(!secilen.find(s=>s.key===k))secilen.push({skor:0,key:k,bilesen:k.charAt(0)});
+      }
+    }
+    return secilen.map(s=>{
+      const a=aksiyonlar[s.key];
+      return '<li><strong>'+a.baslik+'</strong>'+a.aciklama+'</li>';
+    }).join('');
+  }
+
+  function yorumYaz(b,g,fark){
     let s='<strong>Bugün:</strong> Gaye skorun <strong>'+b.toFixed(2)+'</strong> — <em>'+statusFor(b)+'</em> bölgesinde. ';
-    if(b<2)s+='İtici güçlerin ya da desteklerin yetersiz, ya da kösteklerin baskın. Önce A ve B\'yi güçlendirmeye, kösteklerin pratik olarak hangi 1-2 tanesinin en çok zaman aldığını bulmaya odaklan.<br><br>';
-    else if(b<5)s+='Filizlenen bir hizalanma var. M (motivasyon) düzeyini yükseltmek formülde kösteklerin etkisini en çok yumuşatan kaldıraç — burada küçük bir artış skorda büyük sıçrama yaratır.<br><br>';
-    else if(b<10)s+='Güçlü bir hizalanmadan içindesin. İtici güçlerini ve desteklerini koru, kösteklerin sistematik olanlarını (yani tekrar eden kalıpları) hedef al.<br><br>';
-    else s+='Olağanüstü bir hizalanma. Şu an gayen seninle, sen gayenle akıyorsun — bu zemini sürdürebilir kıl ve başkalarına yayma yolları aç.<br><br>';
+    if(b<2)s+='İtici güçlerin ya da desteklerin yetersiz, ya da kösteklerin baskın. ';
+    else if(b<5)s+='Filizlenen bir hizalanma var. ';
+    else if(b<10)s+='Güçlü bir hizalanmandasın. ';
+    else s+='Olağanüstü bir hizalanma. ';
+
     s+='<strong>1 yıl potansiyelin:</strong> <strong>'+g.toFixed(2)+'</strong> — <em>'+statusFor(g)+'</em>. ';
-    if(fark>5)s+='Gelişim potansiyelin çok yüksek (+'+fark.toFixed(2)+'). Hangi bileşeni en çok artırabileceğine odaklan; hepsi yerine birinin sıçraması bile bütünü taşıyabilir.';
-    else if(fark>2)s+='Belirgin bir gelişim potansiyelin var (+'+fark.toFixed(2)+'). Kitabın 2.4 bölümündeki "Bugün ve Gelecek" çalışmasını okumak burada faydalı.';
-    else if(fark>0)s+='Mütevazı bir gelişim aralığı (+'+fark.toFixed(2)+'). Belki de bugünün skorunu sürdürebilir kılmak şu an daha kritik.';
-    else s+='Bugünle gelecek arasında ileri yönlü bir fark görmüyorsun. Beklentilerini tekrar gözden geçir — belki potansiyelini olduğundan düşük tahmin ediyorsun.';
+    if(fark>5)s+='Gelişim potansiyelin çok yüksek. Aşağıdaki iki öncelik, bu sıçramayı en kısa yoldan açan iki kaldıraç.';
+    else if(fark>2)s+='Belirgin bir gelişim potansiyelin var. Tek bir bileşendeki sıçrama bütünü taşıyabilir — aşağıdaki öncelikler ona işaret ediyor.';
+    else if(fark>0)s+='Mütevazı bir gelişim aralığı. Belki de mevcut zeminini sürdürmek şu an asıl mesele.';
+    else s+='İleri yönlü fark görmüyorsun. Beklentilerini tekrar gözden geçir — belki potansiyelini olduğundan düşük tahmin ediyorsun.';
     return s;
   }
+
   function hesapla(){
     const A_b=+document.getElementById('A_bugun').value;
     const A_g=+document.getElementById('A_gelecek').value;
@@ -1215,7 +1877,10 @@
     document.getElementById('potansiyel_text').textContent=(fark>=0?'+':'')+fark.toFixed(2);
     const pct=Math.min(100,Math.max(0,(fark/10)*100));
     document.getElementById('potansiyel_bar').style.width=pct+'%';
-    document.getElementById('result_yorum').innerHTML=yorum(skor_b,skor_g,fark);
+
+    document.getElementById('ba_grid').innerHTML=bilesenAnaliziHTML(A_b,A_g,B_b,B_g,C_b,C_g,M_b,M_g);
+    document.getElementById('oncelik_list').innerHTML=oncelikleriHesapla(A_b,A_g,B_b,B_g,C_b,C_g,M_b,M_g);
+    document.getElementById('result_yorum').innerHTML=yorumYaz(skor_b,skor_g,fark);
   }
   ['A_bugun','A_gelecek','B_bugun','B_gelecek','C_bugun','C_gelecek','M_bugun','M_gelecek'].forEach(id=>{
     const el=document.getElementById(id);
