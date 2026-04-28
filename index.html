@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaye — Hayatını gayeyle hizala</title>
+<style>
+  :root{
+    --ink:#1a1a1a;--paper:#f7f3ec;--paper-2:#efe9de;
+    --accent:#b8472b;--accent-2:#2d4a3e;--gold:#c4a45a;
+    --muted:#6b6258;--line:#d8cfbf;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Georgia','Times New Roman',serif;background:var(--paper);color:var(--ink);line-height:1.6}
+  h1,h2,h3,h4{font-family:'Georgia',serif;font-weight:normal;letter-spacing:-0.01em}
+  .container{max-width:1180px;margin:0 auto;padding:0 32px}
+  .sans{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif}
+  a{color:inherit}
+
+  /* Nav */
+  nav{position:sticky;top:0;background:rgba(247,243,236,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:100;padding:18px 0}
+  nav .container{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-size:22px;font-weight:bold;letter-spacing:0.05em;cursor:pointer}
+  .logo span{color:var(--accent)}
+  nav ul{display:flex;gap:28px;list-style:none;font-family:-apple-system,sans-serif;font-size:14px}
+  nav a{text-decoration:none;transition:color 0.2s;padding-bottom:4px;border-bottom:2px solid transparent;cursor:pointer}
+  nav a:hover{color:var(--accent)}
+  nav a.active{color:var(--accent);border-bottom-color:var(--accent)}
+  .btn{display:inline-block;padding:12px 24px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none;font-family:-apple-system,sans-serif;font-size:14px;letter-spacing:0.03em;cursor:pointer;transition:all 0.2s}
+  .btn:hover{background:var(--accent);border-color:var(--accent)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  .btn-gold{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+  .btn-gold:hover{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+
+  /* Page system */
+  .page{display:none;animation:fadeIn 0.4s ease}
+  .page.active{display:block}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  /* Hero */
+  .hero{padding:120px 0 100px;position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center}
+  .hero h1{font-size:72px;line-height:1.05;margin-bottom:24px}
+  .hero h1 em{color:var(--accent);font-style:italic}
+  .hero p.lead{font-size:20px;color:var(--muted);margin-bottom:40px;max-width:520px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+  .hero-visual{aspect-ratio:1/1;background:radial-gradient(circle at 50% 50%,var(--paper-2) 0%,var(--paper) 70%);border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center}
+  .compass{width:80%;aspect-ratio:1/1;border:2px solid var(--ink);border-radius:50%;position:relative;animation:rotate 60s linear infinite}
+  .compass::before{content:"";position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:16px solid var(--accent)}
+  .compass-inner{position:absolute;inset:20%;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:0.3em;color:var(--muted);font-family:-apple-system,sans-serif}
+  @keyframes rotate{to{transform:rotate(360deg)}}
+
+  /* Section heads */
+  .section{padding:100px 0}
+  .section-dark{background:var(--ink);color:var(--paper)}
+  .section-cream{background:var(--paper-2)}
+  .section-green{background:var(--accent-2);color:var(--paper)}
+  .section-head{max-width:680px;margin-bottom:60px}
+  .section-head .eyebrow{font-family:-apple-system,sans-serif;font-size:13px;letter-spacing:0.3em;color:var(--accent);margin-bottom:16px;text-transform:uppercase}
+  .section-dark .eyebrow,.section-green .eyebrow{color:var(--gold)}
+  .section-head h2{font-size:48px;margin-bottom:20px;line-height:1.1}
+  .section-head p{font-size:18px;color:var(--muted)}
+  .section-dark .section-head p,.section-green .section-head p{color:rgba(247,243,236,0.8)}
+
+  /* Page hero (other pages) */
+  .page-hero{padding:80px 0 40px;border-bottom:1px solid var(--line)}
+  .page-hero .eyebrow{font-family:-apple-system,sans-serif;font-size:13px;letter-spacing:0.3em;color:var(--accent);margin-bottom:20px;text-transform:uppercase}
+  .page-hero h1{font-size:64px;line-height:1.05;margin-bottom:20px;max-width:800px}
+  .page-hero h1 em{color:var(--accent);font-style:italic}
+  .page-hero p{font-size:20px;color:var(--muted);max-width:680px}
+
+  /* Manifesto - ilkeler */
+  .ilkeler{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-bottom:60px}
+  .ilke{padding:32px 0;border-top:2px solid var(--ink)}
+  .section-dark .ilke{border-top-color:rgba(255,255,255,0.2)}
+  .ilke .num{font-family:-apple-system,sans-serif;font-size:13px;color:var(--accent);letter-spacing:0.2em;margin-bottom:16px}
+  .section-dark .ilke .num{color:var(--gold)}
+  .ilke h3{font-size:28px;margin-bottom:14px}
+  .ilke p{font-size:16px;line-height:1.6;color:var(--muted)}
+  .section-dark .ilke p{color:var(--paper-2)}
+
+  /* TORCH */
+  .torch-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+  .torch-card{background:var(--paper);padding:32px 24px;border:1px solid var(--line);text-align:center;transition:transform 0.3s,border-color 0.3s}
+  .torch-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .torch-letter{font-size:56px;color:var(--accent);font-weight:bold;line-height:1;margin-bottom:12px}
+  .torch-card h4{font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-family:-apple-system,sans-serif}
+  .torch-card p{font-size:14px;color:var(--ink)}
+
+  /* Kitap */
+  .kitap-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center}
+  .kitap-cover{aspect-ratio:2/3;background:linear-gradient(135deg,var(--ink) 0%,#3a3a3a 100%);box-shadow:0 30px 60px rgba(0,0,0,0.3);position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:40px;color:var(--paper)}
+  .kitap-cover::before{content:"";position:absolute;inset:20px;border:1px solid rgba(196,164,90,0.3)}
+  .kitap-cover .cover-top{font-family:-apple-system,sans-serif;font-size:11px;letter-spacing:0.3em;color:var(--gold);position:relative;z-index:1}
+  .kitap-cover h3{font-size:42px;line-height:1.05;position:relative;z-index:1}
+  .kitap-cover h3 em{color:var(--gold);font-style:italic}
+  .kitap-cover .cover-bottom{font-family:-apple-system,sans-serif;font-size:13px;letter-spacing:0.15em;position:relative;z-index:1}
+  .kitap-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:32px 0;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .kitap-meta div{font-family:-apple-system,sans-serif}
+  .kitap-meta strong{display:block;font-size:24px;color:var(--accent);margin-bottom:4px}
+  .kitap-meta span{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em}
+  .icindekiler{margin-top:60px;padding:40px;background:var(--paper-2)}
+  .icindekiler h3{font-size:24px;margin-bottom:24px}
+  .icindekiler ol{list-style:none;counter-reset:i}
+  .icindekiler li{counter-increment:i;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px;display:flex;align-items:baseline}
+  .icindekiler li::before{content:counter(i,decimal-leading-zero);font-family:-apple-system,sans-serif;font-size:13px;color:var(--accent);margin-right:20px;letter-spacing:0.1em;font-weight:bold}
+  .icindekiler li:last-child{border-bottom:none}
+
+  /* Components grid */
+  .components{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .comp{background:var(--paper);padding:36px;border:1px solid var(--line);position:relative;transition:all 0.3s}
+  .comp:hover{border-color:var(--accent);box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+  .comp .tag{font-family:-apple-system,sans-serif;font-size:11px;letter-spacing:0.2em;color:var(--accent);margin-bottom:16px;text-transform:uppercase}
+  .comp h3{font-size:22px;margin-bottom:12px}
+  .comp p{font-size:15px;color:var(--muted);margin-bottom:20px;line-height:1.55}
+  .comp .arrow{font-family:-apple-system,sans-serif;font-size:14px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;cursor:pointer}
+
+  /* Hesaplayıcı */
+  .hesaplayici{background:var(--paper);border:2px solid var(--ink);padding:48px;margin-top:60px}
+  .hesaplayici-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:40px;flex-wrap:wrap;gap:20px}
+  .hesaplayici h3{font-size:32px;margin-bottom:8px}
+  .hesaplayici .formula{font-family:'Georgia',serif;font-size:24px;background:var(--ink);color:var(--paper);padding:12px 20px}
+  .hesaplayici .formula em{color:var(--gold)}
+  .sliders{display:grid;grid-template-columns:1fr 1fr;gap:32px 48px;margin-bottom:40px}
+  .slider-group label{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;font-family:-apple-system,sans-serif;font-size:14px}
+  .slider-group label .label-text strong{color:var(--ink);font-size:16px;display:block;margin-bottom:2px}
+  .slider-group label .label-text span{color:var(--muted);font-size:12px}
+  .slider-group label .val{font-size:24px;color:var(--accent);font-weight:bold;font-family:'Georgia',serif}
+  .slider-group input[type=range]{width:100%;-webkit-appearance:none;height:4px;background:var(--line);outline:none;border-radius:2px}
+  .slider-group input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;background:var(--accent);border-radius:50%;cursor:pointer;border:3px solid var(--paper);box-shadow:0 0 0 1px var(--accent)}
+  .slider-group input[type=range]::-moz-range-thumb{width:20px;height:20px;background:var(--accent);border-radius:50%;cursor:pointer;border:3px solid var(--paper)}
+  .result{background:var(--paper-2);padding:32px;text-align:center;border-left:4px solid var(--accent)}
+  .result .label{font-family:-apple-system,sans-serif;font-size:13px;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;margin-bottom:12px}
+  .result .score{font-size:64px;color:var(--accent);font-weight:bold;line-height:1;margin-bottom:8px;font-family:'Georgia',serif}
+  .result .interp{font-size:16px;color:var(--ink);max-width:560px;margin:0 auto}
+
+  /* Test (kart wizard) */
+  .test-container{max-width:720px;margin:60px auto 0;background:var(--paper);border:2px solid var(--ink);padding:48px}
+  .test-progress{font-family:-apple-system,sans-serif;font-size:13px;color:var(--muted);letter-spacing:0.2em;margin-bottom:8px}
+  .test-bar{height:4px;background:var(--line);margin-bottom:32px;overflow:hidden}
+  .test-bar-fill{height:100%;background:var(--accent);width:20%;transition:width 0.3s}
+  .test-q{font-size:26px;line-height:1.4;margin-bottom:32px}
+  .test-options{display:grid;gap:12px}
+  .test-opt{padding:16px 20px;border:1px solid var(--line);background:var(--paper);cursor:pointer;font-family:-apple-system,sans-serif;font-size:15px;text-align:left;transition:all 0.2s}
+  .test-opt:hover{border-color:var(--accent);background:var(--paper-2)}
+  .test-opt.selected{border-color:var(--accent);background:var(--accent);color:var(--paper)}
+  .test-nav{display:flex;justify-content:space-between;margin-top:32px}
+
+  /* Kurumsal cards */
+  .kurum-comps{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .kurum-comp{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);padding:36px;transition:background 0.3s}
+  .kurum-comp:hover{background:rgba(255,255,255,0.1)}
+  .kurum-comp .icon{width:48px;height:48px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:22px;margin-bottom:24px;font-family:'Georgia',serif}
+  .kurum-comp h3{font-size:24px;margin-bottom:12px;color:var(--paper)}
+  .kurum-comp p{color:rgba(247,243,236,0.75);font-size:15px;margin-bottom:20px;line-height:1.6}
+  .kurum-comp .meta{font-family:-apple-system,sans-serif;font-size:12px;letter-spacing:0.15em;color:var(--gold);text-transform:uppercase}
+
+  /* Topluluk */
+  .stories{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:80px}
+  .story{padding:32px;border:1px solid var(--line);background:var(--paper)}
+  .story blockquote{font-family:'Georgia',serif;font-size:18px;line-height:1.5;color:var(--ink);margin-bottom:24px;font-style:italic}
+  .story blockquote::before{content:"\201C";font-size:48px;color:var(--accent);line-height:0;display:block;margin-bottom:20px}
+  .story .author{font-family:-apple-system,sans-serif;font-size:14px}
+  .story .author strong{display:block;color:var(--ink);margin-bottom:2px}
+  .story .author span{color:var(--muted);font-size:12px}
+
+  .events{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .event{padding:28px;border:1px solid var(--line);background:var(--paper);display:flex;gap:24px;align-items:flex-start}
+  .event-date{flex-shrink:0;text-align:center;background:var(--ink);color:var(--paper);padding:12px 16px;font-family:-apple-system,sans-serif}
+  .event-date .day{font-size:28px;font-weight:bold;line-height:1;display:block}
+  .event-date .month{font-size:11px;letter-spacing:0.2em;display:block;margin-top:4px;color:var(--gold)}
+  .event h4{font-size:18px;margin-bottom:8px}
+  .event p{font-size:14px;color:var(--muted);font-family:-apple-system,sans-serif}
+
+  /* Form */
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:flex-start}
+  .form-card{background:var(--paper);padding:40px;border:1px solid var(--line)}
+  .form-row{margin-bottom:20px}
+  .form-row label{display:block;font-family:-apple-system,sans-serif;font-size:13px;letter-spacing:0.05em;color:var(--muted);margin-bottom:8px;text-transform:uppercase}
+  .form-row input,.form-row select,.form-row textarea{width:100%;padding:14px 16px;border:1px solid var(--line);background:var(--paper);font-family:'Georgia',serif;font-size:16px;outline:none;transition:border-color 0.2s}
+  .form-row input:focus,.form-row select:focus,.form-row textarea:focus{border-color:var(--accent)}
+  .form-row textarea{resize:vertical;min-height:120px;font-family:-apple-system,sans-serif}
+
+  /* CTA */
+  .cta-final{padding:120px 0;text-align:center;background:var(--ink);color:var(--paper);margin-top:80px}
+  .cta-final h2{font-size:64px;line-height:1.05;margin-bottom:24px}
+  .cta-final h2 em{color:var(--gold);font-style:italic}
+  .cta-final p{font-size:20px;color:var(--paper-2);max-width:600px;margin:0 auto 40px}
+
+  /* Featured (homepage) */
+  .featured{padding:100px 0;background:var(--paper-2)}
+  .featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .featured-card{background:var(--paper);padding:36px;cursor:pointer;transition:transform 0.3s}
+  .featured-card:hover{transform:translateY(-4px)}
+  .featured-card .num{font-family:'Georgia',serif;font-size:48px;color:var(--accent);line-height:1;margin-bottom:16px;font-weight:bold}
+  .featured-card h3{font-size:22px;margin-bottom:12px}
+  .featured-card p{font-size:15px;color:var(--muted);margin-bottom:20px}
+
+  /* Footer */
+  footer{padding:60px 0 40px;background:var(--ink);color:var(--paper-2);border-top:1px solid rgba(255,255,255,0.1);font-family:-apple-system,sans-serif;font-size:14px}
+  footer .container{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+  footer h5{font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-family:-apple-system,sans-serif}
+  footer ul{list-style:none}
+  footer ul li{margin-bottom:10px}
+  footer a{color:var(--paper-2);text-decoration:none;transition:color 0.2s;cursor:pointer}
+  footer a:hover{color:var(--paper)}
+  .copyright{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;text-align:center;color:var(--muted);font-size:12px}
+
+  @media (max-width:900px){
+    .hero h1{font-size:44px}.page-hero h1{font-size:40px}
+    .hero-grid,.kitap-grid,.form-grid{grid-template-columns:1fr;gap:40px}
+    .ilkeler,.torch-grid,.components,.kurum-comps,.stories,.featured-grid,.events{grid-template-columns:1fr}
+    .sliders{grid-template-columns:1fr}
+    nav ul{display:none}
+    footer .container{grid-template-columns:1fr 1fr;gap:32px}
+    .cta-final h2,.section-head h2{font-size:36px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="logo" onclick="go('home')">GAYE<span>.</span></div>
+    <ul>
+      <li><a data-page="manifesto" onclick="go('manifesto')">Manifesto</a></li>
+      <li><a data-page="kitap" onclick="go('kitap')">Kitap</a></li>
+      <li><a data-page="bireysel" onclick="go('bireysel')">Bireysel</a></li>
+      <li><a data-page="kurumsal" onclick="go('kurumsal')">Kurumsal</a></li>
+      <li><a data-page="topluluk" onclick="go('topluluk')">Topluluk</a></li>
+      <li><a data-page="iletisim" onclick="go('iletisim')">İletişim</a></li>
+    </ul>
+    <a class="btn" onclick="go('bireysel')">Pusulayı Aç</a>
+  </div>
+</nav>
+
+<!-- ============ ANA SAYFA ============ -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Neden buradayız? <em>Gayeni keşfet,</em> hayatını hizala.</h1>
+        <p class="lead">Selim Oktar'ın 25 yıllık araştırması, 755 kayıtlık veritabanı ve dört bilimsel çerçeveyi tek bir yolculukta buluşturan rehber: Gayeni Bul.</p>
+        <div class="hero-cta">
+          <a class="btn" onclick="go('bireysel')">Bireysel yolculuğa başla</a>
+          <a class="btn btn-ghost" onclick="go('kurumsal')">Kurumsal çözümler</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="compass"><div class="compass-inner">K U Z E Y &nbsp; Y I L D I Z I</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Üç ana yol</div>
+        <h2>Nereden başlamak istersin?</h2>
+      </div>
+      <div class="featured-grid">
+        <div class="featured-card" onclick="go('manifesto')">
+          <div class="num">01</div>
+          <h3>Fikri anla</h3>
+          <p>Gayenin ardındaki dört ilke ve TORCH çerçevesi.</p>
+          <span class="arrow" style="font-family:-apple-system,sans-serif;font-size:14px;border-bottom:1px solid var(--ink);padding-bottom:2px">Manifestoyu oku →</span>
+        </div>
+        <div class="featured-card" onclick="go('bireysel')">
+          <div class="num">02</div>
+          <h3>Kendin için</h3>
+          <p>Pusula testi, gaye denklemi, BGS formu — kendi yönünü çiz.</p>
+          <span class="arrow" style="font-family:-apple-system,sans-serif;font-size:14px;border-bottom:1px solid var(--ink);padding-bottom:2px">Bireysel araçlar →</span>
+        </div>
+        <div class="featured-card" onclick="go('kurumsal')">
+          <div class="num">03</div>
+          <h3>Şirketin için</h3>
+          <p>Atölye, matris, lider eğitimi — ekiplerini gayeyle hizala.</p>
+          <span class="arrow" style="font-family:-apple-system,sans-serif;font-size:14px;border-bottom:1px solid var(--ink);padding-bottom:2px">Kurumsal çözümler →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <h2>Senin <em>kuzey yıldızın</em> ne?</h2>
+      <p>15 dakikalık ücretsiz Gaye Pusulası testiyle başla. Profilini al, kitabı oku, hayatını hizala.</p>
+      <a class="btn btn-gold" style="font-size:16px;padding:18px 36px" onclick="go('bireysel')">Pusulayı şimdi aç</a>
+    </div>
+  </section>
+</div>
+
+<!-- ============ MANİFESTO ============ -->
+<div class="page" id="page-manifesto">
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Manifesto</div>
+      <h1>Varsayımlardan <em>ilkelere.</em></h1>
+      <p>Modern hayatın bize dayattığı dört kabulü sorguluyoruz; yerine, her insanın ve her kurumun yaşam pratiğine geçirebileceği dört ilke öneriyoruz.</p>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container">
+      <div class="ilkeler">
+        <div class="ilke">
+          <div class="num">İLKE 01</div>
+          <h3>Anlam, üretilebilir.</h3>
+          <p>Anlam dışarıdan gelen bir lütuf değil; içeriden inşa edilen bir yapıdır. Gaye, bu inşanın iskeletidir. Hayatına anlam katmak için bir şey beklemen gerekmez; bugün başlanabilir.</p>
+        </div>
+        <div class="ilke">
+          <div class="num">İLKE 02</div>
+          <h3>Angajman seçilir.</h3>
+          <p>Hayat sana olur; ama gayeyle hayata sen olursun. Angajman, gayenin günlük tezahürüdür. Her sabah uyandığında bir tercih yaparsın — farkında olarak ya da olmadan.</p>
+        </div>
+        <div class="ilke">
+          <div class="num">İLKE 03</div>
+          <h3>Pusula içeride.</h3>
+          <p>Kuzey yıldızını dışarıda arama; senin TORCH'un (yetenek, motivasyon, değer, ihtiyaç, bağlam) zaten bir yön gösterir. Görmek için durup dinlemek yeter.</p>
+        </div>
+        <div class="ilke">
+          <div class="num">İLKE 04</div>
+          <h3>İz, paylaşılır.</h3>
+          <p>Kişisel gaye, kolektif gayeyle buluştuğunda mağaradaki el izi gibi kalır: sen olmasan da konuşur. Bireysel anlam, kolektif iz bırakmadan tamamlanmaz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Çerçeve · TORCH</div>
+        <h2>Gayenin beş bileşeni.</h2>
+        <p>TORCH, kişisel ve kurumsal gayenin temel taşlarını sistematik bir biçimde haritalandırır. Her bir harf, gayenin farklı bir boyutunu temsil eder.</p>
+      </div>
+      <div class="torch-grid">
+        <div class="torch-card"><div class="torch-letter">T</div><h4>Talent</h4><p>Yetenek — ne yapmakta üstünsün?</p></div>
+        <div class="torch-card"><div class="torch-letter">O</div><h4>Orientation</h4><p>Yönelim — neye motive oluyorsun?</p></div>
+        <div class="torch-card"><div class="torch-letter">R</div><h4>Reason</h4><p>Sebep — değerlerin ve sebebin ne?</p></div>
+        <div class="torch-card"><div class="torch-letter">C</div><h4>Calling</h4><p>Çağrı — dünyada hangi ihtiyaca yanıt veriyorsun?</p></div>
+        <div class="torch-card"><div class="torch-letter">H</div><h4>Harmony</h4><p>Uyum — bağlamla ne kadar hizalısın?</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Kitabın arkasındaki bilim</div>
+        <h2>25 yıl, 755 kayıt, 4 çerçeve.</h2>
+        <p>Gaye, hissin değil, sistematik araştırmanın ürünü. Bu sayfanın altındaki rakamlar, kitabın temelini oluşturan zemini gösterir.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+        <div style="background:var(--paper);padding:32px;text-align:center"><div style="font-size:48px;color:var(--accent);font-weight:bold">25</div><div style="font-family:-apple-system,sans-serif;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:8px">Yıllık araştırma</div></div>
+        <div style="background:var(--paper);padding:32px;text-align:center"><div style="font-size:48px;color:var(--accent);font-weight:bold">755</div><div style="font-family:-apple-system,sans-serif;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:8px">Kayıt</div></div>
+        <div style="background:var(--paper);padding:32px;text-align:center"><div style="font-size:48px;color:var(--accent);font-weight:bold">4</div><div style="font-family:-apple-system,sans-serif;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:8px">Çerçeve</div></div>
+        <div style="background:var(--paper);padding:32px;text-align:center"><div style="font-size:48px;color:var(--accent);font-weight:bold">12</div><div style="font-family:-apple-system,sans-serif;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:8px">Sektör</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ KİTAP ============ -->
+<div class="page" id="page-kitap">
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Kitap</div>
+      <h1>Gayeni <em>Bul.</em></h1>
+      <p>İçsel kuzey yıldızını bulmak isteyen bireyler ve gerçek bir kuzey çizmek isteyen kurumlar için yazılmış, hem hikâye hem yöntem kitabı.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container kitap-grid">
+      <div class="kitap-cover">
+        <div class="cover-top">SELİM OKTAR</div>
+        <h3>Gayeni <em>Bul.</em></h3>
+        <div class="cover-bottom">İÇERİDEN BİR PUSULA</div>
+      </div>
+      <div>
+        <h2 style="font-size:36px;margin-bottom:20px">25 yıllık bir sorunun cevabı.</h2>
+        <p style="font-size:17px;color:var(--muted);margin-bottom:24px">Gayeni Bul, "ne yapıyorum ben?" sorusunu kendine çok kez sormuş insanlar için yazıldı. Yazar Selim Oktar, çeyrek asırlık araştırmasını, 755 kayıtlık veritabanını ve dört bilimsel çerçeveyi 320 sayfalık bir okuma deneyimine dönüştürdü.</p>
+        <p style="font-size:17px;color:var(--muted);margin-bottom:24px">Kitap iki katman halinde okunabilir: hikâye katmanı, mağaradan modern hayata uzanan kavşaklarda gayeyi arayanların izini sürer; yöntem katmanı ise TORCH, Gaye Denklemi ve BGS gibi araçlarla okuyucuyu kendi pusulasını kurmaya davet eder.</p>
+        <div class="kitap-meta">
+          <div><strong>320</strong><span>Sayfa</span></div>
+          <div><strong>7</strong><span>Sprint</span></div>
+          <div><strong>4</strong><span>Çerçeve</span></div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="#" class="btn">Satın al — D&R</a>
+          <a href="#" class="btn btn-ghost">Örnek bölüm (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="icindekiler">
+        <h3>İçindekiler</h3>
+        <ol>
+          <li>Mağaradaki El İzi — Neden hâlâ iz bırakmaya çalışıyoruz?</li>
+          <li>Dört Varsayım — Modern hayatın bize dayattığı kabuller</li>
+          <li>Sacha'nın Yolu — Bir hikâye üzerinden gaye keşfi</li>
+          <li>TORCH — Gayenin beş bileşeni</li>
+          <li>Gaye Denklemi — Sayısallaştırılabilir bir hizalanma</li>
+          <li>Gaye Pusulası — İçeriden yön bulmak</li>
+          <li>Gaye-Angajman Matrisi — Bireyden kuruma</li>
+          <li>BGS Formu — Bugünden geleceğe sıçrama</li>
+          <li>Kolektif Gaye — İz, paylaşılır</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ BİREYSEL ============ -->
+<div class="page" id="page-bireysel">
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Bireysel yolculuk</div>
+      <h1>Kendine <em>bir yön</em> çiz.</h1>
+      <p>Üç araç, bir kitap. Kendi pusulanı kuracak, gaye denklemini hesaplayacak ve günlük yaşamına yansıtacaksın.</p>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div class="components">
+        <div class="comp">
+          <div class="tag">Araç 01</div>
+          <h3>Gaye Pusulası Testi</h3>
+          <p>15 dakikalık, bilim temelli bir test. TORCH profilini çıkarır, hangi bileşeninin güçlü, hangisinin geliştirilmeye açık olduğunu gösterir.</p>
+          <span class="arrow" onclick="document.getElementById('test').scrollIntoView({behavior:'smooth'})">Teste başla ↓</span>
+        </div>
+        <div class="comp">
+          <div class="tag">Araç 02</div>
+          <h3>Gaye Denklemi</h3>
+          <p>Kitabın özü, tek bir formülde. Yetenek, motivasyon, ihtiyaç ve angajmanı denkleme sokarak gaye uyumunu sayısallaştır.</p>
+          <span class="arrow" onclick="document.getElementById('hesap').scrollIntoView({behavior:'smooth'})">Hesaplayıcıyı dene ↓</span>
+        </div>
+        <div class="comp">
+          <div class="tag">Araç 03</div>
+          <h3>BGS Formu</h3>
+          <p>Bugün-Gelecek-Sıçrama. 8 adımlık bir yapılandırılmış form. Doldur, PDF olarak indir, dolabına as.</p>
+          <span class="arrow">Formu doldur →</span>
+        </div>
+      </div>
+
+      <div class="test-container" id="test">
+        <div class="test-progress">SORU <span id="qNum">1</span> / 5</div>
+        <div class="test-bar"><div class="test-bar-fill" id="qBar"></div></div>
+        <div class="test-q" id="qText">Bir hafta tamamen özgür olsan, en çok ne yapmaktan keyif alırsın?</div>
+        <div class="test-options" id="qOpts"></div>
+        <div class="test-nav">
+          <a class="btn btn-ghost" onclick="prevQ()">← Geri</a>
+          <a class="btn" onclick="nextQ()">İleri →</a>
+        </div>
+      </div>
+
+      <div class="hesaplayici" id="hesap">
+        <div class="hesaplayici-head">
+          <div>
+            <h3>Gaye Denklemi Hesaplayıcı</h3>
+            <p style="color:var(--muted);margin-top:8px">Slider'ları kendi durumuna göre ayarla. Sonucu canlı izle.</p>
+          </div>
+          <div class="formula">G = (A+B) / C<sup>(1−<em>M</em>)</sup></div>
+        </div>
+        <div class="sliders">
+          <div class="slider-group">
+            <label><span class="label-text"><strong>A — Yetenek</strong><span>Bu işte ne kadar iyisin? (0–10)</span></span><span class="val" id="vA">7</span></label>
+            <input type="range" id="A" min="0" max="10" value="7" step="0.1">
+          </div>
+          <div class="slider-group">
+            <label><span class="label-text"><strong>B — Destek</strong><span>Çevrenin desteği ne düzeyde? (0–10)</span></span><span class="val" id="vB">5</span></label>
+            <input type="range" id="B" min="0" max="10" value="5" step="0.1">
+          </div>
+          <div class="slider-group">
+            <label><span class="label-text"><strong>C — Direnç</strong><span>Karşındaki engeller ne kadar büyük? (1–10)</span></span><span class="val" id="vC">4</span></label>
+            <input type="range" id="C" min="1" max="10" value="4" step="0.1">
+          </div>
+          <div class="slider-group">
+            <label><span class="label-text"><strong>M — Motivasyon</strong><span>İçsel motivasyonun ne kadar güçlü? (0–1)</span></span><span class="val" id="vM">0.7</span></label>
+            <input type="range" id="M" min="0" max="1" value="0.7" step="0.05">
+          </div>
+        </div>
+        <div class="result">
+          <div class="label">GAYE UYUM SKORU</div>
+          <div class="score" id="skor">9.0</div>
+          <div class="interp" id="yorum">Güçlü hizalanma. Mevcut yönelimini koru, küçük sıçramalarla büyütmeye odaklan.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ KURUMSAL ============ -->
+<div class="page" id="page-kurumsal">
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Kurumsal çözümler</div>
+      <h1>Şirketinin gerçek bir <em>kuzeyi</em> olsun.</h1>
+      <p>Strateji belgelerinde değil, ekiplerin hücrelerinde yaşayan bir gaye. Atölyelerden tarama araçlarına dört modülde paketledik.</p>
+    </div>
+  </section>
+
+  <section class="section section-green">
+    <div class="container">
+      <div class="kurum-comps">
+        <div class="kurum-comp">
+          <div class="icon">◇</div>
+          <h3>Gaye Atölyesi</h3>
+          <p>Yönetim ekibiyle 2 günlük yapılandırılmış atölye. Şirketin gerçek gayesini ortaya çıkarır, somut bir manifestoya dönüştürür.</p>
+          <div class="meta">2 GÜN · YÜZ YÜZE / HİBRİT</div>
+        </div>
+        <div class="kurum-comp">
+          <div class="icon">⬡</div>
+          <h3>Gaye-Angajman Matrisi</h3>
+          <p>Tüm ekibe uygulanan diagnostik. Hangi çalışan hangi kadranda? Hizalanma haritası ve aksiyon planı çıkar.</p>
+          <div class="meta">DİJİTAL · 200+ KİŞİ ÖLÇEKLENEBİLİR</div>
+        </div>
+        <div class="kurum-comp">
+          <div class="icon">△</div>
+          <h3>Lider Eğitimi</h3>
+          <p>Gaye odaklı liderlik için 6 modüllü program. Yöneticilerini gaye taşıyıcısına dönüştür.</p>
+          <div class="meta">6 MODÜL · 12 HAFTA</div>
+        </div>
+        <div class="kurum-comp">
+          <div class="icon">○</div>
+          <h3>Vaka Çalışmaları</h3>
+          <p>Gaye'yi uygulayan şirketlerin gerçek hikâyeleri. Finansal kuruluştan üretim şirketine, sektörler arası örnekler.</p>
+          <div class="meta">12 VAKA · İNDİRİLEBİLİR PDF</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:60px">
+        <a class="btn btn-gold" onclick="go('iletisim')">Şirketinle gayeyi konuşalım</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Sonuçlar</div>
+        <h2>Atölye sonrası ortalama.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+        <div style="text-align:center"><div style="font-size:56px;color:var(--accent);font-weight:bold">+18</div><div style="color:var(--muted);font-family:-apple-system,sans-serif;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;margin-top:8px">Çalışan bağlılığı</div></div>
+        <div style="text-align:center"><div style="font-size:56px;color:var(--accent);font-weight:bold">−24%</div><div style="color:var(--muted);font-family:-apple-system,sans-serif;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;margin-top:8px">Çalışan kaybı</div></div>
+        <div style="text-align:center"><div style="font-size:56px;color:var(--accent);font-weight:bold">+32%</div><div style="color:var(--muted);font-family:-apple-system,sans-serif;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;margin-top:8px">Strateji netliği</div></div>
+        <div style="text-align:center"><div style="font-size:56px;color:var(--accent);font-weight:bold">8.7</div><div style="color:var(--muted);font-family:-apple-system,sans-serif;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;margin-top:8px">NPS skoru / 10</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ TOPLULUK ============ -->
+<div class="page" id="page-topluluk">
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Topluluk</div>
+      <h1>Gayeni <em>bulanlar.</em></h1>
+      <p>Kitabı okumakla başlayan, hayatını yeniden hizalayan okurlardan hikâyeler, etkinlikler ve düşünme alanları.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Hikâyeler</div>
+        <h2>Onların pusulası.</h2>
+      </div>
+      <div class="stories">
+        <div class="story">
+          <blockquote>40'ımdan sonra "ne yapıyorum ben" diye sorduğumda, kitap bana sadece bir cevap değil, bir yöntem verdi.</blockquote>
+          <div class="author"><strong>A.K.</strong><span>Yönetici, İstanbul</span></div>
+        </div>
+        <div class="story">
+          <blockquote>Şirketimizde Gaye Atölyesi sonrası çalışan bağlılığımız 18 puan arttı. Bu sadece kâğıt üzerinde bir değişim değildi.</blockquote>
+          <div class="author"><strong>S.D.</strong><span>İK Direktörü, Teknoloji</span></div>
+        </div>
+        <div class="story">
+          <blockquote>Gaye Denklemi'ni eşimle birlikte yaptık. Ortaklığımıza dair konuşmadığımız her şeyi konuşturdu.</blockquote>
+          <div class="author"><strong>M.E.</strong><span>Girişimci, Ankara</span></div>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <div class="eyebrow">Etkinlikler</div>
+        <h2>Buluşma takvimi.</h2>
+      </div>
+      <div class="events">
+        <div class="event">
+          <div class="event-date"><span class="day">12</span><span class="month">MAY</span></div>
+          <div><h4>Selim Oktar ile Söyleşi — İstanbul</h4><p>Salt Galata · 19:00 · Kayıt zorunlu · 200 kişi</p></div>
+        </div>
+        <div class="event">
+          <div class="event-date"><span class="day">28</span><span class="month">MAY</span></div>
+          <div><h4>Gaye Atölyesi — Online</h4><p>Zoom · 14:00–17:00 · Pratik · 50 katılımcı</p></div>
+        </div>
+        <div class="event">
+          <div class="event-date"><span class="day">14</span><span class="month">HAZ</span></div>
+          <div><h4>Kurumsal Liderler Yuvarlak Masa — Ankara</h4><p>Bilkent · Davetli · CEO/CHRO · 30 kişi</p></div>
+        </div>
+        <div class="event">
+          <div class="event-date"><span class="day">02</span><span class="month">TEM</span></div>
+          <div><h4>İmza Günü ve Okuma — Bodrum</h4><p>D&R Yalıkavak · 18:00 · Açık etkinlik</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Podcast & yazı</div>
+        <h2>Gaye sohbetleri.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <div style="background:var(--paper);padding:28px"><div style="font-family:-apple-system,sans-serif;font-size:11px;color:var(--accent);letter-spacing:0.2em;margin-bottom:12px">PODCAST · S01E04</div><h4 style="font-size:20px;margin-bottom:10px">Gaye ve angajman: günlük tezahür</h4><p style="font-family:-apple-system,sans-serif;font-size:14px;color:var(--muted)">42 dakika · Selim Oktar & Gaye Erkan</p></div>
+        <div style="background:var(--paper);padding:28px"><div style="font-family:-apple-system,sans-serif;font-size:11px;color:var(--accent);letter-spacing:0.2em;margin-bottom:12px">YAZI</div><h4 style="font-size:20px;margin-bottom:10px">Sacha'nın yolundan ne öğrendim</h4><p style="font-family:-apple-system,sans-serif;font-size:14px;color:var(--muted)">8 dk okuma · 24 Nisan 2026</p></div>
+        <div style="background:var(--paper);padding:28px"><div style="font-family:-apple-system,sans-serif;font-size:11px;color:var(--accent);letter-spacing:0.2em;margin-bottom:12px">YAZI</div><h4 style="font-size:20px;margin-bottom:10px">Şirketinin gerçek kuzeyi nedir?</h4><p style="font-family:-apple-system,sans-serif;font-size:14px;color:var(--muted)">12 dk okuma · 18 Nisan 2026</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ İLETİŞİM ============ -->
+<div class="page" id="page-iletisim">
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">İletişim</div>
+      <h1>Konuşmak ister <em>misin?</em></h1>
+      <p>Bireysel danışmanlık, kurumsal işbirliği veya basit bir merhaba — formu doldur, 48 saat içinde yanıtlayalım.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container form-grid">
+      <div class="form-card">
+        <div class="form-row">
+          <label>Adın</label>
+          <input type="text" placeholder="Adın ve soyadın">
+        </div>
+        <div class="form-row">
+          <label>E-posta</label>
+          <input type="email" placeholder="ornek@firma.com">
+        </div>
+        <div class="form-row">
+          <label>Şirket (opsiyonel)</label>
+          <input type="text" placeholder="Şirket adı">
+        </div>
+        <div class="form-row">
+          <label>Konu</label>
+          <select>
+            <option>Bireysel danışmanlık</option>
+            <option>Kurumsal atölye</option>
+            <option>Lider eğitimi</option>
+            <option>Konuşmacı daveti</option>
+            <option>Basın / röportaj</option>
+            <option>Diğer</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Mesajın</label>
+          <textarea placeholder="Bize ne anlatmak istersin?"></textarea>
+        </div>
+        <a class="btn" style="width:100%;text-align:center">Mesajı gönder</a>
+      </div>
+      <div>
+        <h3 style="font-size:24px;margin-bottom:20px">Doğrudan kanallar</h3>
+        <p style="color:var(--muted);margin-bottom:24px">Hızlı bir mesaj için aşağıdaki kanallardan ulaşabilirsin.</p>
+        <div style="font-family:-apple-system,sans-serif;font-size:15px;line-height:2.2">
+          <div><strong style="color:var(--accent);text-transform:uppercase;font-size:12px;letter-spacing:0.2em;display:block;margin-top:16px">E-POSTA</strong>hello@gaye.com</div>
+          <div><strong style="color:var(--accent);text-transform:uppercase;font-size:12px;letter-spacing:0.2em;display:block;margin-top:16px">KURUMSAL</strong>kurumsal@gaye.com</div>
+          <div><strong style="color:var(--accent);text-transform:uppercase;font-size:12px;letter-spacing:0.2em;display:block;margin-top:16px">BASIN</strong>basin@gaye.com</div>
+          <div><strong style="color:var(--accent);text-transform:uppercase;font-size:12px;letter-spacing:0.2em;display:block;margin-top:16px">SOSYAL</strong>@gaye · LinkedIn / Instagram</div>
+        </div>
+        <div style="margin-top:40px;padding:24px;background:var(--paper-2);border-left:4px solid var(--accent)">
+          <p style="font-style:italic;font-size:15px">"İçeriden gelen bir pusulayı dışarıdan kimse çizemez. Ama yolculuğunu paylaşmak için bir masa hep var."</p>
+          <p style="font-family:-apple-system,sans-serif;font-size:13px;color:var(--muted);margin-top:8px">— Selim Oktar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="container">
+    <div>
+      <div class="logo" style="color:var(--paper);margin-bottom:16px" onclick="go('home')">GAYE<span style="color:var(--gold)">.</span></div>
+      <p style="color:var(--muted);max-width:320px;line-height:1.6">İçeriden bir pusula. Selim Oktar'ın 25 yıllık araştırmasına dayanan bireysel ve kurumsal gaye platformu.</p>
+    </div>
+    <div>
+      <h5>Keşfet</h5>
+      <ul>
+        <li><a onclick="go('manifesto')">Manifesto</a></li>
+        <li><a onclick="go('kitap')">Kitap</a></li>
+        <li><a onclick="go('bireysel')">Araçlar</a></li>
+        <li><a onclick="go('topluluk')">Topluluk</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Kurumsal</h5>
+      <ul>
+        <li><a onclick="go('kurumsal')">Atölye</a></li>
+        <li><a onclick="go('kurumsal')">Matris</a></li>
+        <li><a onclick="go('kurumsal')">Eğitim</a></li>
+        <li><a onclick="go('kurumsal')">Vakalar</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>İletişim</h5>
+      <ul>
+        <li><a href="mailto:hello@gaye.com">hello@gaye.com</a></li>
+        <li><a>LinkedIn</a></li>
+        <li><a>Instagram</a></li>
+        <li><a>Podcast</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container copyright">© 2026 Gaye · Selim Oktar · Tüm hakları saklıdır</div>
+</footer>
+
+<script>
+  // ROUTER
+  function go(page){
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    const target = document.getElementById('page-'+page);
+    if(target) target.classList.add('active');
+    document.querySelectorAll('nav a[data-page]').forEach(a=>{
+      a.classList.toggle('active', a.dataset.page===page);
+    });
+    window.scrollTo({top:0,behavior:'instant'});
+    window.location.hash = page==='home' ? '' : page;
+  }
+  window.addEventListener('hashchange', ()=>{
+    const p = window.location.hash.replace('#','') || 'home';
+    go(p);
+  });
+  // Initial route
+  const initial = window.location.hash.replace('#','') || 'home';
+  go(initial);
+
+  // HESAPLAYICI
+  function hesapla(){
+    const A=parseFloat(document.getElementById('A').value);
+    const B=parseFloat(document.getElementById('B').value);
+    const C=parseFloat(document.getElementById('C').value);
+    const M=parseFloat(document.getElementById('M').value);
+    document.getElementById('vA').textContent=A.toFixed(1);
+    document.getElementById('vB').textContent=B.toFixed(1);
+    document.getElementById('vC').textContent=C.toFixed(1);
+    document.getElementById('vM').textContent=M.toFixed(2);
+    const G=(A+B)/Math.pow(C,1-M);
+    document.getElementById('skor').textContent=G.toFixed(1);
+    let y="";
+    if(G<2)y="Düşük hizalanma. Direnç yüksek, motivasyon ya da destek yetersiz. Bu denklemi yeniden kurman gerek.";
+    else if(G<4)y="Zayıf hizalanma. Yeteneğini ve motivasyonunu güçlendir, destek alanını genişlet.";
+    else if(G<7)y="Orta düzey hizalanma. Bir iki bileşeni güçlendirirsen sıçrama yapacaksın.";
+    else if(G<12)y="Güçlü hizalanma. Mevcut yönelimini koru, küçük sıçramalarla büyütmeye odaklan.";
+    else y="Olağanüstü hizalanma. Gayen seninle, sen gayenle akıyorsun. Yayma zamanı.";
+    document.getElementById('yorum').textContent=y;
+  }
+  ['A','B','C','M'].forEach(id=>document.getElementById(id).addEventListener('input',hesapla));
+  hesapla();
+
+  // TEST WIZARD
+  const sorular=[
+    {q:"Bir hafta tamamen özgür olsan, en çok ne yapmaktan keyif alırsın?",o:["Yaratıcı bir şey üretmek","İnsanlara yardım etmek","Yeni bir şey öğrenmek","Yalnız düşünmek","Bir takımı yönetmek"]},
+    {q:"İşinde seni gerçekten harekete geçiren ne?",o:["Etki yaratmak","Tanınmak","Ustalaşmak","Özerklik","Anlam"]},
+    {q:"Hangi değer senin için en kutsal?",o:["Dürüstlük","Özgürlük","Adalet","Sevgi","Mükemmellik"]},
+    {q:"Çevrendeki insanlar hangi konuda sana danışır?",o:["Kararlar","Duygular","Strateji","Yaratıcılık","Teknik"]},
+    {q:"5 yıl sonra hayatına baktığında ne görmek istersin?",o:["İz bırakmış birini","Mutlu birini","Özgür birini","Bağ kurmuş birini","Ustalaşmış birini"]}
+  ];
+  let curQ=0,answers=[];
+  function renderQ(){
+    const s=sorular[curQ];
+    document.getElementById('qNum').textContent=curQ+1;
+    document.getElementById('qBar').style.width=((curQ+1)/sorular.length*100)+'%';
+    document.getElementById('qText').textContent=s.q;
+    const opts=document.getElementById('qOpts');
+    opts.innerHTML='';
+    s.o.forEach((opt,i)=>{
+      const b=document.createElement('button');
+      b.className='test-opt'+(answers[curQ]===i?' selected':'');
+      b.textContent=opt;
+      b.onclick=()=>{answers[curQ]=i;renderQ();};
+      opts.appendChild(b);
+    });
+  }
+  function nextQ(){
+    if(curQ<sorular.length-1){curQ++;renderQ();}
+    else alert("Test tamamlandı! Profilini e-postana gönderiyoruz. (Bu bir mockup'tır)");
+  }
+  function prevQ(){if(curQ>0){curQ--;renderQ();}}
+  renderQ();
+</script>
+
+</body>
+</html>
