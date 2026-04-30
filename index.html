@@ -149,6 +149,49 @@
   .gorsel-card img{margin:0 auto 16px;max-height:560px}
   .gorsel-card .caption{font-size:11px;color:var(--muted);letter-spacing:0.25em;text-transform:uppercase;font-weight:600}
 
+  /* DENKLEM TASARIMI A — SAF MİNİMAL */
+  .dk-block{background:var(--bg);padding:60px 50px;border:1px solid var(--line);margin:36px 0}
+  .dk-block.compact{padding:32px 28px;max-width:640px;margin:0 auto;background:var(--bg)}
+  .dk-block.compact .dk-title-x,.dk-block.compact .dk-sub-x,.dk-block.compact .dk-divider{display:none}
+  .dk-title-x{font-size:32px;font-weight:800;color:var(--ink);letter-spacing:-0.025em;text-align:center;margin-bottom:8px;font-family:'Inter',sans-serif}
+  .dk-sub-x{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--muted);text-align:center;margin-bottom:18px}
+  .dk-divider{width:90px;height:2px;background:#C9A85C;margin:0 auto 50px}
+  .dk-formula{display:flex;align-items:center;justify-content:center;gap:30px;flex-wrap:wrap}
+  .dk-skor{text-align:center}
+  .dk-skor .name{font-size:30px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+  .dk-skor .eng{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--soft);margin-top:4px}
+  .dk-eq{font-size:36px;font-weight:600;color:var(--ink)}
+  .dk-frac{display:flex;flex-direction:column;align-items:center;position:relative}
+  .dk-pay{display:flex;align-items:baseline;gap:18px;padding:0 16px 12px}
+  .dk-term{text-align:center}
+  .dk-term .name{font-size:24px;font-weight:800;letter-spacing:-0.02em;line-height:1.05;color:var(--ink)}
+  .dk-term .eng{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--soft);margin-top:2px}
+  .dk-plus{font-size:26px;font-weight:600;color:var(--soft)}
+  .dk-bar{height:3px;background:var(--ink);width:100%;min-width:300px}
+  .dk-payda{display:inline-flex;align-items:center;gap:6px;padding:24px 0 0;position:relative}
+  .dk-paren{font-size:48px;font-weight:300;line-height:0.9;color:var(--ink)}
+  .dk-ust{position:absolute;left:100%;top:18px;margin-left:3px;white-space:nowrap}
+  .dk-ust .main{font-size:14px;font-weight:700;line-height:1.1;display:block;color:var(--ink)}
+  .dk-ust .eng{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;color:var(--soft);margin-top:2px;display:block}
+  .dk-caption{margin-top:50px;font-size:11px;color:var(--muted);letter-spacing:0.25em;text-transform:uppercase;font-weight:600;text-align:center}
+  .dk-block.compact .dk-caption{margin-top:20px}
+  .dk-block.compact .dk-formula{gap:20px}
+  .dk-block.compact .dk-skor .name{font-size:24px}
+  .dk-block.compact .dk-eq{font-size:30px}
+  .dk-block.compact .dk-term .name{font-size:20px}
+  .dk-block.compact .dk-bar{min-width:240px}
+  .dk-block.compact .dk-paren{font-size:42px}
+  @media(max-width:760px){
+    .dk-block{padding:40px 22px}
+    .dk-formula{gap:14px}
+    .dk-skor .name{font-size:22px}
+    .dk-eq{font-size:26px}
+    .dk-term .name{font-size:18px}
+    .dk-bar{min-width:200px}
+    .dk-paren{font-size:36px}
+    .dk-ust{position:static;margin-top:6px;text-align:center}
+  }
+
   /* DENKLEM GÖRSELİ — HTML/CSS ile inşa */
   .denklem-card{background:var(--bg);padding:48px 40px 40px;border:1px solid var(--line);margin:40px 0;text-align:center}
   .denklem-card .dk-title{font-family:'Inter',sans-serif;font-size:32px;font-weight:800;color:var(--ink);letter-spacing:-0.025em;margin-bottom:8px}
@@ -303,16 +346,34 @@
 
   .mt-result{margin-top:36px;padding:36px;background:var(--bg-warm);border:1px solid var(--line);display:none}
   .mt-result.show{display:block}
-  .mt-result-head{display:grid;grid-template-columns:1fr 280px;gap:30px;align-items:center}
+  .mt-result-head{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
   .mt-kadran{font-size:11px;color:var(--c1);font-weight:600;letter-spacing:0.32em;text-transform:uppercase;margin-bottom:8px}
   .mt-result h4{font-size:32px;font-weight:800;margin-bottom:14px;letter-spacing:-0.025em}
   .mt-result p{font-size:15px;color:var(--muted);line-height:1.65;margin-bottom:10px}
   .mt-result p strong{color:var(--ink);font-weight:600}
-  .mt-skorlar{display:flex;gap:14px;justify-content:flex-end}
-  .mt-skor-pill{background:var(--bg);border:1px solid var(--line);padding:14px 18px;text-align:center;min-width:110px}
+  .mt-skorlar{display:flex;gap:12px;margin-top:18px}
+  .mt-skor-pill{background:var(--bg);border:1px solid var(--line);padding:12px 16px;text-align:center;flex:1}
   .mt-skor-pill .lbl{font-size:10px;color:var(--muted);letter-spacing:0.2em;text-transform:uppercase;font-weight:600;margin-bottom:4px}
-  .mt-skor-pill .val{font-size:24px;font-weight:800;color:var(--ink);line-height:1;letter-spacing:-0.03em}
+  .mt-skor-pill .val{font-size:22px;font-weight:800;color:var(--ink);line-height:1;letter-spacing:-0.03em}
   .mt-skor-pill .max{font-size:12px;color:var(--muted);font-weight:500}
+
+  /* Görsel matris (sonuç) */
+  .mt-visual{position:relative;width:100%;max-width:380px;margin:0 auto}
+  .mt-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;width:100%;aspect-ratio:1/1;position:relative;border:1.5px solid var(--ink)}
+  .mt-grid > div{padding:14px 12px;display:flex;flex-direction:column;justify-content:flex-start;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:0.04em;line-height:1.3;border:0.5px solid var(--line);transition:all 0.3s}
+  .mt-grid > div span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--soft);font-weight:400;display:block;margin-top:4px}
+  .mt-grid > div.active{background:var(--ink);color:var(--bg)}
+  .mt-grid > div.active span{color:rgba(255,255,255,0.7)}
+  .mt-grid .q-k2{grid-column:1;grid-row:1}
+  .mt-grid .q-k1{grid-column:2;grid-row:1}
+  .mt-grid .q-k4{grid-column:1;grid-row:2}
+  .mt-grid .q-k3{grid-column:2;grid-row:2}
+  .mt-dot{position:absolute;width:18px;height:18px;background:var(--c1);border:3px solid var(--bg);border-radius:50%;transform:translate(-50%,50%);transition:all 0.6s ease;box-shadow:0 4px 12px rgba(139,53,32,0.4);z-index:5;pointer-events:none}
+  .mt-dot::after{content:"";position:absolute;inset:-6px;border:2px solid var(--c1);border-radius:50%;opacity:0.3;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{transform:scale(1);opacity:0.3}50%{transform:scale(1.4);opacity:0}}
+  .mt-axis-x{position:absolute;left:0;right:0;bottom:-30px;display:flex;justify-content:space-between;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:0.18em;text-transform:uppercase}
+  .mt-axis-y{position:absolute;top:0;bottom:0;left:-30px;width:24px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:0.18em;text-transform:uppercase;writing-mode:vertical-rl;transform:rotate(180deg)}
+  .mt-axis-label{margin-top:56px;text-align:center;font-size:11px;font-weight:600;color:var(--ink);letter-spacing:0.2em;text-transform:uppercase}
 
   /* MİNİ MATRİS */
   .mini-matrix{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px}
@@ -659,7 +720,7 @@
       <div class="section-head">
         <div class="eyebrow">TORCH Araştırması</div>
         <h2>Üç yıl. <em style="color:var(--c2)">Beş bin katılımcı.</em></h2>
-        <p class="sub">TORCH; gaye–anlam–angajman zincirinin nedenselliğini ölçmek için tasarlanmış üç yıllık bir araştırmadır. Üç farklı kültürden 3.000'den fazla üniversite öğrencisini içeren çalışma, gayenin ölçülebilir bir performans göstergesi olduğunu gösterdi.</p>
+        <p class="sub">TORCH; gaye–anlam–angajman zincirinin nedenselliğini ölçmek için tasarlanmış üç yıllık bir araştırma. Türkiye, ABD ve Güney Kore'den 3.000'den fazla üniversite öğrencisinin katıldığı, beş binden fazla katılımcılık veri setiyle gayenin ölçülebilir bir performans göstergesi olduğunu gösterdi.</p>
       </div>
       <div class="arastirma-grid">
         <div class="arastirma-cell"><div class="big">r=0,71</div><div class="lbl">Gaye netliği ile angajman arasında doğrusal ilişki</div></div>
@@ -717,12 +778,35 @@
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Bölüm 2.3 — Gaye Denklemi</div>
-        <h2>Pay güçlendikçe, <em>payda hafifledikçe.</em></h2>
-        <p class="sub">Gayeyi gerçekleştirme kapasitesi paya yazılır: İtici Güçler ve Destekler. Bu kapasiteyi aşındıran her şey paydaya — köstekler — düşer. Motivasyon onları modüle eden bir üs olarak devreye girer. Pay büyüdükçe, payda hafifledikçe gaye daha net, daha sürdürülebilir biçimde yaşanır.</p>
+        <h2>Seni ileri taşıyan, <em>seni geri çeken.</em></h2>
+        <p class="sub">Gaye yolculuğunu iki kuvvet şekillendirir: <em>ileri taşıyanlar</em> — yeteneğin, ilişki ağın, sana sunulan olanaklar — ve <em>geri çekenler</em> — korkular, alışkanlıklar, çevre direnci. Motivasyon bu ikisinin arasında modülatör olarak çalışır; yüksekse engelleri yumuşatır, düşükse onları olduğu gibi sırtına yıkar. Gaye, bu dengenin yaşanan halidir.</p>
       </div>
-      <div class="gorsel-card">
-        <img src="img/gaye-denklemi.png" alt="Gaye Denklemi — Şekil 2.1">
-        <div class="caption">Şekil 2.1 — Gaye Denklemi (StratejiCo. / TORCH Araştırması)</div>
+      <div class="dk-block">
+        <div class="dk-title-x">Gaye Denklemi</div>
+        <div class="dk-sub-x">Gayeyi güçlendiren ve aşındıran güçlerin dengesi</div>
+        <div class="dk-divider"></div>
+        <div class="dk-formula">
+          <div class="dk-skor"><div class="name">Gaye Skoru</div><div class="eng">Purpose Score</div></div>
+          <div class="dk-eq">=</div>
+          <div class="dk-frac">
+            <div class="dk-pay">
+              <div class="dk-term"><div class="name">İtici Güçler</div><div class="eng">Drivers</div></div>
+              <div class="dk-plus">+</div>
+              <div class="dk-term"><div class="name">Destekler</div><div class="eng">Enablers</div></div>
+            </div>
+            <div class="dk-bar"></div>
+            <div class="dk-payda">
+              <span class="dk-paren">(</span>
+              <div class="dk-term"><div class="name">Köstekler</div><div class="eng">Barriers</div></div>
+              <span class="dk-paren">)</span>
+              <span class="dk-ust">
+                <span class="main">(1 − Motivasyon)</span>
+                <span class="eng">M ∈ [0, 1]</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="dk-caption">Şekil 2.1 · Kitabın 2.3 bölümünden</div>
       </div>
       <div class="skor-cizelge">
         <div><h4>0 — 2</h4><div class="ad">Filiz</div><p>Gaye henüz kök salmamış. Eylem değil, yön bulma evresi — neyi değil neden yaptığını sorgula.</p></div>
@@ -756,8 +840,8 @@
   <section class="page-hero">
     <div class="container">
       <div class="eyebrow">Kitap</div>
-      <h1>Sinek <em>"neden"</em> diye sordu. Bu kitap o sorunun cevabını ölçer.</h1>
-      <p>Otuz yıllık araştırmanın, beş binden fazla katılımcılık saha verisinin ve dört çerçevenin bir araya geldiği yer. Birey için pusula, kurum için kuzey yıldızı, ülke için özgün bir model.</p>
+      <h1>İçsel motivasyonların <em>haritası.</em></h1>
+      <p>Hayatınızdaki ve işinizdeki kararların ardındaki <em>"neden"i</em> görünür kılan, bireysel ile kurumsal motivasyonları birlikte ele alan, kapalı bir sisteme ihtiyaç duymadan bilimsel bir zemin sunan ve okuyucusuna kendi hayatına uygulayabileceği bir yöntem ortaya koyan kitap.</p>
     </div>
   </section>
 
@@ -928,7 +1012,29 @@
           <span class="label">Bireysel Gaye Skoru</span>
           <h3>Skorunu Hesapla</h3>
           <p>Dört bileşeni Bugün ve Gelecek için puanla. Skor, yorum ve öncelikler anında çıkar.</p>
-          <img src="img/gaye-denklemi.png" alt="Gaye Denklemi" class="calc-formula-img" onerror="this.outerHTML='<div style=&quot;color:var(--bg);font-family:Cormorant Garamond,serif;font-size:24px;font-style:italic;line-height:1.5;padding:20px 28px;border:1px solid rgba(255,255,255,0.2);display:inline-block&quot;>Gaye = (İtici Güçler + Destekler) / Köstekler<sup>(1−<em style=&quot;color:var(--c2)&quot;>Motivasyon</em>)</sup></div>'">
+          <div class="dk-block compact">
+            <div class="dk-formula">
+              <div class="dk-skor"><div class="name">Gaye Skoru</div><div class="eng">Purpose Score</div></div>
+              <div class="dk-eq">=</div>
+              <div class="dk-frac">
+                <div class="dk-pay">
+                  <div class="dk-term"><div class="name">İtici Güçler</div><div class="eng">Drivers</div></div>
+                  <div class="dk-plus">+</div>
+                  <div class="dk-term"><div class="name">Destekler</div><div class="eng">Enablers</div></div>
+                </div>
+                <div class="dk-bar"></div>
+                <div class="dk-payda">
+                  <span class="dk-paren">(</span>
+                  <div class="dk-term"><div class="name">Köstekler</div><div class="eng">Barriers</div></div>
+                  <span class="dk-paren">)</span>
+                  <span class="dk-ust">
+                    <span class="main">(1 − M)</span>
+                    <span class="eng">M ∈ [0, 1]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="calc-body">
 
@@ -1073,10 +1179,23 @@
               <div class="mt-kadran" id="mt_kadran">— KADRAN —</div>
               <h4 id="mt_baslik">—</h4>
               <p id="mt_aciklama">—</p>
+              <div class="mt-skorlar">
+                <div class="mt-skor-pill"><div class="lbl">Angajman</div><div class="val"><span id="mt_a_skor">—</span> <span class="max">/40</span></div></div>
+                <div class="mt-skor-pill"><div class="lbl">Gaye Birlikteliği</div><div class="val"><span id="mt_g_skor">—</span> <span class="max">/40</span></div></div>
+              </div>
             </div>
-            <div class="mt-skorlar">
-              <div class="mt-skor-pill"><div class="lbl">Angajman</div><div class="val"><span id="mt_a_skor">—</span> <span class="max">/40</span></div></div>
-              <div class="mt-skor-pill"><div class="lbl">Gaye Birlikteliği</div><div class="val"><span id="mt_g_skor">—</span> <span class="max">/40</span></div></div>
+            <div>
+              <div class="mt-visual">
+                <div style="font-size:10px;font-weight:600;color:var(--muted);letter-spacing:0.18em;text-transform:uppercase;text-align:left;margin-bottom:6px">↑ Gaye Birlikteliği</div>
+                <div class="mt-grid">
+                  <div class="q-k2" id="mtq_k2">II. Kadran<span>Koşan ama nereye?</span></div>
+                  <div class="q-k1" id="mtq_k1">I. Kadran<span>Gaye Birlikteliği</span></div>
+                  <div class="q-k4" id="mtq_k4">IV. Kadran<span>Kopukluk</span></div>
+                  <div class="q-k3" id="mtq_k3">III. Kadran<span>Sempatik ama uzak</span></div>
+                  <div class="mt-dot" id="mt_dot" style="left:50%;bottom:50%"></div>
+                </div>
+                <div class="mt-axis-label">Angajman →</div>
+              </div>
             </div>
           </div>
         </div>
@@ -1276,8 +1395,8 @@
   <section class="page-hero">
     <div class="container">
       <div class="eyebrow">Topluluk</div>
-      <h1>Gayeni <em>bulanların</em> alanı.</h1>
-      <p>Okur hikâyeleri, atölye buluşmaları ve Selim Oktar yazıları — kitabı okumakla başlayan, gayeyle hizalanmaya devam eden bir topluluk. Yakında.</p>
+      <h1>Gaye, <em>yalnız yürünmez.</em></h1>
+      <p>Aynı yıldıza bakanların buluşma noktası. Kitabı bitirip yola çıkanlar, atölyelerde sorularını paylaşanlar, hikâyelerini gönderenler — gayenin paylaşıldıkça derinleştiği alan. Henüz açılıyor; içerik dolduğunda burada olacak.</p>
     </div>
   </section>
 
@@ -1483,24 +1602,39 @@
     document.getElementById('mt_a_skor').textContent = aSkor;
     document.getElementById('mt_g_skor').textContent = gSkor;
 
-    let kadran, baslik, aciklama;
+    let kadran, baslik, aciklama, aktifId;
     const yuksekA = aSkor >= 25, yuksekG = gSkor >= 25;
     if(yuksekA && yuksekG){
-      kadran = 'I. Kadran · Sağ Üst'; baslik = 'Gaye Birlikteliği';
+      kadran = 'I. Kadran · Sağ Üst'; baslik = 'Gaye Birlikteliği'; aktifId = 'mtq_k1';
       aciklama = '<strong>Yüksek angajman + yüksek gaye birlikteliği.</strong> Anlam ve bağlılık birlikte. İdeal konum — pusulan çalışıyor, harekete geçiyorsun. Şimdi asıl iş bu zemini sürdürebilir kılmak ve başkalarına yayma yolları aramak.';
     } else if(yuksekA && !yuksekG){
-      kadran = 'II. Kadran · Sol Üst'; baslik = 'Koşan ama nereye?';
+      kadran = 'II. Kadran · Sol Üst'; baslik = 'Koşan ama nereye?'; aktifId = 'mtq_k2';
       aciklama = '<strong>Yüksek angajman, düşük gaye birlikteliği.</strong> Enerji var, yön belirsiz. Çok çalışıyor, anlam haritasıyla hizalı değil. Tükenmenin yatağı. Soru: <em>"Bu enerjiyi neye yönlendiriyorum?"</em>';
     } else if(!yuksekA && yuksekG){
-      kadran = 'III. Kadran · Sağ Alt'; baslik = 'Sempatik ama uzak';
+      kadran = 'III. Kadran · Sağ Alt'; baslik = 'Sempatik ama uzak'; aktifId = 'mtq_k3';
       aciklama = '<strong>Düşük angajman, yüksek gaye birlikteliği.</strong> Anlama inanır, harekete geçemez. Niyet kadar çaba, eylem kadar irade gerek. Soru: <em>"Hangi köstek beni harekete geçmekten alıkoyuyor?"</em>';
     } else {
-      kadran = 'IV. Kadran · Sol Alt'; baslik = 'Kopukluk';
+      kadran = 'IV. Kadran · Sol Alt'; baslik = 'Kopukluk'; aktifId = 'mtq_k4';
       aciklama = '<strong>Düşük angajman, düşük gaye birlikteliği.</strong> Ne anlam, ne enerji. Yabancılaşmanın bölgesi. Buradan çıkışın yolu önce gaye, sonra angajman: <em>"Neden buradayım?"</em> sorusunu kendine yeniden sor.';
     }
     document.getElementById('mt_kadran').textContent = kadran;
     document.getElementById('mt_baslik').textContent = baslik;
     document.getElementById('mt_aciklama').innerHTML = aciklama;
+
+    // Aktif kadranı vurgula
+    ['mtq_k1','mtq_k2','mtq_k3','mtq_k4'].forEach(id=>{
+      const el=document.getElementById(id);
+      if(el)el.classList.toggle('active',id===aktifId);
+    });
+
+    // Noktayı pozisyonla — angajman x ekseni, gaye y ekseni
+    // Skala: 8 soru × 5 puan = 40 max. Min 8 (1 puan × 8).
+    const dotX = ((aSkor - 8) / 32) * 100; // 8-40 arası → 0-100%
+    const dotY = ((gSkor - 8) / 32) * 100;
+    const dot = document.getElementById('mt_dot');
+    dot.style.left = Math.max(2, Math.min(98, dotX)) + '%';
+    dot.style.bottom = Math.max(2, Math.min(98, dotY)) + '%';
+
     document.getElementById('mt_result').classList.add('show');
     document.getElementById('mt_result').scrollIntoView({behavior:'smooth',block:'center'});
   }
