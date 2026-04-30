@@ -629,6 +629,14 @@
   .ici-section ol li .num{color:var(--ink);font-weight:600;flex-shrink:0;min-width:36px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px}
 
   /* KİTAP */
+  .kitap-hero-grid{grid-template-columns:0.85fr 1.15fr !important}
+  .kitap-tanitim{margin-top:40px}
+  .kitap-tanitim p{font-size:17px;color:var(--ink-2);line-height:1.85;margin-bottom:18px}
+  .kitap-tanitim p strong{color:var(--ink);font-weight:600}
+  .kitap-tanitim p em{font-family:'Cormorant Garamond',serif;color:var(--accent);font-style:italic;font-weight:500}
+  .kitap-quote-line{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:var(--ink);border-left:3px solid var(--accent);padding:8px 0 8px 24px;margin-top:32px;line-height:1.5;font-weight:500}
+  .kitap-quote-line strong{color:var(--accent);font-style:italic;font-weight:600}
+
   .kitap-grid{display:grid;grid-template-columns:0.85fr 1.4fr;gap:80px;align-items:flex-start;margin-bottom:60px}
   .kitap-cover-w{position:relative}
   .kitap-cover-w img{box-shadow:0 24px 60px rgba(10,10,10,0.15),0 6px 16px rgba(10,10,10,0.08);border:1px solid var(--line)}
@@ -1029,7 +1037,7 @@
       <div class="cta-3">
         <a class="btn btn-grad btn-large" onclick="go('bireysel')">Bireysel Skorumu Hesapla</a>
         <a class="btn btn-large btn-cta-light" onclick="go('kurumsal')">Kurumsal Atölye Talep Et</a>
-        <a class="btn btn-ghost btn-large btn-cta-ghost" onclick="go('kitap')">Kitabı Tanı</a>
+        <a class="btn btn-ghost btn-large btn-cta-ghost" href="#satin-al">Kitabı Satın Al</a>
       </div>
     </div>
   </section>
@@ -1234,31 +1242,41 @@
 
 <!-- KİTAP -->
 <div class="page" id="page-kitap">
-  <section class="page-hero">
-    <div class="container">
-      <div class="eyebrow">Kitap</div>
-      <h1>Bu kitap, içsel motivasyonlarımızın <em>haritasını çiziyor.</em></h1>
-      <p>Hayatımızdaki ve işimizdeki kararların ardındaki "neden"i görünür kılmak için yazıldı. Gayeyi dinsel ya da spiritüel bir kavram olmaktan çıkarıp herkesin ulaşabileceği bilimsel bir zemine oturtuyor. En önemlisi, sadece bilgi sunmuyor — okuyucusuna kendi hayatına uygulayabileceği somut bir yöntem öneriyor.</p>
+  <section class="hero">
+    <div class="container hero-grid kitap-hero-grid">
+      <div class="hero-cover">
+        <img src="img/kapak.jpeg" alt="GAYE — Selim Oktar" onerror="this.outerHTML='<div class=hero-cover-fb><div class=fauthor>SELİM OKTAR</div><div class=fsub>Varoluşunuzun<br>Pusulası</div><div class=fgaye>Gaye</div></div>'">
+      </div>
+      <div>
+        <div class="author-tag">Kitap · Selim Oktar · 2025</div>
+        <h1>Gaye, "neden varım?" sorusunun <span class="grad-line">en derin cevabıdır.</span></h1>
+        <p class="lead">Kararlarınızın ardındaki "neden"i görünür kılan, gayeyi spiritüel bir kavram olmaktan çıkarıp ölçülebilir bir yönteme dönüştüren bir kitap.</p>
+        <p class="lead-2">Birey için pusula, kurum için ortak kuzey yıldızı. Yedi bölüm, dört çerçeve, üç yıllık TORCH araştırması.</p>
+        <div class="hero-cta">
+          <a class="btn btn-grad btn-large" href="#satin-al">Kitabı Satın Al</a>
+          <a class="btn btn-ghost btn-large" onclick="document.getElementById('kitap-icindekiler').scrollIntoView({behavior:'smooth'})">İçindekileri Gör</a>
+        </div>
+        <div class="kitap-meta-stats">
+          <div><strong>7</strong><span>Bölüm</span></div>
+          <div><strong>4</strong><span>Çerçeve</span></div>
+          <div><strong>5000+</strong><span>Katılımcı</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- BU KİTAP NİYE VAR? -->
   <section class="section section-warm">
-    <div class="container kitap-grid">
-      <div class="kitap-cover-w">
-        <img src="img/kapak.jpeg" alt="GAYE — Varoluşunuzun Pusulası" onerror="this.outerHTML='<div class=kitap-cover-fb><div class=fauthor>SELİM OKTAR</div><div class=fsub>Varoluşunuzun<br>Pusulası</div><div class=fgaye>Gaye</div></div>'">
+    <div class="container-narrow">
+      <div class="section-head center">
+        <div class="eyebrow">Bu Kitap Niye Var?</div>
+        <h2>Bir soru, çoğumuzun zihninde sessizce dolanır: <em>"ne yapıyorum ben?"</em></h2>
       </div>
-      <div class="kitap-text">
-        <h2>Bu kitap niye <em>var?</em></h2>
-        <p>Bir soru, çoğumuzun zihninde sessizce dolanır: <mark>ne yapıyorum ben?</mark> Sabahın ilk saatinde uyandırır, takvime bakarken kıpırdar, kalabalık bir toplantıda kulağa fısıldar. Bastırırız, geçer — ama dönüp dönüp gelir.</p>
-        <p>Selim Oktar, otuz yıl boyunca bu soruyu hem kendinde hem sahada izledi. Anadolu Sigorta'dan EY'ye, Ankara Patent'ten ÇCSİB sektörlerine uzanan <strong>binlerce kayıt</strong> topladı. Vardığı sonuç: <em>"ne yapıyorum?"</em> sorusu küçük değildir; yöntemsiz cevaplandığında insanı tüketir.</p>
-        <p>Kitap, soruya bir cevap dayatmaz. <strong>Bir yöntem inşa eder.</strong> Gayeyi ölçen, haritalandıran ve geliştirilebilir kılan dört çerçeve sunar: Gaye Haritası, Gaye Denklemi, Gaye Pusulası ve Gaye-Angajman Matrisi. Birey için pusula olur; kurum için ortak bir kuzey yıldızı; ülke için özgün bir model.</p>
-        <p><strong>Dört kapıdan giriyor:</strong> Gaye Skoru ile ölçülebilir bir formül · Birey-kurum-ülke üç düzlemi tek mimari · Türkiye saha vakaları (A101, savunma sanayii, esnaf dijitalleşmesi) · Üç yıllık TORCH araştırması beş binden fazla katılımcı.</p>
-        <div class="quote-line">Drucker müşteriyi öne çıkardı. Sinek "neden" sorusunu sordu. <strong>Bu kitap, o sorunun cevabını ölçer ve taşır.</strong></div>
-        <div class="kitap-meta-stats">
-          <div><strong>7</strong><span>Bölüm</span></div>
-          <div><strong>5000+</strong><span>Katılımcı</span></div>
-          <div><strong>3</strong><span>Düzlem</span></div>
-        </div>
+      <div class="kitap-tanitim">
+        <p>Sabahın ilk saatinde uyandırır, takvime bakarken kıpırdar, kalabalık bir toplantıda kulağa fısıldar. Bastırırız, geçer; ama dönüp dönüp gelir.</p>
+        <p>Selim Oktar otuz yıl boyunca bu soruyu hem kendinde hem sahada izledi. Anadolu Sigorta'dan EY'ye, Ankara Patent'ten ÇCSİB sektörlerine uzanan <strong>binlerce kayıt</strong> topladı. Vardığı sonuç şu: <em>"ne yapıyorum?"</em> sorusu küçük değildir; yöntemsiz cevaplandığında insanı tüketir.</p>
+        <p><strong>Kitap bir cevap dayatmaz; bir yöntem inşa eder.</strong> Gayeyi ölçen, haritalandıran ve geliştirilebilir kılan dört çerçeve sunar: Gaye Pusulası, Gaye Denklemi, Gaye Haritası ve Gaye-Angajman Matrisi. Birey için pusula olur; kurum için ortak bir kuzey yıldızı.</p>
+        <div class="kitap-quote-line">"Drucker müşteriyi öne çıkardı. Sinek 'neden' sorusunu sordu. <strong>Bu kitap, o sorunun cevabını ölçer ve taşır.</strong>"</div>
       </div>
     </div>
   </section>
@@ -1296,7 +1314,7 @@
     </div>
   </section>
 
-  <section class="section section-warm">
+  <section class="section section-warm" id="kitap-icindekiler">
     <div class="container">
       <div class="toc-toggle" onclick="this.classList.toggle('open');document.getElementById('toc-content').classList.toggle('open')">
         <h3>İçindekiler — yedi bölüm</h3>
@@ -1327,6 +1345,18 @@
             <ol><li><span class="num">7.1</span>Matrisin Anatomisi</li><li><span class="num">7.2</span>Dört Profil</li><li><span class="num">7.3</span>Soru Bataryası</li><li><span class="num">7.4</span>İşin Ötesinde</li><li><span class="num">7.5</span>Pratik Adımlar</li></ol>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KİTAP SON CTA -->
+  <section class="cta-final">
+    <div class="container">
+      <h2>Kitabı bugün <em>okumaya başlayın.</em></h2>
+      <p>Yöntemi yedi bölümde elinizde olur; bir hafta içinde ilk skorunuzu çıkarmış olursunuz.</p>
+      <div class="cta-3">
+        <a class="btn btn-grad btn-large" href="#satin-al">Kitabı Satın Al</a>
+        <a class="btn btn-large btn-cta-light" onclick="go('bireysel')">Önce Skoru Hesaplayayım</a>
       </div>
     </div>
   </section>
@@ -1377,42 +1407,24 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">Nasıl Çalışır?</div>
-        <h2>Bu hesaplama hem bugünün <em>aynası</em>, hem yarının <em>haritasıdır.</em></h2>
-        <p class="sub">Her bileşen için iki puan veriyorsun: <em>bugünkü gerçek durum</em> ve <em>bir yıl sonra ulaşmak istediğin yer</em>. Aralarındaki fark, hangi bileşene dokunmanın bütünü taşıyacağını söyler. Skor, kitabın 2.3 bölümündeki formülle anlık hesaplanır.</p>
-      </div>
-
-      <div class="calc-intro">
-        <h3>Neyi <em>nasıl puanlıyorsun?</em></h3>
-        <p>Her bileşeni 1–10 arasında (Motivasyon için 0–1) puanlıyorsun. Önce bugünkü gerçek durumun: <strong>"Şu an ne durumdayım?"</strong> Sonra bir yıllık hedefin: <strong>"Bir yıl içinde nereye gelebilirim?"</strong></p>
-        <div class="calc-puanlama">
-          <div class="puanlama-item">
-            <span class="pi-letter">İ</span><span class="pi-name">İtici Güçler</span><span class="pi-scale">1 – 10</span>
-            <p>Gayeyi eyleme dönüştüren faaliyetlerin gücü. <strong>1</strong>: hiç eyleme dönüşmüyor &nbsp;·&nbsp; <strong>10</strong>: günlük rutine işlenmiş.</p>
-          </div>
-          <div class="puanlama-item">
-            <span class="pi-letter" style="background:var(--c3)">D</span><span class="pi-name">Destekler</span><span class="pi-scale">1 – 10</span>
-            <p>Çevresel, sosyal, yapısal kolaylaştırıcılar. <strong>1</strong>: tek başına &nbsp;·&nbsp; <strong>10</strong>: güçlü ağ ve altyapı.</p>
-          </div>
-          <div class="puanlama-item">
-            <span class="pi-letter" style="background:var(--c5)">K</span><span class="pi-name">Köstekler</span><span class="pi-scale">1 – 10</span>
-            <p>İç ve dış engellerin yoğunluğu. <strong>1</strong>: engel yok &nbsp;·&nbsp; <strong>10</strong>: engel baskın.</p>
-          </div>
-          <div class="puanlama-item">
-            <span class="pi-letter" style="background:var(--c4)">M</span><span class="pi-name">Motivasyon</span><span class="pi-scale">0 – 1</span>
-            <p>Engellere rağmen devam etme gücü. <strong>0</strong>: yok &nbsp;·&nbsp; <strong>1</strong>: tam dayanıklılık.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="section section-warm">
     <div class="container">
-      <div class="calc-box">
+      <div class="section-head center">
+        <div class="eyebrow">Uygulamalar</div>
+        <h2>Hazırsanız, <em>başlayalım.</em></h2>
+        <p class="sub">İki etkileşimli araç: <strong>Bireysel Gaye Skoru</strong> (3 dk) ve <strong>Gaye-Angajman Matrisi Testi</strong> (5 dk). Hangisini açmak isterseniz başlığa tıklamanız yeter.</p>
+      </div>
+
+      <div class="kazanim-accordion">
+        <div class="kazanim-acc">
+          <button class="acc-head" onclick="toggleAcc(this)" aria-expanded="false">
+            <span class="acc-tag">Skor</span>
+            <span class="acc-title">Bireysel Gaye Skorunu Hesapla — 3 dakika</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              <div class="calc-box">
         <div class="calc-head">
           <span class="label">Bireysel Gaye Skoru</span>
           <h3>Skorunu Hesapla</h3>
@@ -1545,17 +1557,20 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+            </div>
+          </div>
+        </div>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">Bölüm 7 · Gaye-Angajman Matrisi</div>
-        <h2>Bireysel haritan: <em>dört kadran.</em></h2>
-        <p class="sub">Çalışmak ile anlamak farklı şeylerdir. Birinin çok çalışması her zaman doğru yere gittiği anlamına gelmez. Matris iki ekseni kesiştirir: angajman (ne kadar bağlısın?) ve gaye birlikteliği (bu bağlılık nereden geliyor?).</p>
-      </div>
-      <div class="mini-matrix">
+        <div class="kazanim-acc">
+          <button class="acc-head" onclick="toggleAcc(this)" aria-expanded="false">
+            <span class="acc-tag">Matris</span>
+            <span class="acc-title">Gaye-Angajman Matrisi Testi — 16 soru, 5 dakika</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              <p style="font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:24px">Çalışmak ile anlamak farklı şeylerdir. Birinin çok çalışması her zaman doğru yere gittiği anlamına gelmez. Matris iki ekseni kesiştirir: <strong style="color:var(--ink)">angajman</strong> (ne kadar bağlısın?) ve <strong style="color:var(--ink)">gaye birlikteliği</strong> (bu bağlılık nereden geliyor?).</p>
+              <div class="mini-matrix">
         <div class="matrix-cell k2"><div class="k-no">II. Kadran · Sol Üst</div><h4>Koşan ama nereye?</h4><p>Yüksek angajman, düşük gaye birlikteliği. Enerji var, yön belirsiz. Tükenmişliğin yatağı.</p></div>
         <div class="matrix-cell k1"><div class="k-no">I. Kadran · Sağ Üst</div><h4>Gaye Birlikteliği</h4><p>Yüksek angajman + yüksek gaye birlikteliği. Anlam ve bağlılık birlikte. Ayşe burada.</p></div>
         <div class="matrix-cell k4"><div class="k-no">IV. Kadran · Sol Alt</div><h4>Kopukluk</h4><p>Düşük angajman + düşük gaye birlikteliği. Ne anlam, ne enerji. Yabancılaşma bölgesi.</p></div>
@@ -1604,6 +1619,22 @@
             </div>
           </div>
         </div>
+      </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BİREYSEL FİNAL CTA -->
+  <section class="cta-final">
+    <div class="container">
+      <h2>Skoru gördüğünde, <em>kitabı da oku.</em></h2>
+      <p>Skor sana hangi tek karara odaklanacağını söyler; kitap o kararın arkasındaki yöntemi, vakaları ve formülü tam verir.</p>
+      <div class="cta-3">
+        <a class="btn btn-grad btn-large" href="#satin-al">Kitabı Satın Al</a>
+        <a class="btn btn-large btn-cta-light" onclick="go('atolye')">Şirketim İçin Atölye</a>
       </div>
     </div>
   </section>
@@ -1660,118 +1691,16 @@
     </div>
   </section>
 
+  <!-- ŞİRKETİM İÇİN — atölyeye geçiş -->
   <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">Bölüm 3.2 · Strateji-Yapı-Kültür</div>
-        <h2>Kurumsal pusula üç eksende çalışır: <em>strateji, yapı, kültür.</em></h2>
-        <p class="sub">Pek çok kurumda strateji belgede, yapı organizasyon şemasında, kültür kâğıttaki değerlerde kalır — üçü ayrı diller konuşur. Ortak bir gaye, bunları tek cümleye bağlar.</p>
+    <div class="container-narrow">
+      <div class="section-head center">
+        <div class="eyebrow">Şirketim İçin</div>
+        <h2>Bu kazanımları kuruma <em>nasıl getiririz?</em></h2>
+        <p class="sub">Gaye odaklı dönüşüm üç katmanda işler: <strong>strateji</strong> (anlamlı bir sorunu çözmek), <strong>yapı</strong> (tutarlı uygulama), <strong>kültür</strong> (anlamla tekrar). Bu üç katmanı tek bir cümleye bağlamak, üst yönetim ekibinizle birlikte yapılan bir iştir. Gaye Atölyesi tam burada devreye girer: bir günde tek cümlelik şirket gayesi, gelişim haritası ve 90 günlük yol planı çıkarıyoruz.</p>
       </div>
-      <div class="kurumsal-cards">
-        <div class="kc-card"><div class="kc-bnum">Strateji</div><h3>Anlamlı bir sorunu çözmek</h3><p>Stratejinin gayesi, anlamlı bir sorunu çözmektir. Gaye olmadan strateji, hedeflerin toplamına indirgenir.</p></div>
-        <div class="kc-card"><div class="kc-bnum">Yapı</div><h3>Tutarlı uygulama</h3><p>Yapının gayesi, çözümün tutarlı biçimde uygulanmasıdır. Süreçler, roller ve kararlar — hepsi gayeye hizmet eder.</p></div>
-        <div class="kc-card"><div class="kc-bnum">Kültür</div><h3>Anlamla tekrar</h3><p>Kültürün gayesi, uygulamanın anlamlandırılarak tekrarlanabilir bir davranışa dönüşmesidir. Kültür, gayenin günlük dilidir.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-warm">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">Bölüm 3.4 · Performans ve Etki</div>
-        <h2>Performans ölçümü artık <em>KPI'dan etkiye</em> doğru kayıyor.</h2>
-        <p class="sub">Kararların sonuç üretmesi gerekir. Liderliğin iki boyutu: performans (ne kadar iyi uyguladık?) ve etki (kurumun sınırlarının ötesinde ne bıraktık?). Her ikisi de gaye etrafında kurulur.</p>
-      </div>
-      <div class="cards-3">
-        <div class="card" style="cursor:default">
-          <div class="num">Performans</div>
-          <h3>Üç soru</h3>
-          <p><strong>Hedef netliği:</strong> Ekip neyi başaracağını biliyor mu? <strong>Kaynak uyumu:</strong> Yetenek, bütçe, süre yeterli mi? <strong>Geri bildirim:</strong> Gerçek zamanlı öğrenme var mı?</p>
-        </div>
-        <div class="card" style="cursor:default">
-          <div class="num">Etki</div>
-          <h3>Üç düzey</h3>
-          <p><strong>Birey:</strong> Çalışan angajmanı, anlamlı iş, gelişim. <strong>Kurum:</strong> Değer yaratımı, itibar, müşteri sadakati. <strong>Toplum:</strong> Sorun çözümüne katkı.</p>
-        </div>
-        <div class="card" style="cursor:default">
-          <div class="num">Patagonia</div>
-          <h3>Mantıksal sonuç</h3>
-          <p>Kurucu Yvon Chouinard 2022'de şirketin tamamını iklim mücadelesi vakfına devretti. <em class="serif">"Dünya artık tek hissedarımız."</em> Etki, slogan değil; yaşanan gerçek.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">Bölüm 6.4 · Dört Tip İş Modeli</div>
-        <h2>Gaye, modele <em>kaç katmanda</em> işliyor?</h2>
-        <p class="sub">Gaye, iş modellerine farklı derinliklerde entegre edilebilir. Yüzeysel bir CSR beyanından, gayesi olmadan var olamayacak modellere kadar.</p>
-      </div>
-      <div class="ismodel-grid">
-        <div class="ismodel">
-          <div class="tnum">Tip 1</div>
-          <h4>Gaye Örtüsü</h4>
-          <p>Mevcut iş modelinin üzerine gaye beyanı yapıştırılır. CSR faaliyetleri bu kategoride. Gaye, işin merkezinde değil, yan koridorunda durur. Risk: 'purpose-washing'.</p>
-          <div class="ornekler">Türkiye holding raporlarındaki sosyal sorumluluk başlıkları</div>
-        </div>
-        <div class="ismodel">
-          <div class="tnum">Tip 2</div>
-          <h4>Gaye Katmanı</h4>
-          <p>Gaye, belirli ürün ya da hizmetlere entegre edilir. Değer önerisinin parçası olur ama kurumun tamamına henüz değil — gaye adacıklarda kalır.</p>
-          <div class="ornekler">Bankaların "yeşil mevduat", "çocuk hesabı" ürünleri</div>
-        </div>
-        <div class="ismodel">
-          <div class="tnum">Tip 3</div>
-          <h4>Gaye Entegrasyonu</h4>
-          <p>Gaye, iş modelinin tüm bloklarına nüfuz eder — müşteri ilişkilerinden tedarik zincirine, işe alımdan fiyatlandırmaya. Kurumsal tutarlılık ve derin angajman.</p>
-          <div class="ornekler">Patagonia bu tipin en iyi örneğidir</div>
-        </div>
-        <div class="ismodel">
-          <div class="tnum">Tip 4</div>
-          <h4>Gaye Doğumlu Model</h4>
-          <p>İş modeli, baştan itibaren bir gaye etrafında inşa edilir. Model, gaye olmadan var olamazdı. En sürdürülebilir, en ilham verici tip.</p>
-          <div class="ornekler">Grameen Bank, Duolingo, Wikipedia</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-warm">
-    <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">Bölüm 6.7 · Sahadaki Gerçek</div>
-        <h2>A101'in 70.000 çalışanı <em>bize ne öğretti?</em></h2>
-        <p class="sub">14.000 mağaza, 70.000 çalışan. TORCH araştırma programı kapsamında yürütülen Gaye-Angajman ölçümü, dört çarpıcı bulgu ortaya koydu.</p>
-      </div>
-      <div class="a101-block">
-        <div class="a-eyebrow">Bölüm 6.7 — Saha Vakası</div>
-        <h3>Gaye, kasiyerin on saniyelik göz temasında yaşar — ya da yaşamaz.</h3>
-        <p class="a-intro">Bu ölçek, angajman ve gaye araştırması açısından hem bir fırsat hem büyük bir zorluk: <strong>her gün milyonlarca Türk'ün doğrudan temas ettiği bir kurumda anlam ve bağlılığı nasıl yönetirsiniz?</strong> Araştırma sonuçları, Türkiye perakende sektörünün ortak fotoğrafını yansıtıyor.</p>
-        <div class="a101-bulgular">
-          <div class="a-bulgu">
-            <div class="ab-tag">Mağaza Çalışanları</div>
-            <h5>IV. Kadran — Kopukluk</h5>
-            <p>Operasyonel baskı yüksek, kurumun büyük resmiyle bağlantı düşük. <em class="serif">"Ben sadece kasiyer olarak görülüyorum"</em> en sık tekrar eden tema.</p>
-          </div>
-          <div class="a-bulgu">
-            <div class="ab-tag">Orta Kademe Yöneticiler</div>
-            <h5>II. Kadran — Yüksek Angajman, Düşük Gaye</h5>
-            <p>Görevlerini iyi yapıyorlar; ama neden yaptıklarını net göremiyorlar. En yoğun burnout riski taşıyan segment.</p>
-          </div>
-          <div class="a-bulgu">
-            <div class="ab-tag">Üst Yönetim</div>
-            <h5>I. Kadran — Gaye Birlikteliği</h5>
-            <p>Vizyona ve değer yaratımına inanç yüksek. Sorun: bu inancın alt kademelere iletilmesindeki ciddi boşluk.</p>
-          </div>
-          <div class="a-bulgu">
-            <div class="ab-tag">Müşteriler</div>
-            <h5>III. Kadran — Fonksiyonel</h5>
-            <p>"Ucuz ve yakın" — fiyat avantajını takdir, ama markayla duygusal/anlamsal bağ yok. Kolaylığın ifadesi, gaye birlikteliğinin değil.</p>
-          </div>
-        </div>
-        <p class="a-intro" style="margin-top:28px;margin-bottom:0">Mağaza çalışanlarının "kurumun nedenini" anlatan kısa oryantasyon programları, orta kademeyle yapılan gaye çalıştayları, müşteri iletişiminde "ucuz ve yakın" yerine <strong>"her eve değer götürüyoruz"</strong> mesajına geçiş — bu üç adım, angajman ölçümlerinde anlamlı bir iyileşme sağladı.</p>
+      <div style="text-align:center;margin-top:38px">
+        <a class="btn btn-grad btn-large" onclick="go('atolye')">Gaye Atölyesi'ni İncele →</a>
       </div>
     </div>
   </section>
@@ -1799,7 +1728,18 @@
           <p>Manavın, berberin, kasabın dijital dünyada yalnız kalmamasını sağlayan girişim. Kitaptaki Emre'nin gerçek hesaplaması: skor 8,0.</p>
         </div>
       </div>
-      <div style="text-align:center;margin-top:60px"><a class="btn btn-large" onclick="go('atolye')">Gaye Atölyesi'ni İncele →</a></div>
+    </div>
+  </section>
+
+  <!-- KURUMSAL FİNAL CTA -->
+  <section class="cta-final">
+    <div class="container">
+      <h2>Şirketinizin gayesi <em>bir günde netleşir.</em></h2>
+      <p>İlk 30 dakikalık tanı görüşmesi ücretsiz. Şirketinizin "neden var?" sorusuna nasıl yaklaştığınızı birlikte değerlendirir, atölye uygunsa devam ederiz.</p>
+      <div class="cta-3">
+        <a class="btn btn-grad btn-large" onclick="go('atolye')">Atölye Talep Et</a>
+        <a class="btn btn-large btn-cta-light" href="#satin-al">Kitabı Al</a>
+      </div>
     </div>
   </section>
 </div>
@@ -2129,7 +2069,7 @@
     </div>
     <div><h5>Keşfet</h5><ul><li><a onclick="go('kitap')">Kitap</a></li><li><a onclick="go('bireysel')">Bireysel</a></li><li><a onclick="go('kurumsal')">Kurumsal</a></li></ul></div>
     <div><h5>Düzlemler</h5><ul><li><a onclick="go('kurumsal')">Kurumsal</a></li><li><a onclick="go('atolye')">Atölye</a></li><li><a onclick="go('topluluk')">Topluluk</a></li><li><a onclick="go('iletisim')">İletişim</a></li></ul></div>
-    <div><h5>Kitap</h5><ul><li><a onclick="go('kitap')">Tanıtım</a></li><li><a onclick="go('kitap')">Yazar</a></li><li><a onclick="go('kitap')">İçindekiler</a></li></ul></div>
+    <div><h5>Kitap</h5><ul><li><a onclick="go('kitap')">Tanıtım</a></li><li><a onclick="go('kitap')">Yazar</a></li><li><a onclick="go('kitap')">İçindekiler</a></li><li><a href="#satin-al"><strong>Kitabı Satın Al →</strong></a></li></ul></div>
   </div>
   <div class="container copyright">© 2025 Selim Oktar · Tüm hakları saklıdır</div>
 </footer>
@@ -2147,19 +2087,26 @@
   window.addEventListener('hashchange',()=>go(window.location.hash.replace('#','')||'home'));
   go(window.location.hash.replace('#','')||'home');
 
-  // KAZANIM ACCORDION
+  // ACCORDION (kazanım + skor + matris)
   function toggleAcc(btn){
     const acc=btn.parentElement;
     const body=acc.querySelector('.acc-body');
     const isOpen=acc.classList.contains('open');
     if(isOpen){
+      // önce explicit yüksekliği yaz, sonra 0'a iniş için reflow
+      body.style.maxHeight=body.scrollHeight+'px';
+      void body.offsetHeight;
+      body.style.maxHeight='0px';
       acc.classList.remove('open');
-      body.style.maxHeight=null;
       btn.setAttribute('aria-expanded','false');
     }else{
       acc.classList.add('open');
       body.style.maxHeight=body.scrollHeight+'px';
       btn.setAttribute('aria-expanded','true');
+      // animasyon bitince max-height'ı 'none' yap, böylece dinamik içerik genişleyebilir
+      setTimeout(()=>{
+        if(acc.classList.contains('open'))body.style.maxHeight='none';
+      },500);
     }
   }
 
