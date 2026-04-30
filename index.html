@@ -149,6 +149,36 @@
   .gorsel-card img{margin:0 auto 16px;max-height:560px}
   .gorsel-card .caption{font-size:11px;color:var(--muted);letter-spacing:0.25em;text-transform:uppercase;font-weight:600}
 
+  /* MANİFESTO — Büyük alıntı + iki sütun */
+  .big-quote{background:var(--bg);padding:80px 60px;border:1px solid var(--line);text-align:center;max-width:920px;margin:0 auto;position:relative}
+  .big-quote::before{content:"";position:absolute;top:30px;left:50%;transform:translateX(-50%);width:50px;height:2px;background:#C9A85C}
+  .big-quote .bq-eyebrow{font-size:11px;font-weight:600;color:var(--ink);letter-spacing:0.32em;text-transform:uppercase;margin-bottom:24px;margin-top:24px;display:inline-block}
+  .big-quote blockquote{font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--ink);font-style:italic;font-weight:500;line-height:1.35;letter-spacing:-0.015em;margin-bottom:18px}
+  .big-quote .bq-source{font-size:12px;color:var(--muted);letter-spacing:0.2em;text-transform:uppercase;font-weight:600}
+
+  .iki-sutun{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:flex-start}
+  .iki-sutun-text p{font-size:17px;color:var(--ink-2);line-height:1.8;margin-bottom:18px}
+  .iki-sutun-text p strong{color:var(--ink);font-weight:600}
+  .iki-sutun-text p em{font-family:'Cormorant Garamond',serif;color:var(--ink);font-style:italic}
+  .iki-sutun-text mark{background:linear-gradient(180deg,transparent 65%,#FFE89A 65%);color:var(--ink);padding:0 2px;font-weight:500}
+  .iki-sutun-side{background:var(--bg-2);padding:40px;border-left:3px solid var(--ink)}
+  .iki-sutun-side .ss-eyebrow{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:0.32em;text-transform:uppercase;margin-bottom:14px}
+  .iki-sutun-side h3{font-size:24px;font-weight:700;color:var(--ink);margin-bottom:14px;line-height:1.2;letter-spacing:-0.018em}
+  .iki-sutun-side p{font-size:15px;color:var(--ink-2);line-height:1.7;margin-bottom:14px}
+  .iki-sutun-side ul{list-style:none;padding-left:0;margin-top:14px}
+  .iki-sutun-side ul li{padding:10px 0;font-size:14.5px;color:var(--ink-2);line-height:1.6;border-bottom:1px solid var(--line);padding-left:22px;position:relative}
+  .iki-sutun-side ul li:last-child{border-bottom:none}
+  .iki-sutun-side ul li::before{content:"→";position:absolute;left:0;color:var(--ink);font-weight:700}
+  .iki-sutun-side ul li strong{color:var(--ink);display:block;margin-bottom:4px;font-weight:700}
+
+  /* Üç Kırılma kartı */
+  .kirilma-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+  .kirilma{background:var(--bg);padding:36px 30px;border:1px solid var(--line);position:relative;transition:all 0.3s}
+  .kirilma:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(10,10,10,0.06)}
+  .kirilma .kr-num{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:var(--ink);line-height:1;margin-bottom:14px;font-style:italic}
+  .kirilma h4{font-size:22px;font-weight:700;color:var(--ink);margin-bottom:10px;letter-spacing:-0.015em}
+  .kirilma p{font-size:14.5px;color:var(--muted);line-height:1.65}
+
   /* DENKLEM TASARIMI A — SAF MİNİMAL */
   .dk-block{background:var(--bg);padding:60px 50px;border:1px solid var(--line);margin:36px 0}
   .dk-block.compact{padding:32px 28px;max-width:640px;margin:0 auto;background:var(--bg)}
@@ -752,6 +782,64 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="container-narrow">
+      <div class="big-quote">
+        <div class="bq-eyebrow">Bölüm 1.5 — Krizdeki Gaye</div>
+        <blockquote>"Gaye kriz zamanı icat edilmez; kriz zamanı sınanır. <em>İcat edildiyse zaten geç kalınmıştır.</em>"</blockquote>
+        <div class="bq-source">Gayeni Bul · Selim Oktar</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-warm">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Bölüm 1.5 · Krizin sınavı</div>
+        <h2>Bolluk değil, <em>kıtlık.</em></h2>
+        <p class="sub">Gayenin asıl sınavı bolluk değil, kıtlıktır. Pandemi 2020'de hatırlattı, 2023 depremi Türkiye'de kemiklerimize işledi. "Sürdürülebilir büyüme" cümleleri ezberleyen şirketlerin önemli bir kısmı, kriz vurduğunda kendine soramayan kuruluşlara dönüştü. Cümleler doğruydu; ama içine kazınmamıştı.</p>
+      </div>
+      <div class="iki-sutun">
+        <div class="iki-sutun-text">
+          <p>Gerçek gayesi olan kurumlarda tablo başkaydı. Bir gıda zinciri, çalışanına ücret kesintisini reddetti — üst yönetim altı ay maaşının yarısını bağışladı. Bir tekstil şirketi, makinelerini bir gece içinde maske üretimine çevirdi. Bir bankanın çağrı merkezi, depremzedeleri arayıp banka borçlarını otomatik erteledi.</p>
+          <p>Hiçbiri stratejik plana yazılmamıştı; çünkü <mark>gayenin kendisi yazılıydı.</mark> Karar, planı doğurdu; tersi değil.</p>
+          <p>Birey için de aynı şey geçerlidir. Kariyerini bir sabah kaybeden okur, içinde gaye bulamamışsa boşluğa bakar; bulanmışsa <em>"şimdi ne yapacağım?"</em> sorusunu <em>"bu deneyim beni neye taşır?"</em> sorusuna çevirir. Aynı acı, iki farklı yola açılır.</p>
+        </div>
+        <div class="iki-sutun-side">
+          <div class="ss-eyebrow">Üç saha gözlemi</div>
+          <h3>Gaye, kararı doğurur</h3>
+          <ul>
+            <li><strong>Gıda zinciri</strong>Pandemi başında ücret kesintisi reddedildi; üst yönetim 6 ay maaşının yarısını bağışladı.</li>
+            <li><strong>Tekstil şirketi</strong>Bir gecede üretim hattı maskeye çevrildi.</li>
+            <li><strong>Banka</strong>Deprem sonrası çağrı merkezi, depremzedeleri arayıp borç ertelemesini otomatikleştirdi.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Bölüm 1.4 · Gaye ve Rekabet</div>
+        <h2>Gaye, paylaşıldıkça <em>güçlenir.</em></h2>
+        <p class="sub">Amaçlar ve hedefler rekabete açıktır: aynı pazar, aynı ödül, aynı pozisyon. Gaye değildir. Bir öğretmenin "insanlara öğretme gayesi" başka bir öğretmenin aynı gayesiyle çelişmez — birbirini büyütür. Kurumlar için de aynı: iki şirket benzer sektörde olsa da, taşıdıkları gaye farklıysa farklı değer yaratır.</p>
+      </div>
+      <div class="iki-sutun">
+        <div class="iki-sutun-text">
+          <p><strong>Gaye kimseye ait değildir;</strong> onu paylaşan herkes aynı anda taşıyabilir. Başkasının sağlık alanında inovasyon yapması, sizin gayenizi tüketmez; aksine daha anlamlı hâle getirir. Gaye, insanları birbirinden uzaklaştırmaz; ortak anlam etrafında birleştirir.</p>
+          <p>Para, gayeyi gerçekleştirmenin bir <em>aracı</em> olabilir; ama hiçbir zaman gayenin kendisi olamaz. Yalnızca kazanmak için var olan bir şirket, bir gün kazanmayı bıraktığında ne olacağını bilemez. Oysa gerçek bir gayeye sahip bir şirket, kayıpları da dahil, her koşulda ileriye bakmaya devam eder.</p>
+        </div>
+        <div class="iki-sutun-side">
+          <div class="ss-eyebrow">Yeni kavram</div>
+          <h3>Gayedaşlık</h3>
+          <p>Aynı gayeyi paylaşan bireylerin, kurumların veya toplulukların birbirini tüketen bir rekabet yerine birbirini besleyen bir <strong>anlam ortaklığı</strong> kurmasıdır.</p>
+          <p>Bu birliktelik sıradan bir iş ilişkisinin çok ötesine geçer: <em>bir anlam ittifakına</em> dönüşür.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section section-warm">
     <div class="container">
       <div class="section-head">
@@ -830,6 +918,52 @@
           <li style="padding-left:38px;position:relative;margin-bottom:14px"><span style="position:absolute;left:0;top:0;font-family:Cormorant Garamond,serif;font-style:italic;color:var(--c3);font-weight:600;font-size:20px">→</span> <strong style="color:var(--ink);font-weight:600">Bugün düşük + Gelecek yüksek:</strong> potansiyel vardır, hızlı ilerleme mümkün.</li>
           <li style="padding-left:38px;position:relative"><span style="position:absolute;left:0;top:0;font-family:Cormorant Garamond,serif;font-style:italic;color:var(--c4);font-weight:600;font-size:20px">→</span> <strong style="color:var(--ink);font-weight:600">Bugün yüksek:</strong> odak korumadır — sürdürülebilirlik öncelik.</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Bölüm 2.5 · Anlam Koptuğunda</div>
+        <h2>Üç kırılma <em>noktası.</em></h2>
+        <p class="sub">Gaye ile anlam arasındaki bağ her zaman sağlam kalmaz. Bu buluşmayı engelleyen üç temel kırılma noktası vardır — ister bireysel ister kurumsal düzeyde aynı zincirleme sonuçlara yol açar: bilgiye ve bilgiyi gönderene olan güvenin kaybı.</p>
+      </div>
+      <div class="kirilma-grid">
+        <div class="kirilma">
+          <div class="kr-num">i.</div>
+          <h4>İlgisizlik</h4>
+          <p>Bilginin görevin bağlamıyla örtüşmemesidir. Kişi <em>ne yaptığını</em> bilir ama <em>neden yaptığını</em> bilmez.</p>
+        </div>
+        <div class="kirilma">
+          <div class="kr-num">ii.</div>
+          <h4>Tamamlanmamışlık</h4>
+          <p>Görevi yerine getirmek için yeterli anlam aktarılmamıştır. Görev tamamlanır, ama bıraktığı etki görünmez kalır.</p>
+        </div>
+        <div class="kirilma">
+          <div class="kr-num">iii.</div>
+          <h4>Değişkenlik</h4>
+          <p>Açıklamanın duruma göre sürekli değişmesi uyumsuzluk ve güvensizlik yaratır. Bir gün bir, ertesi gün başka.</p>
+        </div>
+      </div>
+
+      <div class="iki-sutun" style="margin-top:60px">
+        <div class="iki-sutun-text">
+          <p><strong>İnşa edici</strong> — gayeyi taşıyan kişi, ister çalışan ister girişimci ister gönüllü olsun. İnşa edicinin gerçekleştirdiği her görev, gayeyi doğrulamak için <em>nihai değer yaratımını</em> hedef almalıdır.</p>
+          <p>İnşa edicinin bilinç düzeyi — yaptığı işin <em>"neden"ini</em> ne kadar kavradığı — anlamın derinliğini doğrudan belirler. Bilinç düşükse görev yapılır ama gelişmez; yüksekse inşa edici değer katmayı benimseyerek işini sürekli ileriye taşır.</p>
+          <p>İşin gayesini ve anlamını kavrayamamak, Marx'ın <em>yabancılaşma</em> ilkesiyle örtüşen bir süreci başlatır. Burada ideolojik bir çerçeveden değil, bireyin ürettiği değerle arasındaki kopuşun evrensel dinamiğinden söz ediyoruz.</p>
+        </div>
+        <div class="iki-sutun-side">
+          <div class="ss-eyebrow">Yabancılaşmanın Dört Boyutu</div>
+          <h3>Kaçınılmaz sonuçlar</h3>
+          <p style="margin-bottom:14px;font-size:14.5px">Hiçbiri iradenin bir seçimi değildir — gaye ve anlam sunulmazsa, kaçınılmaz olarak ortaya çıkarlar.</p>
+          <ul>
+            <li><strong>İlişkilerin bozulması</strong>Çevreyle, ekiple, müşteriyle bağlar zayıflar.</li>
+            <li><strong>Görev kalitesinin düşmesi</strong>"Neden" eksilince "ne kadar iyi" de eksilir.</li>
+            <li><strong>Kurumsal uyumsuzluk</strong>Birey ile kurumun gayesi arasındaki çatışma yapısallaşır.</li>
+            <li><strong>Psikolojik güvenliğin erozyonu</strong>Anlam yokluğu, korkuyu çağırır.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
