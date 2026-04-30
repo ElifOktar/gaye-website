@@ -728,6 +728,7 @@
       <li><a data-page="kitap" onclick="go('kitap')">Kitap</a></li>
       <li><a data-page="bireysel" onclick="go('bireysel')">Bireysel</a></li>
       <li><a data-page="kurumsal" onclick="go('kurumsal')">Kurumsal</a></li>
+      <li><a data-page="atolye" onclick="go('atolye')">Atölye</a></li>
       <li><a data-page="topluluk" onclick="go('topluluk')">Topluluk</a></li>
       <li><a data-page="iletisim" onclick="go('iletisim')">İletişim</a></li>
     </ul>
@@ -1614,6 +1615,18 @@
           <p>Manavın, berberin, kasabın dijital dünyada yalnız kalmamasını sağlayan girişim. Kitaptaki Emre'nin gerçek hesaplaması: skor 8,0.</p>
         </div>
       </div>
+      <div style="text-align:center;margin-top:60px"><a class="btn btn-large" onclick="go('atolye')">Gaye Atölyesi'ni İncele →</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ATÖLYE -->
+<div class="page" id="page-atolye">
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Gaye Atölyesi</div>
+      <h1>Şirketinin gayesi, <em>bir günde haritaya.</em></h1>
+      <p>Selim Oktar'ın kitabındaki dört çerçeveyi (Gaye Haritası, Gaye Denklemi, Gaye Pusulası, Gaye-Angajman Matrisi) üst yönetim ekibinizle birlikte kurumunuza uygulayan, çıktısı somut bir atölye programı. Çalışan Pulse Check ile birlikte tam tablo.</p>
     </div>
   </section>
 
@@ -1628,16 +1641,16 @@
           </div>
           <div class="atolye-info-stack">
             <div class="atolye-info-cell">
-              <span class="lbl">Süre</span>
-              <span class="val">1 tam gün · 6 saat</span>
+              <span class="lbl">Atölye</span>
+              <span class="val">1 tam gün · üst yönetim 8–20 kişi</span>
+            </div>
+            <div class="atolye-info-cell">
+              <span class="lbl">Pulse Check</span>
+              <span class="val">Tüm ekip · 10 dakikalık online anket</span>
             </div>
             <div class="atolye-info-cell">
               <span class="lbl">Format</span>
               <span class="val">Yüz yüze · Online · Hibrit</span>
-            </div>
-            <div class="atolye-info-cell">
-              <span class="lbl">Katılımcı</span>
-              <span class="val">8–20 kişi · üst yönetim</span>
             </div>
           </div>
         </div>
@@ -1702,6 +1715,41 @@
   </section>
 
   <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Çalışan Pulse Check</div>
+        <h2>Üst yönetimden öteye, <em>tüm ekibe ulaşan ölçüm.</em></h2>
+        <p class="sub">Atölye üst yönetimle yapılır; ama gayenin gerçek sınavı sahada olur. Pulse Check, çalışanların gözünden Gaye-Angajman fotoğrafını çeken kısa bir online ankettir. Atölye öncesinde yapılır; atölyenin gündemini somut data ile besler.</p>
+      </div>
+      <div class="kim-grid" style="grid-template-columns:repeat(2,1fr);gap:24px">
+        <div class="kim-card" style="text-align:left;padding:36px 32px">
+          <span class="km-rol">Anket</span>
+          <h5 style="font-family:'Inter',sans-serif;font-size:24px;font-style:normal;font-weight:700;letter-spacing:-0.018em;margin-bottom:14px">10 dakikalık çalışan anketi</h5>
+          <p style="font-size:14.5px;line-height:1.7;color:var(--muted);margin-bottom:16px">Kitabın 7.3 bölümündeki <strong style="color:var(--ink)">Soru Bataryası</strong> üzerine kurulu: 8 angajman + 8 gaye birlikteliği sorusu. Çalışan adını paylaşmak zorunda değil; sadece kademe, departman ve kıdem.</p>
+          <ul style="list-style:none;padding-left:0">
+            <li style="padding:6px 0 6px 22px;font-size:13.5px;color:var(--ink-2);position:relative;line-height:1.5"><span style="position:absolute;left:0;color:var(--ink);font-weight:700">→</span> Anonim doldurma seçeneği</li>
+            <li style="padding:6px 0 6px 22px;font-size:13.5px;color:var(--ink-2);position:relative;line-height:1.5"><span style="position:absolute;left:0;color:var(--ink);font-weight:700">→</span> Mobil uyumlu, link üzerinden ulaşım</li>
+            <li style="padding:6px 0 6px 22px;font-size:13.5px;color:var(--ink-2);position:relative;line-height:1.5"><span style="position:absolute;left:0;color:var(--ink);font-weight:700">→</span> 50 kişiden 50.000 kişiye ölçeklenir</li>
+          </ul>
+        </div>
+        <div class="kim-card" style="text-align:left;padding:36px 32px">
+          <span class="km-rol">Sonuç Raporu</span>
+          <h5 style="font-family:'Inter',sans-serif;font-size:24px;font-style:normal;font-weight:700;letter-spacing:-0.018em;margin-bottom:14px">Kurumsal Gaye-Angajman Haritası</h5>
+          <p style="font-size:14.5px;line-height:1.7;color:var(--muted);margin-bottom:16px">Anket bittikten sonra atölye günü size sunulan, ekibinizin dört kadrandaki dağılımını gösteren detaylı rapor. A101 vakasında ortaya çıkan tipoloji burada da kullanılır.</p>
+          <ul style="list-style:none;padding-left:0">
+            <li style="padding:6px 0 6px 22px;font-size:13.5px;color:var(--ink-2);position:relative;line-height:1.5"><span style="position:absolute;left:0;color:var(--ink);font-weight:700">→</span> Kadran bazlı dağılım yüzdeleri</li>
+            <li style="padding:6px 0 6px 22px;font-size:13.5px;color:var(--ink-2);position:relative;line-height:1.5"><span style="position:absolute;left:0;color:var(--ink);font-weight:700">→</span> Departman ve kademe kırılımı</li>
+            <li style="padding:6px 0 6px 22px;font-size:13.5px;color:var(--ink-2);position:relative;line-height:1.5"><span style="position:absolute;left:0;color:var(--ink);font-weight:700">→</span> En kritik 3 müdahale önerisi</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:34px;padding:26px 32px;background:#FBF5E5;border-left:3px solid var(--ink);font-size:14.5px;color:var(--ink-2);line-height:1.7">
+        <strong style="color:var(--ink)">Neden çalışan taraması kritik?</strong> A101 araştırması gösterdi ki üst yönetim çoğunlukla I. Kadran'da (Gaye Birlikteliği), mağaza çalışanları ise IV. Kadran'da (Kopukluk). Tek başına üst yönetim atölyesi bu boşluğu kapatmaz. Pulse Check, atölyeyi sloganlardan çıkarıp <em style="font-family:'Cormorant Garamond',serif">"kasiyerin gözünden ne görünüyor?"</em> sorusuna cevap verecek bir zemine oturtuyor.
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-warm">
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Atölyenin Çıktıları</div>
@@ -1876,7 +1924,7 @@
       <p>Selim Oktar · 30 yıllık araştırma, üç yıllık TORCH çalışması ve sahadan gelen veri ile inşa edilmiş Gaye Modeli.</p>
     </div>
     <div><h5>Keşfet</h5><ul><li><a onclick="go('manifesto')">Manifesto</a></li><li><a onclick="go('kitap')">Kitap</a></li><li><a onclick="go('bireysel')">Bireysel</a></li></ul></div>
-    <div><h5>Düzlemler</h5><ul><li><a onclick="go('kurumsal')">Kurumsal</a></li><li><a onclick="go('topluluk')">Topluluk</a></li><li><a onclick="go('iletisim')">İletişim</a></li></ul></div>
+    <div><h5>Düzlemler</h5><ul><li><a onclick="go('kurumsal')">Kurumsal</a></li><li><a onclick="go('atolye')">Atölye</a></li><li><a onclick="go('topluluk')">Topluluk</a></li><li><a onclick="go('iletisim')">İletişim</a></li></ul></div>
     <div><h5>Kitap</h5><ul><li><a onclick="go('kitap')">Tanıtım</a></li><li><a onclick="go('kitap')">Yazar</a></li><li><a onclick="go('kitap')">İçindekiler</a></li></ul></div>
   </div>
   <div class="container copyright">© 2025 Selim Oktar · Tüm hakları saklıdır</div>
