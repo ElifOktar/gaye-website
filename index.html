@@ -166,6 +166,78 @@
     .manifesto-soz blockquote{font-size:20px}
   }
 
+  /* ATÖLYE BÖLÜMÜ */
+  .atolye-hero{background:var(--ink);color:var(--bg);padding:80px 60px;border-radius:0;margin-bottom:0;text-align:left;position:relative;overflow:hidden}
+  .atolye-hero::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+  .atolye-hero-grid{display:grid;grid-template-columns:1.3fr 0.7fr;gap:50px;align-items:center}
+  .atolye-hero .ah-eyebrow{font-size:11px;letter-spacing:0.32em;color:rgba(255,255,255,0.6);text-transform:uppercase;font-weight:600;margin-bottom:18px;display:inline-block}
+  .atolye-hero h2{font-size:54px;color:var(--bg);font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin-bottom:20px}
+  .atolye-hero h2 em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--bg);font-weight:500}
+  .atolye-hero p{font-size:17px;color:rgba(255,255,255,0.78);line-height:1.65;margin-bottom:0}
+  .atolye-info-stack{display:flex;flex-direction:column;gap:14px}
+  .atolye-info-cell{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);padding:18px 22px}
+  .atolye-info-cell .lbl{font-size:10.5px;letter-spacing:0.25em;color:rgba(255,255,255,0.55);text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block}
+  .atolye-info-cell .val{font-size:18px;color:var(--bg);font-weight:600;letter-spacing:-0.012em}
+
+  .modul-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .modul-card{background:var(--bg);padding:36px 32px;border:1px solid var(--line);position:relative;transition:all 0.3s}
+  .modul-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(10,10,10,0.06);border-color:var(--ink)}
+  .modul-card .modul-no{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--soft);letter-spacing:0.2em;font-style:italic;font-weight:500;margin-bottom:6px;display:block}
+  .modul-card .modul-sure{display:inline-block;font-size:10.5px;letter-spacing:0.18em;color:var(--ink);text-transform:uppercase;font-weight:700;background:var(--bg-warm);padding:4px 10px;margin-bottom:14px}
+  .modul-card h4{font-size:24px;font-weight:700;color:var(--ink);margin-bottom:12px;letter-spacing:-0.02em;line-height:1.2}
+  .modul-card p{font-size:14.5px;color:var(--muted);line-height:1.65;margin-bottom:14px}
+  .modul-card ul{list-style:none;padding-left:0}
+  .modul-card ul li{padding:6px 0 6px 22px;font-size:13.5px;color:var(--ink-2);position:relative;line-height:1.5}
+  .modul-card ul li::before{content:"→";position:absolute;left:0;color:var(--ink);font-weight:700;font-size:13px}
+
+  .cikti-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .cikti-item{background:var(--bg);padding:30px 24px;border:1px solid var(--line);text-align:left;transition:all 0.3s}
+  .cikti-item:hover{transform:translateY(-3px);border-color:var(--ink)}
+  .cikti-item .ci-icon{width:42px;height:42px;border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:18px;font-style:italic}
+  .cikti-item h5{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:8px;letter-spacing:-0.01em;line-height:1.25}
+  .cikti-item p{font-size:13px;color:var(--muted);line-height:1.6}
+
+  .kim-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+  .kim-card{background:var(--bg);padding:26px;border:1px solid var(--line);text-align:center;transition:all 0.3s}
+  .kim-card:hover{transform:translateY(-3px);border-color:var(--ink);box-shadow:0 12px 26px rgba(10,10,10,0.05)}
+  .kim-card .km-rol{font-size:11px;letter-spacing:0.22em;color:var(--soft);text-transform:uppercase;font-weight:600;margin-bottom:10px}
+  .kim-card h5{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--ink);font-weight:600;margin-bottom:8px;font-style:italic}
+  .kim-card p{font-size:13px;color:var(--muted);line-height:1.55}
+
+  /* Süreç adımları (3 kart) */
+  .surec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:var(--bg);border:1px solid var(--line)}
+  .surec-step{padding:38px 32px;border-right:1px solid var(--line);position:relative;transition:all 0.3s}
+  .surec-step:last-child{border-right:none}
+  .surec-step:hover{background:var(--bg-warm)}
+  .surec-step .ss-no{font-family:'Cormorant Garamond',serif;font-size:54px;color:var(--ink);font-weight:600;line-height:1;margin-bottom:14px;font-style:italic}
+  .surec-step h5{font-size:20px;font-weight:700;color:var(--ink);margin-bottom:8px;letter-spacing:-0.015em}
+  .surec-step .ss-sure{font-size:11px;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;font-weight:600;margin-bottom:14px;display:block}
+  .surec-step p{font-size:14px;color:var(--muted);line-height:1.65}
+
+  /* CTA güçlü */
+  .iletisim-cta{background:linear-gradient(180deg,var(--ink) 0%,#000 100%);color:var(--bg);padding:90px 50px;text-align:center;position:relative;overflow:hidden}
+  .iletisim-cta::before{content:"";position:absolute;top:30px;left:50%;transform:translateX(-50%);width:60px;height:2px;background:var(--grad)}
+  .iletisim-cta .ic-eyebrow{font-size:11px;letter-spacing:0.32em;color:rgba(255,255,255,0.6);text-transform:uppercase;font-weight:600;margin-top:30px;margin-bottom:20px;display:inline-block}
+  .iletisim-cta h3{font-family:'Inter',sans-serif;font-size:50px;color:var(--bg);font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin-bottom:20px}
+  .iletisim-cta h3 em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--bg);font-weight:500}
+  .iletisim-cta p{font-size:17px;color:rgba(255,255,255,0.7);max-width:600px;margin:0 auto 36px;line-height:1.6}
+  .iletisim-cta .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .iletisim-cta .btn-grad{background:var(--bg);color:var(--ink);border:0;padding:16px 32px;font-size:14.5px}
+  .iletisim-cta .btn-grad:hover{filter:brightness(0.95)}
+  .iletisim-cta .btn-ghost-light{background:transparent;color:var(--bg);border:1.5px solid var(--bg);padding:16px 32px;font-size:14.5px}
+  .iletisim-cta .btn-ghost-light:hover{background:var(--bg);color:var(--ink)}
+
+  @media (max-width:900px){
+    .atolye-hero{padding:50px 30px}
+    .atolye-hero-grid{grid-template-columns:1fr;gap:30px}
+    .atolye-hero h2{font-size:36px}
+    .modul-grid,.cikti-grid,.kim-grid{grid-template-columns:1fr}
+    .surec-grid{grid-template-columns:1fr}
+    .surec-step{border-right:none;border-bottom:1px solid var(--line)}
+    .iletisim-cta{padding:60px 26px}
+    .iletisim-cta h3{font-size:32px}
+  }
+
   /* MANİFESTO — Büyük alıntı + iki sütun */
   .big-quote{background:var(--bg);padding:80px 60px;border:1px solid var(--line);text-align:center;max-width:920px;margin:0 auto;position:relative}
   .big-quote::before{content:"";position:absolute;top:30px;left:50%;transform:translateX(-50%);width:50px;height:2px;background:#C9A85C}
@@ -1542,7 +1614,196 @@
           <p>Manavın, berberin, kasabın dijital dünyada yalnız kalmamasını sağlayan girişim. Kitaptaki Emre'nin gerçek hesaplaması: skor 8,0.</p>
         </div>
       </div>
-      <div style="text-align:center;margin-top:60px"><a class="btn btn-grad btn-large" onclick="go('iletisim')">Şirketinle gayeyi konuşalım</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="atolye-hero">
+        <div class="atolye-hero-grid">
+          <div>
+            <span class="ah-eyebrow">Gaye Atölyesi</span>
+            <h2>Şirketinizin gayesi, <em>bir günde haritaya.</em></h2>
+            <p>Selim Oktar'ın 30 yılı aşkın araştırma ve danışmanlık birikiminden çıkan dört çerçeveyi (Gaye Haritası, Gaye Denklemi, Gaye Pusulası, Gaye-Angajman Matrisi) üst yönetim ekibinizle birlikte kurumunuza uygulayan, çıktısı somut bir atölye programı.</p>
+          </div>
+          <div class="atolye-info-stack">
+            <div class="atolye-info-cell">
+              <span class="lbl">Süre</span>
+              <span class="val">1 tam gün · 6 saat</span>
+            </div>
+            <div class="atolye-info-cell">
+              <span class="lbl">Format</span>
+              <span class="val">Yüz yüze · Online · Hibrit</span>
+            </div>
+            <div class="atolye-info-cell">
+              <span class="lbl">Katılımcı</span>
+              <span class="val">8–20 kişi · üst yönetim</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-warm">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Atölye Modülleri</div>
+        <h2>Dört modül, <em>bir tam gün.</em></h2>
+        <p class="sub">Her modül kitabın ilgili bölümünden çıkan bir çalışma alanı. Teorik anlatım yerine, kurumunuzun kendi vakası üzerinde yapılandırılmış uygulama.</p>
+      </div>
+      <div class="modul-grid">
+        <div class="modul-card">
+          <span class="modul-no">Modül 01</span>
+          <span class="modul-sure">90 dk</span>
+          <h4>Gaye Keşfi</h4>
+          <p>Şirketinizin sahici gayesini ortaya çıkaran sistematik sorgulama. Bilinçli ve bilinçdışı gaye katmanlarını birbirinden ayırma.</p>
+          <ul>
+            <li>Liderlik sorgulama oturumu</li>
+            <li>Mevcut vizyon-misyon kritiği</li>
+            <li>Şirket gayesi cümlesi taslağı</li>
+          </ul>
+        </div>
+        <div class="modul-card">
+          <span class="modul-no">Modül 02</span>
+          <span class="modul-sure">90 dk</span>
+          <h4>Gaye Haritası ve Skoru</h4>
+          <p>Altı bileşeni şirketinize uyarlamak: İtici güçler, destekler, köstekler, motivasyon. Bugünkü skor ve bir yıllık potansiyelin hesaplanması.</p>
+          <ul>
+            <li>Bileşen bileşen kurumsal puanlama</li>
+            <li>Skorun yorumu ve aşaması</li>
+            <li>Gelişim potansiyeli haritası</li>
+          </ul>
+        </div>
+        <div class="modul-card">
+          <span class="modul-no">Modül 03</span>
+          <span class="modul-sure">90 dk</span>
+          <h4>Liderlik ve Yönetişim</h4>
+          <p>Strateji-yapı-kültür üçgeninin gayeyle hizalanması. KPI'dan etki ölçümüne geçiş. Üst yönetim ekibinin gaye taşıyıcılığı rolü.</p>
+          <ul>
+            <li>Üç eksende mevcut durum tarama</li>
+            <li>Yönetişim ilkelerinin gaye kontrolü</li>
+            <li>Performans ölçütlerinin yeniden yazımı</li>
+          </ul>
+        </div>
+        <div class="modul-card">
+          <span class="modul-no">Modül 04</span>
+          <span class="modul-sure">90 dk</span>
+          <h4>Hizalanma ve Aksiyon</h4>
+          <p>Gaye-Angajman Matrisinde ekiplerinizin yeri. Dört kadrandaki çalışan profillerine yönelik somut müdahale planı. 90 günlük yol haritası.</p>
+          <ul>
+            <li>Ekip kadran haritası</li>
+            <li>Üç sahada test edilecek deney</li>
+            <li>30-60-90 gün eylem planı</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Atölyenin Çıktıları</div>
+        <h2>Sahip olacağınız <em>somut belgeler.</em></h2>
+        <p class="sub">Atölyeden ayrılırken her katılımcının elinde, her ekibin masasında olacak; tartışmaları toplantılara değil pratiğe bağlayan belgeler.</p>
+      </div>
+      <div class="cikti-grid">
+        <div class="cikti-item">
+          <div class="ci-icon">i</div>
+          <h5>Şirket Gayesi Cümlesi</h5>
+          <p>"Neden varız?" sorusunun tek cümlelik, üst yönetim onaylı yanıtı.</p>
+        </div>
+        <div class="cikti-item">
+          <div class="ci-icon">ii</div>
+          <h5>Gaye Haritası</h5>
+          <p>Altı bileşenin kurumsal puanlaması, gelişim önceliklerinin sıralaması.</p>
+        </div>
+        <div class="cikti-item">
+          <div class="ci-icon">iii</div>
+          <h5>Angajman Matrisi</h5>
+          <p>Ekiplerinizin dört kadrandaki dağılımı ve geçiş aksiyonları.</p>
+        </div>
+        <div class="cikti-item">
+          <div class="ci-icon">iv</div>
+          <h5>90 Günlük Plan</h5>
+          <p>Üç ay içinde test edilecek üç deney, sahibi atanmış aksiyonlar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-warm">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Kim İçin?</div>
+        <h2>Atölye kimin <em>için tasarlandı?</em></h2>
+        <p class="sub">Şirketinin "neden var?" sorusunun cevabını arayan, bu cevabı stratejiye, yapıya ve kültüre işlemek isteyen kurumlar için. Sektör fark etmez; ölçek ise 50 kişiden 50.000 kişiye kadar uyarlanır.</p>
+      </div>
+      <div class="kim-grid">
+        <div class="kim-card">
+          <span class="km-rol">Roller</span>
+          <h5>CEO</h5>
+          <p>Stratejinin gayeyle hizalanmasını isteyen üst yönetici.</p>
+        </div>
+        <div class="kim-card">
+          <span class="km-rol">Roller</span>
+          <h5>CHRO</h5>
+          <p>Çalışan bağlılığını performans göstergesine dönüştürmek isteyen İK lideri.</p>
+        </div>
+        <div class="kim-card">
+          <span class="km-rol">Roller</span>
+          <h5>Strateji</h5>
+          <p>VUCA çağında rotasını net tutmak isteyen strateji ekibi.</p>
+        </div>
+        <div class="kim-card">
+          <span class="km-rol">Roller</span>
+          <h5>Marka / İletişim</h5>
+          <p>Marka vaadini "ucuz ve yakın"dan anlam ittifakına taşımak isteyen lider.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Süreç</div>
+        <h2>Üç adımda <em>yola çıkış.</em></h2>
+        <p class="sub">İlk görüşmeden atölyenin ardından gelen takip oturumuna kadar, üç aşamalı bir süreç.</p>
+      </div>
+      <div class="surec-grid">
+        <div class="surec-step">
+          <div class="ss-no">i.</div>
+          <span class="ss-sure">30 dk · ücretsiz</span>
+          <h5>Tanı Görüşmesi</h5>
+          <p>Online görüşme. Şirketinizin durumunu, ihtiyaçlarını ve atölyeden beklentilerini birlikte değerlendiriyoruz. Atölyenin uygun olup olmadığına birlikte karar veriyoruz.</p>
+        </div>
+        <div class="surec-step">
+          <div class="ss-no">ii.</div>
+          <span class="ss-sure">1 tam gün</span>
+          <h5>Atölye Günü</h5>
+          <p>Yüz yüze, online ya da hibrit. Dört modül, üst yönetim ekibinizle birlikte, somut çıktılarla. Atölye sonunda elinizde Şirket Gayesi cümlesi, Gaye Haritası ve 90 günlük plan olur.</p>
+        </div>
+        <div class="surec-step">
+          <div class="ss-no">iii.</div>
+          <span class="ss-sure">30 gün sonra</span>
+          <h5>Takip Oturumu</h5>
+          <p>Bir aylık uygulamanın değerlendirmesi. İlk deneyler nasıl gitti, hangi köstek baskın çıktı, hangi kaldıraç beklenenden güçlü? 60 dakikalık online check-in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="iletisim-cta">
+    <div class="container">
+      <span class="ic-eyebrow">İlk Adım</span>
+      <h3>Şirketinle gayeyi <em>konuşalım.</em></h3>
+      <p>İlk 30 dakikalık tanı görüşmesi ücretsiz. Şirketinin "neden var?" sorusuna nasıl yaklaştığını birlikte değerlendirelim — atölye uygunsa devam ederiz, değilse başka yol haritaları sunarım.</p>
+      <div class="cta-buttons">
+        <a class="btn btn-grad" onclick="go('iletisim')">Tanı Görüşmesi İste</a>
+        <a class="btn btn-ghost-light" onclick="go('iletisim')">Atölye Hakkında Sor</a>
+      </div>
     </div>
   </section>
 </div>
