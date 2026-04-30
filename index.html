@@ -149,6 +149,23 @@
   .gorsel-card img{margin:0 auto 16px;max-height:560px}
   .gorsel-card .caption{font-size:11px;color:var(--muted);letter-spacing:0.25em;text-transform:uppercase;font-weight:600}
 
+  /* ANA SAYFA MANİFESTO SÖZLERİ */
+  .manifesto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .manifesto-soz{background:var(--bg);padding:42px 32px;border:1px solid var(--line);position:relative;transition:all 0.3s;overflow:hidden}
+  .manifesto-soz::before{content:"";position:absolute;top:0;left:0;width:3px;height:0;background:var(--ink);transition:height 0.4s}
+  .manifesto-soz:hover{box-shadow:0 18px 40px rgba(10,10,10,0.06);transform:translateY(-3px)}
+  .manifesto-soz:hover::before{height:100%}
+  .manifesto-soz .ms-no{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--soft);letter-spacing:0.2em;font-style:italic;font-weight:500;margin-bottom:18px;display:block}
+  .manifesto-soz blockquote{font-family:'Cormorant Garamond',serif;font-size:23px;color:var(--ink);font-style:italic;line-height:1.42;font-weight:500;letter-spacing:-0.005em;margin-bottom:18px}
+  .manifesto-soz blockquote em{color:var(--ink);font-style:italic;font-weight:700;letter-spacing:-0.01em}
+  .manifesto-soz .ms-source{font-size:10.5px;color:var(--muted);letter-spacing:0.22em;text-transform:uppercase;font-weight:600;display:block;margin-top:auto;border-top:1px solid var(--line-soft);padding-top:14px}
+
+  @media (max-width:900px){
+    .manifesto-grid{grid-template-columns:1fr}
+    .manifesto-soz{padding:32px 26px}
+    .manifesto-soz blockquote{font-size:20px}
+  }
+
   /* MANİFESTO — Büyük alıntı + iki sütun */
   .big-quote{background:var(--bg);padding:80px 60px;border:1px solid var(--line);text-align:center;max-width:920px;margin:0 auto;position:relative}
   .big-quote::before{content:"";position:absolute;top:30px;left:50%;transform:translateX(-50%);width:50px;height:2px;background:#C9A85C}
@@ -656,8 +673,8 @@
       <div>
         <div class="author-tag">Yeni Kitap · Selim Oktar · 2025</div>
         <h1>Gayeni ölç. <span class="grad-line">Yönünü hizala.</span></h1>
-        <p class="lead">Drucker müşteriyi öne çıkardı. Sinek <em>"neden"</em> diye sordu. Bu kitap, o sorunun cevabını <strong>ölçer</strong> ve <strong>taşır.</strong></p>
-        <p class="lead-2">Otuz yıllık araştırma ve beş binden fazla katılımcılık saha verisiyle inşa edilmiş bir model — bireyden kuruma uzanan üç düzlemde, Türkiye'nin kendi vakalarından damıtılmış bir "neden var?" cevabı.</p>
+        <p class="lead">Gaye, anlatılan değil; <em>yaşanan bir pusuladır.</em></p>
+        <p class="lead-2">VUCA çağında kâr ya da müşteri odağı bizi rotasız bırakabilir. Bu kitap; gayeyi soyut bir kavram olmaktan çıkarıp <strong>ölçülebilir, haritalanabilir, geliştirilebilir</strong> bir yapıya dönüştürür. Otuz yıllık araştırma ve beş binden fazla katılımcılık saha verisinin damıttığı bir yöntem — bireyden kuruma, kurumdan ülkeye uzanan üç düzlemde.</p>
         <div class="hero-cta">
           <a class="btn btn-large" onclick="go('bireysel')">Gaye Skorumu Hesapla</a>
           <a class="btn btn-ghost btn-large" onclick="go('manifesto')">Modeli Tanı</a>
@@ -672,34 +689,40 @@
   <section class="section section-warm">
     <div class="container">
       <div class="section-head center">
-        <div class="eyebrow">Diğerlerinden ne ayırıyor?</div>
-        <h2>Aynı soru. <em>Farklı cevap.</em></h2>
-        <p class="sub">Drucker müşteriyi öne çıkardı. Sinek "neden" diye sordu. Pink motivasyonu üçe ayırdı. Hepsine borçluyuz. Bu kitap, o sorunun cevabını <em>ölçer ve taşır</em> — soyutluk yerine ölçü, tek düzlem yerine üç, yabancı vakalar yerine Türkiye, hipotez yerine veri.</p>
+        <div class="eyebrow">Manifesto</div>
+        <h2>Kitabın özü, <em>kendi cümleleriyle.</em></h2>
+        <p class="sub">Bir model, bir yöntem, bir pusula. Selim Oktar'ın "Gayeni Bul"daki en sahih cümleleri — gayenin neden lüks değil zorunluluk olduğunu, neden anlatılan değil yaşanan, neden paylaşıldıkça güçlenen bir şey olduğunu kendi diliyle anlatan altı söz.</p>
       </div>
-      <div class="diff-grid">
-        <div class="diff-card">
-          <span class="num">01</span>
-          <div class="neg">Slogan değil</div>
-          <div class="pos">Ölçülebilir formül</div>
-          <p>Gaye Skoru: gayeyi 0–10+ aralığında sayısallaştıran sade bir denklem. "Neredeyim?" sorusu artık tahmin değil, hesap.</p>
+      <div class="manifesto-grid">
+        <div class="manifesto-soz">
+          <span class="ms-no">i.</span>
+          <blockquote>"Gaye, lüks değil; <em>zorunluluktur.</em> VUCA çağında kâr ya da müşteri odağı bizi rotasız bırakabilir. Şirketin gayesi zamansızdır."</blockquote>
+          <span class="ms-source">Bölüm 1.1 · Neden Gaye?</span>
         </div>
-        <div class="diff-card">
-          <span class="num">02</span>
-          <div class="neg">Tek düzlem değil</div>
-          <div class="pos">Birey, kurum, ülke</div>
-          <p>Çoğu kitap ya sadece bireye ya sadece kuruma yönelir. Bu kitap üç düzlemi tek bir mimari içinde ele alıyor.</p>
+        <div class="manifesto-soz">
+          <span class="ms-no">ii.</span>
+          <blockquote>"Bu kitap soruya bir cevap dayatmaz. <em>Bir yöntem inşa eder.</em> Okuyucusunun kendi hayatına uygulayabileceği, üç yıllık saha araştırmasıyla test edilmiş bir model sunar."</blockquote>
+          <span class="ms-source">Giriş · Üçüncü Mesele</span>
         </div>
-        <div class="diff-card">
-          <span class="num">03</span>
-          <div class="neg">Yabancı vakalar değil</div>
-          <div class="pos">Türkiye'den 70.000 kişi</div>
-          <p>A101'in sahası, savunma sanayiinin on yıllık dönüşümü, küçük esnafın dijitalleşmesi. Yerel zemin, gerçek vakalar.</p>
+        <div class="manifesto-soz">
+          <span class="ms-no">iii.</span>
+          <blockquote>"Gaye kimseye ait değildir; <em>paylaşıldıkça güçlenir.</em> Amaçlar ve hedefler rekabete açıktır — gaye paylaşıldıkça birbirini büyütür."</blockquote>
+          <span class="ms-source">Bölüm 1.4 · Gaye ve Rekabet</span>
         </div>
-        <div class="diff-card">
-          <span class="num">04</span>
-          <div class="neg">Hipotez değil</div>
-          <div class="pos">5000+ katılımcı veri</div>
-          <p>Üç yıllık TORCH araştırması: gaye–anlam–angajman zincirinin nedenselliğini ölçen, üç kültürden gelen ampirik kanıt.</p>
+        <div class="manifesto-soz">
+          <span class="ms-no">iv.</span>
+          <blockquote>"Gaye kriz zamanı icat edilmez; <em>kriz zamanı sınanır.</em> İcat edildiyse zaten geç kalınmıştır. Asıl sınav bolluk değil, kıtlıktır."</blockquote>
+          <span class="ms-source">Bölüm 1.5 · Krizdeki Gaye</span>
+        </div>
+        <div class="manifesto-soz">
+          <span class="ms-no">v.</span>
+          <blockquote>"Gaye ve Anlam, bir pusulanın iğnesi ve kadranı gibidir: biri yönü gösterir, <em>diğeri onu okunabilir kılar.</em> Biri olmadan diğeri işlevini yitirir."</blockquote>
+          <span class="ms-source">Bölüm 2.1 · Gaye ve Anlam</span>
+        </div>
+        <div class="manifesto-soz">
+          <span class="ms-no">vi.</span>
+          <blockquote>"Gaye bir kez keşfedilip rafa kaldırılan bir cümle değildir. <em>Canlı bir organizma gibi</em> beslenmeye, gözlemlenmeye, yeniden kalibre edilmeye ihtiyaç duyar."</blockquote>
+          <span class="ms-source">Bölüm 2.1 · Gaye Statik Değildir</span>
         </div>
       </div>
     </div>
