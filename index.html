@@ -190,6 +190,28 @@
   .yontem-card h3{font-size:21px;font-weight:700;color:var(--ink);margin-bottom:10px;letter-spacing:-0.015em;line-height:1.2}
   .yontem-card p{font-size:14px;color:var(--muted);line-height:1.6;margin:0}
 
+  /* KAZANIM ACCORDION */
+  .kazanim-accordion{display:flex;flex-direction:column;gap:14px;max-width:920px;margin:50px auto 0}
+  .kazanim-acc{background:var(--bg);border:1px solid var(--line);overflow:hidden;transition:border-color 0.25s}
+  .kazanim-acc:hover{border-color:var(--ink)}
+  .kazanim-acc.open{border-color:var(--ink)}
+  .acc-head{width:100%;background:transparent;border:0;padding:26px 32px;display:flex;align-items:center;gap:20px;cursor:pointer;font-family:inherit;text-align:left;transition:background 0.2s}
+  .acc-head:hover{background:var(--bg-warm)}
+  .acc-tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--accent);padding:5px 11px;border:1.5px solid var(--accent);flex-shrink:0}
+  .acc-title{flex:1;font-size:19px;font-weight:600;color:var(--ink);letter-spacing:-0.012em;line-height:1.3}
+  .acc-icon{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;color:var(--ink);line-height:1;transition:transform 0.3s;flex-shrink:0;font-style:italic}
+  .kazanim-acc.open .acc-icon{transform:rotate(45deg)}
+  .acc-body{max-height:0;overflow:hidden;transition:max-height 0.45s ease}
+  .acc-body-inner{padding:6px 32px 32px;display:flex;flex-direction:column;gap:18px}
+
+  @media (max-width:700px){
+    .acc-head{padding:20px 22px;gap:14px;flex-wrap:wrap}
+    .acc-title{font-size:16px;flex-basis:100%;order:3;line-height:1.35}
+    .acc-tag{font-size:10px;padding:4px 10px}
+    .acc-icon{font-size:28px}
+    .acc-body-inner{padding:6px 22px 22px}
+  }
+
   /* CTA 3 yol */
   .cta-3{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
   .cta-final .btn-cta-light{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.35);color:#fff}
@@ -205,6 +227,35 @@
   }
   @media (max-width:600px){
     .yontem-grid{grid-template-columns:1fr}
+  }
+
+  /* ATÖLYE FAYDA — 90 gün sonra ne değişir */
+  .atolye-fayda-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:50px}
+  .atolye-fayda{background:var(--bg);padding:36px 32px;border:1px solid var(--line);transition:all 0.3s;position:relative}
+  .atolye-fayda:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(10,10,10,0.06);border-color:var(--ink)}
+  .atolye-fayda .af-no{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--accent);letter-spacing:0.2em;font-style:italic;font-weight:600;margin-bottom:14px;display:block}
+  .atolye-fayda h3{font-size:20px;font-weight:700;color:var(--ink);margin-bottom:12px;letter-spacing:-0.012em;line-height:1.32}
+  .atolye-fayda p{font-size:14.5px;color:var(--muted);line-height:1.7;margin:0}
+  .atolye-fayda p strong{color:var(--ink);font-weight:700}
+
+  /* ATÖLYE FORMAT INFO BAR */
+  .atolye-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .am-cell{padding:22px 24px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+  .am-cell:last-child{border-right:none}
+  .am-lbl{font-size:10.5px;letter-spacing:0.28em;text-transform:uppercase;color:var(--soft);font-weight:600}
+  .am-val{font-size:15px;color:var(--ink);font-weight:600;letter-spacing:-0.01em;line-height:1.3}
+
+  @media (max-width:900px){
+    .atolye-fayda-grid{grid-template-columns:1fr;gap:16px}
+    .atolye-meta{grid-template-columns:1fr 1fr}
+    .am-cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .am-cell:nth-child(2n){border-right:none}
+    .am-cell:nth-last-child(-n+2){border-bottom:none}
+  }
+  @media (max-width:480px){
+    .atolye-meta{grid-template-columns:1fr}
+    .am-cell{border-right:none;border-bottom:1px solid var(--line)}
+    .am-cell:last-child{border-bottom:none}
   }
 
   /* ATÖLYE BÖLÜMÜ */
@@ -784,16 +835,16 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="author-tag">Yeni Kitap · Selim Oktar · 2025</div>
+        <div class="author-tag">Selim Oktar · Otuz yıllık saha araştırması</div>
         <h1>Gaye, "neden varım?" sorusunun <span class="grad-line">en derin cevabıdır.</span></h1>
         <p class="lead">Hedefler tamamlanır ve biter; gaye zamansızdır. Amaçlar bir sonuca odaklanır; gaye o sonucu aşan varoluş nedenidir.</p>
-        <p class="lead-2">Selim Oktar bu kitapta, otuz yıllık araştırmasından damıttığı dört çerçeveyle bu cevabı bulmanın yöntemini sunuyor.</p>
+        <p class="lead-2">Otuz yıllık saha deneyimi ve üç yıllık TORCH araştırmasından doğan dört çerçeve, bu cevabı bulmanın somut yöntemini sunuyor.</p>
         <div class="hero-cta">
           <a class="btn btn-large" onclick="go('bireysel')">Gaye Skorumu Hesapla</a>
           <a class="btn btn-ghost btn-large" onclick="go('kurumsal')">Kurumsal Atölye</a>
         </div>
       </div>
-      <div class="hero-cover">
+      <div class="hero-cover" onclick="go('kitap')" style="cursor:pointer" title="Kitap hakkında">
         <img src="img/kapak.jpeg" alt="GAYE — Varoluşunuzun Pusulası · Selim Oktar" onerror="this.outerHTML='<div class=hero-cover-fb><div class=fauthor>SELİM OKTAR</div><div class=fsub>Varoluşunuzun<br>Pusulası</div><div class=fgaye>Gaye</div></div>'">
       </div>
     </div>
@@ -824,9 +875,9 @@
   <section class="section">
     <div class="container-narrow">
       <div class="section-head center">
-        <div class="eyebrow">Bu Kitap Ne Yapar?</div>
-        <h2>"Neden varız?" sorusunu felsefenin elinden alır, <em>yöntemin eline verir.</em></h2>
-        <p class="sub">Selim Oktar, otuz yıllık saha deneyimini ve üç yıllık TORCH araştırmasını dört çerçevede topluyor: Gaye Pusulası, Gaye Denklemi, Gaye Haritası ve Gaye-Angajman Matrisi. Bu çerçeveler gayeyi soyut bir niyet olmaktan çıkarır; ölçer, geliştirir, bireyden kuruma taşır.</p>
+        <div class="eyebrow">Yaklaşım</div>
+        <h2>Gaye, soyut bir niyet değil; <em>ölçülebilir, geliştirilebilir bir yapıdır.</em></h2>
+        <p class="sub">Otuz yıllık saha deneyimi ve üç yıllık TORCH araştırmasından doğan dört çerçeve — Gaye Pusulası, Gaye Denklemi, Gaye Haritası ve Gaye-Angajman Matrisi — gayeyi anlatılır olmaktan çıkarır; bireyden kuruma uygulanabilir bir yöntem hâline getirir.</p>
       </div>
     </div>
   </section>
@@ -836,38 +887,57 @@
     <div class="container">
       <div class="section-head center">
         <div class="eyebrow gold">Kazanım</div>
-        <h2>Bu kitap <em>ne kazandırır?</em></h2>
-        <p class="sub">Soyut faydalar değil, hayatın ve şirketin içinden somut çıktılar. Aşağıdaki rakamların hepsi TORCH araştırmasından geliyor — Türkiye, ABD ve Güney Kore'den beş binden fazla katılımcı.</p>
+        <h2>Gaye <em>ne kazandırır?</em></h2>
+        <p class="sub">Soyut faydalar değil, hayatın ve şirketin içinden somut çıktılar. Önce hangi tarafta olduğunuzu seçin — bireysel skor mu, kurumsal angajman mı?</p>
       </div>
-      <div class="kazanim-grid">
-        <div class="kazanim-col">
-          <div class="kazanim-tag">Bireye</div>
-          <div class="kazanim-item">
-            <h3>Yıllarca yapamadığınız yön değişikliğini yapma cesaretini bulursunuz.</h3>
-            <p>Net gaye, statükoyu eritir. Gayesi netleşen katılımcıların <strong>%62'si</strong> üç yıl içinde büyük bir kariyer ya da hayat kararı aldı.</p>
-          </div>
-          <div class="kazanim-item">
-            <h3>Pazartesi yorgunluğunun nedeninin iş yükü değil, anlamsızlık olduğunu fark edersiniz.</h3>
-            <p>Anlamlı işler insanı tüketmez; besler. Gaye Skoru artanlarda öz-bildirim mutluluk göstergesi <strong>%34 yükseldi</strong>; düşenlerde %19 düştü.</p>
-          </div>
-          <div class="kazanim-item">
-            <h3>İş tekliflerini ücretle değil, "neden" ile değerlendirirsiniz.</h3>
-            <p>Karar netliği bir maaş pazarlığını değil, ömür boyu yaptığınız işin yönünü belirler. Skor bir basamak yükseldiğinde angajman ortalama <strong>%18 artıyor</strong>.</p>
+      <div class="kazanim-accordion">
+        <!-- BİREYSEL SKOR -->
+        <div class="kazanim-acc">
+          <button class="acc-head" onclick="toggleAcc(this)" aria-expanded="false">
+            <span class="acc-tag">Skor</span>
+            <span class="acc-title">Bireysel hayatınızda ne değişir?</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              <div class="kazanim-item">
+                <h3>Pazar akşamı "yarın pazartesi" tedirginliği biter; sabah işe gitme isteğiyle uyanırsınız.</h3>
+                <p>Anlamlı işler insanı tüketmez; besler. TORCH araştırmasında Gaye Skoru artan katılımcıların öz-bildirim mutluluk göstergesi <strong>%34 yükseldi</strong>, düşenlerde %19 düştü.</p>
+              </div>
+              <div class="kazanim-item">
+                <h3>Yıllardır ertelediğiniz yön değişikliğini bu yıl yaparsınız.</h3>
+                <p>Net gaye, statükoyu eritir. Gayesi netleşen katılımcıların <strong>%62'si</strong> üç yıl içinde işini, şehrini ya da hayat rotasını değiştiren büyük bir karar aldı.</p>
+              </div>
+              <div class="kazanim-item">
+                <h3>İki iş teklifi geldiğinde "hangi maaş yüksek?" değil, "hangisi on yıl sonra hâlâ yaptığım iş olur?" sorusunu sorarsınız.</h3>
+                <p>Karar netliği bir maaş pazarlığını değil, ömür boyu yaptığınız işin yönünü belirler. Skor bir basamak yükseldiğinde angajman ortalama <strong>%18 artıyor</strong>.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="kazanim-col">
-          <div class="kazanim-tag">Kuruma</div>
-          <div class="kazanim-item">
-            <h3>Z Kuşağı yeteneğini ücret yarışıyla değil, gayeyle çekersiniz.</h3>
-            <p>Z Kuşağında gaye-iş uyumu beklentisi X Kuşağına göre <strong>1,8 kat yüksek</strong>; bu fark son üç yılda daha da açıldı. Gayesini taşıyamayan şirket, ücret yarışında erir.</p>
-          </div>
-          <div class="kazanim-item">
-            <h3>Sessiz istifa tablosunu kapatırsınız.</h3>
-            <p>Yöneticilerin yalnızca <strong>%29'u</strong> "kendi gayem şirketin gayesiyle örtüşüyor" diyor. Rezonansı yüksek olan departmanlarda iş sonuçları ve çalışan memnuniyeti birlikte yükselir.</p>
-          </div>
-          <div class="kazanim-item">
-            <h3>Vizyon-misyon belgesi duvardan iner, karar masasına oturur.</h3>
-            <p>Krizde dağılan değil, ayağa kalkan kurum olursunuz. Her yatırım, her ürün, her işe alım aynı süzgeçten geçer: "Bu, gayemize hizmet ediyor mu?"</p>
+
+        <!-- KURUMSAL ANGAJMAN -->
+        <div class="kazanim-acc">
+          <button class="acc-head" onclick="toggleAcc(this)" aria-expanded="false">
+            <span class="acc-tag">Angajman</span>
+            <span class="acc-title">Şirketinizde ne değişir?</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              <div class="kazanim-item">
+                <h3>En iyi insanlarınızı tutmak için her yıl ücret zammı yapmak zorunda kalmazsınız.</h3>
+                <p>Yöneticilerin yalnızca <strong>%29'u</strong> "kendi gayem şirketin gayesiyle örtüşüyor" diyor; kalan %71 sessizce kapıya bakıyor. Rezonans yüksek olduğunda ücret yarışı dışında bir bağ kurulur; ekip kalır.</p>
+              </div>
+              <div class="kazanim-item">
+                <h3>Z Kuşağı CV'leri şirkete kendiliğinden akmaya başlar.</h3>
+                <p>TORCH: Z Kuşağında gaye-iş uyumu beklentisi X Kuşağına göre <strong>1,8 kat yüksek</strong>; fark son üç yılda daha da açıldı. Eşit ücretli iki şirketten gayesini taşıyabilen kazanır.</p>
+              </div>
+              <div class="kazanim-item">
+                <h3>"Bu projeyi yapalım mı?" toplantısı üç saat değil, otuz dakika sürer.</h3>
+                <p>Vizyon-misyon belgeniz duvardan iner, karar masasına oturur. Her yatırım, her ürün, her işe alım aynı süzgeçten geçer: "Bu, gayemize hizmet ediyor mu?" Krizde dağılan değil, ayağa kalkan kurum olursunuz.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1696,33 +1766,44 @@
     <div class="container">
       <div class="eyebrow">Gaye Atölyesi</div>
       <h1>Şirketinizin gayesi, <em>bir günlük atölyede netleşir.</em></h1>
-      <p>Selim Oktar'ın kitabındaki dört çerçeveyi (Gaye Haritası, Gaye Denklemi, Gaye Pusulası, Gaye-Angajman Matrisi) üst yönetim ekibinizle birlikte kurumunuza uygulayan, çıktısı somut bir atölye programı. Çalışan Pulse Check ile birlikte tam tablo.</p>
+      <p>Üst yönetim ekibinizle birlikte; "neden varız?" sorusuna tek cümlelik cevap, gelişim önceliği haritası ve 90 günlük yol planı çıkarıyoruz. Çalışan Pulse Check sayesinde sahanın gözünden de tabloyu görüyorsunuz.</p>
+      <div class="atolye-meta">
+        <div class="am-cell"><span class="am-lbl">Süre</span><span class="am-val">1 tam gün</span></div>
+        <div class="am-cell"><span class="am-lbl">Katılımcı</span><span class="am-val">Üst yönetim · 8–20 kişi</span></div>
+        <div class="am-cell"><span class="am-lbl">Pulse Check</span><span class="am-val">Tüm ekip · 10 dk anket</span></div>
+        <div class="am-cell"><span class="am-lbl">Format</span><span class="am-val">Yüz yüze · Online · Hibrit</span></div>
+      </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- ATÖLYE FAYDA -->
+  <section class="section section-warm">
     <div class="container">
-      <div class="atolye-hero">
-        <div class="atolye-hero-grid">
-          <div>
-            <span class="ah-eyebrow">Gaye Atölyesi</span>
-            <h2>Bir günlük atölyede, üst yönetim ekibinizle <em>şirketinizin gayesini netleştiriyoruz.</em></h2>
-            <p>Selim Oktar'ın 30 yılı aşkın araştırma ve danışmanlık birikiminden çıkan dört çerçeveyi (Gaye Haritası, Gaye Denklemi, Gaye Pusulası, Gaye-Angajman Matrisi) üst yönetim ekibinizle birlikte kurumunuza uygulayan, çıktısı somut bir atölye programı.</p>
-          </div>
-          <div class="atolye-info-stack">
-            <div class="atolye-info-cell">
-              <span class="lbl">Atölye</span>
-              <span class="val">1 tam gün · üst yönetim 8–20 kişi</span>
-            </div>
-            <div class="atolye-info-cell">
-              <span class="lbl">Pulse Check</span>
-              <span class="val">Tüm ekip · 10 dakikalık online anket</span>
-            </div>
-            <div class="atolye-info-cell">
-              <span class="lbl">Format</span>
-              <span class="val">Yüz yüze · Online · Hibrit</span>
-            </div>
-          </div>
+      <div class="section-head center">
+        <div class="eyebrow gold">Atölye Sonrası</div>
+        <h2>Atölyeden 90 gün sonra <em>şirketinizde ne değişir?</em></h2>
+        <p class="sub">Atölyenin değeri o gün konuşulanlarda değil; üç ay sonra masaya oturduğunuzda değişen kararlardadır. Aşağıdaki dört çıktının hepsi, gayenin günlük yönetim diline indiği örnekler.</p>
+      </div>
+      <div class="atolye-fayda-grid">
+        <div class="atolye-fayda">
+          <span class="af-no">i.</span>
+          <h3>Üst yönetim toplantısında "neden buradayız?" sorusuna sekiz farklı cevap değil, tek bir cevap olur.</h3>
+          <p>Atölyeden çıkan tek cümlelik şirket gayesi, kurum stratejisinin kerteriz noktası hâline gelir. Her yatırım, her ürün, her işe alım aynı süzgeçten geçer: <strong>"Bu, gayemize hizmet ediyor mu?"</strong></p>
+        </div>
+        <div class="atolye-fayda">
+          <span class="af-no">ii.</span>
+          <h3>"Bu projeyi yapalım mı?" toplantısı üç saat değil, otuz dakika sürer.</h3>
+          <p>Vizyon-misyon belgesi duvardan iner, karar masasına oturur. Gaye süzgeci açıldığı anda kararsızlık biter, hız gelir. VUCA ortamında en kritik avantaj.</p>
+        </div>
+        <div class="atolye-fayda">
+          <span class="af-no">iii.</span>
+          <h3>En iyi insanlarınızın sessizce kapıya bakması durur.</h3>
+          <p>Yöneticilerin yalnızca <strong>%29'u</strong> "kendi gayem şirketin gayesiyle örtüşüyor" diyor; kalan %71 sessizce kapıya bakıyor. Pulse Check sayesinde bu dağılımın kendi şirketinizdeki halini görür, hangi kademede kopuş olduğunu net biçimde tespit edersiniz.</p>
+        </div>
+        <div class="atolye-fayda">
+          <span class="af-no">iv.</span>
+          <h3>Z Kuşağı CV'leri açık pozisyonlarınıza akmaya başlar.</h3>
+          <p>TORCH bulgusu: Z Kuşağında gaye-iş uyumu beklentisi X Kuşağına göre <strong>1,8 kat yüksek</strong>; fark son üç yılda daha da açıldı. Eşit ücretli iki şirketten gayesini taşıyabilen kazanır.</p>
         </div>
       </div>
     </div>
@@ -2012,6 +2093,22 @@
   }
   window.addEventListener('hashchange',()=>go(window.location.hash.replace('#','')||'home'));
   go(window.location.hash.replace('#','')||'home');
+
+  // KAZANIM ACCORDION
+  function toggleAcc(btn){
+    const acc=btn.parentElement;
+    const body=acc.querySelector('.acc-body');
+    const isOpen=acc.classList.contains('open');
+    if(isOpen){
+      acc.classList.remove('open');
+      body.style.maxHeight=null;
+      btn.setAttribute('aria-expanded','false');
+    }else{
+      acc.classList.add('open');
+      body.style.maxHeight=body.scrollHeight+'px';
+      btn.setAttribute('aria-expanded','true');
+    }
+  }
 
   // SKOR HESAPLAYICI
   function statusFor(s){
