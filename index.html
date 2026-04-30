@@ -212,6 +212,21 @@
     .acc-body-inner{padding:6px 22px 22px}
   }
 
+  /* "Neden önemli?" notu (ortak) */
+  .onem{font-size:13.5px;color:var(--ink-2);line-height:1.65;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);font-style:italic}
+  .onem strong{color:var(--ink);font-style:normal;font-weight:700;letter-spacing:0.02em;text-transform:uppercase;font-size:11px;display:inline-block;margin-right:8px}
+
+  /* "Büyük resim" özet bandı */
+  .buyuk-resim{margin:40px auto 0;padding:32px 38px;background:var(--bg);border:1px solid var(--ink);text-align:center;max-width:840px;position:relative}
+  .buyuk-resim::before{content:"";position:absolute;top:-1px;left:0;right:0;height:3px;background:var(--accent)}
+  .buyuk-resim .br-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block}
+  .buyuk-resim p{font-family:'Cormorant Garamond',serif;font-size:23px;font-style:italic;color:var(--ink);line-height:1.5;font-weight:500;margin:0;letter-spacing:-0.005em}
+  .buyuk-resim p strong{font-style:normal;font-weight:700;font-family:'Inter',sans-serif}
+  @media (max-width:700px){
+    .buyuk-resim{padding:24px 22px}
+    .buyuk-resim p{font-size:19px}
+  }
+
   /* CTA 3 yol */
   .cta-3{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
   .cta-final .btn-cta-light{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.35);color:#fff}
@@ -714,12 +729,13 @@
   .a-bulgu p{font-size:14px;color:var(--muted);line-height:1.65}
 
   /* KURUMSAL FAYDA - İstatistikler */
-  .kurum-fayda{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
-  .kf-card{background:var(--bg);padding:32px 26px;border:1px solid var(--line);text-align:left}
-  .kf-card .kf-num{font-size:48px;font-weight:800;color:var(--ink);line-height:1;margin-bottom:8px;letter-spacing:-0.035em}
-  .kf-card .kf-num em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--c1);font-weight:500}
-  .kf-card .kf-label{font-size:13px;color:var(--ink);font-weight:600;margin-bottom:8px}
-  .kf-card .kf-detail{font-size:12.5px;color:var(--muted);line-height:1.6}
+  .kurum-fayda{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
+  .kf-card{background:var(--bg);padding:36px 32px;border:1px solid var(--line);text-align:left;transition:all 0.3s}
+  .kf-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(10,10,10,0.06);border-color:var(--ink)}
+  .kf-card .kf-num{font-size:54px;font-weight:800;color:var(--ink);line-height:1;margin-bottom:10px;letter-spacing:-0.035em}
+  .kf-card .kf-num em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent);font-weight:500}
+  .kf-card .kf-label{font-size:15px;color:var(--ink);font-weight:700;margin-bottom:10px;letter-spacing:-0.012em}
+  .kf-card .kf-detail{font-size:14px;color:var(--muted);line-height:1.65}
 
   /* TOPLULUK */
   .topluluk-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
@@ -903,14 +919,17 @@
               <div class="kazanim-item">
                 <h3>Pazar akşamı "yarın pazartesi" tedirginliği biter; sabah işe gitme isteğiyle uyanırsınız.</h3>
                 <p>Anlamlı işler insanı tüketmez; besler. TORCH araştırmasında Gaye Skoru artan katılımcıların öz-bildirim mutluluk göstergesi <strong>%34 yükseldi</strong>, düşenlerde %19 düştü.</p>
+                <p class="onem"><strong>Neden önemli?</strong> Hayatınızın yedide biri pazar akşamı; elli yıllık kariyerde iki bin küsur akşam eder. Bu duygunun gerçek kaynağını görmeden sürekli bastırmak, hem zihni hem bedeni yorar.</p>
               </div>
               <div class="kazanim-item">
                 <h3>Yıllardır ertelediğiniz yön değişikliğini bu yıl yaparsınız.</h3>
                 <p>Net gaye, statükoyu eritir. Gayesi netleşen katılımcıların <strong>%62'si</strong> üç yıl içinde işini, şehrini ya da hayat rotasını değiştiren büyük bir karar aldı.</p>
+                <p class="onem"><strong>Neden önemli?</strong> Çoğu insan altmışlı yaşlarında "ben aslında..." diye yakınmaya başlar. "Geç kalmadım" diyebilmenin tek garantisi, kararı alabildiğiniz en erken anda almaktır.</p>
               </div>
               <div class="kazanim-item">
                 <h3>İki iş teklifi geldiğinde "hangi maaş yüksek?" değil, "hangisi on yıl sonra hâlâ yaptığım iş olur?" sorusunu sorarsınız.</h3>
                 <p>Karar netliği bir maaş pazarlığını değil, ömür boyu yaptığınız işin yönünü belirler. Skor bir basamak yükseldiğinde angajman ortalama <strong>%18 artıyor</strong>.</p>
+                <p class="onem"><strong>Neden önemli?</strong> Yanlış kapıya girmenin bedeli ücret farkı değil, beş yıllık zamandır. O zamanı geri alamazsınız; ama kararı netleştirerek başta önleyebilirsiniz.</p>
               </div>
             </div>
           </div>
@@ -928,18 +947,26 @@
               <div class="kazanim-item">
                 <h3>En iyi insanlarınızı tutmak için her yıl ücret zammı yapmak zorunda kalmazsınız.</h3>
                 <p>Yöneticilerin yalnızca <strong>%29'u</strong> "kendi gayem şirketin gayesiyle örtüşüyor" diyor; kalan %71 sessizce kapıya bakıyor. Rezonans yüksek olduğunda ücret yarışı dışında bir bağ kurulur; ekip kalır.</p>
+                <p class="onem"><strong>Neden önemli?</strong> Bir kilit pozisyonu yenilemek ortalama on sekiz ay alır; eski kişinin verim seviyesine ulaşmak iki yıl. Sayılı kişiyi kaybetmek, finansal değil sistemik kayıptır.</p>
               </div>
               <div class="kazanim-item">
                 <h3>Z Kuşağı CV'leri şirkete kendiliğinden akmaya başlar.</h3>
                 <p>TORCH: Z Kuşağında gaye-iş uyumu beklentisi X Kuşağına göre <strong>1,8 kat yüksek</strong>; fark son üç yılda daha da açıldı. Eşit ücretli iki şirketten gayesini taşıyabilen kazanır.</p>
+                <p class="onem"><strong>Neden önemli?</strong> 2030'a doğru çalışan havuzunun çoğunluğu Z Kuşağı olacak. Bugün gayesini taşıyamayan şirket, beş yıl sonra rakibinin yetenek havuzuna bakar.</p>
               </div>
               <div class="kazanim-item">
                 <h3>"Bu projeyi yapalım mı?" toplantısı üç saat değil, otuz dakika sürer.</h3>
                 <p>Vizyon-misyon belgeniz duvardan iner, karar masasına oturur. Her yatırım, her ürün, her işe alım aynı süzgeçten geçer: "Bu, gayemize hizmet ediyor mu?" Krizde dağılan değil, ayağa kalkan kurum olursunuz.</p>
+                <p class="onem"><strong>Neden önemli?</strong> VUCA çağında karar hızı, şirketler arası temel ayrımdır. Net gayesi olmayan kurum her tartışmayı sıfırdan yapar; rakipler iki adım önde olur.</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="buyuk-resim">
+        <span class="br-eyebrow">Büyük Resim</span>
+        <p>Bu çıktıları bir araya getirdiğinizde, hayatınızın ya da şirketinizin yönü tesadüfe değil; <strong>ölçülen, yönetilen, sahiplenilen</strong> bir mekanizmaya bağlanır. Yıllar sonra dönüp baktığınızda "öyle oldu" yerine "bu yolu ben seçtim" diyebilirsiniz.</p>
       </div>
     </div>
   </section>
@@ -1311,33 +1338,41 @@
     <div class="container">
       <div class="eyebrow">Bireysel · Gaye Skoru</div>
       <h1>Gayenin yolculuğunda bugün neredesin, <em>bir yıl sonra nereye gidebilirsin?</em></h1>
-      <p>Üç dakikalık bir hesaplamayla dört bileşeni puanlıyorsun. Karşında bugünkü skorun ve bir yıl sonraki potansiyelin yan yana duruyor — ve hangi bileşene odaklanmanın en hızlı sıçramayı yaratacağı.</p>
+      <p>Üç dakikalık bir hesaplamayla dört bileşeni puanlıyorsun. Karşında bugünkü skorun ve bir yıl sonraki potansiyelin yan yana duruyor; hangi tek karara odaklanmanın en hızlı sıçramayı yaratacağı net hâle geliyor.</p>
     </div>
   </section>
 
   <section class="section section-warm">
     <div class="container">
       <div class="section-head">
-        <div class="eyebrow">Neden Hesaplayasın?</div>
-        <h2>Skorun aslında <em>bir sayıdan fazlasıdır.</em></h2>
-        <p class="sub">Gaye yolculuğunda nerede olduğunun, nereye gidebileceğinin ve hangi kaldıraca dokunmanın en kritik olduğunun fotoğrafı. Niyet değil, ölçü; tahmin değil, hesap.</p>
+        <div class="eyebrow">Skoru Hesaplayınca</div>
+        <h2>Üç dakikalık form, <em>hayatınızda ne değiştirir?</em></h2>
+        <p class="sub">Skor bir sayı değil; bugüne dair bir ayna ve yarına dair bir haritadır. Aşağıdaki üç çıktı, hesaplama bittiğinde elinizde olur.</p>
       </div>
       <div class="fayda-grid">
         <div class="fayda-card">
           <div class="icon">i</div>
-          <h3>Mevcut konumunu öğren</h3>
-          <p>Gaye yolculuğunun dört bileşenine sayısal bir konum: Filiz, Gelişen, Güçlü ya da Çok Güçlü. <em class="serif">"Neredeyim?"</em> sorusu net cevap alır.</p>
+          <h3>Cuma akşamı "yarın pazartesi" tedirginliğinin gerçek kaynağını görürsünüz.</h3>
+          <p>Yorgunluğunuz iş yükünden mi, yoksa anlamsızlıktan mı geliyor? Düşük skor "filiz" aşamasını söyler; kaygının kaynağı belirsizlik, çözüm yön bulmaktır.</p>
+          <p class="onem"><strong>Neden önemli?</strong> Yorgunluğun kaynağı bilinmeden çözüm aranamaz. Beş yıl daha aynı duyguyla yaşamak yerine, kaynağa bu yıl müdahale edebilirsiniz.</p>
         </div>
         <div class="fayda-card">
           <div class="icon">+</div>
-          <h3>Gelişim potansiyelini gör</h3>
-          <p>Bugünkü skorunla bir yıllık potansiyelin yan yana. Aralarındaki fark, hangi alanın senin için kritik kaldıraç olduğunu söyler.</p>
+          <h3>Hangi tek karara odaklanırsanız bütünün değişeceğini bilirsiniz.</h3>
+          <p>Bugün ile bir yıl sonra arasındaki en büyük açıklık hangi bileşende? Onu güçlendirmek diğerlerini de yukarı çeker. Tahmin değil; hesaplanmış kaldıraç.</p>
+          <p class="onem"><strong>Neden önemli?</strong> Her şeyi aynı anda değiştirmeye çalışmak hiçbirini değiştirmemenin en yaygın nedenidir. Tek doğru kaldıraç, tek hareketle bütün dengeyi taşır.</p>
         </div>
         <div class="fayda-card">
           <div class="icon">→</div>
-          <h3>Somut aksiyon al</h3>
-          <p>Skorlar üzerine bina edilmiş 1–2 net öncelik: Hangi bileşeni güçlendirmek bütünü taşır? Genel tavsiye değil, kişisel rota.</p>
+          <h3>Yıllardır ertelediğiniz yön değişikliğini bu yıl yapma cesaretini bulursunuz.</h3>
+          <p>Net gaye, statükoyu eritir. TORCH araştırmasında gayesi netleşen katılımcıların <strong>%62'si</strong> üç yıl içinde işini, şehrini ya da hayat rotasını değiştiren büyük bir karar aldı.</p>
+          <p class="onem"><strong>Neden önemli?</strong> Çoğu insan altmışlı yaşlarında "ben aslında..." diye yakınmaya başlar. "Geç kalmadım" diyebilmenin tek garantisi, kararı alabildiğiniz en erken anda almaktır.</p>
         </div>
+      </div>
+
+      <div class="buyuk-resim">
+        <span class="br-eyebrow">Büyük Resim</span>
+        <p>Bu üç çıktıyı bir araya koyduğunuzda, <strong>hayatınızın yönü tesadüfe bırakılmaktan çıkar</strong>; ölçülen ve yönetilen bir mekanizmaya bağlanır. Skor bir sayı değil; kararlarınızın kerteriz noktasıdır.</p>
       </div>
     </div>
   </section>
@@ -1589,29 +1624,38 @@
       <div class="section-head">
         <div class="eyebrow">Kurumsal Fayda</div>
         <h2>Gaye, kuruma <em>ne katar?</em></h2>
-        <p class="sub">Kitapta TORCH araştırması ve A101 vakası gibi saha verileri, gaye odaklı dönüşümün dört somut çıktıya bağlandığını gösterir: çalışan, müşteri, strateji, performans.</p>
+        <p class="sub">Kitaptaki TORCH araştırması ve A101 vakası gibi saha verileri, gaye odaklı dönüşümün dört somut çıktıya bağlandığını gösteriyor: çalışan, müşteri, strateji, performans.</p>
       </div>
       <div class="kurum-fayda">
         <div class="kf-card">
           <div class="kf-num"><em>+%40</em></div>
           <div class="kf-label">Müşteri sadakati</div>
-          <div class="kf-detail">"Müşteri yaşamına somut katkı" KPI'sını birincil yapan teknoloji şirketinde ilk yılda ölçülen artış (Bölüm 3.4).</div>
+          <div class="kf-detail">"Müşteri yaşamına somut katkı" KPI'sını birincil ölçüt yapan bir teknoloji şirketinde ilk yılda ölçülen artış (Bölüm 3.4).</div>
+          <p class="onem"><strong>Neden önemli?</strong> Yeni müşteri kazanmanın maliyeti, mevcut müşteriyi tutmanın beş katı. Sadakat artışı pazarlama bütçesini doğrudan serbest bırakır.</p>
         </div>
         <div class="kf-card">
           <div class="kf-num"><em>2x</em></div>
           <div class="kf-label">Sektör üstü gelir büyümesi</div>
           <div class="kf-detail">Aynı şirketin üçüncü yılda gelir büyümesi sektör ortalamasının iki katına çıktı. Gaye odaklı performans uzun vadede kârlı.</div>
+          <p class="onem"><strong>Neden önemli?</strong> Sektör ortalamasında büyümek "ayakta kalmak"tır; iki katı büyümek "lider olmak". Gaye, bu farkı yaratan tek sürdürülebilir kaldıraçtır.</p>
         </div>
         <div class="kf-card">
           <div class="kf-num"><em>+%18</em></div>
           <div class="kf-label">Çalışan angajmanı</div>
           <div class="kf-detail">TORCH araştırmasında gaye skorunda her bir basamak artışında ölçülen ortalama angajman artışı.</div>
+          <p class="onem"><strong>Neden önemli?</strong> Angajmanı yüksek bir ekip, aynı işi daha az insanla yapar. Verimlilik artışı, yeni işe alımdan bin kat ucuzdur.</p>
         </div>
         <div class="kf-card">
           <div class="kf-num"><em>r=0,71</em></div>
           <div class="kf-label">Doğrusal nedensellik</div>
-          <div class="kf-detail">Gaye netliği ile angajman arasında 5000+ katılımcılık veride bulunan güçlü doğrusal ilişki.</div>
+          <div class="kf-detail">Gaye netliği ile angajman arasında 5000'den fazla katılımcının verisinde bulunan güçlü doğrusal ilişki.</div>
+          <p class="onem"><strong>Neden önemli?</strong> Bu sayı, "gaye işe yarar mı?" tartışmasını kapatır. Gaye netleştikçe angajman artıyor; istisna değil, kural.</p>
         </div>
+      </div>
+
+      <div class="buyuk-resim">
+        <span class="br-eyebrow">Büyük Resim</span>
+        <p>Bu dört çıktı dağınık değil; aynı zincirin halkalarıdır. <strong>Net gaye → yüksek angajman → daha sadık müşteri → sektör üstü büyüme.</strong> Üç yıl sonra şirketinizin sektör ortalamasının iki katı büyüdüğü bir noktaya, başka bir kapıdan girilmiyor.</p>
       </div>
     </div>
   </section>
@@ -1789,22 +1833,31 @@
           <span class="af-no">i.</span>
           <h3>Üst yönetim toplantısında "neden buradayız?" sorusuna sekiz farklı cevap değil, tek bir cevap olur.</h3>
           <p>Atölyeden çıkan tek cümlelik şirket gayesi, kurum stratejisinin kerteriz noktası hâline gelir. Her yatırım, her ürün, her işe alım aynı süzgeçten geçer: <strong>"Bu, gayemize hizmet ediyor mu?"</strong></p>
+          <p class="onem"><strong>Neden önemli?</strong> Üst yönetim hizalanmazsa, organizasyonun her kademesi farklı yöne çekilir. Tek cümlelik gaye, dört saatlik strateji toplantısının yerini alır.</p>
         </div>
         <div class="atolye-fayda">
           <span class="af-no">ii.</span>
           <h3>"Bu projeyi yapalım mı?" toplantısı üç saat değil, otuz dakika sürer.</h3>
           <p>Vizyon-misyon belgesi duvardan iner, karar masasına oturur. Gaye süzgeci açıldığı anda kararsızlık biter, hız gelir. VUCA ortamında en kritik avantaj.</p>
+          <p class="onem"><strong>Neden önemli?</strong> Hızlı karar, sektör payı demektir. Her gecikmiş "evet" ya da "hayır", rakibinizin bir adım öne geçmesidir.</p>
         </div>
         <div class="atolye-fayda">
           <span class="af-no">iii.</span>
           <h3>En iyi insanlarınızın sessizce kapıya bakması durur.</h3>
           <p>Yöneticilerin yalnızca <strong>%29'u</strong> "kendi gayem şirketin gayesiyle örtüşüyor" diyor; kalan %71 sessizce kapıya bakıyor. Pulse Check sayesinde bu dağılımın kendi şirketinizdeki halini görür, hangi kademede kopuş olduğunu net biçimde tespit edersiniz.</p>
+          <p class="onem"><strong>Neden önemli?</strong> Sessiz istifa, finansal göstergelerden yıllar önce kültür göstergelerinde belirir. Pulse Check, bu sinyali henüz geç olmadan duyurur.</p>
         </div>
         <div class="atolye-fayda">
           <span class="af-no">iv.</span>
           <h3>Z Kuşağı CV'leri açık pozisyonlarınıza akmaya başlar.</h3>
           <p>TORCH bulgusu: Z Kuşağında gaye-iş uyumu beklentisi X Kuşağına göre <strong>1,8 kat yüksek</strong>; fark son üç yılda daha da açıldı. Eşit ücretli iki şirketten gayesini taşıyabilen kazanır.</p>
+          <p class="onem"><strong>Neden önemli?</strong> Beş yıl içinde işgücünün yarısı Z Kuşağı olacak. Bugün gayesini bulamayan şirket, ileride rakibin yetenek havuzuna seyirci kalır.</p>
         </div>
+      </div>
+
+      <div class="buyuk-resim">
+        <span class="br-eyebrow">Büyük Resim</span>
+        <p>Atölye bir günlük etkinlik değil; <strong>şirketinizin gelecek üç yılına nasıl karar vereceğini değiştiren</strong> bir başlangıçtır. O bir gün, sonraki bin günün kerteriz noktasını belirler.</p>
       </div>
     </div>
   </section>
