@@ -780,7 +780,7 @@
         <p class="lead">Çoğu insan ne yapacağını bilir, ama <em>neden</em> yaptığını bilmez. Gayeni keşfettiğinde hem işine hem hayatına anlam katarsın — daha kararlı yönetirsin, daha motive çalışırsın, daha iyi yaşarsın.</p>
         <div class="hero-cta">
           <span class="btn-pair">
-            <a class="btn" onclick="document.getElementById('skor-acc-btn').click();document.getElementById('skor-acc-btn').scrollIntoView({behavior:'smooth',block:'start'})">Gayemi keşfet</a>
+            <a class="btn" onclick="openAcc('skor-acc-btn')">Gayemi keşfet</a>
             <span class="duration">10 dk</span>
           </span>
           <a class="btn btn-ghost" onclick="go('kitap')">Kitabı tanı</a>
@@ -1187,7 +1187,7 @@
       <p>Gayeyi ölçmenin, geliştirmenin ve yaşamanın yöntemi. Bir hafta içinde ilk skorunuzu çıkarmış olursunuz.</p>
       <div class="cta-btns">
         <a class="btn" href="#satin-al">Kitabı satın al</a>
-        <a class="btn btn-ghost" onclick="go('home')">Önce skoru hesapla</a>
+        <a class="btn btn-ghost" onclick="go('home');setTimeout(function(){openAcc('skor-acc-btn')},300)">Önce skoru hesapla</a>
       </div>
     </div>
   </section>
@@ -1499,6 +1499,15 @@
   go(window.location.hash.replace('#','')||'home');
 
   // ACCORDION (kazanım + skor + matris)
+  // Accordion'ı aç ve oraya kaydır (hero butonlarından çağrılır)
+  function openAcc(id){
+    const btn = document.getElementById(id);
+    if(!btn) return;
+    const acc = btn.parentElement;
+    if(!acc.classList.contains('open')) btn.click();
+    setTimeout(function(){btn.scrollIntoView({behavior:'smooth',block:'start'});}, 100);
+  }
+
   function toggleAcc(btn){
     const acc=btn.parentElement;
     const body=acc.querySelector('.acc-body');
