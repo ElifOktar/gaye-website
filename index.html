@@ -870,7 +870,110 @@
             </div>
           </div>
         </div>
+        <div class="calc-body">
+
+          <div class="calc-row">
+            <div class="calc-row-head"><div class="calc-letter">İ</div><h4>İtici Güçler</h4></div>
+            <p class="calc-desc">Para, statü ya da zorunluluk olmasa bile yapacağın işler. <em>"Ne yapıyorum?"</em> sorusunun cevabı.</p>
+            <details><summary>Kendine Sor</summary><ul><li>Para, statü olmasa ne yapardın?</li><li>Seni sabah yataktan kaldıran ne?</li><li>Hangi alanda iz bırakmak istiyorsun?</li></ul></details>
+            <div class="scale-pair">
+              <div class="scale-cell">
+                <div class="scale-label"><span>Bugün</span><span class="lbl-r">1–10</span></div>
+                <input type="range" id="I_bugun" min="1" max="10" value="6" step="1">
+                <div class="scale-tick"><span>az</span><span>orta</span><span>çok</span></div>
+                <div class="scale-val" id="vI_bugun">6</div>
+              </div>
+              <div class="scale-cell">
+                <div class="scale-label"><span>1 Yıl Sonra</span><span class="lbl-r">1–10</span></div>
+                <input type="range" id="I_gelecek" min="1" max="10" value="8" step="1">
+                <div class="scale-tick"><span>az</span><span>orta</span><span>çok</span></div>
+                <div class="scale-val" id="vI_gelecek">8</div>
+              </div>
             </div>
+          </div>
+
+          <div class="calc-row">
+            <div class="calc-row-head"><div class="calc-letter destek">D</div><h4>Destekler</h4></div>
+            <p class="calc-desc">Çevresel, sosyal, yapısal kolaylaştırıcılar. Beceriler, ilişki ağları, mentor desteği, altyapı.</p>
+            <details><summary>Kendine Sor</summary><ul><li>Hangi beceriler/kaynaklar seni güçlendiriyor?</li><li>Kim seni destekliyor?</li><li>Hangi ortamda en yaratıcısın?</li></ul></details>
+            <div class="scale-pair">
+              <div class="scale-cell">
+                <div class="scale-label"><span>Bugün</span><span class="lbl-r">1–10</span></div>
+                <input type="range" id="D_bugun" min="1" max="10" value="5" step="1">
+                <div class="scale-tick"><span>az</span><span>orta</span><span>güçlü</span></div>
+                <div class="scale-val" id="vD_bugun">5</div>
+              </div>
+              <div class="scale-cell">
+                <div class="scale-label"><span>1 Yıl Sonra</span><span class="lbl-r">1–10</span></div>
+                <input type="range" id="D_gelecek" min="1" max="10" value="7" step="1">
+                <div class="scale-tick"><span>az</span><span>orta</span><span>güçlü</span></div>
+                <div class="scale-val" id="vD_gelecek">7</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-row">
+            <div class="calc-row-head"><div class="calc-letter kostek">K</div><h4>Köstekler</h4></div>
+            <p class="calc-desc">İç ve dış engeller. Korkular, alışkanlıklar, kaynak yetersizliği, çevresel baskılar.</p>
+            <details><summary>Kendine Sor</summary><ul><li>Seni en çok engelleyen ne?</li><li>Dışsal engellerin neler?</li><li>Tekrarlayan engel kalıbı var mı?</li></ul></details>
+            <div class="scale-pair">
+              <div class="scale-cell">
+                <div class="scale-label"><span>Bugünkü Engel</span><span class="lbl-r">1–10</span></div>
+                <input type="range" id="K_bugun" min="1" max="10" value="5" step="1">
+                <div class="scale-tick"><span>hafif</span><span>orta</span><span>baskın</span></div>
+                <div class="scale-val" id="vK_bugun">5</div>
+              </div>
+              <div class="scale-cell">
+                <div class="scale-label"><span>1 Yıl Sonra Hedef</span><span class="lbl-r">1–10</span></div>
+                <input type="range" id="K_gelecek" min="1" max="10" value="3" step="1">
+                <div class="scale-tick"><span>hafif</span><span>orta</span><span>baskın</span></div>
+                <div class="scale-val" id="vK_gelecek">3</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-row">
+            <div class="calc-row-head"><div class="calc-letter motiv">M</div><h4>Motivasyon</h4></div>
+            <p class="calc-desc">Engellere rağmen yoluna devam etme gücü. <em>0 ile 1 arasında</em> tek skor — köstekleri modüle eden üs.</p>
+            <details><summary>Kendine Sor</summary><ul><li>Zor zamanda seni ayağa kaldıran ne?</li><li>Geçmişte engel aştığın anda seni ne harekete geçirdi?</li><li>"Başaracağım" derken içinde ne konuşur?</li></ul></details>
+            <div class="scale-pair">
+              <div class="scale-cell">
+                <div class="scale-label"><span>Bugün</span><span class="lbl-r">0–1</span></div>
+                <input type="range" id="M_bugun" min="0" max="1" value="0.6" step="0.1">
+                <div class="scale-tick"><span>yok</span><span>orta</span><span>tam</span></div>
+                <div class="scale-val" id="vM_bugun">0,6</div>
+              </div>
+              <div class="scale-cell">
+                <div class="scale-label"><span>1 Yıl Sonra</span><span class="lbl-r">0–1</span></div>
+                <input type="range" id="M_gelecek" min="0" max="1" value="0.8" step="0.1">
+                <div class="scale-tick"><span>yok</span><span>orta</span><span>tam</span></div>
+                <div class="scale-val" id="vM_gelecek">0,8</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="result-block">
+            <div class="result-row">
+              <div class="result-cell">
+                <div class="label">Bugünkü Skor</div>
+                <div class="score-big" id="skor_bugun">—</div>
+                <div class="score-status" id="status_bugun">—</div>
+              </div>
+              <div class="result-cell">
+                <div class="label">1 Yıl Potansiyeli</div>
+                <div class="score-big" id="skor_gelecek">—</div>
+                <div class="score-status" id="status_gelecek">—</div>
+              </div>
+            </div>
+            <div class="gelisim-row">
+              <div class="gelisim-label">Gelişim Potansiyeli</div>
+              <div class="gelisim-fark" id="gelisim_fark">—</div>
+              <div class="gelisim-bar"><div class="gelisim-bar-fill" id="gelisim_bar"></div></div>
+            </div>
+            <div class="result-interp" id="result_yorum"><p><strong>Yorumun:</strong> Skorların güncellenince burada kişisel yorumun belirir.</p></div>
+          </div>
+        </div>
+      </div>
           </div>
         </div>
         <div class="ed-acc">
@@ -943,7 +1046,7 @@
         <div>
           <h3>Selim Oktar</h3>
           <span class="y-tag">Araştırmacı · Yazar · İstanbul</span>
-          <p>StratejiCo. kurucusu. Otuz yıllık stratejik araştırma ve danışmanlık birikiminden, Türkiye gerçekliğine uyarlanmış özgün bir gaye modeline ulaştı. <a class="btn-link" onclick="go('kitap')">Kitap hakkında →</a></p>
+          <p>Otuz yıllık stratejik araştırma ve danışmanlık birikiminden, Türkiye gerçekliğine uyarlanmış özgün bir gaye modeline ulaştı. <a class="btn-link" onclick="go('kitap')">Kitap hakkında →</a></p>
         </div>
       </div>
     </div>
@@ -994,7 +1097,7 @@
       <span class="h-eyebrow">Bu Kitap Niye Var?</span>
       <h2 class="h-italic">Bir soru, çoğumuzun zihninde sessizce dolanır: <em>"ne yapıyorum ben?"</em></h2>
       <p class="body-md" style="margin-top:24px">Sabahın ilk saatinde uyandırır, takvime bakarken kıpırdar, kalabalık bir toplantıda kulağa fısıldar. Bastırırız, geçer; ama dönüp dönüp gelir.</p>
-      <p class="body-md">Selim Oktar otuz yıl boyunca bu soruyu hem kendinde hem sahada izledi. Anadolu Sigorta'dan EY'ye, Ankara Patent'ten ÇCSİB sektörlerine uzanan binlerce kayıt topladı. Vardığı sonuç: <em>"ne yapıyorum?"</em> sorusu küçük değildir; yöntemsiz cevaplandığında insanı tüketir.</p>
+      <p class="body-md">Selim Oktar otuz yıl boyunca bu soruyu hem kendinde hem sahada izledi. Sigorta, danışmanlık, fikri mülkiyet ve kamu sektörlerine uzanan binlerce kayıt topladı. Vardığı sonuç: <em>"ne yapıyorum?"</em> sorusu küçük değildir; yöntemsiz cevaplandığında insanı tüketir.</p>
       <p class="body-md">Kitap bir cevap dayatmaz; bir <em>yöntem</em> inşa eder. Gayeyi ölçen, haritalandıran ve geliştirilebilir kılan dört çerçeve sunar.</p>
     </div>
   </section>
@@ -1042,7 +1145,7 @@
           <div class="toc-section"><div class="b-num">iii.</div><div><h4>Gayeye Ulaşmada Liderlik</h4><p>Strateji-Yapı-Kültür · Yönetişim · Performans · Akil Liderlik</p></div></div>
           <div class="toc-section"><div class="b-num">iv.</div><div><h4>Gayeye Ulaşmada Bilgi</h4><p>Mitoloji · Bilgi-Gaye-Değer · Bilginin Çağı · Pratik Adımlar</p></div></div>
           <div class="toc-section"><div class="b-num">v.</div><div><h4>Gaye, Vizyon, Misyon, Değerler</h4><p>Kavramsal Kargaşa · Çelik İskelet · Türkiye Gerçeği · Bütünleşik Çerçeve</p></div></div>
-          <div class="toc-section"><div class="b-num">vi.</div><div><h4>Gaye Odaklı İş Modelleri</h4><p>Geleneksel Kırılganlık · Dört Tip İş Modeli · A101 Vakası</p></div></div>
+          <div class="toc-section"><div class="b-num">vi.</div><div><h4>Gaye Odaklı İş Modelleri</h4><p>Geleneksel Kırılganlık · Dört Tip İş Modeli · Saha Vakası</p></div></div>
           <div class="toc-section"><div class="b-num">vii.</div><div><h4>Gaye ve Angajman Birlikteliği</h4><p>Matris · Dört Profil · Soru Bataryası</p></div></div>
         </div>
       </div>
@@ -1063,8 +1166,8 @@
         </div>
         <div class="yazar-text">
           <h2>Selim Oktar</h2>
-          <span class="y-tag">StratejiCo. Kurucusu · Yazar · Araştırmacı</span>
-          <p>Türkiye'nin önde gelen stratejik araştırma şirketlerinden Strateji|Mori'yi kurdu, sonra şirketi yönetim danışmanlığı statüsüne taşıdı. Otuz yıldan fazla bir süredir stratejik planlama, araştırma, kriz yönetimi ve danışmanlık alanlarında çalışıyor.</p>
+          <span class="y-tag">Araştırmacı · Yazar · Danışman</span>
+          <p>Otuz yıldan fazla bir süredir stratejik planlama, araştırma, kriz yönetimi ve yönetim danışmanlığı alanlarında çalışıyor. Türkiye'nin önde gelen stratejik araştırma yapılarından birini kurdu, sonra yönetim danışmanlığına genişletti.</p>
           <p>Drucker'ın "şirketlerin gayesi müşteri kazanmaktır" sözüyle başlayan, Sinek'in <em>Start With Why</em>'ıyla derinleşen ilginin Türkiye gerçekliğine uyarlanmış özgün versiyonunu inşa etti.</p>
           <div class="quote-lg">"Gaye, lüks değil <em>zorunluluktur.</em> Bilimsel olarak ölçülebilir, geliştirilebilir bir yapıdır — ve her zaman eylemle sınanır."</div>
           <div class="yazar-stats">
@@ -1097,7 +1200,7 @@
     <div class="container">
       <div class="hero-marks">
         <div class="hero-mark-l">Gaye Atölyesi<br>Kurumsal</div>
-        <div class="hero-mark-r">StratejiCo.<br>Yöntemi</div>
+        <div class="hero-mark-r">Gaye<br>Yöntemi</div>
       </div>
       <div class="hero-center">
         <span class="h-quest">— neden varız?</span>
@@ -1225,18 +1328,18 @@
       <div class="vaka-band">
         <div>
           <span class="v-tag">Perakende</span>
-          <h4>A101</h4>
-          <p>14.000 mağaza, 70.000 çalışan. Gaye Haritası™ ile üst yönetimden mağaza çalışanına kadar dört kadran fotoğrafı. Üst yönetim I. Kadran'da, mağaza çalışanları IV. Kadran'da — kapatılması gereken boşluğun ölçülmesi.</p>
+          <h4>Ulusal perakende ağı</h4>
+          <p>On binlerce mağaza, yüz binlerce çalışan. Gaye Haritası™ ile üst yönetimden mağaza çalışanına kadar dört kadran fotoğrafı. Üst yönetim I. Kadran'da, saha çalışanları IV. Kadran'da — kapatılması gereken boşluğun ölçülmesi.</p>
         </div>
         <div>
           <span class="v-tag">Savunma & Teknoloji</span>
-          <h4>Polsan Teknokent</h4>
-          <p>70+ katılımcılı strateji çalıştayı, bir tam gün. Beş ana eksende gaye haritası, kaldıraçlar ve riskler. Milli güvenlik, yenilikçi Ar-Ge, etik kültür.</p>
+          <h4>Savunma teknoloji ekosistemi</h4>
+          <p>70+ katılımcılı strateji çalıştayı, bir tam gün. Beş ana eksende gaye haritası, kaldıraçlar ve riskler. Milli güvenlik, yenilikçi Ar-Ge, etik kültür eksenleri.</p>
         </div>
         <div>
-          <span class="v-tag">Strateji + Kriz</span>
-          <h4>StratejiCo. Yöntemi</h4>
-          <p>30 yıllık birikim. İç akıl + dış akıl modeli. Stratejik planlama, kriz/itibar yönetimi, çevik dönüşüm — bütüncül yaklaşım.</p>
+          <span class="v-tag">Yöntem & Birikim</span>
+          <h4>Yönetim Danışmanlığı</h4>
+          <p>30 yıllık birikim. İç akıl + dış akıl modeli. Stratejik planlama, kriz/itibar yönetimi, çevik dönüşüm — bütüncül yaklaşım. Onlarca kurumda uygulandı.</p>
         </div>
       </div>
     </div>
@@ -1353,7 +1456,7 @@
   <div class="container">
     <div>
       <div class="logo" onclick="go('home')">G<span class="a">a</span>ye</div>
-      <p>Selim Oktar · Otuz yıllık araştırma, üç yıllık TORCH çalışması ve sahadan gelen veriyle inşa edilmiş Gaye Modeli.</p>
+      <p>Otuz yıllık araştırma, üç yıllık TORCH çalışması ve sahadan gelen veriyle inşa edilmiş Gaye Modeli.</p>
     </div>
     <div>
       <h5>Keşfet</h5>
