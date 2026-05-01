@@ -516,6 +516,237 @@
   .puanlama-item,.puanlama-item p{color:rgba(255,255,255,0.7) !important;border-color:rgba(212,185,127,0.18) !important}
   .puanlama-item .pi-name,.puanlama-item strong{color:#fff !important}
 
+
+  /* ============== SANDVIÇ OVERRIDE — krem body, koyu hero/cta ============== */
+  :root{
+    --bg:#FAF6EC;
+    --bg-cream2:#F1ECE2;
+    --ink:#0F1B36;
+    --ink-mid:#3d3d3d;
+    --muted:#5a5a5a;
+    --soft:#9b9b9b;
+    --line:#e0d6c0;
+    --line-soft:#f0e9d5;
+    --warm:#8B5A2C;
+  }
+  body{background:var(--bg);color:var(--ink)}
+  em{color:var(--warm)}
+  .h-eyebrow{color:var(--warm)}
+  .h-eyebrow.with-line::before,.h-eyebrow.with-line::after{background:var(--warm);opacity:0.5}
+  h1.h-italic,h2.h-italic,h3.h-italic{color:var(--ink)}
+  .lead{color:var(--ink-mid)}
+  .body-md{color:var(--ink-mid)}
+  .body-md em{color:var(--warm)}
+
+  /* NAV — krem */
+  nav{background:rgba(250,246,236,0.92);border-bottom-color:var(--line)}
+  .logo{color:var(--ink)}
+  .logo .a{color:var(--warm)}
+  nav a{color:var(--muted)}
+  nav a:hover{color:var(--warm)}
+  nav a.active{color:var(--warm);border-bottom-color:var(--warm)}
+  .menu-btn{color:var(--ink)}
+
+  /* Buton overrides — krem zeminde koyu primary */
+  .btn{background:var(--ink);border-color:var(--ink);color:#fff}
+  .btn:hover{background:transparent;color:var(--ink)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:#fff}
+  .btn-pair{border-color:var(--ink)}
+  .btn-pair .duration{color:var(--ink);border-left-color:var(--ink)}
+  .btn-link{color:var(--warm);border-bottom-color:var(--warm)}
+  .btn-link:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+  /* HERO — koyu (drama korunur) */
+  .hero{background:var(--bg-dark);color:#fff}
+  .hero::before{height:340px}
+  .hero-center h1,.hero h1.h-italic,.hero-center h1 em{color:#fff}
+  .hero-center h1 .gold,.hero h1 em{color:var(--gold)}
+  .hero-center .h-quest,.hero-marks .hero-mark-l,.hero-marks .hero-mark-r,.hero .h-eyebrow{color:var(--gold)}
+  .hero .lead{color:rgba(255,255,255,0.78)}
+  .hero .lead em{color:var(--gold)}
+  .hero .btn{background:var(--gold);border-color:var(--gold);color:var(--bg-dark)}
+  .hero .btn:hover{background:transparent;color:var(--gold)}
+  .hero .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,0.3)}
+  .hero .btn-ghost:hover{background:#fff;color:var(--bg-dark);border-color:#fff}
+  .hero .btn-pair{border-color:rgba(212,185,127,0.4)}
+  .hero .btn-pair .btn{background:var(--gold);color:var(--bg-dark);border-color:transparent}
+  .hero .btn-pair .duration{color:var(--gold);border-left-color:rgba(212,185,127,0.4)}
+
+  /* Manifesto alıntı — krem */
+  .manifesto-q{border-color:var(--line)}
+  .manifesto-q::before{color:var(--warm)}
+  .manifesto-q blockquote{color:var(--ink)}
+  .manifesto-q blockquote em{color:var(--warm)}
+  .manifesto-q .mq-source{color:var(--warm)}
+
+  /* 3 fayda — krem ızgara */
+  .fayda-3{background:var(--line);border-color:var(--line)}
+  .fayda-3 > div{background:var(--bg)}
+  .fayda-3 > div:hover{background:var(--bg-cream2)}
+  .fayda-3 .e-tag{color:var(--warm)}
+  .fayda-3 h3{color:var(--ink)}
+  .fayda-3 p{color:var(--muted)}
+
+  /* Accordion — krem zemin */
+  .ed-acc{background:#fff;border-color:var(--line)}
+  .ed-acc:hover,.ed-acc.open{border-color:var(--ink);background:#fff}
+  .ed-acc-tag{color:var(--warm)}
+  .ed-acc-title{color:var(--ink)}
+  .ed-acc-icon{color:var(--ink)}
+
+  /* Yazar mini */
+  .yazar-mini{background:#fff;border-color:var(--line)}
+  .yazar-mini::before{background:var(--warm)}
+  .yazar-mini .y-foto{background:var(--bg-darker);border-color:var(--warm)}
+  .yazar-mini h3{color:var(--ink)}
+  .yazar-mini .y-tag{color:var(--warm)}
+  .yazar-mini p{color:var(--ink-mid)}
+
+  /* Divider */
+  .divider-fine{background:var(--warm)}
+
+  /* CTA blokları KOYU — drama */
+  .cta-block{background:var(--bg-dark);color:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cta-block::before{background:var(--gold)}
+  .cta-block .h-eyebrow{color:var(--gold)}
+  .cta-block h2{color:#fff}
+  .cta-block h2 em{color:var(--gold)}
+  .cta-block p{color:rgba(255,255,255,0.78)}
+  .cta-block .btn{background:var(--gold);border-color:var(--gold);color:var(--bg-dark)}
+  .cta-block .btn:hover{background:transparent;color:var(--gold)}
+  .cta-block .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,0.3)}
+  .cta-block .btn-ghost:hover{background:#fff;color:var(--bg-dark);border-color:#fff}
+
+  /* Footer — koyu */
+  footer{background:var(--bg-darker);color:rgba(255,255,255,0.6);border-color:var(--line)}
+  footer .logo{color:#fff}
+  footer .logo .a{color:var(--gold)}
+  footer p{color:rgba(255,255,255,0.55)}
+  footer h5{color:var(--gold)}
+  footer ul a{color:rgba(255,255,255,0.55)}
+  footer ul a:hover{color:var(--gold)}
+  .copyright{color:rgba(255,255,255,0.35);border-color:rgba(212,185,127,0.18)}
+
+  /* Kitap text */
+  .kitap-text h1{color:var(--ink)}
+  .kitap-text h1 em{color:var(--warm)}
+  .kitap-meta{border-color:var(--line)}
+  .kitap-meta strong{color:var(--warm)}
+  .kitap-meta span{color:var(--muted)}
+  .kitap-cover-fb{background:var(--bg-dark);color:var(--gold);border-color:var(--line)}
+
+  /* İddialar */
+  .iddialar{background:var(--line);border-color:var(--line)}
+  .iddialar > div{background:var(--bg)}
+  .iddialar .i-no{color:var(--warm)}
+  .iddialar h4{color:var(--ink)}
+  .iddialar p{color:var(--ink)}
+
+  /* TOC */
+  .toc-wrap{border-color:var(--line)}
+  .toc-toggle h3{color:var(--ink)}
+  .toc-toggle .toc-arrow{color:var(--warm)}
+  .toc-section{border-color:var(--line-soft)}
+  .toc-section .b-num{color:var(--warm)}
+  .toc-section h4{color:var(--ink)}
+  .toc-section p{color:var(--muted)}
+
+  /* Yazar block (kitap) */
+  .yazar-block{background:#fff;border-color:var(--line)}
+  .yazar-block::before{background:var(--warm)}
+  .yazar-foto-big{background:var(--bg-darker);border-color:var(--warm)}
+  .yazar-text h2{color:var(--ink)}
+  .yazar-text .y-tag{color:var(--warm)}
+  .yazar-text p{color:var(--ink-mid)}
+  .yazar-text .quote-lg{border-left-color:var(--warm);color:var(--ink)}
+  .yazar-text .quote-lg em{color:var(--warm)}
+  .yazar-stats{border-color:var(--line)}
+  .yazar-stats > div strong{color:var(--warm)}
+  .yazar-stats > div span{color:var(--muted)}
+
+  /* Kurumsal fayda */
+  .kurum-fayda{background:var(--line);border-color:var(--line)}
+  .kurum-fayda > div{background:var(--bg)}
+  .kurum-fayda > div:hover{background:var(--bg-cream2)}
+  .kurum-fayda .kf-no{color:var(--warm)}
+  .kurum-fayda h3{color:var(--ink)}
+  .kurum-fayda p{color:var(--muted)}
+
+  /* Süreç akışı */
+  .surec-flow{border-color:var(--line)}
+  .surec-step{background:var(--bg);border-color:var(--line)}
+  .surec-step:hover{background:var(--bg-cream2)}
+  .surec-step .ss-no{color:var(--warm)}
+  .surec-step h4{color:var(--ink)}
+  .surec-step p{color:var(--muted)}
+  .surec-section-tag{border-color:var(--line)}
+  .surec-section-tag span{color:var(--warm)}
+
+  /* Pulse band — krem üzerinde sıcak vurgu */
+  .pulse-band{background:#fff;border:2px solid var(--warm);background:linear-gradient(135deg,#FFFEFA 0%,var(--bg-cream2) 100%)}
+  .pulse-band::before{background:var(--warm)}
+  .pulse-band .pulse-icon{color:var(--warm)}
+  .pulse-band .pulse-text .p-tag{color:var(--warm)}
+  .pulse-band .pulse-text h3{color:var(--ink)}
+  .pulse-band .pulse-text h3 em{color:var(--warm)}
+  .pulse-band .pulse-text p{color:var(--ink-mid)}
+  .pulse-band .pulse-text p strong{color:var(--warm)}
+
+  /* Meta bar */
+  .meta-bar{border-color:var(--line)}
+  .meta-bar > div{border-color:var(--line)}
+  .meta-bar .m-lbl{color:var(--warm)}
+  .meta-bar .m-val{color:var(--ink)}
+
+  /* Vaka kartlar */
+  .vaka-band > div{background:var(--bg);border-color:var(--line)}
+  .vaka-band > div:hover{border-color:var(--ink);background:var(--bg-cream2)}
+  .vaka-band .v-tag{color:var(--warm)}
+  .vaka-band h4{color:var(--ink)}
+  .vaka-band p{color:var(--muted)}
+
+  /* Form */
+  .form-card{background:#fff;border-color:var(--line)}
+  .form-row label{color:var(--warm)}
+  .form-row input,.form-row select,.form-row textarea{background:var(--bg);border-color:var(--line);color:var(--ink)}
+  .form-row input:focus,.form-row select:focus,.form-row textarea:focus{border-color:var(--ink)}
+  .form-row input::placeholder,.form-row textarea::placeholder{color:var(--soft)}
+
+  /* Skor + Matris — açık zemin uyarlaması */
+  .calc-box{background:#fff !important;border:1px solid var(--line) !important;color:var(--ink) !important}
+  .calc-box .label,.calc-box h3,.calc-box p,.calc-box h4,.calc-row h4,.calc-desc,.calc-head,.calc-body{color:var(--ink) !important}
+  .calc-row{border-color:var(--line) !important}
+  .calc-row p,.calc-row .calc-desc{color:var(--muted) !important}
+  .calc-letter{background:var(--warm) !important;color:#fff !important}
+  .calc-row details summary{color:var(--warm) !important}
+  .calc-row details ul li,.calc-row details{color:var(--muted) !important}
+  .scale-cell label{color:var(--muted) !important}
+  .scale-cell input[type=range]{accent-color:var(--warm)}
+  .skor-card{background:var(--bg) !important;border-color:var(--warm) !important;color:var(--ink) !important}
+  .skor-card .label,.skor-card .skor-num,.skor-card .skor-status,.skor-card p{color:var(--ink) !important}
+  .dk-block,.dk-formula,.dk-skor,.dk-eq,.dk-pay,.dk-payda,.dk-term,.dk-paren,.dk-ust,.dk-plus,.dk-skor .name,.dk-skor .eng,.dk-term .name,.dk-term .eng{color:var(--ink) !important}
+  .dk-bar{background:var(--warm) !important}
+  .matris-test{background:#fff !important;border:1px solid var(--line) !important;color:var(--ink) !important}
+  .matris-test h3,.matris-test h4,.matris-test p,.mt-section h4,.mt-sub-h,.mt-sub{color:var(--ink) !important}
+  .mt-soru{border-color:var(--line) !important;color:var(--ink) !important;background:var(--bg) !important}
+  .mt-soru input[type=radio]{accent-color:var(--warm)}
+  .mt-soru label{color:var(--muted) !important}
+  .mt-result{background:var(--bg-cream2) !important;border:2px solid var(--warm) !important;color:var(--ink) !important}
+  .mt-kadran,.mt-baslik,.mt-aciklama,.mt-skor-pill .lbl,.mt-skor-pill .val{color:var(--ink) !important}
+  .mt-skor-pill{background:#fff !important;border:1px solid var(--warm) !important}
+  .mt-grid{background:#fff !important;border:1px solid var(--line) !important}
+  .matrix-cell,.q-k1,.q-k2,.q-k3,.q-k4{color:var(--ink) !important;background:#fff !important;border-color:var(--line) !important}
+  .matrix-cell h4,.q-k1 span,.q-k2 span,.q-k3 span,.q-k4 span{color:var(--muted) !important}
+  .matrix-cell.k1 h4,.matrix-cell.k2 h4,.matrix-cell.k3 h4,.matrix-cell.k4 h4{color:var(--warm) !important}
+  .mt-dot{background:var(--warm) !important;box-shadow:0 0 12px rgba(139,90,44,0.5) !important}
+  .mt-axis-label{color:var(--warm) !important}
+  .skor-cizelge{background:#fff !important;border-color:var(--line) !important;color:var(--ink) !important}
+  .skor-cizelge .label,.skor-cizelge p,.skor-cizelge div,.skor-cizelge strong{color:var(--ink) !important}
+  .calc-puanlama{background:#fff !important;border-color:var(--line) !important}
+  .puanlama-item,.puanlama-item p{color:var(--muted) !important;border-color:var(--line) !important}
+  .puanlama-item .pi-name,.puanlama-item strong{color:var(--ink) !important}
+
 </style>
 </head>
 <body>
@@ -1079,9 +1310,9 @@
   <section class="hero">
     <div class="container">
       <div class="hero-center">
-        <span class="h-quest">— birlikte konuşalım</span>
-        <h1>Yazın, <span class="gold">48 saatte dönüyoruz.</span></h1>
-        <p class="lead">Atölye talebi, kitap sorusu, topluluk kaydı, hikâye paylaşımı — hangisi olursa olsun yazın.</p>
+        <span class="h-quest">— ilk adım</span>
+        <h1>Önce bir <span class="gold">konuşma.</span></h1>
+        <p class="lead">Atölye talebi, kitap sorusu, topluluk kaydı, hikâye paylaşımı — hangisi olursa olsun yazın. 48 saat içinde dönüyoruz.</p>
       </div>
     </div>
   </section>
