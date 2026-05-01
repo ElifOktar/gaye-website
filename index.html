@@ -1510,7 +1510,7 @@
 
   function toggleAcc(btn){
     const acc=btn.parentElement;
-    const body=acc.querySelector('.acc-body');
+    const body=acc.querySelector('.ed-acc-body, .acc-body');
     const isOpen=acc.classList.contains('open');
     if(isOpen){
       // önce explicit yüksekliği yaz, sonra 0'a iniş için reflow
