@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kurumsal — Gayeni Bul</title>
+<meta name="description" content="Şirketinizin gayesi günlük kararlarda yaşasın: Gaye Atölyesi, Pulse Check ve 7-10 haftalık dönüşüm yolculuğu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF; --bg-soft:#F7F8FA; --card:#FFFFFF;
+    --ink:#101828; --soft:#475467; --dim:#98A2B3;
+    --blue:#1A56DB; --blue-deep:#12409F; --teal:#0E7490;
+    --blue-soft:#E8F0FB; --line:#EAECF0; --line-2:#D0D5DD;
+    --disp:'Plus Jakarta Sans', sans-serif; --sans:'Inter', -apple-system, sans-serif;
+    --r:20px;
+    --shadow:0 2px 4px rgba(15,18,34,.04),0 18px 44px -18px rgba(15,18,34,.14);
+    --shadow-hover:0 4px 8px rgba(15,18,34,.05),0 30px 60px -20px rgba(37,54,168,.22);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 36px}
+  a{color:inherit}
+  .eyebrow{font-family:var(--disp);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);font-weight:700}
+  h1.big,h2.sec{font-family:var(--disp);font-weight:700;letter-spacing:-.03em;line-height:1.08;text-wrap:balance}
+  h2.sec{font-size:clamp(28px,3.8vw,42px);margin:16px 0 14px}
+  h2.sec em{font-style:normal;color:var(--blue)}
+  .lede{color:var(--soft);font-size:18px;max-width:62ch;text-wrap:pretty}
+  header{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .wordmark{font-family:var(--disp);font-size:21px;font-weight:700;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:10px}
+  .wordmark .dot{width:10px;height:10px;border-radius:50%;background:var(--blue)}
+  .wordmark span{color:var(--blue)}
+  nav.main{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:600}
+  nav.main a{text-decoration:none;color:var(--soft)}
+  nav.main a:hover,nav.main a.on{color:var(--ink)}
+  nav.main a.cta{color:#fff;background:var(--ink);padding:11px 22px;border-radius:999px}
+  nav.main a.cta:hover{background:var(--blue)}
+  @media(max-width:820px){nav.main{display:none}}
+  .btn{font-size:15px;font-weight:600;text-decoration:none;padding:16px 30px;display:inline-flex;align-items:center;gap:8px;border-radius:999px;transition:all .22s;border:1.5px solid transparent}
+  .btn-primary{background:var(--blue);color:#fff;box-shadow:0 14px 30px -12px rgba(26,86,219,.5)}
+  .btn-primary:hover{background:var(--blue-deep);transform:translateY(-2px)}
+  .btn-outline{border-color:var(--line-2);color:var(--ink);background:#fff}
+  .btn-outline:hover{border-color:var(--ink);transform:translateY(-2px)}
+
+  .hero{padding:92px 0 76px;text-align:center;background:linear-gradient(180deg,#F7F8FA, #fff)}
+  .hero h1{font-size:clamp(34px,5vw,58px);max-width:22ch;margin:26px auto 20px}
+  .hero h1 em{font-style:normal;color:var(--blue)}
+  .hero .lede{margin:0 auto 40px}
+  .stats{display:flex;justify-content:center;gap:14px;margin-top:56px;flex-wrap:wrap}
+  .stats span{font-size:12.5px;font-weight:600;color:var(--soft);background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px}
+  .stats b{color:var(--blue)}
+
+  section.blk{padding:88px 0;border-top:1px solid var(--line)}
+  section.blk.soft{background:var(--bg-soft)}
+  .need-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:44px}
+  .need{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:34px 30px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
+  .need:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+  .need .q{font-family:var(--disp);font-size:19px;font-weight:700;letter-spacing:-.01em;line-height:1.35;margin-bottom:12px}
+  .need .q::before{content:"“";color:var(--blue);margin-right:2px}
+  .need .q::after{content:"”";color:var(--blue)}
+  .need .a{font-size:15px;color:var(--soft)}
+  .need .a b{color:var(--ink)}
+  .need .f{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line-2);font-size:13.5px;font-weight:600;color:var(--teal)}
+  @media(max-width:820px){.need-grid{grid-template-columns:1fr}}
+
+  .flow{margin-top:46px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px}
+  .step .n{font-family:var(--disp);font-weight:800;color:var(--blue);font-size:13px;letter-spacing:.08em}
+  .step h4{font-family:var(--disp);font-size:16px;font-weight:700;margin:6px 0 6px}
+  .step p{font-size:13.5px;color:var(--soft);line-height:1.6}
+  @media(max-width:900px){.flow{grid-template-columns:repeat(2,1fr)}}
+  .pulse{margin-top:26px;background:linear-gradient(120deg,#E8F0FB,#E6F4F7);border-radius:var(--r);padding:30px 34px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+  .pulse .t{font-family:var(--disp);font-weight:700;font-size:19px}
+  .pulse p{font-size:15px;color:#33436B;flex:1;min-width:280px}
+
+  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  .case{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;box-shadow:var(--shadow)}
+  .case .tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;display:block}
+  .case h4{font-family:var(--disp);font-size:18px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+  .case p{font-size:14.5px;color:var(--soft)}
+  @media(max-width:880px){.case-grid{grid-template-columns:1fr}}
+
+  .invite{background:#0B1B3A;color:#fff;border-radius:calc(var(--r) + 6px);padding:56px 54px;margin-top:60px;display:grid;grid-template-columns:1.4fr 1fr;gap:44px;align-items:center}
+  .invite h3{font-family:var(--disp);font-size:clamp(24px,3vw,32px);font-weight:700;letter-spacing:-.02em;margin-bottom:12px}
+  .invite h3 em{font-style:normal;color:#7AA5F8}
+  .invite p{color:#B9C6E4;font-size:15.5px}
+  .invite ul{list-style:none;margin-top:14px}
+  .invite li{padding:5px 0 5px 24px;position:relative;color:#D7E0F5;font-size:14.5px}
+  .invite li::before{content:"→";position:absolute;left:0;color:#F5A623}
+  .invite .act{display:flex;flex-direction:column;gap:12px}
+  .invite .act .btn{justify-content:center}
+  .invite .fine{font-size:12px;color:#8FA0C6;text-align:center}
+  @media(max-width:880px){.invite{grid-template-columns:1fr;padding:40px 30px}}
+
+  .contact{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  .cbox{border:1px solid var(--line);border-radius:var(--r);padding:30px;text-align:center;background:#fff;box-shadow:var(--shadow)}
+  .cbox .ic{font-size:26px;margin-bottom:10px}
+  .cbox h4{font-family:var(--disp);font-size:17px;font-weight:700;margin-bottom:6px}
+  .cbox p,.cbox a{font-size:14.5px;color:var(--soft);text-decoration:none}
+  .cbox a:hover{color:var(--blue)}
+  @media(max-width:820px){.contact{grid-template-columns:1fr}}
+
+  footer{background:#0B1B3A;color:#AEB6C8;padding:60px 0 48px;margin-top:88px}
+  .f-grid{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:28px}
+  .f-mark{font-family:var(--disp);font-size:23px;font-weight:700;color:#fff}
+  .f-mark span{color:#7AA5F8}
+  footer nav{display:flex;gap:26px;font-size:13.5px;font-weight:500;flex-wrap:wrap}
+  footer nav a{text-decoration:none;color:#AEB6C8}
+  footer nav a:hover{color:#fff}
+  .f-copy{font-size:12px;color:#7B8091;margin-top:32px;padding-top:22px;border-top:1px solid rgba(255,255,255,.09)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="wordmark" href="index.html"><span class="dot"></span>Gayeni <span>Bul</span></a>
+    <nav class="main">
+      <a class="on" href="kurumsal.html">Kurumsal</a>
+      <a href="topluluk.html">Topluluk</a>
+      <a href="#iletisim">İletişim</a>
+      <a class="cta" href="index.html#satin-al">Kitabı Edin</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Kurumsal</span>
+    <h1 class="big">Şirketinizin gayesi <em>günlük kararlarda</em> yaşasın.</h1>
+    <p class="lede">Bir kurumun gayesi yoksa, en parlak stratejisi bile zamanla enerji ve para kaybına dönüşür. Gaye; stratejinin kerteriz noktası, kararların süzgeci, çalışanın bağlandığı zemin, müşterinin tercih ettiği farktır. Biz onu strateji belgesinden çıkarır, ekiplerin masasına oturturuz.</p>
+    <a class="btn btn-primary" href="#iletisim">30 Dakikalık Ücretsiz Tanı Görüşmesi</a>
+    <div class="stats">
+      <span><b>r = 0,71</b> · gaye netliği × angajman</span>
+      <span><b>%18</b> · skor bir basamak ↑ = angajman artışı</span>
+      <span><b>%29</b> · gayesi şirketiyle örtüşen yönetici — kalanı sessizce kapıya bakıyor</span>
+      <span><b>1,8 kat</b> · Z Kuşağının gaye-iş uyumu beklentisi</span>
+    </div>
+  </div>
+</section>
+
+<!-- IHTIYAC -> COZUM -->
+<section class="blk soft">
+  <div class="wrap">
+    <span class="eyebrow">Hangi İhtiyaca, Nasıl Cevap?</span>
+    <h2 class="sec">Dört tanıdık cümle, <em>dört somut çözüm</em></h2>
+    <div class="need-grid">
+      <div class="need">
+        <div class="q">Stratejimiz var ama her karar yeniden tartışılıyor.</div>
+        <p class="a"><b>Gaye Pusulası</b> ile "neden varız?" sorusuna tek cümlelik cevap çıkarır, dört katmanı (gaye → değerler → vizyon → misyon) hizalarız. Her yatırım, ürün ve işe alım aynı süzgeçten geçer: <i>"Bu karar gayemize hizmet ediyor mu?"</i></p>
+        <div class="f">Fayda: "Yapalım mı?" toplantısı üç saat değil, otuz dakika. Kurumsal sürtünme azalır, karar hızı artar.</div>
+      </div>
+      <div class="need">
+        <div class="q">Çalışan bağlılığı düşüyor, yetenek kaçıyor.</div>
+        <p class="a"><b>Gaye-Angajman Matrisi</b> ile kurumun dört kadran fotoğrafını çekeriz: kim koşuyor ama nereye, kim inanıyor ama katılamıyor. Çalışan maaşıyla değil, "neden"iyle bağlanır — TORCH verisi bunu sayıyla gösteriyor.</p>
+        <div class="f">Fayda: Gaye netliği bir basamak yükseldiğinde angajman ortalama %18 artar; sessiz istifa görünür olmadan yakalanır.</div>
+      </div>
+      <div class="need">
+        <div class="q">Üst yönetimin niyeti ile sahanın algısı kopuk.</div>
+        <p class="a"><b>Pulse Check</b> ile tüm çalışanlara hızlı anket uygular, üst yönetim I. kadrandayken sahanın nerede durduğunu ölçeriz. Atölye gündemini niyetle değil, somut saha verisiyle besleriz.</p>
+        <div class="f">Fayda: Kapatılması gereken boşluk ölçülür; iletişim yatırımı doğru katmana yapılır.</div>
+      </div>
+      <div class="need">
+        <div class="q">Kriz geldiğinde savruluyoruz.</div>
+        <p class="a">Gaye, kurumun omurgasıdır. Ortak gayesi olan kurumlar krizde dağılmaz, <b>yeniden hizalanır</b> — müşteri sadakati ve yetenek akışı bu omurgadan beslenir. Değer stres testiyle ilkelerinizi zor senaryoya sokarız.</p>
+        <div class="f">Fayda: VUCA koşullarında yön kaybı yerine hızlı toparlanma; sloganla değil eylemle taşınan gaye.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUREC + ATOLYE -->
+<section class="blk">
+  <div class="wrap">
+    <span class="eyebrow">Nasıl Çalışıyoruz?</span>
+    <h2 class="sec">Strateji tasarımı + hayata geçirme: <em>7–10 hafta</em></h2>
+    <p class="lede">Önce kurumun yönünü içeriden netleştiriyoruz, sonra uygulamaya geçiriyoruz. Belgeyi herhangi bir danışman yazabilir; insanların kalbine kazımak liderlik eylemidir — biz ikisini birlikte kurgularız.</p>
+    <div class="flow">
+      <div class="step"><div class="n">01 · KEŞİF</div><h4>Dinleme ve veri</h4><p>Pazar, kültür ve iç verilerin analizi; üst yönetimle birebir derinlemesine görüşmeler.</p></div>
+      <div class="step"><div class="n">02 · ATÖLYE</div><h4>Gaye Atölyesi</h4><p>Bir tam gün, üst-orta yönetim: tek cümlelik gaye + altı bileşenin haritası, ortak akıl.</p></div>
+      <div class="step"><div class="n">03 · YOL HARİTASI</div><h4>Sentez ve plan</h4><p>Uzlaşı raporu, gayeyi hayata geçirecek proje kanvası ve 90 günlük uygulama planı.</p></div>
+      <div class="step"><div class="n">04 · YAŞATMA</div><h4>Lansman + Pulse Check</h4><p>CEO sözcülüğünde lansman; çeyreklik Pulse Check ile saha gözünden takip.</p></div>
+    </div>
+    <div class="pulse">
+      <div class="t">Neden atölye üst yönetimle başlar?</div>
+      <p>Gayenin gerçek sınavı sahada olur; ama yön üst akılda netleşmezse saha neye hizalanacağını bilemez. Atölyede "neden varız?" tek cümleye iner, gelişim haritası ve uygulama planı çıkar — sonra tüm çalışanlardan hızlı anketle saha teyidi alınır.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REFERANS -->
+<section class="blk soft">
+  <div class="wrap">
+    <span class="eyebrow">Sahada Ne Oldu?</span>
+    <h2 class="sec">Türkiye'de <em>nasıl çalıştı?</em></h2>
+    <div class="case-grid">
+      <div class="case"><span class="tag">Perakende · 70.000 kişilik kurum</span>
+        <h4>A101: Kültürel dönüşüm</h4>
+        <p>"Toplam Çalışan Deneyimini İyileştirme &amp; Kültürel Dönüşüm Projesi": 16.350 çalışanla nicel ölçüm + 128 derinlemesine görüşme. Gaye Haritası ile üst yönetimden mağaza çalışanına dört kadran fotoğrafı; kapatılacak boşluk ölçüldü, gündem veriye bağlandı.</p></div>
+      <div class="case"><span class="tag">Kamu · Strateji Çalıştayı</span>
+        <h4>70+ katılımcılı çalıştay</h4>
+        <p>Bir tam günde beş ana eksende gaye haritası, kaldıraçlar ve riskler: milli güvenlik, yenilikçi Ar-Ge ve etik kültür eksenlerinde ortak yön çıkarıldı.</p></div>
+      <div class="case"><span class="tag">30 yıllık birikim</span>
+        <h4>İç akıl + dış akıl modeli</h4>
+        <p>Stratejik planlama, kriz ve itibar yönetimi, çevik dönüşüm — onlarca kurumda uygulanan bütüncül yaklaşım. Kopyala-yapıştır strateji değil; özgün gaye, özgün rekabet avantajı.</p></div>
+    </div>
+
+    <div class="invite">
+      <div>
+        <h3>Gaye Atölyesi'ne <em>davetlisiniz</em></h3>
+        <p>Üst yönetim ekibinizle bir tam gün: kurumunuzun "neden varız?" sorusuna tek cümlelik cevap, altı bileşenin haritası ve uygulama planıyla ayrılırsınız.</p>
+        <ul>
+          <li>Tek cümlelik gaye + Gaye Pusulası (değerler, vizyon, misyon hizası)</li>
+          <li>Gaye-Angajman dört kadran fotoğrafınız ve kapatılacak boşluk</li>
+          <li>90 günlük uygulama planı ve Pulse Check kurulumu</li>
+        </ul>
+      </div>
+      <div class="act">
+        <a class="btn btn-primary" href="mailto:info@gaye.org?subject=Gaye%20At%C3%B6lyesi%20%E2%80%94%20Tan%C4%B1%20G%C3%B6r%C3%BC%C5%9Fmesi%20Talebi">Atölye İçin Görüşme Talep Et</a>
+        <a class="btn btn-outline" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.35)" href="index.html#satin-al">Önce Kitapla Tanışın</a>
+        <span class="fine">İlk 30 dakikalık tanı görüşmesi ücretsizdir; sürecin kurumunuza uygunluğuna birlikte karar veririz.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ILETISIM -->
+<section class="blk" id="iletisim">
+  <div class="wrap">
+    <span class="eyebrow">İletişim</span>
+    <h2 class="sec">Önce <em>bir konuşma</em></h2>
+    <p class="lede">Şirketinizin "neden var?" sorusuna nasıl yaklaştığını birlikte değerlendirelim. Tanı görüşmesi ücretsizdir; satış sunumu değil, karşılıklı bir keşiftir.</p>
+    <div class="contact">
+      <div class="cbox"><div class="ic">✉️</div><h4>E-posta</h4><a href="mailto:info@gaye.org">info@gaye.org</a></div>
+      <div class="cbox"><div class="ic">📅</div><h4>Tanı Görüşmesi</h4><p>30 dakika · çevrimiçi · ücretsiz<br><a href="mailto:info@gaye.org?subject=Tan%C4%B1%20G%C3%B6r%C3%BC%C5%9Fmesi">Randevu talep edin</a></p></div>
+      <div class="cbox"><div class="ic">💼</div><h4>LinkedIn</h4><p><a href="https://www.linkedin.com/company/stratejico" target="_blank" rel="noopener">StratejiCo</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/selimoktar" target="_blank" rel="noopener">Selim Oktar</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <span class="f-mark">Gayeni <span>Bul</span></span>
+      <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="gaye-skoru.html">Gaye Skoru</a>
+        <a href="kurumsal.html">Kurumsal</a>
+        <a href="topluluk.html">Topluluk</a>
+        <a href="mailto:info@gaye.org">İletişim</a>
+      </nav>
+    </div>
+    <div class="f-copy">© 2025 Selim Oktar · Tüm hakları saklıdır</div>
+  </div>
+</footer>
+</body>
+</html>

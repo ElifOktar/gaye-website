@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaye Skoru Çalışma Formu — Gayeni Bul</title>
+<meta name="description" content="Gaye Denklemi'ni hayatınıza uygulayın: 8 adımlı çalışma formu, Bugün ve Gelecek skorlarınız, gelişim potansiyeliniz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFFFF; --paper-2:#F7F8FA; --ink:#101828; --ink-soft:#475467;
+    --navy:#1A56DB; --gold:#1A56DB; --rule:#EAECF0; --rust:#B42318;
+    --serif:'Plus Jakarta Sans', sans-serif; --sans:'Inter', -apple-system, sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+  .eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  h1.sec{font-family:var(--serif);font-weight:700;letter-spacing:-.03em;font-size:clamp(30px,4vw,42px);line-height:1.15;margin:14px 0 8px}
+  h1.sec em{font-style:normal;color:#1A56DB}
+  .lede{color:var(--ink-soft);font-size:19px;max-width:64ch}
+  a{color:inherit}
+  header{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:50}
+  .bar{display:flex;align-items:baseline;justify-content:space-between;padding:18px 0}
+  .wordmark{font-family:var(--serif);font-size:21px;font-weight:600;text-decoration:none}
+  .wordmark em{font-style:italic;font-weight:400;color:var(--gold)}
+  .back{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--ink-soft);text-decoration:none}
+  .back:hover{color:var(--ink)}
+  .btn{font-family:var(--sans);font-size:14px;font-weight:600;text-decoration:none;padding:12px 22px;display:inline-block;cursor:pointer;transition:opacity .15s;border:none}
+  .btn:hover{opacity:.85}
+  .btn-ink{background:#1A56DB;color:#fff;border-radius:999px}
+  .btn-line{background:#fff;border:1.5px solid #DDDAD0;color:var(--ink);border-radius:999px}
+
+  .form-sec{padding:64px 0 96px}
+  .grid{display:grid;grid-template-columns:1fr 360px;gap:56px;margin-top:44px;align-items:start}
+  @media(max-width:920px){.grid{grid-template-columns:1fr}}
+
+  .adim{border-top:1px solid var(--rule);padding:34px 0 26px}
+  .adim .a-no{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .adim h2{font-family:var(--serif);font-size:23px;letter-spacing:-.02em;font-weight:600;margin:8px 0 8px}
+  .adim .a-desc{font-size:16px;color:var(--ink-soft);max-width:64ch;margin-bottom:18px}
+  .adim input[type=text]{width:100%;font-family:var(--serif);font-size:17px;padding:12px 14px;border:1px solid var(--rule);background:#FFFFFF;color:var(--ink)}
+  .adim input[type=text]:focus{outline:1px solid var(--gold)}
+
+  table.liste{width:100%;border-collapse:collapse;font-family:var(--sans)}
+  table.liste th{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;text-align:left;padding:8px 10px;border-bottom:1px solid var(--rule)}
+  table.liste th.num, table.liste td.num{width:92px;text-align:center}
+  table.liste td{padding:6px 6px;border-bottom:1px solid var(--paper-2)}
+  table.liste td input[type=text]{border:none;background:none;font-size:15.5px;padding:8px 6px}
+  table.liste td input[type=number]{width:64px;font-family:var(--sans);font-size:15px;padding:8px 6px;border:1px solid var(--rule);background:#FFFFFF;text-align:center}
+  table.liste td input[type=number]:focus{outline:1px solid var(--gold)}
+  .satir-ekle{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--gold);background:none;border:none;cursor:pointer;padding:12px 6px 0}
+  .satir-sil{background:none;border:none;color:var(--rule);cursor:pointer;font-size:16px}
+  .satir-sil:hover{color:var(--rust)}
+
+  .ozet{border:1px solid var(--rule);border-radius:20px;box-shadow:0 18px 44px -18px rgba(15,18,34,.14);background:#FFFFFF;padding:32px 28px;position:sticky;top:92px}
+  .ozet .sb-label{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+  .skor-cift{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:16px}
+  .skor-hucre{background:var(--paper);padding:18px 14px;text-align:center}
+  .skor-hucre .k{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+  .skor-hucre .v{font-family:var(--serif);font-size:44px;font-weight:500;line-height:1.1}
+  .skor-hucre .c{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--gold)}
+  .delta{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--rule);padding:14px 2px}
+  .delta .k{font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+  .delta .v{font-family:var(--serif);font-size:26px;font-weight:500}
+  .ozet .yorum{font-size:15px;color:var(--ink-soft);padding-top:14px}
+  .ozet .formul{font-family:var(--sans);font-size:12px;color:var(--ink-soft);margin-top:16px;line-height:1.7}
+  .ara-tablo{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:12.5px;margin-top:14px}
+  .ara-tablo th,.ara-tablo td{padding:6px 4px;border-bottom:1px solid var(--paper-2);text-align:right}
+  .ara-tablo th{text-align:left;font-weight:600;color:var(--ink-soft)}
+  .ara-tablo td:first-child,.ara-tablo th:first-child{text-align:left}
+
+  .yorum-sec{border-top:1px solid var(--rule);padding:34px 0 0}
+  .yorum-sec h2{font-family:var(--serif);font-size:23px;letter-spacing:-.02em;font-weight:600;margin-bottom:14px}
+  .bant{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:12px 0;border-bottom:1px solid var(--paper-2);font-size:16px}
+  .bant .b{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--gold)}
+  .bant p{color:var(--ink-soft);font-size:15.5px}
+  .not{background:var(--paper-2);border-left:3px solid var(--gold);padding:18px 22px;font-style:italic;font-size:15.5px;color:var(--ink-soft);margin-top:26px}
+  footer{padding:32px 0;border-top:1px solid var(--rule);font-family:var(--sans);font-size:12px;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="wordmark" href="index.html">Gayeni <em>Bul</em></a>
+    <a class="back" href="index.html">← Ana sayfaya dön</a>
+  </div>
+</header>
+
+<section class="form-sec">
+  <div class="wrap">
+    <span class="eyebrow">Pratik Adımlar</span>
+    <h1 class="sec">Gaye Denklemi'ni <em>hayatınıza uygulayın</em></h1>
+    <p class="lede">Gaye Modeli'ni anlamak yeterli değildir; onu kendi yaşamınızda somutlaştırmak gerekir. Aşağıdaki çalışma formu, Gaye Denklemi'nin üç bağımsız bileşenini — İtici Güçler, Destekler, Köstekler — ve motivatör düzeyinizi kendi hayatınıza uygulamak için tasarlanmıştır. Her adımı sırayla doldurun; sonunda ortaya çıkan tablo, gayenizin bir fotoğrafıdır. Bu form bir kez doldurulup bırakılacak bir anket değil, düzenli olarak gözden geçirilecek canlı bir haritadır.</p>
+
+    <div class="grid">
+      <div>
+
+        <div class="adim">
+          <div class="a-no">Adım 1</div>
+          <h2>Gayenizi tanımlayın</h2>
+          <p class="a-desc">Yaşam gayenizi tek bir cümlede yazın. Net, somut ve sizi harekete geçiren bir ifade olsun. Örnek: "Küçük esnafın dijital dönüşümünü kolaylaştırmak."</p>
+          <input type="text" id="gaye-cumle" placeholder="Gayem…">
+        </div>
+
+        <div class="adim">
+          <div class="a-no">Adım 2</div>
+          <h2>İtici Güçlerinizi listeleyin ve puanlayın</h2>
+          <p class="a-desc">Gayenize ulaşmak için yaptığınız somut faaliyetleri tek tek yazın, kaç taneyse. "Gayeme ulaşmak için ne yapıyorum?" sorusunun cevabıdır. Her birini 1–10 arasında puanlayın.</p>
+          <table class="liste" data-b="a">
+            <thead><tr><th>İtici Güçler</th><th class="num">Bugün (1–10)</th><th class="num">Gelecek (1–10)</th><th></th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <button class="satir-ekle">+ Satır ekle</button>
+        </div>
+
+        <div class="adim">
+          <div class="a-no">Adım 3</div>
+          <h2>Desteklerinizi listeleyin ve puanlayın</h2>
+          <p class="a-desc">Beceriler, ilişki ağları, kurumsal altyapı ve eğitim imkânları gibi itici güçlerinizin etkinliğini artıran çevresel faktörleri tek tek yazın. Her birini 1–10 arasında puanlayın.</p>
+          <table class="liste" data-b="b">
+            <thead><tr><th>Destekler</th><th class="num">Bugün (1–10)</th><th class="num">Gelecek (1–10)</th><th></th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <button class="satir-ekle">+ Satır ekle</button>
+        </div>
+
+        <div class="adim">
+          <div class="a-no">Adım 4</div>
+          <h2>Kösteklerinizi listeleyin ve puanlayın</h2>
+          <p class="a-desc">Korkular, erteleme, kaynak yetersizliği ve çevresel baskılar gibi gayenize ulaşmanızı zorlaştıran engelleri tek tek yazın. Yüksek puan = güçlü engel. Her birini 1–10 arasında puanlayın.</p>
+          <table class="liste" data-b="c">
+            <thead><tr><th>Köstekler</th><th class="num">Bugün (1–10)</th><th class="num">Gelecek (1–10)</th><th></th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <button class="satir-ekle">+ Satır ekle</button>
+        </div>
+
+        <div class="adim">
+          <div class="a-no">Adım 5</div>
+          <h2>Motivatörlerinizi listeleyin ve puanlayın</h2>
+          <p class="a-desc">Sizi engellere rağmen yolda tutan motivatörleri listeleyin. Her birini 1–10 arasında puanlayın; sonra puanların toplamı (motivatör sayısı × 10)'a bölünerek 0 ile 1 arasında Motivatör Düzeyiniz (M) bulunur — hesap sağdaki özette otomatik yapılır.</p>
+          <table class="liste" data-b="m">
+            <thead><tr><th>Motivatörler</th><th class="num">Bugün (1–10)</th><th class="num">Gelecek (1–10)</th><th></th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <button class="satir-ekle">+ Satır ekle</button>
+        </div>
+
+        <div class="adim">
+          <div class="a-no">Adım 8</div>
+          <h2>Anlam cümlenizi yazın</h2>
+          <p class="a-desc">Bu yolculuk sizin için ne anlama geliyor? Gayeniz gerçekleştiğinde dünyada ne değişecek? Tek bir cümle yazın. Bu, pusulada kuzeyi gösteren oktur.</p>
+          <input type="text" id="anlam-cumle" placeholder="Gayem gerçekleştiğinde…">
+        </div>
+
+        <div class="yorum-sec">
+          <h2>Skorunuzu nasıl yorumlayabilirsiniz?</h2>
+          <div class="bant"><div class="b">5–10 · Güçlü</div><p>Gayen güçlü ve yaşanmış. Hayatın senin pusulanı takip ediyor, iz bırakıyorsun.</p></div>
+          <div class="bant"><div class="b">2–5 · Gelişen</div><p>Gaye filizleniyor. Doğru yoldasın ama bazı boyutlarını beslemen gerek. Hangi değişken düşükse oraya odaklan.</p></div>
+          <div class="bant"><div class="b">0–2 · Filiz</div><p>Gaye henüz kök salmamış. Önce Bölüm 1 ve 2'ye dön, keşif sorularını yeniden çalış.</p></div>
+          <div class="not">Not: Bu form tek seferlik bir sınav değil, dönemsel bir pusuladır. Her çeyrekte yeniden doldurun; değişen skorlar gelişim alanınızı gösterir.</div>
+        </div>
+
+      </div>
+
+      <aside class="ozet">
+        <div class="sb-label">Adım 6 · Gaye Skorunuz</div>
+        <div class="skor-cift">
+          <div class="skor-hucre"><div class="k">Bugün</div><div class="v" id="skor-b">—</div><div class="c" id="kat-b"></div></div>
+          <div class="skor-hucre"><div class="k">Gelecek</div><div class="v" id="skor-g">—</div><div class="c" id="kat-g"></div></div>
+        </div>
+        <table class="ara-tablo" id="ara"></table>
+        <div class="delta" style="margin-top:10px"><span class="k">Adım 7 · ΔGaye (Gelişim Potansiyeli)</span><span class="v" id="delta">—</span></div>
+        <div class="yorum" id="yorum">Her bileşene en az bir satır girip Bugün ve Gelecek puanlarını verin; skorlarınız otomatik hesaplanır.</div>
+        <div class="formul">Gaye Skoru = (İtici Güçler + Destekler) / Köstekler<sup>(1−M)</sup><br>M = motivatör puanları toplamı ÷ (sayı × 10) · Diğer bileşenler: Değer = toplam ÷ sayı</div>
+        <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px">
+          <a class="btn btn-ink" href="index.html#satin-al" style="text-align:center">Skorunu kitapla derinleştir</a>
+          <a class="btn btn-line" href="index.html#skill-indir" style="text-align:center">AI analiziyle devam et</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2025 Selim Oktar · Tüm hakları saklıdır</div>
+</footer>
+
+<script>
+(function(){
+  var ADLAR={a:'İtici Güçler',b:'Destekler',c:'Köstekler',m:'Motivatörler'};
+
+  function satirEkle(tbody){
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td><input type="text" placeholder="Yazın…"></td>'+
+      '<td class="num"><input type="number" min="1" max="10" data-t="bugun"></td>'+
+      '<td class="num"><input type="number" min="1" max="10" data-t="gelecek"></td>'+
+      '<td><button class="satir-sil" title="Satırı sil">×</button></td>';
+    tbody.appendChild(tr);
+  }
+  document.querySelectorAll('table.liste').forEach(function(tb){
+    var body=tb.querySelector('tbody');
+    for(var i=0;i<3;i++) satirEkle(body);
+  });
+  document.querySelectorAll('.satir-ekle').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      satirEkle(btn.previousElementSibling.querySelector('tbody'));
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(e.target.classList.contains('satir-sil')){
+      e.target.closest('tr').remove(); hesapla();
+    }
+  });
+  document.addEventListener('input',function(e){
+    if(e.target.type==='number'){
+      var v=+e.target.value;
+      if(e.target.value!=='' && (v<1||v>10)) e.target.value=Math.min(10,Math.max(1,v));
+      hesapla();
+    }
+  });
+
+  function topla(b,t){
+    var s=0,n=0;
+    document.querySelectorAll('table.liste[data-b='+b+'] input[data-t='+t+']').forEach(function(inp){
+      if(inp.value!==''){s+=+inp.value;n++;}
+    });
+    return {s:s,n:n};
+  }
+  function deger(b,t){var r=topla(b,t);return r.n?r.s/r.n:null;}
+  function mDegeri(t){var r=topla('m',t);return r.n?r.s/(r.n*10):null;}
+  function skor(t){
+    var A=deger('a',t),B=deger('b',t),C=deger('c',t),M=mDegeri(t);
+    if(A===null||B===null||C===null||M===null) return null;
+    return (A+B)/Math.pow(C,1-M);
+  }
+  function kat(g){return g==null?'':g<2?'Filiz':g<5?'Gelişen':g<10?'Güçlü':'Çok Güçlü';}
+  function fmt(x,d){return x==null?'—':x.toFixed(d===undefined?1:d);}
+
+  function hesapla(){
+    var sb=skor('bugun'),sg=skor('gelecek');
+    document.getElementById('skor-b').textContent=fmt(sb);
+    document.getElementById('skor-g').textContent=fmt(sg);
+    document.getElementById('kat-b').textContent=kat(sb);
+    document.getElementById('kat-g').textContent=kat(sg);
+    var d=(sb!=null&&sg!=null)?sg-sb:null;
+    document.getElementById('delta').textContent=d==null?'—':(d>=0?'+':'')+d.toFixed(1);
+
+    // ara tablo
+    var html='<tr><th>Bileşen</th><th>Sayı</th><th>Bugün</th><th>Gelecek</th></tr>';
+    ['a','b','c'].forEach(function(b){
+      var n=topla(b,'bugun').n||topla(b,'gelecek').n;
+      html+='<tr><td>'+ADLAR[b]+'</td><td>'+n+'</td><td>'+fmt(deger(b,'bugun'))+'</td><td>'+fmt(deger(b,'gelecek'))+'</td></tr>';
+    });
+    var nm=topla('m','bugun').n||topla('m','gelecek').n;
+    html+='<tr><td>Motivatör Düzeyi (M)</td><td>'+nm+'</td><td>'+fmt(mDegeri('bugun'),2)+'</td><td>'+fmt(mDegeri('gelecek'),2)+'</td></tr>';
+    document.getElementById('ara').innerHTML=html;
+
+    var y=document.getElementById('yorum');
+    if(sb==null){y.textContent='Her bileşene en az bir satır girip Bugün ve Gelecek puanlarını verin; skorlarınız otomatik hesaplanır.';}
+    else{
+      var m={'Filiz':'Gaye henüz kök salmamış. Önce Bölüm 1 ve 2\'ye dönün, keşif sorularını yeniden çalışın.',
+             'Gelişen':'Gaye filizleniyor. Doğru yoldasınız ama bazı boyutları beslemeniz gerek — hangi değişken düşükse oraya odaklanın.',
+             'Güçlü':'Gayeniz güçlü ve yaşanmış. Hayatınız pusulanızı takip ediyor, iz bırakıyorsunuz.',
+             'Çok Güçlü':'Gayeniz çok güçlü çalışıyor. Bu netliği eyleme ve çevrenize taşıyın — gaye paylaşıldıkça derinleşir.'};
+      var ek=(d!=null&&d>0)?' Pozitif ΔGaye büyüme alanınızı gösteriyor.':(d!=null&&d<0)?' Negatif ΔGaye risk bölgenizi gösteriyor.':'';
+      y.textContent=m[kat(sb)]+ek;
+    }
+  }
+  hesapla();
+})();
+</script>
+</body>
+</html>
