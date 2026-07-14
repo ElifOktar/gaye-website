@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gayeni Bul — Selim Oktar</title>
+<title>Gaye — Selim Oktar</title>
 <meta name="description" content="Gayeyi ölçmenin, geliştirmenin ve yaşamanın yöntemi. Selim Oktar'dan TORCH araştırmasına dayanan özgün bir model.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -109,8 +109,8 @@
   .path:nth-child(3) .pnum{background:#F0F3F7;color:#344054}
   .path h3{font-family:var(--disp);font-size:24px;font-weight:600;letter-spacing:-.02em;margin-bottom:10px}
   .path p{font-size:15.5px;color:var(--soft);max-width:60ch}
-  .path .steps{font-size:13px;color:var(--soft);margin-top:16px;line-height:2.1;border-top:1px dashed var(--line-2);padding-top:14px}
-  .path .steps b{color:var(--indigo);font-weight:700}
+  .path .steps{font-size:14px;color:var(--soft);margin-top:14px;line-height:1.75;font-style:italic}
+  .path .steps b{color:var(--ink);font-weight:600;font-style:normal}
   .path-act{display:flex;flex-direction:column;gap:10px;align-items:stretch;text-align:center}
   .path-act .btn{justify-content:center;padding:14px 20px;font-size:14px}
   .btn-dark{background:var(--ink);color:#fff}
@@ -164,6 +164,8 @@
     section.blk,.neden,.paths,.yazar{padding-top:60px;padding-bottom:60px}
     .hero-actions .btn,.path-act .btn,.invite .act .btn,.bulten .act .btn{width:100%;justify-content:center;text-align:center}
     .hero .kicker{gap:8px;margin-top:40px}
+    .lede{font-size:16px}
+    .hero p.sub{font-size:17px}
     .hero .kicker span,.stats span{font-size:11.5px;padding:7px 12px}
     .path{padding:28px 22px}
     .invite,.bulten{padding:32px 22px}
@@ -177,7 +179,7 @@
 
 <header id="topbar">
   <div class="wrap bar">
-    <a class="wordmark" href="#"><span class="dot"></span>Gayeni <span>Bul</span></a>
+    <a class="wordmark" href="#"><span class="dot"></span>Gaye</a>
     <nav class="main">
       <a href="kurumsal.html">Kurumsal</a>
       <a href="topluluk.html">Topluluk</a>
@@ -253,10 +255,7 @@
         <div>
           <h3>Kitabı oku, gayeni kendin belirle</h3>
           <p>Kitabı edinin, dört bilimsel çerçeveyi öğrenin ve adım adım kendi gaye analizinizi yapın. Bir hafta içinde ilk skorunuzu çıkarmış olursunuz.</p>
-          <div class="steps">
-            <b>1.</b> Kitabı satın alın ya da PDF indirin &nbsp;·&nbsp; <b>2.</b> Gaye Denklemi ile güçlerinizi ve engellerinizi belirleyin<br>
-            <b>3.</b> TORCH analizi ile kendinizi beş boyutta değerlendirin &nbsp;·&nbsp; <b>4.</b> Gaye Pusulası ile kuzey yıldızınızı netleştirin
-          </div>
+          <div class="steps">Yol belli: Gaye Denklemi ile güçlerinizi ve engellerinizi belirlersiniz, TORCH ile kendinizi beş boyutta tartarsınız, Gaye Pusulası ile kuzey yıldızınızı netleştirirsiniz.</div>
         </div>
         <div class="path-act">
           <img class="path-cover" src="img/kapak.jpeg" alt="Gaye — kitap kapağı" onerror="this.style.display='none'">
@@ -270,7 +269,7 @@
         <div>
           <h3>Gaye Skorunu hesapla</h3>
           <p>Sekiz adımlı çalışma formuyla gayenizi tanımlayın; İtici Güçlerinizi, Desteklerinizi, Kösteklerinizi ve Motivatörlerinizi Bugün ve Gelecek için puanlayın. Gaye Denklemi skorunuz ve gelişim potansiyeliniz anında çıkar.</p>
-          <div class="steps"><b>Süre:</b> ~15 dakika &nbsp;·&nbsp; <b>Kayıt:</b> gerekmez &nbsp;·&nbsp; <b>Çıktı:</b> Bugün + Gelecek skoru, ΔGaye, kişisel yorum</div>
+          <div class="steps">On beş dakika sürer, kayıt istemez. Bittiğinde Bugün ve Gelecek skorunuz, gelişim potansiyeliniz ve kişisel yorumunuz karşınızdadır.</div>
         </div>
         <div class="path-act">
           <a class="btn btn-amber" href="gaye-skoru.html">Forma Başla →</a>
@@ -282,10 +281,7 @@
         <div>
           <h3>AI destekli gaye analizi</h3>
           <p>Gaye Keşif Skill'i, kitabın beş duraklı yolculuğunu Claude'a taşır: keşif soruları, Gaye Haritası, Gaye Denklemi skoru, Matris &amp; Pusula ve 90 günlük plan. İsterseniz e-postalarınızı veya dosyalarınızı bağlar, sohbetin sonunda kişisel PDF raporunuzu üretir.</p>
-          <div class="steps">
-            <b>Kurulum:</b> &nbsp;<b>1.</b> Skill dosyasını indirin &nbsp;·&nbsp; <b>2.</b> Claude'da <b>Ayarlar → Yetenekler → Skills → Yükle</b> deyin (veya dosyayı sohbete sürükleyin)<br>
-            <b>Kullanım:</b> &nbsp;<b>3.</b> Yeni sohbet açıp <em>"Gayemi keşfetmek istiyorum"</em> yazın &nbsp;·&nbsp; <b>4.</b> ~30 dakikalık yolculuğun sonunda PDF raporunuzu alın
-          </div>
+          <div class="steps">Dosyayı indirip Claude'da <b>Ayarlar → Yetenekler → Skills</b> bölümünden yükleyin — ya da doğrudan sohbete sürükleyin. Yeni bir sohbette <b>"Gayemi keşfetmek istiyorum"</b> demeniz yeterli; yarım saatlik yolculuğun sonunda raporunuz hazır.</div>
         </div>
         <div class="path-act">
           <a class="btn btn-outline" href="gaye-kesif.skill" download>Skill'i İndir (.skill)</a>
@@ -331,7 +327,7 @@
 <footer>
   <div class="wrap">
     <div class="f-grid">
-      <span class="f-mark">Gayeni <span>Bul</span></span>
+      <span class="f-mark">Gaye</span>
       <nav>
         <a href="#kitap">Kitap</a>
         <a href="gaye-skoru.html">Gaye Skoru</a>
