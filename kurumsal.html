@@ -40,6 +40,10 @@
   nav.main a.cta{color:#fff;background:var(--ink);padding:11px 22px;border-radius:999px}
   nav.main a.cta:hover{background:var(--blue)}
   @media(max-width:820px){nav.main{display:none}}
+  .lang-btn{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--soft);border:1px solid var(--line-2);border-radius:999px;padding:7px 14px;cursor:pointer;background:#fff}
+  .lang-btn:hover{color:var(--ink);border-color:var(--ink)}
+  .lang-btn.mobile{display:none;position:fixed;bottom:18px;right:18px;z-index:95;box-shadow:0 8px 22px -8px rgba(15,18,34,.3)}
+  @media(max-width:820px){.lang-btn.mobile{display:block}}
   .btn{font-size:15px;font-weight:600;text-decoration:none;padding:16px 30px;display:inline-flex;align-items:center;gap:8px;border-radius:999px;transition:all .22s;border:1.5px solid transparent}
   .btn-primary{background:var(--blue);color:#fff;box-shadow:0 14px 30px -12px rgba(26,86,219,.5)}
   .btn-primary:hover{background:var(--blue-deep);transform:translateY(-2px)}
@@ -140,26 +144,28 @@
   <div class="wrap bar">
     <a class="wordmark" href="index.html"><span class="dot"></span>Gaye</a>
     <nav class="main">
-      <a class="on" href="kurumsal.html">Kurumsal</a>
-      <a href="topluluk.html">Topluluk</a>
-      <a href="#iletisim">İletişim</a>
-      <a class="cta" href="index.html#satin-al">Kitabı Edin</a>
+      <a class="on" href="kurumsal.html" data-i18n="nav.kurumsal">Kurumsal</a>
+      <a href="topluluk.html" data-i18n="nav.topluluk">Topluluk</a>
+      <a href="#iletisim" data-i18n="nav.iletisim">İletişim</a>
+      <a class="cta" href="index.html#satin-al" data-i18n="nav.cta">Kitabı Edin</a>
+      <button class="lang-btn" type="button" onclick="toggleLang()">EN</button>
     </nav>
   </div>
 </header>
+<button class="lang-btn mobile" type="button" onclick="toggleLang()">EN</button>
 
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">Kurumsal</span>
-    <h1 class="big">Şirketinizin gayesi <em>günlük kararlarda</em> yaşasın.</h1>
-    <p class="lede">Bir kurumun gayesi yoksa, en parlak stratejisi bile zamanla enerji ve para kaybına dönüşür. Gaye; stratejinin kerteriz noktası, kararların süzgeci, çalışanın bağlandığı zemin, müşterinin tercih ettiği farktır. Biz onu strateji belgesinden çıkarır, ekiplerin masasına oturturuz.</p>
-    <a class="btn btn-primary" href="#iletisim">30 Dakikalık Ücretsiz Tanı Görüşmesi</a>
+    <span class="eyebrow" data-i18n="hero.eyebrow">Kurumsal</span>
+    <h1 class="big" data-i18n="hero.h1">Şirketinizin gayesi <em>günlük kararlarda</em> yaşasın.</h1>
+    <p class="lede" data-i18n="hero.lede">Bir kurumun gayesi yoksa, en parlak stratejisi bile zamanla enerji ve para kaybına dönüşür. Gaye; stratejinin kerteriz noktası, kararların süzgeci, çalışanın bağlandığı zemin, müşterinin tercih ettiği farktır. Biz onu strateji belgesinden çıkarır, ekiplerin masasına oturturuz.</p>
+    <a class="btn btn-primary" href="#iletisim" data-i18n="hero.cta">30 Dakikalık Ücretsiz Tanı Görüşmesi</a>
     <div class="stats">
-      <span><b>r = 0,71</b> · gaye netliği × angajman</span>
-      <span><b>%18</b> · skor bir basamak ↑ = angajman artışı</span>
-      <span><b>%29</b> · gayesi şirketiyle örtüşen yönetici — kalanı sessizce kapıya bakıyor</span>
-      <span><b>1,8 kat</b> · Z Kuşağının gaye-iş uyumu beklentisi</span>
+      <span data-i18n="st1"><b>r = 0,71</b> · gaye netliği × angajman</span>
+      <span data-i18n="st2"><b>%18</b> · skor bir basamak ↑ = angajman artışı</span>
+      <span data-i18n="st3"><b>%29</b> · gayesi şirketiyle örtüşen yönetici — kalanı sessizce kapıya bakıyor</span>
+      <span data-i18n="st4"><b>1,8 kat</b> · Z Kuşağının gaye-iş uyumu beklentisi</span>
     </div>
   </div>
 </section>
@@ -167,28 +173,28 @@
 <!-- IHTIYAC -> COZUM -->
 <section class="blk soft">
   <div class="wrap">
-    <span class="eyebrow">Hangi İhtiyaca, Nasıl Cevap?</span>
-    <h2 class="sec">Dört tanıdık cümle, <em>dört somut çözüm</em></h2>
+    <span class="eyebrow" data-i18n="need.eyebrow">Hangi İhtiyaca, Nasıl Cevap?</span>
+    <h2 class="sec" data-i18n="need.h2">Dört tanıdık cümle, <em>dört somut çözüm</em></h2>
     <div class="need-grid">
       <div class="need">
-        <div class="q">Stratejimiz var ama her karar yeniden tartışılıyor.</div>
-        <p class="a"><b>Gaye Pusulası</b> ile "neden varız?" sorusuna tek cümlelik cevap çıkarır, dört katmanı (gaye → değerler → vizyon → misyon) hizalarız. Her yatırım, ürün ve işe alım aynı süzgeçten geçer: <i>"Bu karar gayemize hizmet ediyor mu?"</i></p>
-        <div class="f">Fayda: "Yapalım mı?" toplantısı üç saat değil, otuz dakika. Kurumsal sürtünme azalır, karar hızı artar.</div>
+        <div class="q" data-i18n="n1.q">Stratejimiz var ama her karar yeniden tartışılıyor.</div>
+        <p class="a" data-i18n="n1.a"><b>Gaye Pusulası</b> ile "neden varız?" sorusuna tek cümlelik cevap çıkarır, dört katmanı (gaye → değerler → vizyon → misyon) hizalarız. Her yatırım, ürün ve işe alım aynı süzgeçten geçer: <i>"Bu karar gayemize hizmet ediyor mu?"</i></p>
+        <div class="f" data-i18n="n1.f">Fayda: "Yapalım mı?" toplantısı üç saat değil, otuz dakika. Kurumsal sürtünme azalır, karar hızı artar.</div>
       </div>
       <div class="need">
-        <div class="q">Çalışan bağlılığı düşüyor, yetenek kaçıyor.</div>
-        <p class="a"><b>Gaye-Angajman Matrisi</b> ile kurumun dört kadran fotoğrafını çekeriz: kim koşuyor ama nereye, kim inanıyor ama katılamıyor. Çalışan maaşıyla değil, "neden"iyle bağlanır — TORCH verisi bunu sayıyla gösteriyor.</p>
-        <div class="f">Fayda: Gaye netliği bir basamak yükseldiğinde angajman ortalama %18 artar; sessiz istifa görünür olmadan yakalanır.</div>
+        <div class="q" data-i18n="n2.q">Çalışan bağlılığı düşüyor, yetenek kaçıyor.</div>
+        <p class="a" data-i18n="n2.a"><b>Gaye-Angajman Matrisi</b> ile kurumun dört kadran fotoğrafını çekeriz: kim koşuyor ama nereye, kim inanıyor ama katılamıyor. Çalışan maaşıyla değil, "neden"iyle bağlanır — TORCH verisi bunu sayıyla gösteriyor.</p>
+        <div class="f" data-i18n="n2.f">Fayda: Gaye netliği bir basamak yükseldiğinde angajman ortalama %18 artar; sessiz istifa görünür olmadan yakalanır.</div>
       </div>
       <div class="need">
-        <div class="q">Üst yönetimin niyeti ile sahanın algısı kopuk.</div>
-        <p class="a"><b>Pulse Check</b> ile tüm çalışanlara hızlı anket uygular, üst yönetim I. kadrandayken sahanın nerede durduğunu ölçeriz. Atölye gündemini niyetle değil, somut saha verisiyle besleriz.</p>
-        <div class="f">Fayda: Kapatılması gereken boşluk ölçülür; iletişim yatırımı doğru katmana yapılır.</div>
+        <div class="q" data-i18n="n3.q">Üst yönetimin niyeti ile sahanın algısı kopuk.</div>
+        <p class="a" data-i18n="n3.a"><b>Pulse Check</b> ile tüm çalışanlara hızlı anket uygular, üst yönetim I. kadrandayken sahanın nerede durduğunu ölçeriz. Atölye gündemini niyetle değil, somut saha verisiyle besleriz.</p>
+        <div class="f" data-i18n="n3.f">Fayda: Kapatılması gereken boşluk ölçülür; iletişim yatırımı doğru katmana yapılır.</div>
       </div>
       <div class="need">
-        <div class="q">Kriz geldiğinde savruluyoruz.</div>
-        <p class="a">Gaye, kurumun omurgasıdır. Ortak gayesi olan kurumlar krizde dağılmaz, <b>yeniden hizalanır</b> — müşteri sadakati ve yetenek akışı bu omurgadan beslenir. Değer stres testiyle ilkelerinizi zor senaryoya sokarız.</p>
-        <div class="f">Fayda: VUCA koşullarında yön kaybı yerine hızlı toparlanma; sloganla değil eylemle taşınan gaye.</div>
+        <div class="q" data-i18n="n4.q">Kriz geldiğinde savruluyoruz.</div>
+        <p class="a" data-i18n="n4.a">Gaye, kurumun omurgasıdır. Ortak gayesi olan kurumlar krizde dağılmaz, <b>yeniden hizalanır</b> — müşteri sadakati ve yetenek akışı bu omurgadan beslenir. Değer stres testiyle ilkelerinizi zor senaryoya sokarız.</p>
+        <div class="f" data-i18n="n4.f">Fayda: VUCA koşullarında yön kaybı yerine hızlı toparlanma; sloganla değil eylemle taşınan gaye.</div>
       </div>
     </div>
   </div>
@@ -197,18 +203,18 @@
 <!-- SUREC + ATOLYE -->
 <section class="blk">
   <div class="wrap">
-    <span class="eyebrow">Nasıl Çalışıyoruz?</span>
-    <h2 class="sec">Strateji tasarımı + hayata geçirme: <em>7–10 hafta</em></h2>
-    <p class="lede">Önce kurumun yönünü içeriden netleştiriyoruz, sonra uygulamaya geçiriyoruz. Belgeyi herhangi bir danışman yazabilir; insanların kalbine kazımak liderlik eylemidir — biz ikisini birlikte kurgularız.</p>
+    <span class="eyebrow" data-i18n="surec.eyebrow">Nasıl Çalışıyoruz?</span>
+    <h2 class="sec" data-i18n="surec.h2">Strateji tasarımı + hayata geçirme: <em>7–10 hafta</em></h2>
+    <p class="lede" data-i18n="surec.lede">Önce kurumun yönünü içeriden netleştiriyoruz, sonra uygulamaya geçiriyoruz. Belgeyi herhangi bir danışman yazabilir; insanların kalbine kazımak liderlik eylemidir — biz ikisini birlikte kurgularız.</p>
     <div class="flow">
-      <div class="step"><div class="n">01 · KEŞİF</div><h4>Dinleme ve veri</h4><p>Pazar, kültür ve iç verilerin analizi; üst yönetimle birebir derinlemesine görüşmeler.</p></div>
-      <div class="step"><div class="n">02 · ATÖLYE</div><h4>Gaye Atölyesi</h4><p>Bir tam gün, üst-orta yönetim: tek cümlelik gaye + altı bileşenin haritası, ortak akıl.</p></div>
-      <div class="step"><div class="n">03 · YOL HARİTASI</div><h4>Sentez ve plan</h4><p>Uzlaşı raporu, gayeyi hayata geçirecek proje kanvası ve 90 günlük uygulama planı.</p></div>
-      <div class="step"><div class="n">04 · YAŞATMA</div><h4>Lansman + Pulse Check</h4><p>CEO sözcülüğünde lansman; çeyreklik Pulse Check ile saha gözünden takip.</p></div>
+      <div class="step"><div class="n" data-i18n="s1.n">01 · KEŞİF</div><h4 data-i18n="s1.h">Dinleme ve veri</h4><p data-i18n="s1.p">Pazar, kültür ve iç verilerin analizi; üst yönetimle birebir derinlemesine görüşmeler.</p></div>
+      <div class="step"><div class="n" data-i18n="s2.n">02 · ATÖLYE</div><h4 data-i18n="s2.h">Gaye Atölyesi</h4><p data-i18n="s2.p">Bir tam gün, üst-orta yönetim: tek cümlelik gaye + altı bileşenin haritası, ortak akıl.</p></div>
+      <div class="step"><div class="n" data-i18n="s3.n">03 · YOL HARİTASI</div><h4 data-i18n="s3.h">Sentez ve plan</h4><p data-i18n="s3.p">Uzlaşı raporu, gayeyi hayata geçirecek proje kanvası ve 90 günlük uygulama planı.</p></div>
+      <div class="step"><div class="n" data-i18n="s4.n">04 · YAŞATMA</div><h4 data-i18n="s4.h">Lansman + Pulse Check</h4><p data-i18n="s4.p">CEO sözcülüğünde lansman; çeyreklik Pulse Check ile saha gözünden takip.</p></div>
     </div>
     <div class="pulse">
-      <div class="t">Neden atölye üst yönetimle başlar?</div>
-      <p>Gayenin gerçek sınavı sahada olur; ama yön üst akılda netleşmezse saha neye hizalanacağını bilemez. Atölyede "neden varız?" tek cümleye iner, gelişim haritası ve uygulama planı çıkar — sonra tüm çalışanlardan hızlı anketle saha teyidi alınır.</p>
+      <div class="t" data-i18n="pulse.t">Neden atölye üst yönetimle başlar?</div>
+      <p data-i18n="pulse.p">Gayenin gerçek sınavı sahada olur; ama yön üst akılda netleşmezse saha neye hizalanacağını bilemez. Atölyede "neden varız?" tek cümleye iner, gelişim haritası ve uygulama planı çıkar — sonra tüm çalışanlardan hızlı anketle saha teyidi alınır.</p>
     </div>
   </div>
 </section>
@@ -216,30 +222,30 @@
 <!-- REFERANS -->
 <section class="blk soft">
   <div class="wrap">
-    <span class="eyebrow">Sahada Ne Oldu?</span>
-    <h2 class="sec">Türkiye'de <em>nasıl çalıştı?</em></h2>
+    <span class="eyebrow" data-i18n="ref.eyebrow">Sahada Ne Oldu?</span>
+    <h2 class="sec" data-i18n="ref.h2">Türkiye'de <em>nasıl çalıştı?</em></h2>
     <div class="case-grid">
-      <div class="case"><span class="tag">Perakende · 70.000 kişilik kurum</span>
-        <h4>A101: Kültürel dönüşüm</h4>
-        <p>"Toplam Çalışan Deneyimini İyileştirme &amp; Kültürel Dönüşüm Projesi": 16.350 çalışanla nicel ölçüm + 128 derinlemesine görüşme. Gaye Haritası ile üst yönetimden mağaza çalışanına dört kadran fotoğrafı; kapatılacak boşluk ölçüldü, gündem veriye bağlandı.</p></div>
-      <div class="case"><span class="tag">Kamu · Strateji Çalıştayı</span>
-        <h4>70+ katılımcılı çalıştay</h4>
-        <p>Bir tam günde beş ana eksende gaye haritası, kaldıraçlar ve riskler: milli güvenlik, yenilikçi Ar-Ge ve etik kültür eksenlerinde ortak yön çıkarıldı.</p></div>
-      <div class="case"><span class="tag">30 yıllık birikim</span>
-        <h4>İç akıl + dış akıl modeli</h4>
-        <p>Stratejik planlama, kriz ve itibar yönetimi, çevik dönüşüm — onlarca kurumda uygulanan bütüncül yaklaşım. Kopyala-yapıştır strateji değil; özgün gaye, özgün rekabet avantajı.</p></div>
+      <div class="case"><span class="tag" data-i18n="case1.tag">Perakende · 70.000 kişilik kurum</span>
+        <h4 data-i18n="case1.h">A101: Kültürel dönüşüm</h4>
+        <p data-i18n="case1.p">"Toplam Çalışan Deneyimini İyileştirme &amp; Kültürel Dönüşüm Projesi": 16.350 çalışanla nicel ölçüm + 128 derinlemesine görüşme. Gaye Haritası ile üst yönetimden mağaza çalışanına dört kadran fotoğrafı; kapatılacak boşluk ölçüldü, gündem veriye bağlandı.</p></div>
+      <div class="case"><span class="tag" data-i18n="case2.tag">Kamu · Strateji Çalıştayı</span>
+        <h4 data-i18n="case2.h">70+ katılımcılı çalıştay</h4>
+        <p data-i18n="case2.p">Bir tam günde beş ana eksende gaye haritası, kaldıraçlar ve riskler: milli güvenlik, yenilikçi Ar-Ge ve etik kültür eksenlerinde ortak yön çıkarıldı.</p></div>
+      <div class="case"><span class="tag" data-i18n="case3.tag">30 yıllık birikim</span>
+        <h4 data-i18n="case3.h">İç akıl + dış akıl modeli</h4>
+        <p data-i18n="case3.p">Stratejik planlama, kriz ve itibar yönetimi, çevik dönüşüm — onlarca kurumda uygulanan bütüncül yaklaşım. Kopyala-yapıştır strateji değil; özgün gaye, özgün rekabet avantajı.</p></div>
     </div>
 
     <div class="invite">
       <div>
-        <h3>Gaye Atölyesi'ne <em>davetlisiniz</em></h3>
-        <p>Üst yönetim ekibinizle bir tam gün: kurumunuzun "neden varız?" sorusuna tek cümlelik cevap, altı bileşenin haritası ve uygulama planıyla ayrılırsınız.</p>
-        <p style="margin-top:12px;color:#D7E0F5">Günün sonunda elinizde üç şey olur: tek cümlelik gayeniz ve onunla hizalanmış Gaye Pusulanız; kurumunuzun dört kadran fotoğrafı ve kapatılacak boşluğun ölçüsü; 90 günlük uygulama planı ile Pulse Check kurulumu.</p>
+        <h3 data-i18n="inv.h3">Gaye Atölyesi'ne <em>davetlisiniz</em></h3>
+        <p data-i18n="inv.p1">Üst yönetim ekibinizle bir tam gün: kurumunuzun "neden varız?" sorusuna tek cümlelik cevap, altı bileşenin haritası ve uygulama planıyla ayrılırsınız.</p>
+        <p style="margin-top:12px;color:#D7E0F5" data-i18n="inv.p2">Günün sonunda elinizde üç şey olur: tek cümlelik gayeniz ve onunla hizalanmış Gaye Pusulanız; kurumunuzun dört kadran fotoğrafı ve kapatılacak boşluğun ölçüsü; 90 günlük uygulama planı ile Pulse Check kurulumu.</p>
       </div>
       <div class="act">
-        <a class="btn btn-primary" href="mailto:info@gaye.org?subject=Gaye%20At%C3%B6lyesi%20%E2%80%94%20Tan%C4%B1%20G%C3%B6r%C3%BC%C5%9Fmesi%20Talebi">Atölye İçin Görüşme Talep Et</a>
-        <a class="btn btn-outline" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.35)" href="index.html#satin-al">Önce Kitapla Tanışın</a>
-        <span class="fine">İlk 30 dakikalık tanı görüşmesi ücretsizdir; sürecin kurumunuza uygunluğuna birlikte karar veririz.</span>
+        <a class="btn btn-primary" href="mailto:info@gaye.org?subject=Gaye%20At%C3%B6lyesi%20%E2%80%94%20Tan%C4%B1%20G%C3%B6r%C3%BC%C5%9Fmesi%20Talebi" data-i18n="inv.b1">Atölye İçin Görüşme Talep Et</a>
+        <a class="btn btn-outline" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.35)" href="index.html#satin-al" data-i18n="inv.b2">Önce Kitapla Tanışın</a>
+        <span class="fine" data-i18n="inv.fine">İlk 30 dakikalık tanı görüşmesi ücretsizdir; sürecin kurumunuza uygunluğuna birlikte karar veririz.</span>
       </div>
     </div>
   </div>
@@ -248,12 +254,12 @@
 <!-- ILETISIM -->
 <section class="blk" id="iletisim">
   <div class="wrap">
-    <span class="eyebrow">İletişim</span>
-    <h2 class="sec">Önce <em>bir konuşma</em></h2>
-    <p class="lede">Şirketinizin "neden var?" sorusuna nasıl yaklaştığını birlikte değerlendirelim. Tanı görüşmesi ücretsizdir; satış sunumu değil, karşılıklı bir keşiftir.</p>
+    <span class="eyebrow" data-i18n="nav.iletisim">İletişim</span>
+    <h2 class="sec" data-i18n="il.h2">Önce <em>bir konuşma</em></h2>
+    <p class="lede" data-i18n="il.lede">Şirketinizin "neden var?" sorusuna nasıl yaklaştığını birlikte değerlendirelim. Tanı görüşmesi ücretsizdir; satış sunumu değil, karşılıklı bir keşiftir.</p>
     <div class="contact">
-      <div class="cbox"><div class="ic">✉️</div><h4>E-posta</h4><a href="mailto:info@gaye.org">info@gaye.org</a></div>
-      <div class="cbox"><div class="ic">📅</div><h4>Tanı Görüşmesi</h4><p>30 dakika · çevrimiçi · ücretsiz<br><a href="mailto:info@gaye.org?subject=Tan%C4%B1%20G%C3%B6r%C3%BC%C5%9Fmesi">Randevu talep edin</a></p></div>
+      <div class="cbox"><div class="ic">✉️</div><h4 data-i18n="il.c1">E-posta</h4><a href="mailto:info@gaye.org">info@gaye.org</a></div>
+      <div class="cbox"><div class="ic">📅</div><h4 data-i18n="il.c2">Tanı Görüşmesi</h4><p data-i18n="il.c2p">30 dakika · çevrimiçi · ücretsiz<br><a href="mailto:info@gaye.org?subject=Tan%C4%B1%20G%C3%B6r%C3%BC%C5%9Fmesi">Randevu talep edin</a></p></div>
       <div class="cbox"><div class="ic">💼</div><h4>LinkedIn</h4><p><a href="https://www.linkedin.com/company/stratejico" target="_blank" rel="noopener">StratejiCo</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/selimoktar" target="_blank" rel="noopener">Selim Oktar</a></p></div>
     </div>
   </div>
@@ -264,16 +270,111 @@
     <div class="f-grid">
       <span class="f-mark">Gaye</span>
       <nav>
-        <a href="index.html">Ana Sayfa</a>
-        <a href="gaye-skoru.html">Gaye Skoru</a>
-        <a href="kurumsal.html">Kurumsal</a>
-        <a href="topluluk.html">Topluluk</a>
-        <a href="mailto:info@gaye.org">İletişim</a>
+        <a href="index.html" data-i18n="f.ana">Ana Sayfa</a>
+        <a href="gaye-skoru.html" data-i18n="f.skor">Gaye Skoru</a>
+        <a href="kurumsal.html" data-i18n="nav.kurumsal">Kurumsal</a>
+        <a href="topluluk.html" data-i18n="nav.topluluk">Topluluk</a>
+        <a href="mailto:info@gaye.org" data-i18n="nav.iletisim">İletişim</a>
       </nav>
     </div>
-    <div class="f-copy">© 2025 Selim Oktar · Tüm hakları saklıdır</div>
+    <div class="f-copy" data-i18n="f.copy">© 2025 Selim Oktar · Tüm hakları saklıdır</div>
   </div>
 </footer>
+<script>
+var I18N={
+ "meta.title":{tr:"Kurumsal — Gaye",en:"Corporate — Purpose"},
+ "nav.kurumsal":{tr:"Kurumsal",en:"Corporate"},
+ "nav.topluluk":{tr:"Topluluk",en:"Community"},
+ "nav.iletisim":{tr:"İletişim",en:"Contact"},
+ "nav.cta":{tr:"Kitabı Edin",en:"Get the Book"},
+ "hero.eyebrow":{tr:"Kurumsal",en:"Corporate"},
+ "hero.h1":{tr:'Şirketinizin gayesi <em>günlük kararlarda</em> yaşasın.',en:'Let your company\'s purpose <em>live in everyday decisions</em>.'},
+ "hero.lede":{tr:'Bir kurumun gayesi yoksa, en parlak stratejisi bile zamanla enerji ve para kaybına dönüşür. Gaye; stratejinin kerteriz noktası, kararların süzgeci, çalışanın bağlandığı zemin, müşterinin tercih ettiği farktır. Biz onu strateji belgesinden çıkarır, ekiplerin masasına oturturuz.',en:'When an organization has no purpose, even its brightest strategy eventually turns into wasted energy and money. Purpose is the strategy\'s bearing point, the filter for decisions, the ground employees commit to, the difference customers choose. We take it out of the strategy document and seat it at your teams\' table.'},
+ "hero.cta":{tr:"30 Dakikalık Ücretsiz Tanı Görüşmesi",en:"Free 30-Minute Diagnostic Call"},
+ "st1":{tr:'<b>r = 0,71</b> · gaye netliği × angajman',en:'<b>r = 0.71</b> · purpose clarity × engagement'},
+ "st2":{tr:'<b>%18</b> · skor bir basamak ↑ = angajman artışı',en:'<b>18%</b> · one step up in score = engagement gain'},
+ "st3":{tr:'<b>%29</b> · gayesi şirketiyle örtüşen yönetici — kalanı sessizce kapıya bakıyor',en:'<b>29%</b> · managers whose purpose aligns with their company — the rest are quietly eyeing the door'},
+ "st4":{tr:'<b>1,8 kat</b> · Z Kuşağının gaye-iş uyumu beklentisi',en:'<b>1.8x</b> · Gen Z\'s expectation of purpose-job fit'},
+ "need.eyebrow":{tr:"Hangi İhtiyaca, Nasıl Cevap?",en:"Which Need, What Answer?"},
+ "need.h2":{tr:'Dört tanıdık cümle, <em>dört somut çözüm</em>',en:'Four familiar sentences, <em>four concrete solutions</em>'},
+ "n1.q":{tr:'Stratejimiz var ama her karar yeniden tartışılıyor.',en:'We have a strategy, but every decision gets debated all over again.'},
+ "n1.a":{tr:'<b>Gaye Pusulası</b> ile "neden varız?" sorusuna tek cümlelik cevap çıkarır, dört katmanı (gaye → değerler → vizyon → misyon) hizalarız. Her yatırım, ürün ve işe alım aynı süzgeçten geçer: <i>"Bu karar gayemize hizmet ediyor mu?"</i>',en:'With the <b>Purpose Compass</b> we distill a single-sentence answer to "why do we exist?" and align the four layers (purpose → values → vision → mission). Every investment, product and hire passes through the same filter: <i>"Does this decision serve our purpose?"</i>'},
+ "n1.f":{tr:'Fayda: "Yapalım mı?" toplantısı üç saat değil, otuz dakika. Kurumsal sürtünme azalır, karar hızı artar.',en:'Benefit: the "should we do it?" meeting takes thirty minutes, not three hours. Organizational friction drops, decision speed rises.'},
+ "n2.q":{tr:'Çalışan bağlılığı düşüyor, yetenek kaçıyor.',en:'Engagement is falling, talent is leaving.'},
+ "n2.a":{tr:'<b>Gaye-Angajman Matrisi</b> ile kurumun dört kadran fotoğrafını çekeriz: kim koşuyor ama nereye, kim inanıyor ama katılamıyor. Çalışan maaşıyla değil, "neden"iyle bağlanır — TORCH verisi bunu sayıyla gösteriyor.',en:'With the <b>Purpose-Engagement Matrix</b> we take a four-quadrant snapshot of the organization: who is running but where to, who believes but cannot engage. Employees commit through their "why", not their salary — the TORCH data shows this in numbers.'},
+ "n2.f":{tr:'Fayda: Gaye netliği bir basamak yükseldiğinde angajman ortalama %18 artar; sessiz istifa görünür olmadan yakalanır.',en:'Benefit: when purpose clarity rises one step, engagement grows 18% on average; quiet quitting is caught before it shows.'},
+ "n3.q":{tr:'Üst yönetimin niyeti ile sahanın algısı kopuk.',en:'Leadership\'s intent and the field\'s perception are disconnected.'},
+ "n3.a":{tr:'<b>Pulse Check</b> ile tüm çalışanlara hızlı anket uygular, üst yönetim I. kadrandayken sahanın nerede durduğunu ölçeriz. Atölye gündemini niyetle değil, somut saha verisiyle besleriz.',en:'With <b>Pulse Check</b> we run a rapid survey across all employees and measure where the field stands while leadership sits in quadrant I. We feed the workshop agenda with concrete field data, not intent.'},
+ "n3.f":{tr:'Fayda: Kapatılması gereken boşluk ölçülür; iletişim yatırımı doğru katmana yapılır.',en:'Benefit: the gap to close is measured; communication investment goes to the right layer.'},
+ "n4.q":{tr:'Kriz geldiğinde savruluyoruz.',en:'When crisis hits, we drift.'},
+ "n4.a":{tr:'Gaye, kurumun omurgasıdır. Ortak gayesi olan kurumlar krizde dağılmaz, <b>yeniden hizalanır</b> — müşteri sadakati ve yetenek akışı bu omurgadan beslenir. Değer stres testiyle ilkelerinizi zor senaryoya sokarız.',en:'Purpose is the organization\'s backbone. Organizations with a shared purpose don\'t scatter in crisis — they <b>realign</b>; customer loyalty and talent flow feed off that backbone. With a values stress test we put your principles through hard scenarios.'},
+ "n4.f":{tr:'Fayda: VUCA koşullarında yön kaybı yerine hızlı toparlanma; sloganla değil eylemle taşınan gaye.',en:'Benefit: in VUCA conditions, fast recovery instead of losing direction; a purpose carried by action, not slogans.'},
+ "surec.eyebrow":{tr:"Nasıl Çalışıyoruz?",en:"How We Work"},
+ "surec.h2":{tr:'Strateji tasarımı + hayata geçirme: <em>7–10 hafta</em>',en:'Strategy design + activation: <em>7–10 weeks</em>'},
+ "surec.lede":{tr:'Önce kurumun yönünü içeriden netleştiriyoruz, sonra uygulamaya geçiriyoruz. Belgeyi herhangi bir danışman yazabilir; insanların kalbine kazımak liderlik eylemidir — biz ikisini birlikte kurgularız.',en:'First we clarify the organization\'s direction from within, then we put it into practice. Any consultant can write the document; engraving it in people\'s hearts is an act of leadership — we design both together.'},
+ "s1.n":{tr:"01 · KEŞİF",en:"01 · DISCOVERY"},
+ "s1.h":{tr:"Dinleme ve veri",en:"Listening and data"},
+ "s1.p":{tr:'Pazar, kültür ve iç verilerin analizi; üst yönetimle birebir derinlemesine görüşmeler.',en:'Analysis of market, culture and internal data; in-depth one-on-ones with senior leadership.'},
+ "s2.n":{tr:"02 · ATÖLYE",en:"02 · WORKSHOP"},
+ "s2.h":{tr:"Gaye Atölyesi",en:"Purpose Workshop"},
+ "s2.p":{tr:'Bir tam gün, üst-orta yönetim: tek cümlelik gaye + altı bileşenin haritası, ortak akıl.',en:'One full day with senior and middle management: a single-sentence purpose + a map of six components, built with collective intelligence.'},
+ "s3.n":{tr:"03 · YOL HARİTASI",en:"03 · ROADMAP"},
+ "s3.h":{tr:"Sentez ve plan",en:"Synthesis and plan"},
+ "s3.p":{tr:'Uzlaşı raporu, gayeyi hayata geçirecek proje kanvası ve 90 günlük uygulama planı.',en:'A consensus report, a project canvas to bring purpose to life, and a 90-day action plan.'},
+ "s4.n":{tr:"04 · YAŞATMA",en:"04 · SUSTAINING"},
+ "s4.h":{tr:"Lansman + Pulse Check",en:"Launch + Pulse Check"},
+ "s4.p":{tr:'CEO sözcülüğünde lansman; çeyreklik Pulse Check ile saha gözünden takip.',en:'A CEO-led launch; quarterly Pulse Check tracking through the field\'s eyes.'},
+ "pulse.t":{tr:'Neden atölye üst yönetimle başlar?',en:'Why does the workshop start with senior leadership?'},
+ "pulse.p":{tr:'Gayenin gerçek sınavı sahada olur; ama yön üst akılda netleşmezse saha neye hizalanacağını bilemez. Atölyede "neden varız?" tek cümleye iner, gelişim haritası ve uygulama planı çıkar — sonra tüm çalışanlardan hızlı anketle saha teyidi alınır.',en:'Purpose is truly tested in the field; but if direction isn\'t clear at the top, the field doesn\'t know what to align with. In the workshop, "why do we exist?" comes down to one sentence, with a development map and action plan — then a rapid survey of all employees confirms it from the field.'},
+ "ref.eyebrow":{tr:"Sahada Ne Oldu?",en:"What Happened in the Field?"},
+ "ref.h2":{tr:'Türkiye\'de <em>nasıl çalıştı?</em>',en:'How did it work <em>in Türkiye?</em>'},
+ "case1.tag":{tr:"Perakende · 70.000 kişilik kurum",en:"Retail · 70,000-person organization"},
+ "case1.h":{tr:"A101: Kültürel dönüşüm",en:"A101: Cultural transformation"},
+ "case1.p":{tr:'"Toplam Çalışan Deneyimini İyileştirme &amp; Kültürel Dönüşüm Projesi": 16.350 çalışanla nicel ölçüm + 128 derinlemesine görüşme. Gaye Haritası ile üst yönetimden mağaza çalışanına dört kadran fotoğrafı; kapatılacak boşluk ölçüldü, gündem veriye bağlandı.',en:'"Total Employee Experience Improvement &amp; Cultural Transformation Project": quantitative measurement with 16,350 employees + 128 in-depth interviews. With the Purpose Map, a four-quadrant snapshot from senior leadership to store staff; the gap to close was measured and the agenda tied to data.'},
+ "case2.tag":{tr:"Kamu · Strateji Çalıştayı",en:"Public Sector · Strategy Workshop"},
+ "case2.h":{tr:"70+ katılımcılı çalıştay",en:"A workshop with 70+ participants"},
+ "case2.p":{tr:'Bir tam günde beş ana eksende gaye haritası, kaldıraçlar ve riskler: milli güvenlik, yenilikçi Ar-Ge ve etik kültür eksenlerinde ortak yön çıkarıldı.',en:'In one full day, a purpose map with levers and risks on five main axes: a shared direction drawn on national security, innovative R&D and ethical culture.'},
+ "case3.tag":{tr:"30 yıllık birikim",en:"30 years of experience"},
+ "case3.h":{tr:"İç akıl + dış akıl modeli",en:"Inner mind + outer mind model"},
+ "case3.p":{tr:'Stratejik planlama, kriz ve itibar yönetimi, çevik dönüşüm — onlarca kurumda uygulanan bütüncül yaklaşım. Kopyala-yapıştır strateji değil; özgün gaye, özgün rekabet avantajı.',en:'Strategic planning, crisis and reputation management, agile transformation — a holistic approach applied across dozens of organizations. No copy-paste strategy; a distinctive purpose is a distinctive competitive advantage.'},
+ "inv.h3":{tr:'Gaye Atölyesi\'ne <em>davetlisiniz</em>',en:'You are invited to the <em>Purpose Workshop</em>'},
+ "inv.p1":{tr:'Üst yönetim ekibinizle bir tam gün: kurumunuzun "neden varız?" sorusuna tek cümlelik cevap, altı bileşenin haritası ve uygulama planıyla ayrılırsınız.',en:'One full day with your leadership team: you leave with a single-sentence answer to your organization\'s "why do we exist?", a map of six components and an action plan.'},
+ "inv.p2":{tr:'Günün sonunda elinizde üç şey olur: tek cümlelik gayeniz ve onunla hizalanmış Gaye Pusulanız; kurumunuzun dört kadran fotoğrafı ve kapatılacak boşluğun ölçüsü; 90 günlük uygulama planı ile Pulse Check kurulumu.',en:'By day\'s end you hold three things: your single-sentence purpose and a Purpose Compass aligned with it; your organization\'s four-quadrant snapshot and the measure of the gap to close; a 90-day action plan with Pulse Check setup.'},
+ "inv.b1":{tr:"Atölye İçin Görüşme Talep Et",en:"Request a Workshop Call"},
+ "inv.b2":{tr:"Önce Kitapla Tanışın",en:"Meet the Book First"},
+ "inv.fine":{tr:'İlk 30 dakikalık tanı görüşmesi ücretsizdir; sürecin kurumunuza uygunluğuna birlikte karar veririz.',en:'The first 30-minute diagnostic call is free; together we decide whether the process fits your organization.'},
+ "il.h2":{tr:'Önce <em>bir konuşma</em>',en:'First, <em>a conversation</em>'},
+ "il.lede":{tr:'Şirketinizin "neden var?" sorusuna nasıl yaklaştığını birlikte değerlendirelim. Tanı görüşmesi ücretsizdir; satış sunumu değil, karşılıklı bir keşiftir.',en:'Let\'s look together at how your company approaches its "why do we exist?" question. The diagnostic call is free; not a sales pitch but a mutual discovery.'},
+ "il.c1":{tr:"E-posta",en:"Email"},
+ "il.c2":{tr:"Tanı Görüşmesi",en:"Diagnostic Call"},
+ "il.c2p":{tr:'30 dakika · çevrimiçi · ücretsiz<br><a href="mailto:info@gaye.org?subject=Tan%C4%B1%20G%C3%B6r%C3%BC%C5%9Fmesi">Randevu talep edin</a>',en:'30 minutes · online · free<br><a href="mailto:info@gaye.org?subject=Diagnostic%20Call">Request an appointment</a>'},
+ "f.ana":{tr:"Ana Sayfa",en:"Home"},
+ "f.skor":{tr:"Gaye Skoru",en:"Purpose Score"},
+ "f.copy":{tr:"© 2025 Selim Oktar · Tüm hakları saklıdır",en:"© 2025 Selim Oktar · All rights reserved"}
+};
+function applyLang(l){
+  document.documentElement.lang=l;
+  if(I18N["meta.title"])document.title=I18N["meta.title"][l];
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var k=el.getAttribute("data-i18n");
+    if(I18N[k]&&I18N[k][l]!==undefined)el.innerHTML=I18N[k][l];
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function(el){
+    var k=el.getAttribute("data-i18n-ph");
+    if(I18N[k]&&I18N[k][l]!==undefined)el.setAttribute("placeholder",I18N[k][l]);
+  });
+  document.querySelectorAll(".lang-btn").forEach(function(b){b.textContent=l==="tr"?"EN":"TR"});
+  try{localStorage.setItem("gaye-lang",l)}catch(e){}
+  if(window.onLangChange)window.onLangChange(l);
+}
+function toggleLang(){applyLang(document.documentElement.lang==="tr"?"en":"tr");}
+(function(){
+  var saved="tr";
+  try{saved=localStorage.getItem("gaye-lang")||"tr"}catch(e){}
+  if(saved!=="tr")applyLang(saved);
+})();
+
+</script>
 <script>
 (function(){
   var bar=document.querySelector('.bar'),nav=document.querySelector('nav.main'),hdr=document.querySelector('header');
@@ -289,3 +390,4 @@
 </script>
 </body>
 </html>
+
