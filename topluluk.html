@@ -21,25 +21,29 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1140px;margin:0 auto;padding:0 36px}
   a{color:inherit}
   .eyebrow{font-family:var(--disp);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);font-weight:700}
   h1.big,h2.sec{font-family:var(--disp);font-weight:700;letter-spacing:-.03em;line-height:1.08;text-wrap:balance}
   h2.sec{font-size:clamp(28px,3.8vw,42px);margin:16px 0 14px}
   h2.sec em{font-style:normal;color:var(--blue)}
-  .lede{color:var(--soft);font-size:18px;max-width:62ch;text-wrap:pretty}
+  .lede{color:var(--soft);font-size:19.5px;max-width:62ch;text-wrap:pretty}
   header{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
   .bar{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
   .wordmark{font-family:var(--disp);font-size:21px;font-weight:700;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:10px}
   .wordmark .dot{width:10px;height:10px;border-radius:50%;background:var(--blue)}
   .wordmark span{color:var(--blue)}
-  nav.main{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:600}
+  nav.main{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:600}
   nav.main a{text-decoration:none;color:var(--soft)}
   nav.main a:hover,nav.main a.on{color:var(--ink)}
   nav.main a.cta{color:#fff;background:var(--ink);padding:11px 22px;border-radius:999px}
   nav.main a.cta:hover{background:var(--blue)}
   @media(max-width:820px){nav.main{display:none}}
+  .lang-btn{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--soft);border:1px solid var(--line-2);border-radius:999px;padding:7px 14px;cursor:pointer;background:#fff}
+  .lang-btn:hover{color:var(--ink);border-color:var(--ink)}
+  .lang-btn.mobile{display:none;position:fixed;bottom:18px;right:18px;z-index:95;box-shadow:0 8px 22px -8px rgba(15,18,34,.3)}
+  @media(max-width:820px){.lang-btn.mobile{display:block}}
   .btn{font-size:15px;font-weight:600;text-decoration:none;padding:15px 28px;display:inline-flex;align-items:center;gap:8px;border-radius:999px;transition:all .22s;border:1.5px solid transparent}
   .btn-primary{background:var(--blue);color:#fff;box-shadow:0 14px 30px -12px rgba(26,86,219,.5)}
   .btn-primary:hover{background:var(--blue-deep);transform:translateY(-2px)}
@@ -60,9 +64,9 @@
   .cc:nth-child(2) .ic{background:#E6F4F7}
   .cc:nth-child(3) .ic{background:#E9F8F0}
   .cc:nth-child(4) .ic{background:#FFF3E4}
-  .cc h3{font-family:var(--disp);font-size:20px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
-  .cc p{font-size:15px;color:var(--soft);flex:1}
-  .cc .how{margin-top:14px;font-size:14px;font-style:italic;color:var(--soft)}
+  .cc h3{font-family:var(--disp);font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+  .cc p{font-size:16.5px;color:var(--soft);flex:1}
+  .cc .how{margin-top:14px;font-size:15.5px;font-style:italic;color:var(--soft)}
   .cc .how b{color:var(--teal)}
   @media(max-width:820px){.cg{grid-template-columns:1fr}}
 
@@ -77,17 +81,22 @@
   .ritual{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
   .rt{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 20px;text-align:center}
   .rt .m{font-family:var(--disp);font-weight:800;color:var(--blue);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
-  .rt h4{font-family:var(--disp);font-size:16px;font-weight:700;margin:8px 0 6px}
-  .rt p{font-size:13.5px;color:var(--soft)}
+  .rt h4{font-family:var(--disp);font-size:17.5px;font-weight:700;margin:8px 0 6px}
+  .rt p{font-size:15px;color:var(--soft)}
   @media(max-width:900px){.ritual{grid-template-columns:repeat(2,1fr)}}
 
   .bulten{background:#0B1B3A;color:#fff;border-radius:calc(var(--r) + 6px);padding:52px 54px;margin-top:60px;display:grid;grid-template-columns:1.3fr 1fr;gap:44px;align-items:center}
   .bulten h3{font-family:var(--disp);font-size:clamp(22px,3vw,30px);font-weight:700;margin-bottom:10px}
   .bulten h3 em{font-style:normal;color:#7AA5F8}
-  .bulten p{color:#B9C6E4;font-size:15px}
+  .bulten p{color:#B9C6E4;font-size:16.5px}
   .bulten .act{display:flex;flex-direction:column;gap:12px}
   .bulten .act .btn{justify-content:center}
   .bulten .fine{font-size:12px;color:#8FA0C6;text-align:center}
+  .bulten input[type=email]{font-family:var(--sans);font-size:15px;padding:14px 18px;border-radius:999px;border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;outline:none;width:100%}
+  .bulten input[type=email]::placeholder{color:#8FA0C6}
+  .bulten input[type=email]:focus{border-color:#7AA5F8}
+  .bulten .act button.btn{cursor:pointer;border:none;font-family:var(--sans)}
+  .bulten .ok-msg{display:none;font-size:15px;font-weight:600;color:#7DE8B5;text-align:center}
   @media(max-width:880px){.bulten{grid-template-columns:1fr;padding:38px 28px}}
 
   footer{background:#0B1B3A;color:#AEB6C8;padding:60px 0 48px;margin-top:88px}
@@ -126,53 +135,55 @@
   <div class="wrap bar">
     <a class="wordmark" href="index.html"><span class="dot"></span>Gaye</a>
     <nav class="main">
-      <a href="kurumsal.html">Kurumsal</a>
-      <a class="on" href="topluluk.html">Topluluk</a>
-      <a href="kurumsal.html#iletisim">İletişim</a>
-      <a class="cta" href="index.html#satin-al">Kitabı Edin</a>
+      <a href="kurumsal.html" data-i18n="nav.kurumsal">Kurumsal</a>
+      <a class="on" href="topluluk.html" data-i18n="nav.topluluk">Topluluk</a>
+      <a href="kurumsal.html#iletisim" data-i18n="nav.iletisim">İletişim</a>
+      <a class="cta" href="index.html#satin-al" data-i18n="nav.cta">Kitabı Edin</a>
+      <button class="lang-btn" type="button" onclick="toggleLang()">EN</button>
     </nav>
   </div>
 </header>
+<button class="lang-btn mobile" type="button" onclick="toggleLang()">EN</button>
 
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">Topluluk</span>
-    <h1 class="big">Aynı yıldıza bakanların <em>buluşma noktası</em></h1>
-    <p class="lede">Gaye paylaşıldıkça derinleşir. Kitabı bitirip yola çıkanlar, skorunu her çeyrek yenileyenler, hikâyesini anlatanlar ve sorularını getirenler — hepsi aynı haritada, farklı noktalarda. Burası o haritanın buluşma yeri.</p>
-    <a class="btn btn-primary" href="#katil">Topluluğa Katıl</a>
+    <span class="eyebrow" data-i18n="hero.eyebrow">Topluluk</span>
+    <h1 class="big" data-i18n="hero.h1">Aynı yıldıza bakanların <em>buluşma noktası</em></h1>
+    <p class="lede" data-i18n="hero.lede">Gaye paylaşıldıkça derinleşir. Burası, aynı yıldıza bakanların buluşma yeri.</p>
+    <a class="btn btn-primary" href="#katil" data-i18n="hero.cta">Topluluğa Katıl</a>
   </div>
 </section>
 
 <!-- 4 KANAL -->
 <section class="blk soft" id="katil">
   <div class="wrap">
-    <span class="eyebrow">Dört Kapı</span>
-    <h2 class="sec">Topluluğa <em>nereden girersiniz?</em></h2>
+    <span class="eyebrow" data-i18n="kapi.eyebrow">Dört Kapı</span>
+    <h2 class="sec" data-i18n="kapi.h2">Topluluğa <em>nereden girersiniz?</em></h2>
     <div class="cg">
       <div class="cc">
         <div class="ic">🧭</div>
-        <h3>Gaye Çemberleri</h3>
-        <p>4–6 kişilik okur grupları. Ayda bir buluşur (çevrimiçi veya yüz yüze), bir bölümü ve birbirinin Gaye Haritası'nı konuşur. Gaye çatışması yaşayan üyeler için kitaptaki "üç soru" çerçevesi masadadır. Çember, gayenin en hızlı derinleştiği yerdir — çünkü insan, kendisine anlam veren ilişkiye bağlanır.</p>
-        <div class="how">Kayıt formuyla başvurun; sizi şehir/saat uyumuna göre bir çembere yerleştirelim. Kendi çemberinizi kurmak isterseniz kolaylaştırıcı rehberi gönderiyoruz.</div>
+        <h3 data-i18n="c1.h">Gaye Çemberleri</h3>
+        <p data-i18n="c1.p">4–6 kişilik okur grupları, ayda bir buluşur: bir bölüm, bir de birbirinin haritası. İnsan, kendisine anlam veren ilişkiye bağlanır.</p>
+        <div class="how" data-i18n="c1.how">Başvurun, sizi uygun çembere yerleştirelim — ya da rehberle kendi çemberinizi kurun.</div>
       </div>
       <div class="cc">
         <div class="ic">🔦</div>
-        <h3>Selim Oktar ile Q&amp;A</h3>
-        <p>Ayda bir, çevrimiçi. Kitabın derinliklerini birlikte keşfetme alanı: bir tema (ör. "kösteklerle yaşamak", "gaye çatışması", "kurumda gaye") + okurlardan gelen sorular. Kayıtlar topluluk arşivinde kalır.</p>
-        <div class="how">Bültene kayıt olanlara davet bağlantısı her ayın başında gelir.</div>
+        <h3 data-i18n="c2.h">Selim Oktar ile Q&amp;A</h3>
+        <p data-i18n="c2.p">Ayda bir, çevrimiçi: bir tema, bir de okur soruları. Kayıtlar arşivde kalır.</p>
+        <div class="how" data-i18n="c2.how">Davet, her ay bülten abonelerine gelir.</div>
       </div>
       <div class="cc">
         <div class="ic">📈</div>
-        <h3>Çeyreklik Skor Ritüeli</h3>
-        <p>Form tek seferlik bir sınav değil, dönemsel bir pusuladır. Her çeyreğin ilk haftası topluluk birlikte yeniden ölçer: skorunu güncelle, ΔGaye'ni gör, bir sonraki çeyreğin tek odağını seç. Yalnız başına unutulan ritüel, birlikte alışkanlık olur.</p>
-        <div class="how">Çeyrek başı hatırlatması bültenle gelir; ölçüm <a href="gaye-skoru.html" style="color:var(--blue)">Gaye Skoru formu</a> üzerinden 15 dakika sürer.</div>
+        <h3 data-i18n="c3.h">Çeyreklik Skor Ritüeli</h3>
+        <p data-i18n="c3.p">Her çeyrek topluluk birlikte yeniden ölçer: skorunu güncelle, tek odağını seç. Yalnız unutulan ritüel, birlikte alışkanlık olur.</p>
+        <div class="how" data-i18n="c3.how">Hatırlatma bültenle gelir; <a href="gaye-skoru.html" style="color:var(--blue)">ölçüm</a> 15 dakika sürer.</div>
       </div>
       <div class="cc">
         <div class="ic">✍️</div>
-        <h3>Hikâyeni Paylaş</h3>
-        <p>Kitabı okuduktan sonra bir karar aldıysanız — iş değiştirdiniz, bir çemberi başlattınız, skorunuz 1,8'den 4,7'ye çıktı — hikâyeniz başka bir okurun aynası olur. Seçilen hikâyeler (izinle) bültende ve bu sayfada yayımlanır.</p>
-        <div class="how">300–500 kelimelik hikâyenizi <a href="mailto:info@gaye.org?subject=Hik%C3%A2yemi%20Payla%C5%9F%C4%B1yorum" style="color:var(--blue)">info@gaye.org</a> adresine gönderin.</div>
+        <h3 data-i18n="c4.h">Hikâyeni Paylaş</h3>
+        <p data-i18n="c4.p">Kitaptan sonra bir karar aldıysanız, hikâyeniz başka bir okurun aynası olur. Seçilenler izinle yayımlanır.</p>
+        <div class="how" data-i18n="c4.how">300–500 kelime: <a href="mailto:info@gaye.org?subject=Hik%C3%A2yemi%20Payla%C5%9F%C4%B1yorum" style="color:var(--blue)">info@gaye.org</a></div>
       </div>
     </div>
   </div>
@@ -181,24 +192,26 @@
 <!-- YILLIK RITIM -->
 <section class="blk soft">
   <div class="wrap">
-    <span class="eyebrow">Topluluk Ritmi</span>
-    <h2 class="sec">Yıl boyunca <em>ne olur?</em></h2>
+    <span class="eyebrow" data-i18n="ritim.eyebrow">Topluluk Ritmi</span>
+    <h2 class="sec" data-i18n="ritim.h2">Yıl boyunca <em>ne olur?</em></h2>
     <div class="ritual">
-      <div class="rt"><div class="m">Her Ay</div><h4>Q&amp;A + Bülten</h4><p>Selim Oktar ile çevrimiçi buluşma; kısa ve sade bir e-bülten.</p></div>
-      <div class="rt"><div class="m">Her Çeyrek</div><h4>Skor Ritüeli</h4><p>Topluca yeniden ölçüm: skor, ΔGaye ve tek odak.</p></div>
-      <div class="rt"><div class="m">Sürekli</div><h4>Gaye Çemberleri</h4><p>Aylık çember buluşmaları; yeni çemberler her ay açılır.</p></div>
-      <div class="rt"><div class="m">Yılda Bir</div><h4>Gaye Buluşması</h4><p>Tüm çemberlerin yüz yüze geldiği, vakaların paylaşıldığı gün.</p></div>
+      <div class="rt"><div class="m" data-i18n="r1.m">Her Ay</div><h4 data-i18n="r1.h">Q&amp;A + Bülten</h4><p data-i18n="r1.p">Selim Oktar ile çevrimiçi buluşma; kısa ve sade bir e-bülten.</p></div>
+      <div class="rt"><div class="m" data-i18n="r2.m">Her Çeyrek</div><h4 data-i18n="r2.h">Skor Ritüeli</h4><p data-i18n="r2.p">Topluca yeniden ölçüm: skor, ΔGaye ve tek odak.</p></div>
+      <div class="rt"><div class="m" data-i18n="r3.m">Sürekli</div><h4 data-i18n="r3.h">Gaye Çemberleri</h4><p data-i18n="r3.p">Aylık çember buluşmaları; yeni çemberler her ay açılır.</p></div>
+      <div class="rt"><div class="m" data-i18n="r4.m">Yılda Bir</div><h4 data-i18n="r4.h">Gaye Buluşması</h4><p data-i18n="r4.p">Tüm çemberlerin yüz yüze geldiği, vakaların paylaşıldığı gün.</p></div>
     </div>
 
     <div class="bulten">
       <div>
-        <h3>Ayda bir, <em>kısa bir e-posta</em></h3>
-        <p>Yeni vakalar, okur sesleri, Q&amp;A daveti, atölye duyuruları ve çeyreklik ölçüm hatırlatması. Reklamsız, sade, ayda tek e-posta — gaye gibi: az ama net.</p>
+        <h3 data-i18n="bulten.h3">Ayda bir, <em>kısa bir e-posta</em></h3>
+        <p data-i18n="bulten.p">Yeni vakalar, okur sesleri, davetler. Reklamsız, ayda tek e-posta — gaye gibi: az ama net.</p>
       </div>
-      <div class="act">
-        <a class="btn btn-primary" href="mailto:info@gaye.org?subject=B%C3%BCltene%20Kay%C4%B1t">Bültene Kayıt Ol</a>
-        <span class="fine">E-posta adresiniz yalnızca bülten için kullanılır; tek tıkla ayrılabilirsiniz.</span>
-      </div>
+      <form class="act" id="bulten-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfANJifyWP0q1vxbi0vkr-5ec55ZhXVkMM_C-tw4gV-BUWNSQ/formResponse" method="POST">
+        <input type="email" name="entry.437404652" required placeholder="E-posta adresiniz" data-i18n-ph="bulten.ph" aria-label="E-posta">
+        <button class="btn btn-primary" type="submit" data-i18n="bulten.btn">Bültene Kayıt Ol</button>
+        <span class="ok-msg" id="bulten-ok" data-i18n="bulten.ok">Kaydınız alındı — hoş geldiniz!</span>
+        <span class="fine" data-i18n="bulten.fine">E-posta adresiniz yalnızca bülten için kullanılır; tek tıkla ayrılabilirsiniz.</span>
+      </form>
     </div>
   </div>
 </section>
@@ -208,21 +221,107 @@
     <div class="f-grid">
       <span class="f-mark">Gaye</span>
       <nav>
-        <a href="index.html">Ana Sayfa</a>
-        <a href="gaye-skoru.html">Gaye Skoru</a>
-        <a href="kurumsal.html">Kurumsal</a>
-        <a href="topluluk.html">Topluluk</a>
-        <a href="mailto:info@gaye.org">İletişim</a>
+        <a href="index.html" data-i18n="f.ana">Ana Sayfa</a>
+        <a href="gaye-skoru.html" data-i18n="f.skor">Gaye Skoru</a>
+        <a href="kurumsal.html" data-i18n="nav.kurumsal">Kurumsal</a>
+        <a href="topluluk.html" data-i18n="nav.topluluk">Topluluk</a>
+        <a href="mailto:info@gaye.org" data-i18n="nav.iletisim">İletişim</a>
       </nav>
     </div>
-    <div class="f-copy">© 2025 Selim Oktar · Tüm hakları saklıdır</div>
+    <div class="f-copy" data-i18n="f.copy">© 2025 Selim Oktar · Tüm hakları saklıdır</div>
   </div>
 </footer>
+
+<script>
+var I18N={
+ "meta.title":{tr:"Topluluk — Gaye",en:"Community — Purpose"},
+ "nav.kurumsal":{tr:"Kurumsal",en:"Corporate"},
+ "nav.topluluk":{tr:"Topluluk",en:"Community"},
+ "nav.iletisim":{tr:"İletişim",en:"Contact"},
+ "nav.cta":{tr:"Kitabı Edin",en:"Get the Book"},
+ "hero.eyebrow":{tr:"Topluluk",en:"Community"},
+ "hero.h1":{tr:'Aynı yıldıza bakanların <em>buluşma noktası</em>',en:'A meeting point for those <em>watching the same star</em>'},
+ "hero.lede":{tr:'Gaye paylaşıldıkça derinleşir. Burası, aynı yıldıza bakanların buluşma yeri.',en:'Purpose deepens as it is shared. This is where those watching the same star meet.'},
+ "hero.cta":{tr:"Topluluğa Katıl",en:"Join the Community"},
+ "kapi.eyebrow":{tr:"Dört Kapı",en:"Four Doors"},
+ "kapi.h2":{tr:'Topluluğa <em>nereden girersiniz?</em>',en:'Where do you <em>come in?</em>'},
+ "c1.h":{tr:"Gaye Çemberleri",en:"Purpose Circles"},
+ "c1.p":{tr:'4–6 kişilik okur grupları, ayda bir buluşur: bir bölüm, bir de birbirinin haritası. İnsan, kendisine anlam veren ilişkiye bağlanır.',en:'Reader groups of 4–6 meet once a month: one chapter, and each other\'s maps. People commit to the relationship that gives them meaning.'},
+ "c1.how":{tr:'Başvurun, sizi uygun çembere yerleştirelim — ya da rehberle kendi çemberinizi kurun.',en:'Apply and we\'ll place you in the right circle — or start your own with the guide.'},
+ "c2.h":{tr:"Selim Oktar ile Q&amp;A",en:"Q&amp;A with Selim Oktar"},
+ "c2.p":{tr:'Ayda bir, çevrimiçi: bir tema, bir de okur soruları. Kayıtlar arşivde kalır.',en:'Once a month, online: one theme plus reader questions. Recordings stay in the archive.'},
+ "c2.how":{tr:'Davet, her ay bülten abonelerine gelir.',en:'Invitations go out monthly to newsletter subscribers.'},
+ "c3.h":{tr:"Çeyreklik Skor Ritüeli",en:"Quarterly Score Ritual"},
+ "c3.p":{tr:'Her çeyrek topluluk birlikte yeniden ölçer: skorunu güncelle, tek odağını seç. Yalnız unutulan ritüel, birlikte alışkanlık olur.',en:'Every quarter the community re-measures together: update your score, pick one focus. A ritual forgotten alone becomes a habit together.'},
+ "c3.how":{tr:'Hatırlatma bültenle gelir; <a href="gaye-skoru.html" style="color:var(--blue)">ölçüm</a> 15 dakika sürer.',en:'The reminder arrives by newsletter; the <a href="gaye-skoru.html" style="color:var(--blue)">measurement</a> takes 15 minutes.'},
+ "c4.h":{tr:"Hikâyeni Paylaş",en:"Share Your Story"},
+ "c4.p":{tr:'Kitaptan sonra bir karar aldıysanız, hikâyeniz başka bir okurun aynası olur. Seçilenler izinle yayımlanır.',en:'If the book led you to a decision, your story becomes another reader\'s mirror. Selected stories are published with permission.'},
+ "c4.how":{tr:'300–500 kelime: <a href="mailto:info@gaye.org?subject=Hik%C3%A2yemi%20Payla%C5%9F%C4%B1yorum" style="color:var(--blue)">info@gaye.org</a>',en:'300–500 words: <a href="mailto:info@gaye.org?subject=Sharing%20My%20Story" style="color:var(--blue)">info@gaye.org</a>'},
+ "ritim.eyebrow":{tr:"Topluluk Ritmi",en:"Community Rhythm"},
+ "ritim.h2":{tr:'Yıl boyunca <em>ne olur?</em>',en:'What happens <em>through the year?</em>'},
+ "r1.m":{tr:"Her Ay",en:"Every Month"},
+ "r1.h":{tr:"Q&amp;A + Bülten",en:"Q&amp;A + Newsletter"},
+ "r1.p":{tr:'Selim Oktar ile çevrimiçi buluşma; kısa ve sade bir e-bülten.',en:'An online session with Selim Oktar; a short, simple newsletter.'},
+ "r2.m":{tr:"Her Çeyrek",en:"Every Quarter"},
+ "r2.h":{tr:"Skor Ritüeli",en:"Score Ritual"},
+ "r2.p":{tr:'Topluca yeniden ölçüm: skor, ΔGaye ve tek odak.',en:'Re-measuring together: score, ΔPurpose and one focus.'},
+ "r3.m":{tr:"Sürekli",en:"Ongoing"},
+ "r3.h":{tr:"Gaye Çemberleri",en:"Purpose Circles"},
+ "r3.p":{tr:'Aylık çember buluşmaları; yeni çemberler her ay açılır.',en:'Monthly circle meetings; new circles open every month.'},
+ "r4.m":{tr:"Yılda Bir",en:"Once a Year"},
+ "r4.h":{tr:"Gaye Buluşması",en:"Purpose Gathering"},
+ "r4.p":{tr:'Tüm çemberlerin yüz yüze geldiği, vakaların paylaşıldığı gün.',en:'The day all circles meet face to face and cases are shared.'},
+ "bulten.h3":{tr:'Ayda bir, <em>kısa bir e-posta</em>',en:'Once a month, <em>a short email</em>'},
+ "bulten.p":{tr:'Yeni vakalar, okur sesleri, davetler. Reklamsız, ayda tek e-posta — gaye gibi: az ama net.',en:'New cases, reader voices, invitations. No ads, one email a month — like purpose itself: little but clear.'},
+ "bulten.ph":{tr:"E-posta adresiniz",en:"Your email address"},
+ "bulten.btn":{tr:"Bültene Kayıt Ol",en:"Subscribe"},
+ "bulten.ok":{tr:"Kaydınız alındı — hoş geldiniz!",en:"You're subscribed — welcome!"},
+ "bulten.fine":{tr:'E-posta adresiniz yalnızca bülten için kullanılır; tek tıkla ayrılabilirsiniz.',en:'Your email is used only for the newsletter; unsubscribe in one click.'},
+ "f.ana":{tr:"Ana Sayfa",en:"Home"},
+ "f.skor":{tr:"Gaye Skoru",en:"Purpose Score"},
+ "f.copy":{tr:"© 2025 Selim Oktar · Tüm hakları saklıdır",en:"© 2025 Selim Oktar · All rights reserved"}
+};
+function applyLang(l){
+  document.documentElement.lang=l;
+  if(I18N["meta.title"])document.title=I18N["meta.title"][l];
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var k=el.getAttribute("data-i18n");
+    if(I18N[k]&&I18N[k][l]!==undefined)el.innerHTML=I18N[k][l];
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function(el){
+    var k=el.getAttribute("data-i18n-ph");
+    if(I18N[k]&&I18N[k][l]!==undefined)el.setAttribute("placeholder",I18N[k][l]);
+  });
+  document.querySelectorAll(".lang-btn").forEach(function(b){b.textContent=l==="tr"?"EN":"TR"});
+  try{localStorage.setItem("gaye-lang",l)}catch(e){}
+  if(window.onLangChange)window.onLangChange(l);
+}
+function toggleLang(){applyLang(document.documentElement.lang==="tr"?"en":"tr");}
+(function(){
+  var saved="tr";
+  try{saved=localStorage.getItem("gaye-lang")||"tr"}catch(e){}
+  if(saved!=="tr")applyLang(saved);
+})();
+</script>
+<script>
+(function(){
+  var form=document.getElementById('bulten-form');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=form.querySelector('button[type=submit]'),ok=document.getElementById('bulten-ok');
+    btn.disabled=true;btn.style.opacity='.6';
+    fetch(form.action,{method:'POST',mode:'no-cors',body:new FormData(form)})
+      .then(function(){form.querySelector('input[type=email]').value='';ok.style.display='block';btn.style.display='none';})
+      .catch(function(){btn.disabled=false;btn.style.opacity='1';});
+  });
+})();
+</script>
 <script>
 (function(){
   var bar=document.querySelector('.bar'),nav=document.querySelector('nav.main'),hdr=document.querySelector('header');
   if(!bar||!nav||!hdr)return;
-  var btn=document.createElement('button');btn.className='menu-btn';btn.setAttribute('aria-label','Men\u00fc');
+  var btn=document.createElement('button');btn.className='menu-btn';btn.setAttribute('aria-label','Menü');
   btn.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#101828" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
   var panel=document.createElement('div');panel.className='m-panel';
   nav.querySelectorAll('a').forEach(function(a){panel.appendChild(a.cloneNode(true))});
@@ -233,3 +332,4 @@
 </script>
 </body>
 </html>
+
