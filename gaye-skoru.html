@@ -28,6 +28,9 @@
   .wordmark em{font-style:italic;font-weight:400;color:var(--gold)}
   .back{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--ink-soft);text-decoration:none}
   .back:hover{color:var(--ink)}
+  .bar-right{display:flex;align-items:baseline;gap:14px}
+  .lang-btn{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--ink-soft);border:1px solid var(--rule);border-radius:999px;padding:6px 13px;cursor:pointer;background:#fff}
+  .lang-btn:hover{color:var(--ink);border-color:var(--ink)}
   .btn{font-family:var(--sans);font-size:14px;font-weight:600;text-decoration:none;padding:12px 22px;display:inline-block;cursor:pointer;transition:opacity .15s;border:none}
   .btn:hover{opacity:.85}
   .btn-ink{background:#1A56DB;color:#fff;border-radius:999px}
@@ -97,100 +100,103 @@
 <header>
   <div class="wrap bar">
     <a class="wordmark" href="index.html">Gaye</a>
-    <a class="back" href="index.html">← Ana sayfaya dön</a>
+    <div class="bar-right">
+      <a class="back" href="index.html" data-i18n="hdr.back">← Ana sayfaya dön</a>
+      <button class="lang-btn" type="button" onclick="toggleLang()">EN</button>
+    </div>
   </div>
 </header>
 
 <section class="form-sec">
   <div class="wrap">
-    <span class="eyebrow">Pratik Adımlar</span>
-    <h1 class="sec">Gaye Denklemi'ni <em>hayatınıza uygulayın</em></h1>
-    <p class="lede">Gaye Modeli'ni anlamak yeterli değildir; onu kendi yaşamınızda somutlaştırmak gerekir. Aşağıdaki çalışma formu, Gaye Denklemi'nin üç bağımsız bileşenini — İtici Güçler, Destekler, Köstekler — ve motivatör düzeyinizi kendi hayatınıza uygulamak için tasarlanmıştır. Her adımı sırayla doldurun; sonunda ortaya çıkan tablo, gayenizin bir fotoğrafıdır. Bu form bir kez doldurulup bırakılacak bir anket değil, düzenli olarak gözden geçirilecek canlı bir haritadır.</p>
+    <span class="eyebrow" data-i18n="top.eyebrow">Pratik Adımlar</span>
+    <h1 class="sec" data-i18n="top.h1">Gaye Denklemi'ni <em>hayatınıza uygulayın</em></h1>
+    <p class="lede" data-i18n="top.lede">Gaye Modeli'ni anlamak yeterli değildir; onu kendi yaşamınızda somutlaştırmak gerekir. Aşağıdaki çalışma formu, Gaye Denklemi'nin üç bağımsız bileşenini — İtici Güçler, Destekler, Köstekler — ve motivatör düzeyinizi kendi hayatınıza uygulamak için tasarlanmıştır. Her adımı sırayla doldurun; sonunda ortaya çıkan tablo, gayenizin bir fotoğrafıdır. Bu form bir kez doldurulup bırakılacak bir anket değil, düzenli olarak gözden geçirilecek canlı bir haritadır.</p>
 
     <div class="grid">
       <div>
 
         <div class="adim">
-          <div class="a-no">Adım 1</div>
-          <h2>Gayenizi tanımlayın</h2>
-          <p class="a-desc">Yaşam gayenizi tek bir cümlede yazın. Net, somut ve sizi harekete geçiren bir ifade olsun. Örnek: "Küçük esnafın dijital dönüşümünü kolaylaştırmak."</p>
-          <input type="text" id="gaye-cumle" placeholder="Gayem…">
+          <div class="a-no" data-i18n="a1.no">Adım 1</div>
+          <h2 data-i18n="a1.h">Gayenizi tanımlayın</h2>
+          <p class="a-desc" data-i18n="a1.d">Yaşam gayenizi tek bir cümlede yazın. Net, somut ve sizi harekete geçiren bir ifade olsun. Örnek: "Küçük esnafın dijital dönüşümünü kolaylaştırmak."</p>
+          <input type="text" id="gaye-cumle" placeholder="Gayem…" data-i18n-ph="a1.ph">
         </div>
 
         <div class="adim">
-          <div class="a-no">Adım 2</div>
-          <h2>İtici Güçlerinizi listeleyin ve puanlayın</h2>
-          <p class="a-desc">Gayenize ulaşmak için yaptığınız somut faaliyetleri tek tek yazın, kaç taneyse. "Gayeme ulaşmak için ne yapıyorum?" sorusunun cevabıdır. Her birini 1–10 arasında puanlayın.</p>
+          <div class="a-no" data-i18n="a2.no">Adım 2</div>
+          <h2 data-i18n="a2.h">İtici Güçlerinizi listeleyin ve puanlayın</h2>
+          <p class="a-desc" data-i18n="a2.d">Gayenize ulaşmak için yaptığınız somut faaliyetleri tek tek yazın, kaç taneyse. "Gayeme ulaşmak için ne yapıyorum?" sorusunun cevabıdır. Her birini 1–10 arasında puanlayın.</p>
           <table class="liste" data-b="a">
-            <thead><tr><th>İtici Güçler</th><th class="num">Bugün (1–10)</th><th class="num">Gelecek (1–10)</th><th></th></tr></thead>
+            <thead><tr><th data-i18n="a2.th">İtici Güçler</th><th class="num" data-i18n="th.bugun">Bugün (1–10)</th><th class="num" data-i18n="th.gelecek">Gelecek (1–10)</th><th></th></tr></thead>
             <tbody></tbody>
           </table>
-          <button class="satir-ekle">+ Satır ekle</button>
+          <button class="satir-ekle" data-i18n="btn.satir">+ Satır ekle</button>
         </div>
 
         <div class="adim">
-          <div class="a-no">Adım 3</div>
-          <h2>Desteklerinizi listeleyin ve puanlayın</h2>
-          <p class="a-desc">Beceriler, ilişki ağları, kurumsal altyapı ve eğitim imkânları gibi itici güçlerinizin etkinliğini artıran çevresel faktörleri tek tek yazın. Her birini 1–10 arasında puanlayın.</p>
+          <div class="a-no" data-i18n="a3.no">Adım 3</div>
+          <h2 data-i18n="a3.h">Desteklerinizi listeleyin ve puanlayın</h2>
+          <p class="a-desc" data-i18n="a3.d">Beceriler, ilişki ağları, kurumsal altyapı ve eğitim imkânları gibi itici güçlerinizin etkinliğini artıran çevresel faktörleri tek tek yazın. Her birini 1–10 arasında puanlayın.</p>
           <table class="liste" data-b="b">
-            <thead><tr><th>Destekler</th><th class="num">Bugün (1–10)</th><th class="num">Gelecek (1–10)</th><th></th></tr></thead>
+            <thead><tr><th data-i18n="a3.th">Destekler</th><th class="num" data-i18n="th.bugun">Bugün (1–10)</th><th class="num" data-i18n="th.gelecek">Gelecek (1–10)</th><th></th></tr></thead>
             <tbody></tbody>
           </table>
-          <button class="satir-ekle">+ Satır ekle</button>
+          <button class="satir-ekle" data-i18n="btn.satir">+ Satır ekle</button>
         </div>
 
         <div class="adim">
-          <div class="a-no">Adım 4</div>
-          <h2>Kösteklerinizi listeleyin ve puanlayın</h2>
-          <p class="a-desc">Korkular, erteleme, kaynak yetersizliği ve çevresel baskılar gibi gayenize ulaşmanızı zorlaştıran engelleri tek tek yazın. Yüksek puan = güçlü engel. Her birini 1–10 arasında puanlayın.</p>
+          <div class="a-no" data-i18n="a4.no">Adım 4</div>
+          <h2 data-i18n="a4.h">Kösteklerinizi listeleyin ve puanlayın</h2>
+          <p class="a-desc" data-i18n="a4.d">Korkular, erteleme, kaynak yetersizliği ve çevresel baskılar gibi gayenize ulaşmanızı zorlaştıran engelleri tek tek yazın. Yüksek puan = güçlü engel. Her birini 1–10 arasında puanlayın.</p>
           <table class="liste" data-b="c">
-            <thead><tr><th>Köstekler</th><th class="num">Bugün (1–10)</th><th class="num">Gelecek (1–10)</th><th></th></tr></thead>
+            <thead><tr><th data-i18n="a4.th">Köstekler</th><th class="num" data-i18n="th.bugun">Bugün (1–10)</th><th class="num" data-i18n="th.gelecek">Gelecek (1–10)</th><th></th></tr></thead>
             <tbody></tbody>
           </table>
-          <button class="satir-ekle">+ Satır ekle</button>
+          <button class="satir-ekle" data-i18n="btn.satir">+ Satır ekle</button>
         </div>
 
         <div class="adim">
-          <div class="a-no">Adım 5</div>
-          <h2>Motivatörlerinizi listeleyin ve puanlayın</h2>
-          <p class="a-desc">Sizi engellere rağmen yolda tutan motivatörleri listeleyin. Her birini 1–10 arasında puanlayın; sonra puanların toplamı (motivatör sayısı × 10)'a bölünerek 0 ile 1 arasında Motivatör Düzeyiniz (M) bulunur — hesap sağdaki özette otomatik yapılır.</p>
+          <div class="a-no" data-i18n="a5.no">Adım 5</div>
+          <h2 data-i18n="a5.h">Motivatörlerinizi listeleyin ve puanlayın</h2>
+          <p class="a-desc" data-i18n="a5.d">Sizi engellere rağmen yolda tutan motivatörleri listeleyin. Her birini 1–10 arasında puanlayın; sonra puanların toplamı (motivatör sayısı × 10)'a bölünerek 0 ile 1 arasında Motivatör Düzeyiniz (M) bulunur — hesap sağdaki özette otomatik yapılır.</p>
           <table class="liste" data-b="m">
-            <thead><tr><th>Motivatörler</th><th class="num">Bugün (1–10)</th><th class="num">Gelecek (1–10)</th><th></th></tr></thead>
+            <thead><tr><th data-i18n="a5.th">Motivatörler</th><th class="num" data-i18n="th.bugun">Bugün (1–10)</th><th class="num" data-i18n="th.gelecek">Gelecek (1–10)</th><th></th></tr></thead>
             <tbody></tbody>
           </table>
-          <button class="satir-ekle">+ Satır ekle</button>
+          <button class="satir-ekle" data-i18n="btn.satir">+ Satır ekle</button>
         </div>
 
         <div class="adim">
-          <div class="a-no">Adım 8</div>
-          <h2>Anlam cümlenizi yazın</h2>
-          <p class="a-desc">Bu yolculuk sizin için ne anlama geliyor? Gayeniz gerçekleştiğinde dünyada ne değişecek? Tek bir cümle yazın. Bu, pusulada kuzeyi gösteren oktur.</p>
-          <input type="text" id="anlam-cumle" placeholder="Gayem gerçekleştiğinde…">
+          <div class="a-no" data-i18n="a8.no">Adım 8</div>
+          <h2 data-i18n="a8.h">Anlam cümlenizi yazın</h2>
+          <p class="a-desc" data-i18n="a8.d">Bu yolculuk sizin için ne anlama geliyor? Gayeniz gerçekleştiğinde dünyada ne değişecek? Tek bir cümle yazın. Bu, pusulada kuzeyi gösteren oktur.</p>
+          <input type="text" id="anlam-cumle" placeholder="Gayem gerçekleştiğinde…" data-i18n-ph="a8.ph">
         </div>
 
         <div class="yorum-sec">
-          <h2>Skorunuzu nasıl yorumlayabilirsiniz?</h2>
-          <div class="bant"><div class="b">5–10 · Güçlü</div><p>Gayen güçlü ve yaşanmış. Hayatın senin pusulanı takip ediyor, iz bırakıyorsun.</p></div>
-          <div class="bant"><div class="b">2–5 · Gelişen</div><p>Gaye filizleniyor. Doğru yoldasın ama bazı boyutlarını beslemen gerek. Hangi değişken düşükse oraya odaklan.</p></div>
-          <div class="bant"><div class="b">0–2 · Filiz</div><p>Gaye henüz kök salmamış. Önce Bölüm 1 ve 2'ye dön, keşif sorularını yeniden çalış.</p></div>
-          <div class="not">Not: Bu form tek seferlik bir sınav değil, dönemsel bir pusuladır. Her çeyrekte yeniden doldurun; değişen skorlar gelişim alanınızı gösterir.</div>
+          <h2 data-i18n="y.h2">Skorunuzu nasıl yorumlayabilirsiniz?</h2>
+          <div class="bant"><div class="b" data-i18n="y1.b">5–10 · Güçlü</div><p data-i18n="y1.p">Gayen güçlü ve yaşanmış. Hayatın senin pusulanı takip ediyor, iz bırakıyorsun.</p></div>
+          <div class="bant"><div class="b" data-i18n="y2.b">2–5 · Gelişen</div><p data-i18n="y2.p">Gaye filizleniyor. Doğru yoldasın ama bazı boyutlarını beslemen gerek. Hangi değişken düşükse oraya odaklan.</p></div>
+          <div class="bant"><div class="b" data-i18n="y3.b">0–2 · Filiz</div><p data-i18n="y3.p">Gaye henüz kök salmamış. Önce Bölüm 1 ve 2'ye dön, keşif sorularını yeniden çalış.</p></div>
+          <div class="not" data-i18n="y.not">Not: Bu form tek seferlik bir sınav değil, dönemsel bir pusuladır. Her çeyrekte yeniden doldurun; değişen skorlar gelişim alanınızı gösterir.</div>
         </div>
 
       </div>
 
       <aside class="ozet">
-        <div class="sb-label">Adım 6 · Gaye Skorunuz</div>
+        <div class="sb-label" data-i18n="oz.label">Adım 6 · Gaye Skorunuz</div>
         <div class="skor-cift">
-          <div class="skor-hucre"><div class="k">Bugün</div><div class="v" id="skor-b">—</div><div class="c" id="kat-b"></div></div>
-          <div class="skor-hucre"><div class="k">Gelecek</div><div class="v" id="skor-g">—</div><div class="c" id="kat-g"></div></div>
+          <div class="skor-hucre"><div class="k" data-i18n="oz.bugun">Bugün</div><div class="v" id="skor-b">—</div><div class="c" id="kat-b"></div></div>
+          <div class="skor-hucre"><div class="k" data-i18n="oz.gelecek">Gelecek</div><div class="v" id="skor-g">—</div><div class="c" id="kat-g"></div></div>
         </div>
         <table class="ara-tablo" id="ara"></table>
-        <div class="delta" style="margin-top:10px"><span class="k">Adım 7 · ΔGaye (Gelişim Potansiyeli)</span><span class="v" id="delta">—</span></div>
+        <div class="delta" style="margin-top:10px"><span class="k" data-i18n="oz.delta">Adım 7 · ΔGaye (Gelişim Potansiyeli)</span><span class="v" id="delta">—</span></div>
         <div class="yorum" id="yorum">Her bileşene en az bir satır girip Bugün ve Gelecek puanlarını verin; skorlarınız otomatik hesaplanır.</div>
-        <div class="formul">Gaye Skoru = (İtici Güçler + Destekler) / Köstekler<sup>(1−M)</sup><br>M = motivatör puanları toplamı ÷ (sayı × 10) · Diğer bileşenler: Değer = toplam ÷ sayı</div>
+        <div class="formul" data-i18n="oz.formul">Gaye Skoru = (İtici Güçler + Destekler) / Köstekler<sup>(1−M)</sup><br>M = motivatör puanları toplamı ÷ (sayı × 10) · Diğer bileşenler: Değer = toplam ÷ sayı</div>
         <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px">
-          <a class="btn btn-ink" href="index.html#satin-al" style="text-align:center">Skorunu kitapla derinleştir</a>
-          <a class="btn btn-line" href="index.html#skill-indir" style="text-align:center">AI analiziyle devam et</a>
+          <a class="btn btn-ink" href="index.html#satin-al" style="text-align:center" data-i18n="oz.b1">Skorunu kitapla derinleştir</a>
+          <a class="btn btn-line" href="index.html#skill-indir" style="text-align:center" data-i18n="oz.b2">AI analiziyle devam et</a>
         </div>
       </aside>
     </div>
@@ -198,16 +204,115 @@
 </section>
 
 <footer>
-  <div class="wrap">© 2025 Selim Oktar · Tüm hakları saklıdır</div>
+  <div class="wrap" data-i18n="f.copy">© 2025 Selim Oktar · Tüm hakları saklıdır</div>
 </footer>
 
 <script>
+var I18N={
+ "meta.title":{tr:"Gaye Skoru Çalışma Formu — Gaye",en:"Purpose Score Worksheet — Purpose"},
+ "hdr.back":{tr:"← Ana sayfaya dön",en:"← Back to home"},
+ "top.eyebrow":{tr:"Pratik Adımlar",en:"Practical Steps"},
+ "top.h1":{tr:"Gaye Denklemi'ni <em>hayatınıza uygulayın</em>",en:"Apply the Purpose Equation <em>to your life</em>"},
+ "top.lede":{tr:"Gaye Modeli'ni anlamak yeterli değildir; onu kendi yaşamınızda somutlaştırmak gerekir. Aşağıdaki çalışma formu, Gaye Denklemi'nin üç bağımsız bileşenini — İtici Güçler, Destekler, Köstekler — ve motivatör düzeyinizi kendi hayatınıza uygulamak için tasarlanmıştır. Her adımı sırayla doldurun; sonunda ortaya çıkan tablo, gayenizin bir fotoğrafıdır. Bu form bir kez doldurulup bırakılacak bir anket değil, düzenli olarak gözden geçirilecek canlı bir haritadır.",en:"Understanding the Purpose Model is not enough; you need to make it concrete in your own life. The worksheet below is designed to apply the Purpose Equation's three independent components — Drivers, Enablers, Barriers — and your motivator level to your own life. Fill in each step in order; the resulting table is a snapshot of your purpose. This is not a survey to fill once and set aside, but a living map to revisit regularly."},
+ "a1.no":{tr:"Adım 1",en:"Step 1"},
+ "a1.h":{tr:"Gayenizi tanımlayın",en:"Define your purpose"},
+ "a1.d":{tr:'Yaşam gayenizi tek bir cümlede yazın. Net, somut ve sizi harekete geçiren bir ifade olsun. Örnek: "Küçük esnafın dijital dönüşümünü kolaylaştırmak."',en:'Write your life purpose in a single sentence. Make it clear, concrete and mobilizing. Example: "Making digital transformation easier for small businesses."'},
+ "a1.ph":{tr:"Gayem…",en:"My purpose…"},
+ "a2.no":{tr:"Adım 2",en:"Step 2"},
+ "a2.h":{tr:"İtici Güçlerinizi listeleyin ve puanlayın",en:"List and rate your Drivers"},
+ "a2.d":{tr:'Gayenize ulaşmak için yaptığınız somut faaliyetleri tek tek yazın, kaç taneyse. "Gayeme ulaşmak için ne yapıyorum?" sorusunun cevabıdır. Her birini 1–10 arasında puanlayın.',en:'Write down, one by one, the concrete activities you do to reach your purpose — however many there are. This is the answer to "What am I doing to reach my purpose?" Rate each 1–10.'},
+ "a2.th":{tr:"İtici Güçler",en:"Drivers"},
+ "a3.no":{tr:"Adım 3",en:"Step 3"},
+ "a3.h":{tr:"Desteklerinizi listeleyin ve puanlayın",en:"List and rate your Enablers"},
+ "a3.d":{tr:'Beceriler, ilişki ağları, kurumsal altyapı ve eğitim imkânları gibi itici güçlerinizin etkinliğini artıran çevresel faktörleri tek tek yazın. Her birini 1–10 arasında puanlayın.',en:'Write down, one by one, the environmental factors that amplify your drivers — skills, networks, institutional infrastructure, learning opportunities. Rate each 1–10.'},
+ "a3.th":{tr:"Destekler",en:"Enablers"},
+ "a4.no":{tr:"Adım 4",en:"Step 4"},
+ "a4.h":{tr:"Kösteklerinizi listeleyin ve puanlayın",en:"List and rate your Barriers"},
+ "a4.d":{tr:'Korkular, erteleme, kaynak yetersizliği ve çevresel baskılar gibi gayenize ulaşmanızı zorlaştıran engelleri tek tek yazın. Yüksek puan = güçlü engel. Her birini 1–10 arasında puanlayın.',en:'Write down, one by one, the obstacles that make reaching your purpose harder — fears, procrastination, lack of resources, environmental pressures. Higher score = stronger barrier. Rate each 1–10.'},
+ "a4.th":{tr:"Köstekler",en:"Barriers"},
+ "a5.no":{tr:"Adım 5",en:"Step 5"},
+ "a5.h":{tr:"Motivatörlerinizi listeleyin ve puanlayın",en:"List and rate your Motivators"},
+ "a5.d":{tr:"Sizi engellere rağmen yolda tutan motivatörleri listeleyin. Her birini 1–10 arasında puanlayın; sonra puanların toplamı (motivatör sayısı × 10)'a bölünerek 0 ile 1 arasında Motivatör Düzeyiniz (M) bulunur — hesap sağdaki özette otomatik yapılır.",en:"List the motivators that keep you on the road despite the barriers. Rate each 1–10; the sum of ratings is then divided by (number of motivators × 10) to give your Motivator Level (M) between 0 and 1 — the calculation happens automatically in the summary on the right."},
+ "a5.th":{tr:"Motivatörler",en:"Motivators"},
+ "a8.no":{tr:"Adım 8",en:"Step 8"},
+ "a8.h":{tr:"Anlam cümlenizi yazın",en:"Write your meaning sentence"},
+ "a8.d":{tr:'Bu yolculuk sizin için ne anlama geliyor? Gayeniz gerçekleştiğinde dünyada ne değişecek? Tek bir cümle yazın. Bu, pusulada kuzeyi gösteren oktur.',en:'What does this journey mean to you? What changes in the world when your purpose is realized? Write a single sentence. This is the needle pointing north on your compass.'},
+ "a8.ph":{tr:"Gayem gerçekleştiğinde…",en:"When my purpose is realized…"},
+ "th.bugun":{tr:"Bugün (1–10)",en:"Today (1–10)"},
+ "th.gelecek":{tr:"Gelecek (1–10)",en:"Future (1–10)"},
+ "btn.satir":{tr:"+ Satır ekle",en:"+ Add row"},
+ "y.h2":{tr:"Skorunuzu nasıl yorumlayabilirsiniz?",en:"How to read your score"},
+ "y1.b":{tr:"5–10 · Güçlü",en:"5–10 · Strong"},
+ "y1.p":{tr:'Gayen güçlü ve yaşanmış. Hayatın senin pusulanı takip ediyor, iz bırakıyorsun.',en:'Your purpose is strong and lived. Your life follows your compass; you are leaving a mark.'},
+ "y2.b":{tr:"2–5 · Gelişen",en:"2–5 · Developing"},
+ "y2.p":{tr:'Gaye filizleniyor. Doğru yoldasın ama bazı boyutlarını beslemen gerek. Hangi değişken düşükse oraya odaklan.',en:'Your purpose is budding. You are on the right path, but some dimensions need feeding. Focus on whichever variable is lowest.'},
+ "y3.b":{tr:"0–2 · Filiz",en:"0–2 · Seedling"},
+ "y3.p":{tr:"Gaye henüz kök salmamış. Önce Bölüm 1 ve 2'ye dön, keşif sorularını yeniden çalış.",en:'Your purpose has not taken root yet. Return to Chapters 1 and 2 and rework the discovery questions.'},
+ "y.not":{tr:'Not: Bu form tek seferlik bir sınav değil, dönemsel bir pusuladır. Her çeyrekte yeniden doldurun; değişen skorlar gelişim alanınızı gösterir.',en:'Note: this worksheet is not a one-off test but a periodic compass. Refill it every quarter; the changing scores show where to grow.'},
+ "oz.label":{tr:"Adım 6 · Gaye Skorunuz",en:"Step 6 · Your Purpose Score"},
+ "oz.bugun":{tr:"Bugün",en:"Today"},
+ "oz.gelecek":{tr:"Gelecek",en:"Future"},
+ "oz.delta":{tr:"Adım 7 · ΔGaye (Gelişim Potansiyeli)",en:"Step 7 · ΔPurpose (Development Potential)"},
+ "oz.formul":{tr:'Gaye Skoru = (İtici Güçler + Destekler) / Köstekler<sup>(1−M)</sup><br>M = motivatör puanları toplamı ÷ (sayı × 10) · Diğer bileşenler: Değer = toplam ÷ sayı',en:'Purpose Score = (Drivers + Enablers) / Barriers<sup>(1−M)</sup><br>M = sum of motivator ratings ÷ (count × 10) · Other components: value = total ÷ count'},
+ "oz.b1":{tr:"Skorunu kitapla derinleştir",en:"Deepen your score with the book"},
+ "oz.b2":{tr:"AI analiziyle devam et",en:"Continue with AI analysis"},
+ "f.copy":{tr:"© 2025 Selim Oktar · Tüm hakları saklıdır",en:"© 2025 Selim Oktar · All rights reserved"}
+};
+var JS_I18N={
+ tr:{
+  adlar:{a:'İtici Güçler',b:'Destekler',c:'Köstekler',m:'Motivatörler'},
+  mduzey:'Motivatör Düzeyi (M)',
+  ara:['Bileşen','Sayı','Bugün','Gelecek'],
+  kat:{filiz:'Filiz',gelisen:'Gelişen',guclu:'Güçlü',cokguclu:'Çok Güçlü'},
+  rowPh:'Yazın…',
+  bos:'Her bileşene en az bir satır girip Bugün ve Gelecek puanlarını verin; skorlarınız otomatik hesaplanır.',
+  msg:{'Filiz':"Gaye henüz kök salmamış. Önce Bölüm 1 ve 2'ye dönün, keşif sorularını yeniden çalışın.",
+       'Gelişen':'Gaye filizleniyor. Doğru yoldasınız ama bazı boyutları beslemeniz gerek — hangi değişken düşükse oraya odaklanın.',
+       'Güçlü':'Gayeniz güçlü ve yaşanmış. Hayatınız pusulanızı takip ediyor, iz bırakıyorsunuz.',
+       'Çok Güçlü':'Gayeniz çok güçlü çalışıyor. Bu netliği eyleme ve çevrenize taşıyın — gaye paylaşıldıkça derinleşir.'},
+  ekPos:' Pozitif ΔGaye büyüme alanınızı gösteriyor.',
+  ekNeg:' Negatif ΔGaye risk bölgenizi gösteriyor.'
+ },
+ en:{
+  adlar:{a:'Drivers',b:'Enablers',c:'Barriers',m:'Motivators'},
+  mduzey:'Motivator Level (M)',
+  ara:['Component','Count','Today','Future'],
+  kat:{filiz:'Seedling',gelisen:'Developing',guclu:'Strong',cokguclu:'Very Strong'},
+  rowPh:'Type…',
+  bos:'Enter at least one row per component with Today and Future ratings; your scores are calculated automatically.',
+  msg:{'Seedling':'Your purpose has not taken root yet. Return to Chapters 1 and 2 and rework the discovery questions.',
+       'Developing':'Your purpose is budding. You are on the right path, but some dimensions need feeding — focus on whichever variable is lowest.',
+       'Strong':'Your purpose is strong and lived. Your life follows your compass; you are leaving a mark.',
+       'Very Strong':'Your purpose is working powerfully. Carry this clarity into action and to those around you — purpose deepens as it is shared.'},
+  ekPos:' A positive ΔPurpose shows your growth area.',
+  ekNeg:' A negative ΔPurpose shows your risk zone.'
+ }
+};
+function applyLang(l){
+  document.documentElement.lang=l;
+  if(I18N["meta.title"])document.title=I18N["meta.title"][l];
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var k=el.getAttribute("data-i18n");
+    if(I18N[k]&&I18N[k][l]!==undefined)el.innerHTML=I18N[k][l];
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function(el){
+    var k=el.getAttribute("data-i18n-ph");
+    if(I18N[k]&&I18N[k][l]!==undefined)el.setAttribute("placeholder",I18N[k][l]);
+  });
+  document.querySelectorAll(".lang-btn").forEach(function(b){b.textContent=l==="tr"?"EN":"TR"});
+  try{localStorage.setItem("gaye-lang",l)}catch(e){}
+  if(window.onLangChange)window.onLangChange(l);
+}
+function toggleLang(){applyLang(document.documentElement.lang==="tr"?"en":"tr");}
+
+</script>
+<script>
 (function(){
-  var ADLAR={a:'İtici Güçler',b:'Destekler',c:'Köstekler',m:'Motivatörler'};
+  function L(){return JS_I18N[document.documentElement.lang]||JS_I18N.tr;}
 
   function satirEkle(tbody){
     var tr=document.createElement('tr');
-    tr.innerHTML='<td><input type="text" placeholder="Yazın…"></td>'+
+    tr.innerHTML='<td><input type="text" data-row-ph placeholder="'+L().rowPh+'"></td>'+
       '<td class="num"><input type="number" min="1" max="10" data-t="bugun"></td>'+
       '<td class="num"><input type="number" min="1" max="10" data-t="gelecek"></td>'+
       '<td><button class="satir-sil" title="Satırı sil">×</button></td>';
@@ -249,7 +354,7 @@
     if(A===null||B===null||C===null||M===null) return null;
     return (A+B)/Math.pow(C,1-M);
   }
-  function kat(g){return g==null?'':g<2?'Filiz':g<5?'Gelişen':g<10?'Güçlü':'Çok Güçlü';}
+  function kat(g){var k=L().kat;return g==null?'':g<2?k.filiz:g<5?k.gelisen:g<10?k.guclu:k.cokguclu;}
   function fmt(x,d){return x==null?'—':x.toFixed(d===undefined?1:d);}
 
   function hesapla(){
@@ -262,28 +367,34 @@
     document.getElementById('delta').textContent=d==null?'—':(d>=0?'+':'')+d.toFixed(1);
 
     // ara tablo
-    var html='<tr><th>Bileşen</th><th>Sayı</th><th>Bugün</th><th>Gelecek</th></tr>';
+    var A=L().ara;
+    var html='<tr><th>'+A[0]+'</th><th>'+A[1]+'</th><th>'+A[2]+'</th><th>'+A[3]+'</th></tr>';
     ['a','b','c'].forEach(function(b){
       var n=topla(b,'bugun').n||topla(b,'gelecek').n;
-      html+='<tr><td>'+ADLAR[b]+'</td><td>'+n+'</td><td>'+fmt(deger(b,'bugun'))+'</td><td>'+fmt(deger(b,'gelecek'))+'</td></tr>';
+      html+='<tr><td>'+L().adlar[b]+'</td><td>'+n+'</td><td>'+fmt(deger(b,'bugun'))+'</td><td>'+fmt(deger(b,'gelecek'))+'</td></tr>';
     });
     var nm=topla('m','bugun').n||topla('m','gelecek').n;
-    html+='<tr><td>Motivatör Düzeyi (M)</td><td>'+nm+'</td><td>'+fmt(mDegeri('bugun'),2)+'</td><td>'+fmt(mDegeri('gelecek'),2)+'</td></tr>';
+    html+='<tr><td>'+L().mduzey+'</td><td>'+nm+'</td><td>'+fmt(mDegeri('bugun'),2)+'</td><td>'+fmt(mDegeri('gelecek'),2)+'</td></tr>';
     document.getElementById('ara').innerHTML=html;
 
     var y=document.getElementById('yorum');
-    if(sb==null){y.textContent='Her bileşene en az bir satır girip Bugün ve Gelecek puanlarını verin; skorlarınız otomatik hesaplanır.';}
+    if(sb==null){y.textContent=L().bos;}
     else{
-      var m={'Filiz':'Gaye henüz kök salmamış. Önce Bölüm 1 ve 2\'ye dönün, keşif sorularını yeniden çalışın.',
-             'Gelişen':'Gaye filizleniyor. Doğru yoldasınız ama bazı boyutları beslemeniz gerek — hangi değişken düşükse oraya odaklanın.',
-             'Güçlü':'Gayeniz güçlü ve yaşanmış. Hayatınız pusulanızı takip ediyor, iz bırakıyorsunuz.',
-             'Çok Güçlü':'Gayeniz çok güçlü çalışıyor. Bu netliği eyleme ve çevrenize taşıyın — gaye paylaşıldıkça derinleşir.'};
-      var ek=(d!=null&&d>0)?' Pozitif ΔGaye büyüme alanınızı gösteriyor.':(d!=null&&d<0)?' Negatif ΔGaye risk bölgenizi gösteriyor.':'';
-      y.textContent=m[kat(sb)]+ek;
+      var ek=(d!=null&&d>0)?L().ekPos:(d!=null&&d<0)?L().ekNeg:'';
+      y.textContent=(L().msg[kat(sb)]||'')+ek;
     }
   }
+  window.onLangChange=function(){
+    document.querySelectorAll('[data-row-ph]').forEach(function(inp){inp.setAttribute('placeholder',L().rowPh)});
+    hesapla();
+  };
   hesapla();
+
+  var saved="tr";
+  try{saved=localStorage.getItem("gaye-lang")||"tr"}catch(e){}
+  if(saved!=="tr")applyLang(saved);
 })();
 </script>
 </body>
 </html>
+
